@@ -5,6 +5,7 @@
 *.fls
 *.out
 *.toc
+*.pdf
 
 *.dvi
 # *.ps
