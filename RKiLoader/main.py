@@ -1,11 +1,6 @@
-# This is a sample Python script.
-import requests
-from Config import *
-import pandas as pd
-
+from VaccinationScraper import VaccinationScraper
 
 if __name__ == "__main__":
-    city_df = pd.read_csv(path_to_city_csv, header=0, sep=';')
-    for index, row in city_df.iterrows():
-        #print(corona_api_base_url + corona_api_districts + row['AGS'][0:5])
-        print(requests.get(corona_api_base_url + corona_api_districts + row['AGS'][0:5]).json())
+    vac_scraper = VaccinationScraper()
+
+    print(vac_scraper.get_vaccination_data())
