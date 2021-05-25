@@ -228,6 +228,215 @@ Das soeben erw\"ahnte Konzept der Nachrichten wird genauso f\"ur die Massnahmen 
 Auch die Wetterdaten werden im gleichen Stil abgelegt. Heisst die einzelnen Wetterlogs werden als Dokumente im Elasticsearch abgelegt und auch hier\"uber abgefragt. Allerdings werden die Wetterdaten auch noch entsprechend des allgmeinen Konzepts im HDFS abgelegt. Die Ablage Struktur im HDFS ist in folgendem Pattern:  '/datakraken/weather/\$Stadt\$/\$Datum\$/\$TimeStamp\$'.
 \section{'Querdenker' Telegram Gruppen}
 Im Bereich der Telegram Gruppen muss hier differenziert werden. Die verschickten Nachrichten an sich werden mit den Meta-Daten zusammen im Elasticsearch abgelegt. H\"angt allerdings an der Nachricht noch eine Datei ein, oder ein Link, wird die Datei im HDFS abgelegt. Dazu wird eine Referenz erstellt und mit im Elasticsearch abgelegt. Die Ablage Struktur im HDFS ist in folgendem Pattern: '/datakraken/telegram/\$GruppenName\$/\$Datum\$/\$NachrichtId\$\_\$TimeStamp\$'.
+
+\chapter{Cluster und Deployment}
+%mehr so braindump, überarbeiten%
+\section{Überblick} Bereits bei der Ideenfindung zu unserer Projektarbeit hatten wir uns dazu entschieden, nicht nur den Quellcode für den Datensammler zu schreiben, sondern das ganze auch auf einem Cluster zum laufen zu bringen. Hierfür haben wir 3 alte Rechner (Bis zur explosion eines Netzteils ursprünglich 4) von Moritz genommen. Die Absicht hier war, aus alter, ungenutzter Hardware, neuen Wert zu schöpfen. Tieferen Einblick in Serververwaltung erhalten. Bla bla weitere gründe ausdenken. Wir haben bewusst von der Verwendung von Docker abgesehen, trotz des Wissens, dass es die einfachste Möglichkeit wäre die Software auf dem Cluster zu deployen. Grund ist, dass wir dieses Projekt vornehmlich dazu nutzen wollen, ein breites Fundament an Wissen aufzubauen, welches auch Serveradministration beinhalten soll. Um Elasticsearch mit Docker zu starten, ist nicht viel mehr nötig als sich ein Compose-File aus dem Internet zu suchen und zu starten. Retrospektiv betrachtet hat sich diese Erwartung erfüllt und durch das troubleshooting 
+
+\section{Betriebssystem} Als Betriebssystem wählten wir Ubuntu 18.04 LTS, da es mit ca. einem Drittel aller Linuxserver das meistverwendete Betriebssystem darstellt. Als Bezeichnung für die einzelnen Knoten wählten wir "datakrakennamenode", für den Masternode, sowie "datanodekraken1" und "datenodekraken2", für die beiden Anderen. Auf jedem Knoten legten wir einen User mit Namen "Hadoop" an. Im laufe des Projekts stellte sich heraus, dass eine "sauberere" Lösung gewesen wäre, einen User zu allgemeinen Serververwaltung, sowie jeweils einen User zum laufen der Elasticsearch sowie Hadoop Daemons zu erstellen. Auch wurde der Fehler gemacht den Rootuser nur Stiefmütterlich zu behandeln und nicht mit Passwort einzurichten, dies kostete beim Recovery viel Zeit und nerven.\newline
+Als nächsten Schritt wiesen wir allen Nodes statische private IP-Adressen zu, hierzu wählten wir die vom Router vergebenen Adressen. \pagebreak
+\begin{lstlisting}[caption=datakrakennamenode: /etc/netplan/00-installer-config.yaml,label=hosts,language=bash]
+network:
+  ethernets:
+    enp6s0:
+      dhcp4: no
+      dhcp6: no
+      addresses: [192.168.0.115/24]
+      gateway4: 192.168.0.255
+  version: 2
+#mit sudo netplan apply anwenden!
+\end{lstlisting}
+Diese mapten wir auf die Knotennamen in der "hosts"- Datei, um sie bei der weiteren Konfiguration immer mit ihrem Namen angeben zu können.
+\begin{lstlisting}[caption=etc/hosts,label=hosts,language=bash]
+...
+192.168.0.115 datakrakennamenode
+192.168.0.103 datanodekraken1
+192.168.0.201 datanodekraken2
+...
+\end{lstlisting}
+Jeder Node erhielt ausserdem noch Java 8 zum ausführen von Hadoop bzw. Elasticsearch/Kibana, die Umgebungsvariable wurde gesetzt.
+\begin{lstlisting}[caption=etc/environment,label=javaenv,language=bash]
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+\end{lstlisting}
+
+\section{Hadoop}
+\subsection{Allgemeines}
+Hadoop ist eine Opensource Lösung von Apache die parallele Verarbeitung und verteilte Datenhaltung auf einem Cluster möglich macht. Mit Hadoop ist auch immer das Hadoop Distributet File System (HDFS) sowie Hadoop YARN, ein Framework zur Ablaufplanung von verteilten Anwendungen. \newline
+Der Cluster besteht aus einem Master und sogenannten Workernodes. Der Master behält dabei den Überblich über das verteilte Dateisystem. Dies tut er indem auf ihm 2 Daemons laufen, der Namenode und der Resourcemanager. Der Namenode managt das verteilte Dateisystem und weiß wo die gespeicherten Daten sind. Der Resourcemanager verwaltet YARN-Jobs und kümmert sich um die Planung und Ausführung von Prozessen auf den Workernodes. \newline
+Workernodes hingegen sind zum speichern der Daten und dem Ausführen der Jobs da. Auch sie hosten zwei Daemons, den Datanode, zum verwalten der Daten auf dem Node, sowie dem Nodemanager, der die Ausführung der Tasks auf dem Node verwaltet.
+\subsection{Setup}
+Hadoop Version 3.2.2 wurde als Binary für Ubuntu heruntergeladen und entpackt. Der Einfachheit halber wurde der Ordner von "hadoop-3.2.2" zu "hadoop" umbenannt.
+Als nächstes wurden die nötigen Umgebungsvariablen gesetzt und die PATH-Variable angepasst. %hier muss noch hin warum environment und nicht einfach .bashrc
+\begin{lstlisting}[caption=etc/environment,label=env,language=bash]
+HADOOP_HOME=/home/hadoop/hadoop
+YARN_HOME=/home/hadoop/hadoop
+HADOOP_COMMON_HOME=/home/hadoop/hadoop
+HADOOP_HDFS_HOME=/home/hadoop/hadoop
+HOME=/home/hadoop
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/bin:/home/hadoop/hadoop/bin:/home/hadoop/hadoop/sbin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/lib/jvm/java-8-openjdk-amd64/sbin
+\end{lstlisting}
+Ausserdem wurden noch folgende Konfigurationen vorgenommen: \newline
+\begin{lstlisting}[caption=/hadoop/etc/hadoop/core-site.xml,label=coresitexml,language=bash]
+<configuration>
+        <property>
+            <name>fs.default.name</name>
+            <value>hdfs://datakrakennamenode:9000</value>
+        </property>
+    </configuration>
+\end{lstlisting}
+\begin{lstlisting}[caption=hadoop/etc/hadoop/hdfs-site.xml,label=hdfssitexml,language=bash]
+<configuration>
+    <property>
+            <name>dfs.namenode.name.dir</name>
+            <value>/home/hadoop/data/nameNode</value>
+    </property>
+
+    <property>
+            <name>dfs.datanode.data.dir</name>
+            <value>/home/hadoop/data/dataNode</value>
+    </property>
+
+    <property>
+            <name>dfs.replication</name>
+            <value>1</value>
+    </property>
+</configuration>
+\end{lstlisting}
+\begin{lstlisting}[caption=hadoop/etc/hadoop/hdfs-site.xml,label=hdfssitexml,language=bash]
+<configuration>
+    <property>
+            <name>dfs.namenode.name.dir</name>
+            <value>/home/hadoop/data/nameNode</value>
+    </property>
+
+    <property>
+            <name>dfs.datanode.data.dir</name>
+            <value>/home/hadoop/data/dataNode</value>
+    </property>
+
+    <property>
+            <name>dfs.replication</name>
+            <value>1</value>
+    </property>
+</configuration>
+\end{lstlisting}\begin{lstlisting}[caption=/hadoop/etc/hadoop/mapred-site.xml,label=mapredsitexml,language=bash]
+<configuration>
+    <property>
+            <name>mapreduce.framework.name</name>
+            <value>yarn</value>
+    </property>
+    <property>
+            <name>yarn.app.mapreduce.am.env</name>
+            <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+    </property>
+    <property>
+            <name>mapreduce.map.env</name>
+            <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+    </property>
+    <property>
+            <name>mapreduce.reduce.env</name>
+            <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+    </property>
+</configuration>
+\end{lstlisting}
+\begin{lstlisting}[caption=/hadoop/etc/hadoop/yarn-site.xml,label=yarnsitexml,language=bash]
+<configuration>
+    <property>
+            <name>yarn.acl.enable</name>
+            <value>0</value>
+    </property>
+
+    <property>
+            <name>yarn.resourcemanager.hostname</name>
+            <value>datakrakennamenode</value>
+    </property>
+
+    <property>
+            <name>yarn.nodemanager.aux-services</name>
+            <value>mapreduce_shuffle</value>
+    </property>
+</configuration>
+
+\end{lstlisting}
+\begin{lstlisting}[caption=/hadoop/etc/hadoop/workers,label=workers,language=bash]
+datanodekraken1
+datanodekraken2
+\end{lstlisting}
+\begin{lstlisting}[caption=Formatieren des HDFS und Start/Stop,label=start,language=bash]
+hdfs namenode -format
+start-dfs.sh
+stop-dfs.sh
+\end{lstlisting}
+\begin{lstlisting}[caption=Check ob daemon auf datakrakennamenode läuft,label=jpsnamenode,language=bash] %hier noch orginal von cmd einfügen
+>jps
+21922 Jps
+21804 NameNode
+21879 SecondaryNameNode
+\end{lstlisting}
+\begin{lstlisting}[caption=Check ob daemon auf den workern läuft,label=jpsworker,language=bash]
+>jps
+21912 Jps
+21434 DataNode
+\end{lstlisting}
+Sollten die Daemons wider erwarten nicht anspringen, hat es sich als hilfreich erwiesen den tempordner von Hadoop zu löschen und das HDFS erneut zu formatieren.
+
+\section{Elasticsearch}
+Alles nach anleitung von elastic installiert.
+Kibana nur auf datakrakennamenode installiert
+User zu gruppen elasticsearch und kibana hinzugefügt
+Berechtigungen über die verzeichnisse verteilt
+
+\begin{lstlisting}[caption=elasticsearch.yml,label=elasticyml,language=bash]
+cluster.name: datakraken
+cluster.initial_master_nodes: ["datakrakennamenode"]
+node.name: datakrakennamenode
+node.master: true
+path.data: /var/lib/elasticsearch
+path.logs: /var/log/elasticsearch
+discovery.zen.ping.unicast.hosts: ["datakrakennamenode", "datanodekraken1", "datanodekraken2"]
+\end{lstlisting}
+
+\begin{lstlisting}[caption=kibana.yml,label=kibanayml,language=bash]
+server.port: 5601
+server.host: "datakrakennamenode"
+server.name: "datakraken"
+elasticsearch.hosts: ["http://datakrakennamenode:9200"]
+\end{lstlisting}
+
+
+\begin{lstlisting}[caption=Setup zum automatischen Start mit jedem Boot, label=boot,language=bash]
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable elasticsearch.service
+#nur auf datakrakennamenode:
+sudo /bin/systemctl enable kibana.service
+\end{lstlisting}
+\begin{lstlisting}[caption=Manuelles Starten/ Stoppen von Elasticsearch/Kibana,label=startstopelastic,language=bash]
+sudo systemctl start elasticsearch.service
+sudo systemctl stop elasticsearch.service
+sudo systemctl start kibana.service
+sudo systemctl stop kibana.service
+\end{lstlisting}
+
+
+\begin{lstlisting}[caption=Befehl zum durchsuchen der Logdaten,label=logelastic,language=bash]
+sudo journalctl --unit elasticsearch --since  ">>heutiges datum<<"
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Befehl zum durchsuchen der Logdaten,label=logkibana,language=bash]
+journalctl -u kibana.service
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Statusabfrage Elasticsearch,label=statuselastic,language=bash]
+curl -XGET 'datakrakennamenode:9200/_cluster/health?pretty'
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Statusabfrage Kibana,label=statuskibana,language=bash]
+curl -XGET 'datakrakennamenode:5601/api/status'
+curl -XGET 'datakrakennamenode:5601/status'
+\end{lstlisting}
+
+Über ssh beide mittels IP adresse abrufbar
+%Braindump ende%
 \chapter{Problemstellung}
 
 \chapter{Lösung}
