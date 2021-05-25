@@ -12,8 +12,7 @@ class ElasticSearchClient:
     """
 
     def __init__(self):
-        """
-        constructor which crates ElasticSearchClient with the elasticsearch
+        """constructor which crates ElasticSearchClient with the elasticsearch
         url from the config file
         """
         logging.info('Init Elasticsearch client with url: ' +
@@ -22,28 +21,32 @@ class ElasticSearchClient:
             [elasticsearch_url + ':' + elasticsearch_port])
 
     def get_es_client(self):
-        """
-        :return:
+        """get the created es client for own use
+
+        Returns:
+            elasticsearch instance: the elasticsearch client
         """
         return self.es_client
 
     def index_single_document(self, index, document):
-        """
-        index weather data to elasticsearch
-        :return: None
+        """index weather data to elasticsearch
+
+        Args:
+            index (string): the target index as a string representation
+            document (object/dict): document you want to index
         """
         self.es_client.index(index=index, body=document,
                              doc_type='_doc')
 
-    def bulk_index_list(self, index_name, chunk_size, document_list):
-        """
-        indexes a list of documents using the bulk index api
+    def bulk_index_list(self, index_name, document_list, chunk_size=10000):
+        """indexes a list of documents using the bulk index api
         converts list of objects to a bulk index command 
         make sure index exists before using this method
 
-        :index_name: name of the es index
-        :chunk_size: how many docs per bulk request shall be added to the request
-        :document_list: list of documents
+        Args:
+            index_name (string): name of the es index
+            document_list (list): python list containing all documents you want to index
+            chunk_size (int, optional): how many docs per bulk request shall be added to the request. Defaults to 10000.
         """
         base_map = {}
         base_map['_index'] = index_name
