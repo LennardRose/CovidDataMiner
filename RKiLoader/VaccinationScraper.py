@@ -1,5 +1,4 @@
 import requests
-import time
 from Config import *
 from Util import *
 from ElasticSearchWrapper import ElasticSearchClient
@@ -15,24 +14,24 @@ class VaccinationScraper():
         Args:
             es_client (elasticsearch client): a created elasticsearch client instance
         """
-        self.vaccination_data = {}
+        self.testing_data = {}
         self.es_client = es_client
         self.request_time = None
 
-    def get_vaccination_dat_raw(self):
+    def get_testing_dat_raw(self):
         """function that returns raw vaccination data
         if not present requests it from api and saves the request time stamp
 
         Returns:
             dict: raw vaccination data
         """
-        if not self.vaccination_data or self.vaccination_data is None:
-            self.vaccination_data = requests.get(
-                corona_api_base_url + corona_api_vaccinations).json()
+        if not self.testing_data or self.testing_data is None:
+            self.testing_data = requests.get(
+                corona_api_base_url + corona_api_testing).json()
             self.request_time = current_milli_time()
-        return self.vaccination_data
+        return self.testing_data
 
-    def convert_raw_data_to_state_list(self):
+    def convert_raw_data_to_list(self):
         """create list of vaccination data consisting of vaccination data of all 16 states in germany
 
         Returns:
@@ -55,6 +54,7 @@ class VaccinationScraper():
         """
         data = self.get_vaccination_dat_raw()
         del data['states']
+        data['identifier'] = elasticsearch_vaccination_index
         return data
 
     def index_vaccination_data(self):
@@ -64,7 +64,7 @@ class VaccinationScraper():
         self.es_client.bulk_index_list(
             index_name=elasticsearch_vaccination_index, document_list=self.convert_raw_data_to_state_list())
         self.es_client.index_single_document(
-            index=elasticsearch_vaccination_meta_index, document=self.get_meta_data_from_raw_data())
+            index=elasticsearch_meta_index, document=self.get_meta_data_from_raw_data())
 
     def save_raw_vaccination_data_to_hdfs(self):
         """ToDo build this

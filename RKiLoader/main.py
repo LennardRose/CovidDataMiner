@@ -1,8 +1,12 @@
-from VaccinationScraper import VaccinationScraper
+from TestingScraper import TestingScraper
+from TestingScraper import TestingScraper
 from ElasticSearchWrapper import ElasticSearchClient
 
-if __name__ == "__main__":
-    es_client = ElasticSearchClient()
-    vac_scraper = VaccinationScraper(es_client=es_client)
 
-    print(vac_scraper.convert_raw_data_to_state_list())
+
+if __name__ == "__main__":
+
+    es_client = ElasticSearchClient()
+    testing_scraper = TestingScraper(es_client=es_client)
+    testing_scraper.get_newest_week_from_index()
+    #print(testing_scraper.index_testing_data())

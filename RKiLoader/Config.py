@@ -18,7 +18,7 @@ elasticsearch_url = '127.0.0.1'
 elasticsearch_port = '9200'
 
 elasticsearch_vaccination_index = 'rki_vaccination'
-elasticsearch_vaccination_meta_index = 'rki_vaccination_meta'
+elasticsearch_meta_index = 'rki_meta'
 elasticsearch_testing_index = 'rki_testing'
 elasticsearch_incidence_index = 'rki_incidence'
 
