@@ -83,7 +83,7 @@ class TestingScraper():
         """
         search_result = self.es_client.get_es_client().search(
             index=elasticsearch_testing_index, body='{"size":0,"aggs":{"max_unique_sort_order":{"top_hits":{"sort":[{"unqiue_sort_order":{"order":"desc"}}],"size":1}}}}')
-        return search_result['aggregations']['max_unique_sort_order']['hits']['hits'][0]['_source']['unique_sort_order'])
+        return search_result['aggregations']['max_unique_sort_order']['hits']['hits'][0]['_source']['unique_sort_order']
 
     def save_raw_testing_data_to_hdfs(self):
         """ToDo build this

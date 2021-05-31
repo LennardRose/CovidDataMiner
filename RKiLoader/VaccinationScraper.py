@@ -18,7 +18,7 @@ class VaccinationScraper():
         self.es_client = es_client
         self.request_time = None
 
-    def get_testing_dat_raw(self):
+    def get_vaccination_dat_raw(self):
         """function that returns raw vaccination data
         if not present requests it from api and saves the request time stamp
 
