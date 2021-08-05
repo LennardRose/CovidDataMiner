@@ -1,0 +1,44 @@
+{
+    "city": "muenchen",
+    "site_name": "sueddeutsche_zeitung",
+    "base_url": "https://www.sueddeutsche.de",
+    "path_url": "/thema/Coronavirus_in_M%C3%BCnchen",
+    "html_tag": "a",
+    "html_class": "sz-teaser",
+    "condition": null,
+    "condition_boolean": null,
+    "title": {
+        "source": "STANDARD",
+        "tag": null,
+        "class": null
+    },
+    "date": {
+        "source": null,
+        "tag": null,
+        "class": null
+    },
+    "author": {
+        "source": null,
+        "tag": null,
+        "class": null,
+        "default": null
+    },
+    "description": {
+        "source": "NOEXIST",
+        "tag": null,
+        "class": null,
+        "default": null
+    },
+    "type": {
+        "source": "NOEXIST",
+        "tag": null,
+        "class": null,
+        "default": null
+    },
+    "keywords": {
+        "source": "NOEXIST",
+        "tag": null,
+        "class": null,
+        "default": null
+    }
+} 
