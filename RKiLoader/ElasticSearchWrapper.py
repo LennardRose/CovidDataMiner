@@ -48,7 +48,7 @@ class ElasticSearchClient:
             document_list (list): python list containing all documents you want to index
             chunk_size (int, optional): how many docs per bulk request shall be added to the request. Defaults to 10000.
         """
-        if not document_list:
+        if document_list:
             base_map = {}
             base_map['_index'] = index_name
             items = []

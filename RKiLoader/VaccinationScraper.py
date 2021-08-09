@@ -2,6 +2,7 @@ import requests
 from Config import *
 from Util import *
 from ElasticSearchWrapper import ElasticSearchClient
+import copy
 
 
 class VaccinationScraper():
@@ -14,32 +15,32 @@ class VaccinationScraper():
         Args:
             es_client (elasticsearch client): a created elasticsearch client instance
         """
-        self.testing_data = {}
+        self.vaccination_data = {}
         self.es_client = es_client
         self.request_time = None
 
-    def get_vaccination_dat_raw(self):
+    def get_vaccination_data_raw(self):
         """function that returns raw vaccination data
         if not present requests it from api and saves the request time stamp
 
         Returns:
             dict: raw vaccination data
         """
-        if not self.testing_data or self.testing_data is None:
-            self.testing_data = requests.get(
-                corona_api_base_url + corona_api_testing).json()
+        if not self.vaccination_data or self.vaccination_data is None:
+            self.vaccination_data = requests.get(
+                corona_api_base_url + corona_api_vaccinations).json()
             self.request_time = current_milli_time()
-        return self.testing_data
+        return self.vaccination_data
 
-    def convert_raw_data_to_list(self):
+    def convert_raw_data_to_state_list(self):
         """create list of vaccination data consisting of vaccination data of all 16 states in germany
 
         Returns:
             list: vacination data per state as a list
         """
-        data = self.get_vaccination_dat_raw()
+        vaccination_data = copy.deepcopy(self.get_vaccination_data_raw())
         states_list = []
-        states = data['data']['states']
+        states = vaccination_data['data']['states']
         for state in german_state_list_abbreviated:
             state_object = states[state]
             state_object['data_request_time'] = self.request_time
@@ -52,8 +53,8 @@ class VaccinationScraper():
         Returns:
             dict: meta data of vaccination request
         """
-        data = self.get_vaccination_dat_raw()
-        del data['states']
+        data = copy.deepcopy(self.get_vaccination_data_raw())
+        del data['data']['states']
         data['identifier'] = elasticsearch_vaccination_index
         return data
 

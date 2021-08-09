@@ -1,4 +1,5 @@
 import requests
+import copy
 from Config import *
 from Util import *
 from ElasticSearchWrapper import ElasticSearchClient
@@ -38,7 +39,7 @@ class TestingScraper():
         Returns:
             list: testing data per state as a list
         """
-        data = self.get_testing_dat_raw()
+        data = copy.deepcopy(self.get_testing_dat_raw())
         week_list = []
         for week in data['data']['history']:
             week_date = week['calendarWeek']
@@ -61,8 +62,8 @@ class TestingScraper():
         Returns:
             dict: meta data of testing request
         """
-        data = self.get_testing_dat_raw()
-        del data['history']
+        data = copy.deepcopy(self.get_testing_dat_raw())
+        del data['data']
         data['identifier'] = elasticsearch_testing_index
         return data
 
