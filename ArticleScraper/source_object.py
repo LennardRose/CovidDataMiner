@@ -1,12 +1,12 @@
 class source_object:
 
     def __init__(self, city, site_name, base_url, path_url, html_tag = None, html_class = None, condition = None, condition_boolean = None,
-    title_source = "STANDARD", title_tag = None, title_class = None, 
-    date_source = None, date_tag = None, date_class = None, 
-    author_source = None, author_tag = None, author_class = None, author_default = None, 
-    description_source = "NOEXIST", description_tag = None, description_class = None, description_default = None, 
-    type_source = "NOEXIST", type_tag = None, type_class = None, type_default = None, 
-    keywords_source = "NOEXIST", keywords_tag = None, keywords_class = None, keywords_default = None
+    title_source = "STANDARD", title_tag = None, title_attribute = None, title_attribute_value = None, 
+    date_source = None, date_tag = None, date_attribute = None, date_attribute_value = None,
+    author_source = None, author_tag = None, author_attribute = None, author_attribute_value = None, author_default = None, 
+    description_source = "NOEXIST", description_tag = None, description_attribute = None, description_attribute_value = None, description_default = None, 
+    type_source = "NOEXIST", type_tag = None, type_attribute = None, type_attribute_value = None, type_default = None, 
+    keywords_source = "NOEXIST", keywords_tag = None, keywords_attribute = None, keywords_attribute_value = None, keywords_default = None
     ):
         self.city = city
         self.site_name = site_name
@@ -18,30 +18,36 @@ class source_object:
         self.condition_boolean = condition_boolean
         self.title = { "source" : title_source,
                         "tag" : title_tag,
-                        "class" : title_class
+                        "attribute" : title_attribute,
+                        "attribute_value" : title_attribute_value
                         }
         self.date = { "source" : date_source,
                         "tag" : date_tag,
-                        "class" : date_class
+                        "attribute" : date_attribute,
+                        "attribute_value" : date_attribute_value
                         }
         self.author = { "source" : author_source,
                         "tag" : author_tag,
-                        "class" : author_class,
+                        "attribute" : author_attribute,
+                        "attribute_value" : author_attribute_value,
                         "default" : author_default
                         }
         self.description = { "source" : description_source,
                         "tag" : description_tag,
-                        "class" : description_class,
+                        "attribute" : description_attribute,
+                        "attribute_value" : description_attribute_value,
                         "default" : description_default
                         }
         self.type = { "source" : type_source,
                         "tag" : type_tag,
-                        "class" : type_class,
+                        "attribute" : type_attribute,
+                        "attribute_value" : type_attribute_value,
                         "default" : type_default
                         }
         self.keywords = { "source" : keywords_source,
                         "tag" : keywords_tag,
-                        "class" : keywords_class,
+                        "attribute" : keywords_attribute,
+                        "attribute_value" : keywords_attribute_value,
                         "default" : keywords_default
                         }
 

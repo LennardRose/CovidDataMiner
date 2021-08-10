@@ -5,40 +5,46 @@
     "path_url": "/thema/Coronavirus_in_M%C3%BCnchen",
     "html_tag": "a",
     "html_class": "sz-teaser",
-    "condition": null,
-    "condition_boolean": null,
+    "condition": "/muenchen",
+    "condition_boolean": true,
     "title": {
-        "source": "STANDARD",
-        "tag": null,
-        "class": null
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "og:title"
     },
     "date": {
-        "source": null,
-        "tag": null,
-        "class": null
+        "source": "JSON_LD",
+        "tag": "datePublished",
+        "attribute" : null,
+        "attribute_value": null
     },
     "author": {
-        "source": null,
-        "tag": null,
-        "class": null,
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "name",
+        "attribute_value": "author",
         "default": null
     },
     "description": {
-        "source": "NOEXIST",
-        "tag": null,
-        "class": null,
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "og:description",
         "default": null
     },
     "type": {
-        "source": "NOEXIST",
-        "tag": null,
-        "class": null,
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "og:type",
         "default": null
     },
     "keywords": {
-        "source": "NOEXIST",
-        "tag": null,
-        "class": null,
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "name",
+        "attribute_value": "keywords",
         "default": null
     }
 } 

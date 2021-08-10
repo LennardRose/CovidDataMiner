@@ -7,22 +7,24 @@ from source_object import source_object
 import json
 import datetime
 import html5lib
-import meta_parser
+from MetaParser import meta_parser 
 import argparse
 from ElasticSearchWrapper import ElasticSearchClient
 import logging
+import sys
 
 def get_soup_out_of_page(URL):
     page = requests.get(URL)
     return BeautifulSoup(page.content, 'html5lib')
 
-"""
-collects all tags from the specified URL-combination that fits the html_tag thml_class combination
-If no href is found, the children will be searched for a href
-"""
-def get_articlelink_list(base_URL, path_URL, html_tag, html_class):
 
-    soup = get_soup_out_of_page(base_URL + path_URL)
+def get_articlelink_list(URL, html_tag, html_class):
+    """
+    collects all tags from the specified URL-combination that fits the html_tag thml_class combination
+    If no href is found, the children will be searched for a href
+    """
+
+    soup = get_soup_out_of_page(URL)
     articlelist = soup.body.find_all(html_tag, html_class )
     links = []
     for row in articlelist: 
@@ -36,10 +38,11 @@ def get_articlelink_list(base_URL, path_URL, html_tag, html_class):
     return links
     #erster link ist immer der aktuellste, vielleicht speichern und dann abgleichen, dass man nur immer die läd die man noch nicht hat        
 
-"""
-searches all children of a tag for a href, returns the first
-"""
+
 def search_direct_children_for_href(tag):
+    """
+    searches all children of a tag for a href, returns the first
+    """
     for child in tag.findAll(recursive = True):
         if child.has_attr('href'):
             return child['href']
@@ -48,79 +51,66 @@ def search_direct_children_for_href(tag):
 
 
 
-"""
-Scrapes only pages that have a match(contition_boolean = True) or have no match(contiditon_boolean = False) of condition in their page_list URLs.
-Also checks if the URL is relative or absolute, adds base_URL if necessary
-Saves the content of page with the given file_prefix 
-"""
-def scrape_all_valid_pages(base_URL, page_list, city, site_name, condition, condition_boolean):
-    for URL in page_list:
-        if is_valid(URL, condition, condition_boolean):
-            if is_relative_URL(URL):
-                URL = base_URL + URL
-            save_content_of_page(URL, city, site_name)    
-
-"""
-Scrapes all page_list URLs.
-Also checks if the URL is relative or absolute, adds base_URL if necessary
-Saves the content of page with the given file_prefix 
-"""
-def scrape_all_pages(base_URL, page_list, city, site_name):
-    for URL in page_list:
-        if is_relative_URL(URL):
-            URL = base_URL + URL
-        save_content_of_page(URL, city, site_name)  
-
-# def save_articles_of_page(base_URL, path_URL, html_tag, html_class):
-#     soup = get_soup_out_of_page(base_URL + path_URL)
-#     articlelist = soup.body.find_all(html_tag, html_class )
-
-
-
-def save_content_of_page(URL, city, site_name):
+def scrape_all_pages(source):
+    """
+    Scrapes only pages that have no conditions set or 
+    a match(contition_boolean = True) or have no match(contiditon_boolean = False) 
+    of condition in their page_list URLs.
+    Also checks if the URL is relative or absolute, adds base_URL if necessary
+    Saves the content of page 
+    """
     
+    for URL in get_articlelink_list(source["base_url"] + source["path_url"], source["html_tag"], source["html_class"]):
+        
+        if is_valid(URL, source["condition"], source["condition_boolean"]):
 
-    soup = get_soup_out_of_page(URL)
-    encoding = soup.original_encoding or 'utf-8' #encoding für sonderzeichen sonst heult er rum
-    text = str(soup.encode(encoding)).split("\\n") #er checkt einfach nicht dass das hier lineseperators sind
+            if is_relative_URL(URL):
+                URL = source["base_URL"] + URL
 
-    meta_data = meta_parser.parse_metadata(soup, city, site_name, URL)
+            save_content_of_page(source, URL)    
 
-    #in datei schreiben
-    with open(meta_data["filename"], "w") as file:
-        for line in text:
-            file.write(line + os.linesep)
-
-    #print(meta_dict) # an dieser stelle dann über ES client den ganzen kram in die unendlichkeit feuern
-       
 
 def is_relative_URL(URL):
     return not bool(re.search("^http", URL))
 
 
 def is_valid(URL, condition, condition_boolean):
-    if condition_boolean:
-        return bool(re.search(condition, URL))
+    if condition == None and condition_boolean == None:
+        return True
     else:
-        return not bool(re.search(condition, URL))
+        if condition_boolean:
+            return bool(re.search(condition, URL))
+        else:
+            return not bool(re.search(condition, URL))
+
+
+def save_content_of_page(source, URL):
+    
+    soup = get_soup_out_of_page(URL)
+    encoding = soup.original_encoding or 'utf-8' #encoding für sonderzeichen sonst heult er rum
+    text = str(soup.encode(encoding)).split("\\n") #er checkt einfach nicht dass das hier lineseperators sind
+
+    parser = meta_parser( URL, soup, source)
+    meta_data = parser.parse_metadata() #das URL ist von der individuellen seite, nicht aus Base + Path, ausser bei direktem scrapen der seite
+
+    #in datei schreiben
+    with open("./articles/" + meta_data["filename"], "w") as file:
+        for line in text:
+            file.write(line + os.linesep)
+
+    es_client.index_meta_data(meta_data)  
+
 
 def scrape(source):
+
     # if all articles are on the page
-    if source.html_tag == None and source.html_class == None:
-        save_content_of_page(source.base_url + source.path_url, source.city, source.site_name)
+    if source["html_tag"] == None and source["html_class"] == None:
+        save_content_of_page(source, source["base_url"] + source["path_url"])
 
     # if the page has links to all the articles
     else:
-        list = get_articlelink_list(source.base_url, source.path_url, source.html_tag, source.html_class)
+        scrape_all_pages(source)
         
-        # if all articles should be scraped
-        if source.condition == None:
-            scrape_all_pages(source.base_url, list, source.city, source.site_name)
-        
-        # if only articles with a spectific URL should be scraped
-        else:   
-            scrape_all_valid_pages(source.base_url, list, source.city, source.site_name, source.condition, source.condition_boolean)
-
 
 def parse_arguments():
 
@@ -134,17 +124,21 @@ def parse_arguments():
 
     return parser.parse_args()
 
-def parse_input_arguments():
+def parse_data_from_arguments():
 
     args = parse_arguments()
     data = []
+    print(args)
+
+    if len(sys.argv) < 2: #programmname ist auch ein argument, deshalb 2 ---> scrape alle in elasticsearch wenn nichts weiter angegeben
+        data = es_client.get_all_article_configs()
 
     for filename in args.filenames:
         with open(filename, "r") as file:
             data.append(json.load(file))
             
     for id in args.elastic_ids:
-        data.append(es_client.search_article_config(id))
+        data.append(es_client.get_article_config(id))
 
     return data
 
@@ -152,16 +146,15 @@ if __name__ == '__main__':
 
     logging.info("start scraping")
     ssl._create_default_https_context = ssl._create_unverified_context
+    
     es_client = ElasticSearchClient()
 
-    data = parse_input_arguments()
+    data = parse_data_from_arguments()
 
     for source in data:
-        scrape(source)
+            scrape(source)
 
 
-
-    #today = datetime.datetime.now().strftime("%d.%m.%Y")
 
 
 

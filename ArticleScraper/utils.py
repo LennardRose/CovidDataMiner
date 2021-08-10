@@ -1,12 +1,15 @@
 import datetime
+import dateutil
 import unicodedata
 import re
 import json
 from source_object import source_object
-
-STANDARD_FORMAT = "%d.%m.%Y %H:%M:%S" #vielleicht aus einer config auslesen
+from Config import STANDARD_FORMAT 
 
 def parse_date(date, format=STANDARD_FORMAT):
+    if type(date) == str:
+        date =  dateutil.parser.parse(date)
+
     return date.strftime(format)
 
 def date_now():
@@ -37,7 +40,7 @@ def slugify(value, allow_unicode=False):
 
 source_list = []
 source_list.append(source_object("muenchen","sueddeutsche_zeitung", "https://www.sueddeutsche.de", "/thema/Coronavirus_in_M%C3%BCnchen", "a", "sz-teaser"))
-source_list.append(source_object("stuttgart","stuttgarter_zeitung", "https://www.sueddeutsche.de", "https://www.stuttgarter-zeitung.de", "a", "data", "/inhalt." , True ))
+source_list.append(source_object("stuttgart","stuttgarter_zeitung", "https://www.stuttgarter-zeitung.de", "https://www.stuttgarter-zeitung.de", "a", "data", "/inhalt." , True ))
 source_list.append(source_object("berlin","tagesspiegel","https://m.tagesspiegel.de/","berlin/coronavirus-in-der-hauptstadtregion-neuinfektionen-in-brandenburg-steigen-wieder-zweistellig/25655678.html"))
 source_list.append(source_object("potsdam","potsdamer_neuste_nachrichten","https://www.pnn.de/","potsdam/corona-newsblog-fuer-potsdam-und-brandenburg-corona-infektionen-in-brandenburg-wieder-zweistellig/25617916.html"))
 source_list.append(source_object("bremen","buten_und_binnen","https://www.butenunbinnen.de/","nachrichten/schwerpunkt-corona-virus-106.html","a", "teaser-link"))
