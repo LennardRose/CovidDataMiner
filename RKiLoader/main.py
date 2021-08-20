@@ -8,9 +8,12 @@ from ElasticSearchWrapper import ElasticSearchClient
 if __name__ == "__main__":
 
     es_client = ElasticSearchClient()
-    #vaccination_scraper = VaccinationScraper(es_client=es_client)
-    #testing_scraper = TestingScraper(es_client=es_client)
-    # vaccination_scraper.index_vaccination_data()
-    # testing_scraper.index_testing_data()
+
+    vaccination_scraper = VaccinationScraper(es_client=es_client)
+    testing_scraper = TestingScraper(es_client=es_client)
     incidence_scraper = IncidenceScraper(es_client=es_client)
-    incidence_scraper.convert_raw_data_to_district_list()
+
+    vaccination_scraper.index_vaccination_data()
+    testing_scraper.index_testing_data()
+
+    incidence_scraper.index_incidence_data()

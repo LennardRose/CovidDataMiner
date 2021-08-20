@@ -20,7 +20,7 @@ class TestingScraper():
         self.request_time = None
         self.latest_week = self.get_latest_week_from_es()
 
-    def get_testing_dat_raw(self):
+    def get_testing_data_raw(self):
         """function that returns raw testing data
         if not present requests it from api and saves the request time stamp
 
@@ -39,7 +39,7 @@ class TestingScraper():
         Returns:
             list: testing data per state as a list
         """
-        data = copy.deepcopy(self.get_testing_dat_raw())
+        data = copy.deepcopy(self.get_testing_data_raw())
         week_list = []
         for week in data['data']['history']:
             week_date = week['calendarWeek']
@@ -62,7 +62,7 @@ class TestingScraper():
         Returns:
             dict: meta data of testing request
         """
-        data = copy.deepcopy(self.get_testing_dat_raw())
+        data = copy.deepcopy(self.get_testing_data_raw())
         del data['data']
         data['identifier'] = elasticsearch_testing_index
         return data
