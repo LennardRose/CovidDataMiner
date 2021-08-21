@@ -209,25 +209,41 @@ TODO
 
 \chapter{Einführung}\label{ch:intro}
 
+\chapter{Cluster}
+Grunds\"atzlich wird das komplette Projekt auf Basis eines Hadoop Cluster erstellt. Hadoop ist ein \"Okosystem f\"ur verteilte Verarbeitung von Daten. Hadoop erm\"oglicht eine horizontale Skalierung, dies bedeutet das dem System dynamisch zus\"atzliche Knoten, in diesem Fall Rechner, angeh\"angt werden k\"onnen die dann die Rechenleistung des Clusters erh\"ohen. In der Basis besteht Hadoop zun\"achst aus YARN und dem HDFS die zusammen mit dem MapReduce Konzept eine Datenverarbeitung erm\"oglichen. Zus\"atzlich zu diesen Standardkomponenten wurden noch Apache Oozie sowie Apache Zeppelin installiert. Diese einzelnen Konzepte werden im folgendendem noch genauer erkl\"art.
+\section{YARN}
+YARN steht f\"ur 'Yet another resource negotiater'. Im Grund besteht die Aufgabe des YARN darin die verf\"ugbaren Ressourcen auf alle anfallenden Aufgaben zu verteilen.
+\section{HDFS}
+\section{MapReduce}
+\section{Oozie}
+\section{Zeppelin}
+
+\chapter{Entwicklungsprozess}
+Beim Entwicklungsprozess wurde sich f\"ur eine Scrum artige L\"osung entschieden. So werden klassische Artefakte und Tools wie etwa das Daily oder der Backlog entsprechend angepasst angewandt. Anpassung meist im Sinne der zeitlichen Komponente. Da das Projekt parallel w\"ahrend des Semesters abl\"auft wurde hier das 'Daily', von einem t\"aglichen auf einen w\"ochentlichen Rhythmus umgestellt. Das Backlog wird durch das Team selbst bef\"ullt da es keinen 'Product Owner' gibt. Genauso wurden die Sprints abgewandelt, durch die zeitliche Entzerrung wird hier direkt auf eine dynamische Sprintl\"ange gesetzt die jeweils zum Sprint-Anfang abgestimmt worden ist. \newline
+G\"anzlich verzichtet wurde auf die Sprint Retrospektive, zwar hat sich im Laufe des Projekts der Prozess dynamisch angepasst, allerdings wurde hier nicht explizit ein Artefakt bzw. Termin durchgef\"uhrt. \"Anderungen am Prozess wurden kurzfristig und in direkter Absprache mit allen Teammitgliedern beschlossen.
+
+
 \chapter{Datenablagekonzept}
 F\"ur die Datenablage wurde zun\"achst ein entsprechendes Konzept entwickelt. Dieses Konzept basiert auf den Daten die abgelegt werden sollen. Hierzu wird zun\"achst ein \"Uberblick \"uber die zu ablegenden Daten gegeben:
 \begin{itemize}
 	\item Corona Nachrichten/Artikel
+	\item Corona RKI Daten
 	\item Corona Maßnahmen
 	\item Wetterdaten
-	\item 'Querdenker' Telegram Gruppen
 \end{itemize}
 Jede einzelne Datenquelle wird nun genauer beleuchtet und ein entsprechendes Datenablagekonzept erarbeitet. Da die Konzepte sich aber sehr \"ahneln wird der Hauptteil der Erkl\"arung bei der gr\"ossten Komponente den Corona-Artikeln zu finden sein. Grunds\"atzlich werden alle Daten sowohl in Elasticsearch als auch im HDFS abgelegt. Wobei das HDFS haupts\"achlich f\"ur Data Governance Zwecke genutzt wird. Bedeutet das hier die Rohdaten unver\"andert gespeichert werden sollen um sp\"ater immer noch Zugriff auf die Original Daten zu haben, was eine Art 'sanity-check' der Daten erm\"oglicht.
 \section{Corona Nachrichten/Artikel}
 Die Corona Nachrichten bzw. Artikel werden in zwei unterschiedlichen Technologien abgelegt. Zun\"achst betrachten wir die Rohdaten. Wie bereits erkl\"art wird jeder Artikel in Rohformat gespeichert. Diese Daten sind aber f\"ur die Auswertung und zur \"Ubersicht der Datensammlung erst mal unwichtig. Dies bedeutet das diese Daten nicht in einer Datenbank indiziert, sondern nur im HDFS abgelegt werden. Die Geschwindigkeit des HDFS f\"ur den Datenzugriff ist ausreichend um die Daten bei einer genauen Auswertung ad-hoc zu lesen. Streng genommen k\"onnte man sogar argumentieren dass das HDFS nichts anderes als ein 'key-value store' ist. So wird im Hintergrund eine Datei die unter einem gewissen Pfad abgelegt worden ist f\"ur den User als klassischer Dateipfad angezeigt (Ordner durch 'forward-slashes' getrennt und am Ende des Pfades ein Dateiname), intern aber der Pfad einen key darstellt. Dies ist n\"otig um die Verteilung und Ausfallsicherheit der Daten \"uber mehrere Knoten gew\"ahrleisten zu k\"onnen. Allerdings ist dies f\"ur den User faktisch nicht bemerkbar, da dieser immer mit den entsprechenden Pfaden arbeitet.
 Um nun den Kreis zu schliessen werden nicht nur Meta-Daten der Artikel gespeichert sondern auch der komplette Artikel im Rohformat um Datenverlust vorzubeugen und die Konsistenz der Daten sp\"ater noch pr\"ufen zu k\"onnen. Die Rohdaten werden dann abgelegt unter dem Pfad: '/datakraken/articles/\$bundesland\$/\$Zeitung\$/\$Datum\$/\$ArtikelId\$\_\$TimeStamp\$'. Dieser Pfad wird dann zu den Meta-Daten hinzugef\"ugt.
 Nun zu den Meta-Daten, diese kommen werden vom entsprechenden Scraper erzeugt. Dies Daten werden dann im Elasticsearch Cluster abgelegt unter entsprechendem Index Namen. Dies hilft dabei eine \"Ubersicht zu den Daten zu erhalte, einen Status zu bekommen in welchem Mass die Daten in das System kommen und erm\"oglicht eine rudiment\"are Analyse. Die Daten an sich sind definiert durch die entsprechende Config
+\section{Corona RKI Daten}
+Die wichtigsten Basis Informationen \"uber den Status der Corona-Pandemie in Deutschland sind h\"ochst wahrscheinlich Inzidenz-Wert und Impfquote. Diese Informationen werden in diesem Projekt \"uber das Robert-Koch-Institut bezogen. \"Uber eine \"offentliche API kann nicht nur Inzidenzwert pro Bundesland, sondern auch per Bezirk bezogen werden. Ausserdem sind alle Informationen zum derzeitigen Impfstand in Deutschland, sowie Informationen zu PCR- und Schnelltests in Deutschland verf\"ugbar. Alle Informationen die hier von der API zur Verf\"ugung gestellt werden, werden auch gespeichert. Hier folgt der Scraper dem Allgemeinen Konzept, die Original Daten werden im HDFS abgelegt und dann mit minimaler Ver\"anderung im Elasticsearch indiziert.
 \section{Corona Maßnahmen}
 Das soeben erw\"ahnte Konzept der Nachrichten wird genauso f\"ur die Massnahmen verwendet. Rohdaten werden im HDFS abgelegt, w\"ahrend die beschreibenden Daten im Elasticsearch indiziert werden. Diese Massnahmen werden mit folgendem Pattern abgelegt: '/datakraken/measures/\$bundesland\$/\$Zeitung\$/\$Datum\$/\$ArtikelId\$\_\$TimeStamp\$'.
+\section{Corona Basis Daten}
 \section{Wetterdaten}
 Auch die Wetterdaten werden im gleichen Stil abgelegt. Heisst die einzelnen Wetterlogs werden als Dokumente im Elasticsearch abgelegt und auch hier\"uber abgefragt. Allerdings werden die Wetterdaten auch noch entsprechend des allgmeinen Konzepts im HDFS abgelegt. Die Ablage Struktur im HDFS ist in folgendem Pattern:  '/datakraken/weather/\$Stadt\$/\$Datum\$/\$TimeStamp\$'.
-\section{'Querdenker' Telegram Gruppen}
-Im Bereich der Telegram Gruppen muss hier differenziert werden. Die verschickten Nachrichten an sich werden mit den Meta-Daten zusammen im Elasticsearch abgelegt. H\"angt allerdings an der Nachricht noch eine Datei ein, oder ein Link, wird die Datei im HDFS abgelegt. Dazu wird eine Referenz erstellt und mit im Elasticsearch abgelegt. Die Ablage Struktur im HDFS ist in folgendem Pattern: '/datakraken/telegram/\$GruppenName\$/\$Datum\$/\$NachrichtId\$\_\$TimeStamp\$'.
+
 \chapter{Problemstellung}
 
 \chapter{Lösung}
