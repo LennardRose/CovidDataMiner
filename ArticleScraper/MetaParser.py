@@ -1,5 +1,5 @@
 import json
-import utils
+import Utils
 import logging
 
 class meta_parser:
@@ -17,7 +17,7 @@ class meta_parser:
             "url": URL, #wird direkt übergeben um sie nicht nochmal auslesen zu müssen
             "type" : None, 
             "date" : None, 
-            "index_time" : utils.date_now(),
+            "index_time" : Utils.date_now(),
             "city" : meta_config["city"], 
             "site_name" : meta_config["site_name"], 
             "author" : None, 
@@ -86,7 +86,7 @@ class meta_parser:
             logging.error("Forbidden attribute value DEFAULT for title meta data.")
 
         elif key == "date":
-            self.meta_data[key] = utils.date_now()
+            self.meta_data[key] = Utils.date_now()
 
         else:
             self.meta_data[key] = self.meta_config[key]["default"]
@@ -108,10 +108,10 @@ class meta_parser:
 
             if key == "title":
 
-                self.meta_data[key] = utils.slugify(self.get_content(tag))
+                self.meta_data[key] = Utils.slugify(self.get_content(tag))
 
             elif key == "date":
-                self.meta_data[key] = utils.parse_date(self.get_content(tag))
+                self.meta_data[key] = Utils.parse_date(self.get_content(tag))
 
             else:
                 self.meta_data[key] = self.get_content(tag)
@@ -170,10 +170,10 @@ class meta_parser:
         if self.meta_config[key]["tag"] in script:
     
             if key == "title":
-                self.meta_data[key] = utils.slugify(script[self.meta_config[key]["tag"]])
+                self.meta_data[key] = Utils.slugify(script[self.meta_config[key]["tag"]])
 
             elif key == "date":
-                self.meta_data[key] = utils.parse_date(script[self.meta_config[key]["tag"]])
+                self.meta_data[key] = Utils.parse_date(script[self.meta_config[key]["tag"]])
 
             else:
                 self.meta_data[key] = script[self.meta_config[key]["tag"]] 
