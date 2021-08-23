@@ -38,6 +38,8 @@ class ElasticSearchClient:
         docs = self.es_client.search(index="article_config", body=query)
         if docs["hits"]["hits"]:
             return docs["hits"]["hits"][0]["_source"]
+        else:
+            logging.error("id: " + id + " not found.")
 
 
 

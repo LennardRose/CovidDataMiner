@@ -7,23 +7,31 @@ from source_object import source_object
 from Config import STANDARD_FORMAT 
 
 def parse_date(date, format=STANDARD_FORMAT):
+    """
+    parses a date to another format
+    :param date: the date to parse, can be str or date
+    :param format: the format to parse the date to, uses STANDARD_FORMAT from config as default
+    :return: the date in new format
+    """
     if type(date) == str:
         date =  dateutil.parser.parse(date)
 
     return date.strftime(format)
 
 def date_now():
+    """
+    returns current date in the STANDARD_FORMAT
+    """
     return parse_date(datetime.datetime.now())
 
-"""
-Taken from https://github.com/django/django/blob/master/django/utils/text.py
-Convert to ASCII if 'allow_unicode' is False. Convert spaces or repeated
-dashes to single dashes. Remove characters that aren't alphanumerics,
-underscores, or hyphens. Convert to lowercase. Also strip leading and
-trailing whitespace, dashes, and underscores.
-"""
 def slugify(value, allow_unicode=False):
-
+    """
+    Taken from https://github.com/django/django/blob/master/django/utils/text.py
+    Convert to ASCII if 'allow_unicode' is False. Convert spaces or repeated
+    dashes to single dashes. Remove characters that aren't alphanumerics,
+    underscores, or hyphens. Convert to lowercase. Also strip leading and
+    trailing whitespace, dashes, and underscores.
+    """
     value = str(value)
     value.replace("ä", "ae").replace("Ä", "Ae").replace("ö", "oe").replace("Ö", "Oe").replace("ü", "ue").replace("Ü", "Ue").replace("ß", "ss")
     if allow_unicode:
@@ -37,6 +45,8 @@ def slugify(value, allow_unicode=False):
   
 
 
+
+#################################### this is just a helper and should be removed soon ############################################
 
 source_list = []
 source_list.append(source_object("muenchen","sueddeutsche_zeitung", "https://www.sueddeutsche.de", "/thema/Coronavirus_in_M%C3%BCnchen", "a", "sz-teaser"))

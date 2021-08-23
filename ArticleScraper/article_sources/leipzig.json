@@ -6,7 +6,7 @@
     "html_tag": "div",
     "html_class": "news-latest-item",
     "condition": null,
-    "condition_boolean": null,
+    "include_condition": null,
     "title": {
         "source": "STANDARD",
         "tag": null,

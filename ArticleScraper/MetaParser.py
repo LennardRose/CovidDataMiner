@@ -3,6 +3,10 @@ import utils
 import logging
 
 class meta_parser:
+    """
+    parses meta data from given soup based on the specifications in the meta_config
+
+    """
 
     def __init__(self, URL, soup, meta_config):
 
@@ -10,7 +14,7 @@ class meta_parser:
         self.soup = soup
         self.meta_data = { "title" : None, 
             "description" : None, 
-            "url": URL, 
+            "url": URL, #wird direkt übergeben um sie nicht nochmal auslesen zu müssen
             "type" : None, 
             "date" : None, 
             "index_time" : utils.date_now(),
@@ -20,9 +24,20 @@ class meta_parser:
             "keywords" : None,
             "filename" : "placeholder_to_prevent_iteration"}
 
+
+
+    def get_meta_data(self):
+        """
+        returns the meta_data
+        """
+        return self.meta_data
+
+
+
     def parse_metadata(self):
         """
-        parses meta data from given soup based on the specifications in source
+        chooses a parsing strategy for every meta attribute based on the given source set in the meta_config to set the value
+        sets the filename
         """
         for key in self.meta_data.keys():
 
@@ -46,7 +61,6 @@ class meta_parser:
 
         self.set_filename()
 
-        return self.meta_data
 
     def set_filename(self):
         self.meta_data["filename"] = self.meta_config["city"] + "_" + self.meta_config["site_name"] + "_" + self.meta_data["title"] + ".txt"
@@ -58,7 +72,15 @@ class meta_parser:
         
         self.meta_data[key] = "-" #überlegen welches freizeichen 
 
+
+
     def set_default(self, key):
+        """
+        set the keys default value
+        error if the key is title, title must be unique for filename
+        default date is the current date
+        every other key is set from meta_configs default value
+        """
 
         if key == "title":
             logging.error("Forbidden attribute value DEFAULT for title meta data.")
@@ -68,6 +90,11 @@ class meta_parser:
 
         else:
             self.meta_data[key] = self.meta_config[key]["default"]
+
+        if self.meta_data[key] == None or self.meta_data[key] == "":
+            logging.warning("No default-value set for " + key)
+
+
 
     def parse_from_tag(self, key):
         """
@@ -88,6 +115,26 @@ class meta_parser:
 
             else:
                 self.meta_data[key] = self.get_content(tag)
+
+
+
+    def get_content(self, tag):
+        """
+        get content of given tag, if tag has some nested tags inside of which one is holding the content, it returns the first content
+        example:
+        right result will be returned: <div><span><a>right</a></span></div> 
+        wrong result will be returned: <div><span>wrong<a>right</a></span></div>
+        """
+        if not tag.is_empty_element:
+            return tag.text
+        if tag.get("content", None) != None and tag.get("content", None) != "":
+            return tag.get("content", None)
+        else:
+            for child in tag.descendants:
+                return self.get_content(child) # rekursiv vielleicht bisschen zu unperformant
+
+        logging.error("No content in tag: " + tag if tag else "<not found>" + " found.")
+
         
 
     def parse_from_json(self, key):
@@ -108,44 +155,30 @@ class meta_parser:
             if type(scripts) == list: #check ob json liste
 
                 for script in scripts:
-                    self.get_json_value(script, key) #rekursiv whoopsie
+                    self.get_json_value(script, key)
 
             else: 
                 self.get_json_value(scripts, key)
         
 
 
-    def get_json_value(self, scripts, key):
-        try:
-            if scripts[self.meta_config[key]["tag"]]:
-        
-                if key == "title":
-                    self.meta_data[key] = utils.slugify(scripts[self.meta_config[key]["tag"]])
-
-                elif key == "date":
-                    self.meta_data[key] = utils.parse_date(scripts[self.meta_config[key]["tag"]])
-
-                else:
-                    self.meta_data[key] = scripts[self.meta_config[key]["tag"]] 
-        except: #keyerror abfangen bis ich weiß wie man in nem json check ob key vorhanden ist
-            pass
-
-
-    def get_content(self, tag):
+    def get_json_value(self, script, key):
         """
-        get content of given tag, if tag has some nested tags inside of which one is holding the content, it returns the first content
-        example:
-        right result will be returned: <div><span><a>right</a></span></div> 
-        wrong result will be returned: <div><span>wrong<a>right</a></span></div>
+        set the meta_data of the given key if the json-key is in the given script
         """
-        if not tag.is_empty_element:
-            return tag.text
-        if tag.get("content", None) != None and tag.get("content", None) != "":
-            return tag.get("content", None)
-        else:
-            for child in tag.descendants:
-                return self.get_content(child) # rekursiv vielleicht bisschen zu unperformant
 
-        logging.error("No content in tag: " + tag if tag else "<not found>" + " found.")
+        if self.meta_config[key]["tag"] in script:
+    
+            if key == "title":
+                self.meta_data[key] = utils.slugify(script[self.meta_config[key]["tag"]])
+
+            elif key == "date":
+                self.meta_data[key] = utils.parse_date(script[self.meta_config[key]["tag"]])
+
+            else:
+                self.meta_data[key] = script[self.meta_config[key]["tag"]] 
+
+
+
 
 

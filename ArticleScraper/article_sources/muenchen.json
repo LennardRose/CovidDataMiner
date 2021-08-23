@@ -6,7 +6,7 @@
     "html_tag": "a",
     "html_class": "sz-teaser",
     "condition": "/muenchen",
-    "condition_boolean": true,
+    "include_condition": true,
     "title": {
         "source": "TAG",
         "tag": "meta",
