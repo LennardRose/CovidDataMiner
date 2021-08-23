@@ -1,0 +1,44 @@
+{
+    "city": "leipzig",
+    "site_name": "stadt",
+    "base_url": "https://www.leipzig.de/",
+    "path_url": "jugend-familie-und-soziales/gesundheit/neuartiges-coronavirus-2019-n-cov/",
+    "html_tag": "div",
+    "html_class": "news-latest-item",
+    "condition": null,
+    "include_condition": null,
+    "title": {
+        "source": "STANDARD",
+        "tag": null,
+        "class": null
+    },
+    "date": {
+        "source": null,
+        "tag": null,
+        "class": null
+    },
+    "author": {
+        "source": null,
+        "tag": null,
+        "class": null,
+        "default": null
+    },
+    "description": {
+        "source": "NOEXIST",
+        "tag": null,
+        "class": null,
+        "default": null
+    },
+    "type": {
+        "source": "NOEXIST",
+        "tag": null,
+        "class": null,
+        "default": null
+    },
+    "keywords": {
+        "source": "NOEXIST",
+        "tag": null,
+        "class": null,
+        "default": null
+    }
+} 
