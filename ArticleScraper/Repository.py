@@ -3,6 +3,10 @@ import json
 import logging
 
 class Repository:
+    """
+    this class gathers all database and filesystem clients and redirects persistence methods
+    this is to make sure datasources are easily interchangable
+    """
 
     def __init__(self):
         self.article_client, self.meta_client = ElasticSearchClient()
@@ -31,4 +35,7 @@ class Repository:
                 return json.load(file)
         except:
             logging.error(filename + " not found.")
+
+    def get_latest_entry_URL(self, source_URL):
+        self.meta_client.get_latest_entry_URL(source_URL)
 

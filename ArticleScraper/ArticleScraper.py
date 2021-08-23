@@ -15,7 +15,6 @@ class ArticleScraper:
         ssl._create_default_https_context = ssl._create_unverified_context
 
 
-
     def get_text_of_page(self, soup):
         """
         parse soup to string 
@@ -41,13 +40,17 @@ class ArticleScraper:
         """
 
         soup = self.get_soup_out_of_page(URL)
-        articlelist = soup.body.find_all(html_tag, html_class )
+        article_link_list = soup.body.find_all(html_tag, html_class )
         links = []
-        for row in articlelist: 
-            if row.has_attr('href'):
-                links.append(row['href'])
+
+        for article_link in article_link_list: 
+
+            if article_link.has_attr('href'):
+                links.append(article_link['href'])
+
             else:    
-                link = self.search_direct_children_for_href(row)
+                link = self.search_direct_children_for_href(article_link)
+
                 if link != None:
                     links.append(link)
 
@@ -73,15 +76,32 @@ class ArticleScraper:
         saves the content of every valid link in the list
         also completes every relative URL with the base_url if necessary
         """
+        source_URL = source["base_url"] + source["path_url"]
+        most_recent_saved_articles_url = self.repository.get_latest_entry_URL(source_URL) 
         
-        for URL in self.get_articlelink_list(source["base_url"] + source["path_url"], source["html_tag"], source["html_class"]):
+        for URL in self.get_articlelink_list(source_URL, source["html_tag"], source["html_class"]):
             
             if self.is_valid(URL, source["condition"], source["include_condition"]):
 
                 if self.is_relative_URL(URL):
                     URL = source["base_URL"] + URL
 
+                if self.was_already_saved(most_recent_saved_articles_url, URL):
+                    break
+
                 self.save_content_of_page(source, URL)    
+
+
+    def was_already_saved(self, most_recent_saved_articles_url, URL):# a lot of text for a function that does nothing else than comparing two strings, but easy to break things here
+        """
+        the first link in the article_list is always the most recent
+        by iterating these and break if the url is matching the url of the latest meta_data document we are preventing the system of scraping already present data
+        :param most_recent_saved_articles_url: the URL of the most recent saved article (in an earlier call)
+        :param URL: the url of the current link
+        :return: true if the URL matches the url of the most recent url
+        """
+        return most_recent_saved_articles_url == URL
+
 
 
     def is_relative_URL(URL):

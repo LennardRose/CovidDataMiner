@@ -1,3 +1,7 @@
+
+############################## this is outdated and will be deleted soon ######################################
+
+
 class source_object:
 
     def __init__(self, city, site_name, base_url, path_url, html_tag = None, html_class = None, condition = None, include_condition = None,

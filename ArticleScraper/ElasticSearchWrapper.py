@@ -67,4 +67,16 @@ class ElasticSearchClient:
         self.es_client.index(index="meta_data", body=metadata_json,
                              doc_type="_doc")
 
+                             
+    def get_latest_entry_URL(self, source_URL):
+        """
+        searches for the latest entries url of the given website
+        latest means latest index_time 
+        :param source_URL: the URL of the site we are looking for the latest entry
+        :returns: the url of the latest entry in the meta_data index with the matching source_URL
+        """
+        query = {"query" : {"match": { "source_url": source_URL } },"sort" : [{"index_time": {"order": "desc" } } ],"size": 1 } 
+        docs = self.es_client.search(index="meta_data", body = query)
+        return docs["hits"]["hits"][0]["_source"]["url"]
+
 

@@ -15,6 +15,7 @@ class meta_parser:
         self.meta_data = { "title" : None, 
             "description" : None, 
             "url": URL, #wird direkt übergeben um sie nicht nochmal auslesen zu müssen
+            "source_url" : meta_config["base_url"] + meta_config["path_url"], #wird gebraucht um später doppelte ergebnisse zu vermeiden und um bei mehreren scrapern pro website verwechslungen zu vermeiden
             "type" : None, 
             "date" : None, 
             "index_time" : Utils.date_now(),
