@@ -19,7 +19,7 @@ class meta_parser:
             "type" : None, 
             "date" : None, 
             "index_time" : Utils.date_now(),
-            "city" : meta_config["city"], 
+            "region" : meta_config["region"], 
             "site_name" : meta_config["site_name"], 
             "author" : None, 
             "keywords" : None,
@@ -64,7 +64,7 @@ class meta_parser:
 
 
     def set_filename(self):
-        self.meta_data["filename"] = self.meta_config["city"] + "_" + self.meta_config["site_name"] + "_" + self.meta_data["title"] + ".txt"
+        self.meta_data["filename"] = self.meta_config["region"] + "_" + self.meta_config["site_name"] + "_" + self.meta_data["title"] + ".txt"
 
 
     def set_noexist(self, key):
@@ -134,7 +134,7 @@ class meta_parser:
             for child in tag.descendants:
                 return self.get_content(child) # rekursiv vielleicht bisschen zu unperformant
 
-        logging.error("No content in tag: " + tag if tag else "<not found>" + " found.")
+        logging.error("No content in tag: " + tag if tag else "<tag not found>" + " found.")
 
         
 

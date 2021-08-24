@@ -4,9 +4,9 @@ import unicodedata
 import re
 import json
 from source_object import source_object
-from Config import STANDARD_FORMAT 
+from Config import STANDARD_DATE_FORMAT 
 
-def parse_date(date, format=STANDARD_FORMAT):
+def parse_date(date, format=STANDARD_DATE_FORMAT):
     """
     parses a date to another format
     :param date: the date to parse, can be str or date

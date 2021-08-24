@@ -31,7 +31,7 @@ class ArgumentParserWrapper: # clap the sillables like a 3 year old
         :return: all found data
         """
 
-        args = self.parser.parse_arguments()
+        args = self.parse_arguments()
         data = []
 
         if len(sys.argv) < 2: #programmname ist auch ein argument, deshalb 2 ---> scrape alle in elasticsearch wenn nichts weiter angegeben
@@ -42,5 +42,7 @@ class ArgumentParserWrapper: # clap the sillables like a 3 year old
                 
         for id in args.elastic_ids:
             data.append(self.repository.get_article_config(id))
+
+        data = list(filter(None, data)) # filter the none values for missing values
 
         return data

@@ -38,10 +38,12 @@ class ArticleScraper:
         collects all tags from the specified URL-combination that fits the html_tag html_class combination
         If no href is found, the children will be searched for a href
         """
+        most_recent_saved_articles_url = self.repository.get_latest_entry_URL(URL) 
 
         soup = self.get_soup_out_of_page(URL)
         article_link_list = soup.body.find_all(html_tag, html_class )
         links = []
+        result_list = []
 
         for article_link in article_link_list: 
 
@@ -54,7 +56,17 @@ class ArticleScraper:
                 if link != None:
                     links.append(link)
 
-        return links
+        for link in links:
+
+            if self.was_already_saved(most_recent_saved_articles_url, link):
+                logging.info("Reached last element of previous session: " + link)
+                break
+            else:
+                result_list.insert(0, link) # filling the resultlist so it is a reverse list of the links with the first element being the first article after the most recent saved one
+
+        return result_list  # important to have the newest article at the last index of the list, so it has the newest indexing time, making it easier (if not possible) to search for without having to write an overcomplicated algorithm
+
+
         #erster link ist immer der aktuellste, vielleicht speichern und dann abgleichen, dass man nur immer die läd die man noch nicht hat        
 
 
@@ -77,7 +89,6 @@ class ArticleScraper:
         also completes every relative URL with the base_url if necessary
         """
         source_URL = source["base_url"] + source["path_url"]
-        most_recent_saved_articles_url = self.repository.get_latest_entry_URL(source_URL) 
         
         for URL in self.get_articlelink_list(source_URL, source["html_tag"], source["html_class"]):
             
@@ -85,9 +96,6 @@ class ArticleScraper:
 
                 if self.is_relative_URL(URL):
                     URL = source["base_URL"] + URL
-
-                if self.was_already_saved(most_recent_saved_articles_url, URL):
-                    break
 
                 self.save_content_of_page(source, URL)    
 
@@ -100,11 +108,14 @@ class ArticleScraper:
         :param URL: the url of the current link
         :return: true if the URL matches the url of the most recent url
         """
-        return most_recent_saved_articles_url == URL
+        if most_recent_saved_articles_url:
+            return most_recent_saved_articles_url == URL
+        else:
+            return False
 
 
 
-    def is_relative_URL(URL):
+    def is_relative_URL(self, URL):
         """
         checks if the given URL starts with http, to determine if it is a relative URL
         lots of webpages return only the path url on their own website
@@ -138,6 +149,7 @@ class ArticleScraper:
         saves the html source of the given URL 
         also saves the meta data of the page as configurated in the given article source
         """
+        logging.info("Save content of: " + URL)
         soup = self.get_soup_out_of_page(URL)
 
         parser = meta_parser( URL, soup, source)

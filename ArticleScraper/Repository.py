@@ -9,7 +9,8 @@ class Repository:
     """
 
     def __init__(self):
-        self.article_client, self.meta_client = ElasticSearchClient()
+        self.article_client = ElasticSearchClient() 
+        self.meta_client = ElasticSearchClient()
         self.file_client = ""
 
     def get_article_config(self, id):
@@ -37,5 +38,5 @@ class Repository:
             logging.error(filename + " not found.")
 
     def get_latest_entry_URL(self, source_URL):
-        self.meta_client.get_latest_entry_URL(source_URL)
+        return self.meta_client.get_latest_entry_URL(source_URL)
 

@@ -19,6 +19,26 @@ class ElasticSearchClient:
         logging.info("Init Elasticsearch client with url: " + elasticsearch_url + ":" + elasticsearch_port)
         self.es_client = Elasticsearch([elasticsearch_url + ":" + elasticsearch_port])
 
+        self.initialize_indizes_if_not_there()
+
+    def initialize_indizes_if_not_there(self):
+        """
+        initializes needed indizes if not already there
+        """
+        if not self.es_client.indices.exists(index="article_config"):
+            logging.info("Index article_config not found, initialize index.")
+            self.es_client.indices.create(index="article_config")
+
+        if not self.es_client.indices.exists(index="meta_data"):
+            logging.info("Index meta_data not found, initialize index.")
+            self.es_client.indices.create(index="meta_data", body=self.get_meta_data_mapping())
+            
+
+    def get_meta_data_mapping(self):
+        """
+        :return: the meta_data index mapping from the config
+        """
+        return META_DATA_MAPPING
 
     def get_es_client(self):
         """
@@ -75,8 +95,11 @@ class ElasticSearchClient:
         :param source_URL: the URL of the site we are looking for the latest entry
         :returns: the url of the latest entry in the meta_data index with the matching source_URL
         """
-        query = {"query" : {"match": { "source_url": source_URL } },"sort" : [{"index_time": {"order": "desc" } } ],"size": 1 } 
-        docs = self.es_client.search(index="meta_data", body = query)
-        return docs["hits"]["hits"][0]["_source"]["url"]
+        try:
+            query = {"query" : {"match": { "source_url": source_URL } },"sort" : [{"index_time": {"order": "desc" } } ],"size": 1 } 
+            docs = self.es_client.search(index="meta_data", body = query)
+            return docs["hits"]["hits"][0]["_source"]["url"]
+        except:
+            return None
 
 
