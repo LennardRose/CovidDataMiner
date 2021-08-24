@@ -15,6 +15,7 @@ import pytesseract
 import pandas as pd
 import pdfminer
 import pdfminer.high_level
+from selenium import webdriver
 
 try:
     from PIL import Image
@@ -34,31 +35,40 @@ logging.basicConfig(level=logging.INFO)
 ssl._create_default_https_context = ssl._create_unverified_context
 #URL = "https://www.stmgp.bayern.de/coronavirus/"
 # https://regex101.com/r/2BXdcV/1
-DATE_REGEX = r"([1-3]?[0-9][.]([ ](Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)([ ]202[0-9])?|[0-1]?[0-9][.]?(202[0-9])?))"
+DATE_REGEX = r"([1-3]?[0-9][.]([ ](Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)([ ]202[0-9])?|[0-1]?[0-9][.]?(202[0-9])?))\D"
 # https://regex101.com/r/4J8BJ9/1
 INCIDENCE_REGEX = r"(?<=Inzidenzstufe \d \n[(]).*(?=\))"
+# https://regex101.com/r/FojuZ9/1
+OTHER_INCIDENCE_REGEX = r"(((?<=Inzidenzstufe)|(?<=Inzidenzwert)|(?<=Inzidenz))).{0,20}(\d{2,3})"
 
-attributes = ["validFrom", "incidenceBased", "federateState", "creationDate", "incidenceSteps", "tags"]
-tags = ["Maskenpflicht", "Kontaktbeschrankung", "Veranstaltungen", "Kultur", "Gastronomie", "Schule", "Sport"]
+attributes = ["validFrom", "incidenceBased", "federateState", "creationDate", "incidenceRanges", "tags"]
+#tags = ["Maskenpflicht", "Kontaktbeschrankung", "Veranstaltungen", "Kultur", "Gastronomie", "Schule", "Sport"]
+tags = {
+    "Maskenpflicht" : ["Maskenpflicht"],
+    "Kontaktbeschränkung" : ["Kontaktbeschränkung", "Kontaktbeschrankung"],
+    "Veranstaltungen" : ["Events", "Veranstaltungen"],
+    "Kultur" : ["Kultur"],
+    "Gastronomie" : ["Gastronomie"],
+    "Schule" : ["Schule", "Kindergarten"],
+    "Sport" : ["Sport", "Fitnessstudios"]
+}
+
 
 def getImgURLfromElem(elem):
-    #if "Regeln" in elem['alt'] or "Regelung" in elem['alt']:
-    srcSet = elem.attrs['srcset']
-    srcSet = srcSet.split(',')
+    if "Regeln" in elem['alt'] or "Regelung" in elem['alt'] or not elem['alt'] or "Änderung" in elem['alt']:
+        imgURL = elem['src']
+        logging.info("Filtering found Img-Element %s", imgURL)
+        return imgURL
 
-    srcSet = ['http' + re.search('http(.*).png', str).group(1) + '.png' for str in srcSet]
-    srcSet.sort()
-    # brauchen wir alle Links zu den Bildern?
-    # hol mir jetzt mal nur das größte Bild weil geile Auflösung
-    size = len(srcSet)
-    imgURL = srcSet[size - 1]
-    logging.info("Filtering found Img-Element %s", imgURL)
-    return imgURL
+    return None
 
 def getPDFURLfromElem(elem):
 
 
-    pdfURL = row.URL[:row.URL.index(".de")+4] + elem["href"]
+    pdfURL = elem["href"]
+    if not pdfURL.startswith(row.URL[:row.URL.index(".de")+4]):
+        pdfURL = row.URL[:row.URL.index(".de")+4] + elem["href"]
+
     logging.info("Filtering found PDF %s", pdfURL)
     return pdfURL
 
@@ -80,65 +90,124 @@ def generateTxtFileFromPDF(pdfFile):
 
 def saveImagesFromPage(imgURLs, directory):
 
-    fileNames = [""] * len(imgURLs)
-    incidenceRanges = [""] * len(imgURLs)
+    #fileNames = [""] * len(imgURLs)
+    txtData = ""
 
     if not os.path.isdir(directory):
         os.makedirs(directory)
 
     for index, imgURL in enumerate(imgURLs, start=0):
-        incidenceRanges[index] = re.search('ueberblick_(.*).png', imgURL).group(1)
-        #fileNames[index] = datetime.now().strftime("%d-%m-%Y_%H-%M-%S/")+ restrictionData["federateState"] + "_" + incidenceType + ".png"
-        fileNames[index] = directory+incidenceRanges[index] + ".png"
-        #TODO: save raw data to hadoop
-        logging.info("downloading File %s", fileNames[index])
-        urllib.request.urlretrieve(imgURL, fileNames[index])
 
-    return fileNames, incidenceRanges
+        #clean url
+        if not imgURL.find('?') < 1:
+            imgURL = imgURL[:imgURL.find('?')]
+
+        t, dataType = os.path.splitext(imgURL)
+
+        image = 'image' + str(index+1)
+        fileName = directory+image+dataType
+        fileNameBG = directory + image + "BG" + dataType
+        fileNameBW = directory + image + "BW" + dataType
+
+        #TODO: save raw data to hadoop
+
+        logging.info("downloading File %s", fileName)
+        urllib.request.urlretrieve(imgURL, fileName)
+
+        logging.info("converting %s into B&G",fileName)
+        imgBG = Image.open(fileName).convert("L")
+        imgBW = Image.open(fileName).convert("1", dither=Image.NONE)
+
+        imgBG.save(fileNameBG)
+        imgBW.save(fileNameBW)
+
+        logging.info("extracting text from image")
+        #data = pytesseract.image_to_string(Image.open(fileNames[index]), lang='deu')
+        data = pytesseract.image_to_string(imgBW, lang='deu')
+
+        #with open(fileNames[index] + ".txt", "w") as text_file:
+        #   text_file.write(data)
+
+        txtData += '\n' + data
+
+    return txtData
 
 def savePDFfromPage(pdfURLs, directory):
 
     fileNames = [""] * len(pdfURLs)
+    txtData = ""
 
     if not os.path.isdir(directory):
         os.makedirs(directory)
 
     for index, pdfURL in enumerate(pdfURLs, start=0):
 
-        fileNames[index] = directory + pdfURL[pdfURL.rindex("/")+1:pdfURL.rindex(".")] + ".pdf"
-        logging.info("downloading File %s", fileNames[index])
-        urllib.request.urlretrieve(pdfURL, fileNames[index])
+        fileName = directory + pdfURL[pdfURL.rindex("/")+1:pdfURL.rindex(".")] + ".pdf"
+        logging.info("downloading File %s", fileName)
+        urllib.request.urlretrieve(pdfURL, fileName)
 
-    return fileNames
+        with open(fileName, 'rb') as fin:
+            data = pdfminer.high_level.extract_text(fin, codec='utf-8')
+
+        with open(fileName + ".txt", "w") as text_file:
+            text_file.write(data)
+
+        txtData += '\n' + data
+
+    return txtData
+
+def extractIncidences(data):
+
+    incidenceRanges = []
+
+    matches = re.finditer(OTHER_INCIDENCE_REGEX, data, re.MULTILINE)
+    for matchNum, match in enumerate(matches, start=1):
+        if not match.group(3) in incidenceRanges:
+            incidenceRanges.append(match.group(3))
+        #print(match.group(3))
+
+    incidenceRanges.sort()
+
+    return incidenceRanges
 
 def extractDate(data):
-    beginDateStr = re.search(DATE_REGEX, data, re.IGNORECASE).group()
-    if any(c.isalpha() for c in beginDateStr) and not beginDateStr[-1].isnumeric():
-        now = datetime.now()
-        beginDateStr += " " + str(now.year)
-    locale.setlocale(locale.LC_ALL, "german")
-    return datetime.strptime(beginDateStr, '%d. %B %Y')
+    match = re.search(DATE_REGEX, data, re.IGNORECASE)
+    if match:
+        beginDateStr = match.group()
+        beginDateStr = beginDateStr[:-1]
+        if any(c.isalpha() for c in beginDateStr) and not beginDateStr[-1].isnumeric():
+            now = datetime.now()
+            beginDateStr += " " + str(now.year)
+        locale.setlocale(locale.LC_ALL, "german")
+        try:
+            return datetime.strptime(beginDateStr, '%d. %B %Y')
+        except:
+            try:
+                return datetime.strptime(beginDateStr, '%d.%m.%Y')
+            except:
+                logging.error("date conversion failed")
+    logging.error("No ValidFrom Date found...")
+    return None
 
 def checkForTags(restrictionData, data, tags):
-    for tag in tags:
-        if tag in data:
-            if restrictionData['tags'] is None:
-                restrictionData['tags'] = [tag]
+    for tag, keys in tags.items():
+        for key in keys:
+            if re.search(key, data, re.IGNORECASE):
+            #if any(key in data for key in keys): #if any string from the list of keys is in data
+                if restrictionData['tags'] is None:
+                    restrictionData['tags'] = [tag]
+                else:
+                    if tag not in restrictionData['tags']:
+                        restrictionData['tags'].append(tag)
             else:
-                if tag not in restrictionData['tags']:
-                    restrictionData['tags'].append(tag)
-        else:
-            continue
+                continue
 
-def getInformationFromPDF(pdfFiles):
-    if pdfFiles:
+def getInformationFromPDF(txtData):
+    if txtData:
         for index, pdfFile in enumerate(pdfFiles, start=0):
             logging.info("analyzing Metadata for file %s", pdfFile)
 
-            with open(pdfFile, 'rb') as fin:
-                data = pdfminer.high_level.extract_text(fin,codec='utf-8')
-            with open(pdfFile + ".txt", "w") as text_file:
-                text_file.write(data)
+
 
             if index == 0:
                 restrictionData['validFrom'] = extractDate(data).strftime("%d-%m-%Y")
@@ -161,41 +230,27 @@ def getInformationFromPDF(pdfFiles):
                         restrictionData["incidenceSteps"].append(incidenceStep)
 
 
-
             checkForTags(restrictionData, data, tags)
 
 
-def getInformationFromImages(imgFiles, incidenceRanges):
+def getInformationFromData(txtData, restrictionData):
 
-    if imgFiles:
-        for index, imgFile in enumerate(imgFiles, start=0):
+    if txtData:
+        #for index, imgFile in enumerate(imgFiles, start=0):
 
-            logging.info("analyzing Metadata for file %s", imgFile)
+        logging.info("analyzing Metadata...")
 
-            data = pytesseract.image_to_string(Image.open(imgFile))
+        restrictionData['validFrom'] = extractDate(txtData).strftime("%d-%m-%Y")
 
-            with open(imgFile + ".txt", "w") as text_file:
-                text_file.write(data)
+        incidenceRanges = extractIncidences(txtData)
 
-            if index==0:
-                restrictionData['validFrom'] = extractDate(data).strftime("%d-%m-%Y")
+        if incidenceRanges:
+            restrictionData["incidenceRanges"] = incidenceRanges
+            restrictionData["incidenceBased"] = True
 
-            if incidenceRanges[index].startswith("u"):
-                incidenceStep = "<"+incidenceRanges[index][1:]
-            else:
-                incidenceStep = ">"+incidenceRanges[index][0:2]
+        checkForTags(restrictionData, txtData, tags)
 
-            if restrictionData["incidenceSteps"] is None:
-                restrictionData["incidenceSteps"] = [incidenceStep]
-            else:
-                restrictionData["incidenceSteps"].append(incidenceStep)
-
-            checkForTags(restrictionData, data, tags)
-
-    else:
-        logging.error("Couldn't find any images for URL %s", URL)
-
-def saveMetadata():
+def saveMetadata(restrictionData):
     # send metadata to elastic search
     fileName = directory+"data.json"
     with open(fileName, 'w') as outfile:
@@ -207,7 +262,24 @@ def saveMetadata():
 
     es = Elasticsearch()
     es.indices.create(index="restrictions", ignore=400)
-    es.index(index="restrictions", body=json_object)
+    if not es.exists(index="restrictions", id=restrictionData["federateState"]+restrictionData['creationDate']):
+        es.index(index="restrictions", id=restrictionData["federateState"]+restrictionData['creationDate'], body=json_object)
+
+def findElements(URL,target,value):
+    page = requests.get(URL)
+    soup = BeautifulSoup(page.content, 'html.parser')
+
+    element = ""
+
+    if target != 'CSSselector':
+        kwargs = {
+            target: value
+        }
+        element = soup.find_all(**kwargs)
+    else:
+        element = soup.select(value)
+
+    return element
 
 if __name__ == '__main__':
 
@@ -217,32 +289,35 @@ if __name__ == '__main__':
 
         logging.info("Starting scraping for %s with URL %s",row.State, row.URL)
 
-        restrictionData = dict.fromkeys(attributes)
-        restrictionData['incidenceBased'] = True
-        restrictionData['federateState'] = str(row.State)
-        restrictionData['creationDate'] = datetime.now().strftime("%d-%m-%Y")
+        element = findElements(row.URL, row.Target, row.Value)
 
-        directory = "measures/" + restrictionData["federateState"] + "/" + datetime.now().strftime("%d-%m-%Y_%H-%M/")
+        if element:
+            restrictionData = dict.fromkeys(attributes)
+            restrictionData['federateState'] = str(row.State)
+            restrictionData['creationDate'] = datetime.now().strftime("%d-%m-%Y")
+            restrictionData['incidenceBased'] = False
 
-        page = requests.get(row.URL)
-        soup = BeautifulSoup(page.content, 'html.parser')
-        if row.Target != 'CSSselector':
-            kwargs = {
-                row.Target : row.Value
-            }
-            element = soup.find_all(**kwargs)
+            directory = "measures/" + restrictionData["federateState"] + "/" + datetime.now().strftime("%d-%m-%Y_%H-%M/")
+
+            if element[0].name == "img": #-> multiple images
+                imgURLs = [getImgURLfromElem(elem) for elem in element]
+                imgURLs = [elem for elem in imgURLs if elem is not None] # Filters empty urls - guess not necessary anymore
+                if imgURLs:
+                    txtData = saveImagesFromPage(imgURLs, directory)
+                    getInformationFromData(txtData, restrictionData)
+                else:
+                    logging.error("Couldn't find any images for URL %s", row.URL)
+            elif element[0].name == "a": #-> PDF
+                pdfURLs = [getPDFURLfromElem(elem) for elem in element]
+                if pdfURLs:
+                    txtData = savePDFfromPage(pdfURLs, directory)
+                    getInformationFromData(txtData, restrictionData)
+                else:
+                    logging.error("Couldn't find any PDFs for URL %s", row.URL)
+
+            saveMetadata(restrictionData)
+            logging.info("Scraping for Federate State %s done", restrictionData["federateState"])
+
         else:
-            element = soup.select(row.Value)
+            logging.error("nothing found for URL %s", row.URL)
 
-        if element[0].name == "img": #-> multiple images
-            imgURLs = [getImgURLfromElem(elem) for elem in element]
-            #imgURLs = [elem for elem in imgURLs if elem is not None] # Filters empty urls - guess not necessary anymore
-            imgFiles, incidenceRanges = saveImagesFromPage(imgURLs, directory)
-            getInformationFromImages(imgFiles, incidenceRanges)
-        elif element[0].name == "a": #-> PDF
-            pdfURLs = [getPDFURLfromElem(elem) for elem in element]
-            pdfFiles = savePDFfromPage(pdfURLs, directory)
-            getInformationFromPDF(pdfFiles)
-
-        saveMetadata()
-        logging.info("Scraping for Federate State %s done", restrictionData["federateState"])

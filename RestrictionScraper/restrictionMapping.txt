@@ -13,7 +13,7 @@ PUT restrictions
         "incidenceBased" : {
           "type" : "boolean"
         },
-        "incidenceSteps" : {
+        "incidenceRanges" : {
           "type" : "text",
           "fields" : {
             "keyword" : {
