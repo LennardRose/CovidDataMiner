@@ -23,5 +23,5 @@ elasticsearch_testing_index = 'rki_testing'
 elasticsearch_incidence_index = 'rki_incidence'
 
 # -------------------------------hdfs---------------------------------------------------
-hdfs_base_url = '127.0.0.1'
-hdfs_port = '8020'
+hdfs_base_url = '192.168.0.115'
+hdfs_port = '9870'

@@ -1,4 +1,4 @@
-from hdfs import InsecureClient
+from pywebhdfs.webhdfs import PyWebHdfsClient
 import re
 import json
 import time
@@ -13,7 +13,8 @@ class HdfsHelper():
     def __init__(self) -> None:
         """init function that creates an insecure hdfs client
         """
-        self.hdfs_client = InsecureClient(hdfs_base_url)
+        self.hdfs_client = PyWebHdfsClient(
+            host=hdfs_base_url, port=hdfs_port, user_name='hadoop')
 
     def read_meta_json_from_hdfs(self, file_path):
         """reads a json file from the given path and converts it into an dictionary using json python lib
@@ -24,8 +25,7 @@ class HdfsHelper():
         Returns:
             json: the json document as a dict/ json object
         """
-        with self.hdfs_client.read(file_path, encoding='utf-8') as reader:
-            return json.load(reader)
+        return json.loads(self.hdfs_client.read_file(file_path))
 
     def get_metajsons_from_directory(self, directory):
         """get all meta jsons in a hdfs directory matching the internal regex pattern
@@ -37,9 +37,14 @@ class HdfsHelper():
         Returns:
             list: list of all meta jsons in specified hdfs directory
         """
-        file_names = self.hdfs_client.list(directory)
-        p = re.compile(".*[mM]eta.*\\.json")
-        return [name for name in file_names if p.match(name)]
+        file_names = self.hdfs_client.list_dir(
+            directory)['FileStatuses']['FileStatus']
+        file_list = []
+        for file_name in file_names:
+            file_list.append(file_name['pathSuffix'])
+        file_list = list(
+            filter(lambda x: x.endswith(".json"), file_list))
+        return file_list
 
     def save_meta_json_to_hdfs(self, meta_json, target_path):
         """takes a meta json and a target path
@@ -50,8 +55,8 @@ class HdfsHelper():
             meta_json (dict): meta json as a dictionary / json object
             target_path (dict): hdfs file path of target location
         """
-        with self.hdfs_client.write(target_path, encoding='utf-8', overwrite=True) as writer:
-            json.dump(meta_json, writer)
+        self.hdfs_client.create_file(
+            target_path, json.dumps(meta_json), overwrite=True)
 
     def append_dict_to_meta_json(self, file_path, additional_dictionary, override_existing):
         """Append a dictionary to a meta_json in hdfs
@@ -59,7 +64,7 @@ class HdfsHelper():
         Args:
             file_path (string): hdfs path to the meta json
             additional_dictionary (dict): dictionary you want to add to your current meta json
-            override_existing (boolean): override existing items in 
+            override_existing (boolean): override existing items in
         """
         meta_json = self.read_meta_json_from_hdfs(file_path)
         meta_json = self.append_dict_to_dict(
