@@ -4,6 +4,7 @@ import urllib
 import ssl
 import datefinder
 import locale
+import html5lib
 import json
 import os.path
 from pdf2image import convert_from_path
@@ -16,6 +17,8 @@ import pandas as pd
 import pdfminer
 import pdfminer.high_level
 from selenium import webdriver
+from bs4.element import Comment
+#from pywebcopy import save_webpage
 
 try:
     from PIL import Image
@@ -34,12 +37,13 @@ except ImportError:
 logging.basicConfig(level=logging.INFO)
 ssl._create_default_https_context = ssl._create_unverified_context
 #URL = "https://www.stmgp.bayern.de/coronavirus/"
-# https://regex101.com/r/2BXdcV/1
+# https://regex101.com/r/2BXdcV/1 -> vll https://regex101.com/r/TyQzsm/1
 DATE_REGEX = r"([1-3]?[0-9][.]([ ](Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)([ ]202[0-9])?|[0-1]?[0-9][.]?(202[0-9])?))\D"
+OTHER_DATE_REGEX = r"(ab |vom |, |Stand(:)? |am ){1}[1-3]?[0-9][.]([ ](Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)([ ]202[0-9])?|(0|1)?[0-9][.]?(202[0-9])?) "
 # https://regex101.com/r/4J8BJ9/1
 INCIDENCE_REGEX = r"(?<=Inzidenzstufe \d \n[(]).*(?=\))"
 # https://regex101.com/r/FojuZ9/1
-OTHER_INCIDENCE_REGEX = r"(((?<=Inzidenzstufe)|(?<=Inzidenzwert)|(?<=Inzidenz))).{0,20}(\d{2,3})"
+OTHER_INCIDENCE_REGEX = r"(((?<=Inzidenzstufe)|(?<=Inzidenzwert)|(?<=Inzidenz)|(?<=Schwellenwert))).{0,20}(\d{2,3})"
 
 attributes = ["validFrom", "incidenceBased", "federateState", "creationDate", "incidenceRanges", "tags"]
 #tags = ["Maskenpflicht", "Kontaktbeschrankung", "Veranstaltungen", "Kultur", "Gastronomie", "Schule", "Sport"]
@@ -57,13 +61,16 @@ tags = {
 def getImgURLfromElem(elem):
     if "Regeln" in elem['alt'] or "Regelung" in elem['alt'] or not elem['alt'] or "Änderung" in elem['alt']:
         imgURL = elem['src']
+
+        if not imgURL.startswith(row.URL[:row.URL.index(".de") + 4]):
+            imgURL = row.URL[:row.URL.index(".de") + 4] + elem['src']
+
         logging.info("Filtering found Img-Element %s", imgURL)
         return imgURL
 
     return None
 
 def getPDFURLfromElem(elem):
-
 
     pdfURL = elem["href"]
     if not pdfURL.startswith(row.URL[:row.URL.index(".de")+4]):
@@ -87,6 +94,21 @@ def generateTxtFileFromPDF(pdfFile):
         text = str(((pytesseract.image_to_string(Image.open(filename)))))
         f.write(text)
     f.close()
+
+def savePage(URL, directory):
+
+    if not os.path.isdir(directory):
+        os.makedirs(directory)
+
+    response = urllib.request.urlopen(URL)
+    webContent = response.read()
+    fileName = directory + "page.html"
+
+    #kwargs = {'bypass_robots': True, 'project_name': 'recognisable-name'}
+    #save_webpage(URL, directory, **kwargs)
+
+    open(fileName, 'wb').write(webContent)
+
 
 def saveImagesFromPage(imgURLs, directory):
 
@@ -148,8 +170,9 @@ def savePDFfromPage(pdfURLs, directory):
 
         with open(fileName, 'rb') as fin:
             data = pdfminer.high_level.extract_text(fin, codec='utf-8')
+            #data = data.encode('utf-8').decode("utf-8")
 
-        with open(fileName + ".txt", "w") as text_file:
+        with open(fileName + ".txt", "w", encoding='utf-8') as text_file:
             text_file.write(data)
 
         txtData += '\n' + data
@@ -171,10 +194,25 @@ def extractIncidences(data):
     return incidenceRanges
 
 def extractDate(data):
-    match = re.search(DATE_REGEX, data, re.IGNORECASE)
+    match = re.search(OTHER_DATE_REGEX, data, re.IGNORECASE)
+    if not match:
+        match = re.search(DATE_REGEX, data, re.IGNORECASE)
     if match:
         beginDateStr = match.group()
-        beginDateStr = beginDateStr[:-1]
+        #beginDateStr = beginDateStr[:-1]
+        beginDateStr = beginDateStr.rstrip()
+
+        # date has chars infront
+        if re.search(r"\d", beginDateStr).start() > 0:
+            index = re.search(r"\d", beginDateStr).start()
+            beginDateStr = beginDateStr[index:]
+
+        # date has chars behind
+        if re.search(r"[^a-zA-Z0-9]*$",beginDateStr).start() > 0:
+            # regex to find Any character that is NOT a letter or number
+            index = re.search(r"[^a-zA-Z0-9]*$",beginDateStr).start()
+            beginDateStr = beginDateStr[:index]
+
         if any(c.isalpha() for c in beginDateStr) and not beginDateStr[-1].isnumeric():
             now = datetime.now()
             beginDateStr += " " + str(now.year)
@@ -250,7 +288,7 @@ def getInformationFromData(txtData, restrictionData):
 
         checkForTags(restrictionData, txtData, tags)
 
-def saveMetadata(restrictionData):
+def saveMetadata(es, restrictionData):
     # send metadata to elastic search
     fileName = directory+"data.json"
     with open(fileName, 'w') as outfile:
@@ -260,30 +298,51 @@ def saveMetadata(restrictionData):
     logging.info("writing Metadata-JSON to Elasticsearch")
     json_object = json.dumps(restrictionData)
 
-    es = Elasticsearch()
-    es.indices.create(index="restrictions", ignore=400)
-    if not es.exists(index="restrictions", id=restrictionData["federateState"]+restrictionData['creationDate']):
-        es.index(index="restrictions", id=restrictionData["federateState"]+restrictionData['creationDate'], body=json_object)
+    uid = restrictionData["federateState"] + restrictionData['validFrom']
+
+    if not es.exists(index="restrictions", id=uid):
+        es.index(index="restrictions", id=uid, body=json_object)
+
+# https://stackoverflow.com/questions/1936466/beautifulsoup-grab-visible-webpage-text
+def tag_visible(element):
+    if element.parent.name in ['style', 'script', 'head', 'title', 'meta', '[document]']:
+        return False
+    if isinstance(element, Comment):
+        return False
+    return True
 
 def findElements(URL,target,value):
     page = requests.get(URL)
-    soup = BeautifulSoup(page.content, 'html.parser')
+    soup = BeautifulSoup(page.content, 'lxml')
 
     element = ""
 
-    if target != 'CSSselector':
-        kwargs = {
-            target: value
-        }
-        element = soup.find_all(**kwargs)
-    else:
+    if target == 'Text':
+        texts  = soup.findAll(text=True)
+        visible_texts = filter(tag_visible, texts )
+        element = element.join(t.strip() for t in visible_texts).strip()
+        print(element)
+
+    elif target == 'CSSselector':
         element = soup.select(value)
+
+    else:
+        kwargs = ""
+        if "[" in value: # a list
+            kwargs = ""
+        else:
+            kwargs = {
+                target: value
+            }
+        element = soup.find_all(**kwargs)
 
     return element
 
 if __name__ == '__main__':
 
     sources = pd.read_csv("urls.csv", sep=";")
+    es = Elasticsearch()
+    es.indices.create(index="restrictions", ignore=400)
 
     for index, row in sources.iterrows():
 
@@ -307,6 +366,7 @@ if __name__ == '__main__':
                     getInformationFromData(txtData, restrictionData)
                 else:
                     logging.error("Couldn't find any images for URL %s", row.URL)
+
             elif element[0].name == "a": #-> PDF
                 pdfURLs = [getPDFURLfromElem(elem) for elem in element]
                 if pdfURLs:
@@ -315,9 +375,14 @@ if __name__ == '__main__':
                 else:
                     logging.error("Couldn't find any PDFs for URL %s", row.URL)
 
-            saveMetadata(restrictionData)
-            logging.info("Scraping for Federate State %s done", restrictionData["federateState"])
+            elif element[0].name == 'div': #-> Text
+                txtData = "".join(div.text.strip() for div in element)
+                savePage(row.URL, directory)
+                getInformationFromData(txtData, restrictionData)
 
+            saveMetadata(es, restrictionData)
+            logging.info("Scraping for Federate State %s done", restrictionData["federateState"])
         else:
             logging.error("nothing found for URL %s", row.URL)
 
+    logging.info("Scraper finished")

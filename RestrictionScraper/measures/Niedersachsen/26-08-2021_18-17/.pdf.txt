@@ -1,0 +1,2969 @@
+ 
+
+ 
+
+Niedersächsische Verordnung   
+über infektionspräventive Schutzmaßnahmen   
+gegen das Coronavirus SARS-CoV-2 und dessen Varianten 
+(Niedersächsische Corona-Verordnung) 
+
+Vom 24. August 2021 
+
+Aufgrund des § 32 Satz 1 in Verbindung mit § 28 Abs. 1 Sätze 1 und 2 und § 28 a des Infektionsschutzgesetzes vom 20. Juli 2000 
+(BGBl. I S. 1045), zuletzt geändert durch Artikel 6 des Gesetzes vom 27. Juli 2021 (BGBl. I S. 3274), in Verbindung mit § 3 Nr. 1 der 
+Subdelegationsverordnung  vom  9. Dezember  2011  (Nds.  GVBl.  S.  487),  zuletzt  geändert  durch  Verordnung  vom  2. Februar  2021 
+(Nds. GVBl. S. 32), wird verordnet: 
+
+I n h a l t s ü b e r s i c h t  
+
+E r s t e r   T e i l  
+
+Allgemeine Vorschriften 
+
+§   1 
+
+Regelungsbereich, allgemeine Verhaltenspflichten 
+
+§   2  Warnstufen   
+
+§   3 
+
+Feststellung der Warnstufen für den Landkreis oder die kreisfreie Stadt 
+
+§   4  Mund-Nasen-Bedeckung 
+
+Hygienekonzept 
+
+§   5 
+
+§   6 
+
+§   7 
+
+Testung 
+
+Datenerhebung und Dokumentation 
+
+Z w e i t e r   T e i l  
+
+Beschränkungen auf Geimpfte, Genesene und Getestete 
+
+§   8 
+
+Beschränkung des Zutritts zu Veranstaltungen und Einrichtungen und der Inanspruchnahme von Leistungen auf Geimpfte, Gene-
+sene und Getestete 
+
+Inzidenzunabhängige Vorschriften für Bereiche mit hohem Risiko für Mehrfachansteckungen 
+
+D r i t t e r   T e i l 
+
+§ 10 
+
+Sitzungen, Zusammenkünfte und Veranstaltungen mit mehr als 1 000 bis zu 5 000 Teilnehmerinnen und Teilnehmern 
+
+§ 12  Diskotheken, Clubs, Shisha-Bars und ähnliche Einrichtungen 
+
+§ 13  Regelungen für die Beschäftigung von Personen in bestimmten Betrieben 
+
+Kindertagespflege, private Kinderbetreuung, Jugendfreizeiten 
+
+V i e r t e r   T e i l  
+
+Besondere Vorschriften 
+
+§   9  Grundsatz 
+
+§ 11  Großveranstaltungen 
+
+§ 14 
+
+§ 15 
+
+§ 16 
+
+Schulen 
+
+Kindertageseinrichtungen 
+
+stützung im Alltag 
+
+§ 17  Heime, unterstützende Wohnformen, Intensivpflege-Wohngemeinschaften,Einrichtungen der Tagespflege und Angebote zur Unter-
+
+§ 18  Werkstätten und Tagesförderstätten für behinderte Menschen sowie vergleichbare Angebote der Eingliederungshilfe 
+
+§ 19 
+
+Krankenhäuser, Vorsorge- und Rehabilitationseinrichtungen 
+
+§ 20  Wahlen 
+
+§ 21  Weitergehende Regelungen und Anordnungen 
+
+§ 22  Ordnungswidrigkeiten 
+
+§ 23 
+
+Inkrafttreten, Außerkrafttreten 
+
+F ü n f t e r   T e i l 
+
+Schlussbestimmungen 
+
+E r s t e r   T e i l  
+
+Allgemeine Vorschriften 
+
+ 
+
+§ 1 
+
+Regelungsbereich, allgemeine Verhaltenspflichten 
+
+(1) 1Diese Verordnung regelt für Niedersachsen notwendige Schutzmaßnahmen zur Verhinderung der Verbreitung des Corona-
+Virus SARS-CoV-2 und zu dessen Eindämmung, soweit nicht aufgrund des § 28 c des Infektionsschutzgesetzes (IfSG) erlassener 
+Verordnungen der Bundesregierung abweichende Regelungen getroffen sind. 2Weitergehende Schutzmaßnahmen des Landes und 
+der Kommunen auf der Grundlage des Infektionsschutzgesetzes bleiben unberührt. 
+
+ 
+
+ 
+
+(2)  1Personen  und  Gruppen  sollen  wenn möglich  einen  Abstand  von  mindestens  1,5  Metern  zu  anderen  Personen  einhalten. 
+
+2Ferner werden eine ausreichende Hygiene und das Belüften geschlossener Räume empfohlen. 
+
+§ 2 
+
+Warnstufen 
+
+(1) Sind Regelungen zur Bekämpfung des Coronavirus SARS-CoV-2 von Warnstufen abhängig, so bestimmen sich diese nach 
+
+den Absätzen 2 bis 5. 
+
+(2) Eine Warnstufe wird nach Maßgabe des § 3 festgestellt, wenn mindestens zwei der drei folgenden Leitindikatoren die in der 
+
+nachfolgenden Tabelle dargestellten Wertebereiche erreichen: 
+
+Leitindikator 
+
+Warnstufe 1 
+
+Warnstufe 2 
+
+Warnstufe 3 
+
+1. 
+
+2. 
+
+3. 
+
+„Neuinfizierte" (7-Tage-Inzidenz 
+- Fälle je 100 000 - im Landkreis 
+oder in der kreisfreien Stadt) 
+
+„Hospitalisierung" (landesweite 
+7-Tage-Hospitalisierungsinzi-
+denz - Fälle je 100 000) 
+
+„Intensivbetten" (landesweiter 
+Anteil der Belegung von Inten-
+sivbetten mit an COVID-19 Er-
+krankten an der Intensivbetten-
+Kapazität) 
+
+mehr als 35   
+bis höchstens 100 
+
+mehr als 100   
+bis höchstens 200 
+
+mehr als 200 
+
+mehr als 6   
+bis höchstens 9 
+
+mehr als 9   
+bis höchstens 12 
+
+mehr als 12 
+
+mehr als 5   
+bis höchstens 10 Prozent 
+
+mehr als 10   
+bis höchstens 20 Prozent 
+
+mehr als 20 Prozent. 
+
+(3) 1Der Leitindikator „Neuinfizierte“ richtet sich für jeden Landkreis und jede kreisfreie Stadt nach der Zahl der Neuinfizierten im 
+Verhältnis zur Bevölkerung je 100 000 Einwohnerinnen und Einwohner kumulativ in den letzten sieben Tagen (7-Tage-Inzidenz). 2Da-
+bei sind die vom Robert Koch-Institut im Internet unter https://www.rki.de/inzidenzen für die betreffenden Kommunen veröffentlichten 
+Zahlen zugrunde zu legen. 
+
+(4) 1Der Leitindikator „Hospitalisierung“ bestimmt sich nach der landesweiten Zahl der Hospitalisierungsfälle mit COVID-19-Erkran-
+kung je 100 000 Einwohnerinnen und Einwohner im Durchschnitt der letzten sieben Tagen (7-Tage-Hospitalisierungs-Inzidenz). 2Ein 
+Hospitalisierungsfall ist jede Person, die sich in Bezug auf die COVID-19-Erkrankung in einem Krankenhaus in stationärer Behandlung 
+befindet. 3Die Fallzahl wird mittels der Sonderlage des Interdisziplinären Versorgungsnachweises IVENA eHealth bestimmt. 
+
+(5)  1Der  Leitindikator  „Intensivbetten“  bestimmt  sich  nach  dem  landesweiten  prozentualen  Anteil  der  mit  COVID-19-Erkrankten 
+belegten Intensivbetten an der Intensivbettenkapazität.  2Die Intensivbettenkapazität beträgt 2 424 Betten.  3Die Anzahl der belegten 
+Intensivbetten wird mittels der Sonderlage des Interdisziplinären Versorgungsnachweises IVENA eHealth bestimmt. 
+
+(6) Das für Gesundheit zuständige Ministerium veröffentlicht die aktuellen Werte der Leitindikatoren „Hospitalisierung“ und „Inten-
+sivbetten“  täglich  auf  der  Internetseite  https://www.niedersachsen.de/Coronavirus/aktuelle_lage_in_niedersachsen/niedersachsen-
+und-corona-aktuelle-leitindikatoren-203487.html.   
+
+(7) Das Land wird jeweils die Gesamtinfektionslage überprüfen und durch Änderung dieser Verordnung weitergehende verursa-
+
+chungsgerechte Maßnahmen treffen, sobald die Warnstufen 2 oder 3 in erheblichem Umfang ausgelöst sind.   
+
+Feststellung der Warnstufen für den Landkreis oder die kreisfreie Stadt 
+
+§ 3 
+
+(1) 1Erreichen für das Gebiet eines Landkreises oder einer kreisfreien Stadt an fünf aufeinander folgenden Werktagen, wobei Sonn- 
+und Feiertage nicht die Zählung der Werktage unterbrechen, (Fünftagesabschnitt) jeweils zwei der drei Leitindikatoren mindestens den 
+in dieser Verordnung festgelegten Wertebereich, so stellt der Landkreis oder die kreisfreie Stadt durch öffentlich bekannt zu gebende 
+Allgemeinverfügung den Zeitpunkt fest, ab dem die jeweilige Warnstufe in seinem oder ihrem Gebiet gilt; die jeweilige Warnstufe gilt 
+ab dem übernächsten Tag nach dem Ablauf des Fünftagesabschnitts nach Halbsatz 1.  2Die Bekanntgabe der Allgemeinverfügung 
+erfolgt unverzüglich, nachdem aufgrund der nach § 2 Abs. 3 Satz 2 vom Robert Koch-Institut veröffentlichten Zahlen und der Veröf-
+fentlichungen nach § 2 Abs. 6 erkennbar wurde, dass die jeweiligen Wertebereiche erreicht sind. 3Hängt die Feststellung einer Warn-
+stufe vom Leitindikator „Neuinfizierte“ ab, so darf der Landkreis oder die kreisfreie Stadt von der Feststellung nach Satz 1 absehen, 
+solange das Erreichen des für die Feststellung maßgeblichen höheren Wertebereichs auf einem Infektionsgeschehen beruht, das mit 
+hinreichender Sicherheit einem bestimmten räumlich abgrenzbaren Bereich zugeordnet werden kann, und deshalb die Gefahr einer 
+nicht mehr kontrollierbaren Verbreitung des Corona-Virus SARS-CoV-2 nicht besteht. 4Hängt die Feststellung einer Warnstufe aus-
+schließlich von den Leitindikatoren „Hospitalisierung“ und „Intensivbetten“ ab und liegt gleichzeitig in dem Landkreis oder der kreisfreien 
+Stadt der Leitindikator „Neuinfektion“ deutlich und voraussichtlich auf Dauer unter dem Wertebereich dieser Warnstufe, so darf der 
+Landkreis oder die kreisfreie Stadt von der Feststellung nach Satz 1 absehen.   
+
+(2) 1Erreichen für das Gebiet eines Landkreises oder einer kreisfreien Stadt an fünf aufeinander folgenden Werktagen, wobei Sonn- 
+und Feiertage nicht die Zählung der Werktage unterbrechen, jeweils zwei der drei Leitindikatoren den in dieser Verordnung festgeleg-
+ten Wertebereich nicht mehr, so stellt der Landkreis oder die kreisfreie Stadt durch öffentlich bekannt zu gebende Allgemeinverfügung 
+den Zeitpunkt fest, ab dem die jeweilige Warnstufe in seinem oder ihrem Gebiet nicht mehr gilt; die jeweilige Warnstufe gilt ab dem 
+übernächsten Tag nach dem Ablauf des Fünftagesabschnitts nach Halbsatz 1 nicht mehr. 2Die Bekanntgabe der Allgemeinverfügung 
+erfolgt unverzüglich, nachdem aufgrund der nach § 2 Abs. 3 Satz 2 vom Robert Koch-Institut veröffentlichten Zahlen und der Veröf-
+fentlichungen nach § 2 Abs. 6 erkennbar wurde, dass die jeweiligen Wertebereiche nicht mehr erreicht sind.   
+
+ 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+  1. 
+
+  2. 
+
+  3. 
+
+  6. 
+
+  7. 
+
+§ 4 
+
+Mund-Nasen-Bedeckung 
+
+(1) 1Jede Person hat in geschlossenen Räumen, die öffentlich oder im Rahmen eines Besuchs- oder Kundenverkehrs zugänglich 
+
+sind, eine medizinische Maske als Mund-Nasen-Bedeckung zu tragen. 2Dies gilt auch für Personen, die 
+
+1. 
+
+an einer privaten Veranstaltung in geschlossenen Räumen teilnehmen, wenn die Teilnehmerzahl 25 Teilnehmerinnen und Teil-
+nehmer zuzüglich   
+
+a) 
+
+b) 
+
+c) 
+
+Personen, die nach § 8 Abs. 4 Satz 1 einen Impfnachweis, einen Genesenennachweis oder einen Nachweis über eine 
+negative Testung vorlegen,   
+
+Kindern, die das sechste Lebensjahr noch nicht vollendet haben oder noch nicht eingeschult sind, sowie   
+
+Schülerinnen und Schüler, die im Rahmen eines verbindlichen schulischen Testkonzepts regelmäßig getestet werden,   
+
+übersteigt, unabhängig vom Veranstaltungsort, 
+
+Verkehrsmittel des Personenverkehrs oder die dazugehörigen Einrichtungen in geschlossenen Räumen, wie zum Beispiel an 
+Haltestellen, Bahnhöfen, Flughäfen und Fähranlegern, nutzen, wobei Fahrzeugführerinnen und Fahrzeugführer ausgenommen 
+sind,   
+
+als Fahrgäste an touristischen Bus-, Schiffs- und Kutschfahrten teilnehmen, es sei denn, dass alle Fahrgäste nach § 8 Abs. 4 
+Satz 1 einen Impfnachweis, einen Genesenennachweis oder einen Nachweis über eine negative Testung vorlegen, 
+
+an einer Sitzung, Zusammenkunft oder Veranstaltung im Sinne des § 8 Abs. 1 Satz 3 Nr. 1, des § 10 oder 11, in geschlossenen 
+Räumen teilnehmen, 
+
+am Unterricht oder an einer Prüfung in einem Fahrzeug im Rahmen einer Fahrausbildung oder Fahrlehrerausbildung teilnehmen, 
+
+Tätigkeiten und Dienstleistungen ausüben, die den Abstand nach § 1 Abs. 2 Satz 1 naturgemäß unterschreiten, insbesondere 
+im Rahmen der Gesundheitsversorgung, der Pflege von Personen oder des Handels. 
+
+3Atemschutzmasken mit Ausatemventil sind nicht zulässig. 4Kinder zwischen dem vollendeten 6. Lebensjahr und dem vollendeten 14. 
+Lebensjahr dürfen anstelle einer medizinischen Maske eine beliebige andere geeignete textile oder textilähnliche Barriere, die aufgrund 
+ihrer Beschaffenheit eine Ausbreitung von übertragungsfähigen Tröpfchenpartikeln durch Husten, Niesen und Aussprache verringert, 
+unabhängig von einer Kennzeichnung oder zertifizierten Schutzkategorie, als Mund-Nasen-Bedeckung im Sinne des Satzes 1 tragen. 
+
+(2) Die Landkreise und kreisfreien Städte können durch öffentlich bekannt zu gebende Allgemeinverfügung für bestimmte Örtlich-
+keiten, die in der Öffentlichkeit unter freiem Himmel liegen und an denen sich Menschen entweder auf engem Raum oder nicht nur 
+vorübergehend aufhalten, festlegen, dass an diesen eine Mund-Nasen-Bedeckung nach Absatz 1 zu tragen ist; dabei können auch 
+Dauer oder Zeitraum dieser Pflicht festgelegt werden. 
+
+(3) Die Pflicht zum Tragen einer Mund-Nasen-Bedeckung nach Absatz 1 gilt nicht 
+
+in Bezug auf ausschließlich der privaten Nutzung dienende Räumlichkeiten der pflichtigen Person sowie in Bezug auf privat oder 
+beruflich genutzte Kraftfahrzeuge, soweit Absatz 1 Satz 2 Nr. 2 nicht etwas anderes regelt, 
+
+für die Teilnahme an einer privaten Veranstaltung mit höchstens 25 Teilnehmerinnen und Teilnehmern zuzüglich Personen, die 
+nach § 8 Abs. 4 Satz 1 einen Impfnachweis, einen Genesenennachweis oder einen Nachweis über eine negative Testung vor-
+legen, Kindern sowie Schülerinnen und Schülern gemäß § 8 Abs. 6, unabhängig vom Veranstaltungsort, 
+
+im Zusammenhang mit der Ausübung einer beruflichen Tätigkeit oder im Zusammenhang mit einer Tätigkeit zur Gefahrenab-
+wehr, einschließlich der entsprechenden Fortbildung, es sei denn, dass die Tätigkeit Absatz 1 Satz 3 Nr. 6 unterfällt, in den in 
+§ 8 Abs. 1 Satz 3 Nrn. 2 bis 5 genannten Betrieben und Einrichtungen erfolgt oder eine Dienstleistung bei einer Veranstaltung 
+nach § 10 Abs. 2 oder § 11 Abs. 3 darstellt,   
+
+  4. 
+
+im Zusammenhang mit der Wahrnehmung eines politischen Mandats sowie bei Kontakten im Wahlkampf oder bei der Wahlwer-
+bung für Personen, die sich im Rahmen einer öffentlichen Wahl um ein politisches Mandat oder Amt bewerben, 
+
+  5.  bei  Veranstaltungen  und  Sitzungen  des  Niedersächsischen  Landtags,  seiner  Gremien  und  Fraktionen  und  von  kommunalen 
+Vertretungen, deren Gremien und Fraktionen, wobei das Hausrecht und die Ordnungsgewalt der Präsidentin oder des Präsiden-
+ten des Niedersächsischen Landtages unberührt bleiben,   
+
+im Rahmen von Einrichtungen und Angeboten der Kinder- und Jugendhilfe insbesondere bei der Sozialen Gruppenarbeit nach 
+§ 29 des Achten Buchs des Sozialgesetzbuchs (SGB VIII) sowie bei der Erziehung in einer Tagesgruppe nach § 32 SGB VIII, 
+
+im Rahmen von Angeboten der Jugendarbeit nach § 11 SGB VIII, der Jugendsozialarbeit nach § 13 SGB VIII und des erziehe-
+rischen Kinder- und Jugendschutzes nach § 14 SGB VIII,   
+
+  8.  bei sportlicher Betätigung und im Rahmen der Nutzung eines Schwimmbads, 
+
+  9. 
+
+im Rahmen des Betriebs einer Musikschule, wenn die musikalische Aktivität, zum Beispiel das Spielen eines Blasinstruments 
+oder die Gesangsausbildung, das Tragen einer Mund-Nasen-Bedeckung ausschließt,   
+
+10. 
+
+im Rahmen einer logopädischen Behandlung und während der Bestrahlung in einem Solarium, 
+
+11.  bei der Entgegennahme einer körpernahen Dienstleistung, bei der das Gesicht unbedeckt bleiben muss, 
+
+12.  wenn Regelungen und Maßnahmen gemäß § 5 Abs. 2 Satz 2 dies ermöglichen.   
+
+(4) Abweichend von Absatz 1 darf die pflichtige Person während einer Veranstaltung, an der die Besucherinnen und Besucher 
+sitzend  teilnehmen,  oder  beim  Besuch  eines  Gastronomiebetriebs,  einer  Diskothek,  eines  Clubs  oder einer  ähnlichen  Einrichtung, 
+
+ 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+auch einer Einrichtung, in der Shisha-Pfeifen zum Konsum angeboten werden, die Mund-Nasen-Bedeckung abnehmen, soweit und 
+solange sie einen Sitzplatz eingenommen hat.   
+
+(5) Personen, für die aufgrund einer körperlichen, geistigen oder psychischen Beeinträchtigung oder einer Vorerkrankung, zum 
+Beispiel einer schweren Herz- oder Lungenerkrankung, das Tragen einer Mund-Nasen-Bedeckung nicht zumutbar ist und die dies 
+durch ein ärztliches Attest oder eine vergleichbare amtliche Bescheinigung glaubhaft machen können, und Kinder bis zur Vollendung 
+des 6. Lebensjahres sind von den Verpflichtungen nach den Absätzen 1, 2 und 4 ausgenommen.   
+
+(6) 1Die Betreiberinnen, Betreiber und verantwortlichen Personen haben in Bezug auf die von ihnen zu verantwortenden Bereiche 
+im Sinne des Absatzes 1 auf die Pflicht, eine Mund-Nasen-Bedeckung zu tragen, hinzuweisen und auf die Einhaltung dieser Pflichten 
+hinzuwirken.  2Die  Betreiberinnen  und  Betreiber  von  Verkehrsmitteln  des  Personenverkehrs  sind  insbesondere  verpflichtet,  auf  die 
+Pflicht, eine Mund-Nasen-Bedeckung zu tragen, durch Aushang sowie zusätzlich mit Durchsagen hinzuweisen und für deren Einhal-
+tung zu werben. 3Sie sollen innerbetrieblich sicherstellen, dass Personen ohne Mund-Nasen-Bedeckung im Rahmen der Kontrolltätig-
+keiten beim Verdacht eines Verstoßes gegen Absatz 1 im Einzelfall persönlich angesprochen, angemessen zur Einhaltung ermahnt 
+und bei Bedarf erforderliche Gegenmaßnahmen ergriffen werden. 
+
+§ 5 
+
+Hygienekonzept 
+
+(1) Der Betrieb einer öffentlich zugänglichen Einrichtung mit Kunden- oder Besuchsverkehr jeglicher Art sowie die Durchführung 
+einer Veranstaltung oder Versammlung setzen ein Hygienekonzept nach den Vorgaben des Absatzes 2 voraus; ausgenommen sind   
+
+1. 
+
+private Veranstaltungen mit höchstens 25 Teilnehmerinnen und Teilnehmern zuzüglich Personen, die entsprechend § 8 Abs. 4 
+Satz 1 einen Impfnachweis, einen Genesenennachweis oder einen Nachweis über eine negative Testung vorlegen, Kindern, die 
+das sechste Lebensjahr noch nicht vollendet haben oder noch nicht eingeschult sind, sowie Schülerinnen und Schülern, die im 
+Rahmen eines verbindlichen schulischen Testkonzepts regelmäßig getestet werden, und 
+
+2.  wegen des Hausrechts und der Ordnungsgewalt der Präsidentin oder des Präsidenten des Niedersächsischen Landtags der 
+
+Niedersächsische Landtag, seine Gremien und Fraktionen. 
+
+(2) 1In dem Hygienekonzept im Sinne des Absatzes 1 sind insbesondere Maßnahmen zum Schutz vor Infektionen mit dem Corona-
+
+Virus SARS-CoV-2 vorzusehen, die 
+
+die Zahl von Personen auf der Grundlage der jeweiligen räumlichen Kapazitäten begrenzen und steuern, 
+
+der Wahrung der Abstände nach § 1 Abs. 2 Satz 1 dienen, auch durch entsprechende Hinweise,   
+
+das Tragen von Mund-Nasen-Bedeckungen in Situationen, in denen einander unbekannte Personen nicht einen Mindestabstand 
+von 1,5 Meter einhalten können, regeln, 
+
+Personenströme einschließlich Zu- und Abfahrten steuern und der Vermeidung von Warteschlangen dienen, 
+
+die Nutzung sanitärer Anlagen regeln, 
+
+das Reinigen von Oberflächen und Gegenständen, die häufig von Personen berührt werden, und von Sanitäranlagen sicherstel-
+len und 
+
+7. 
+
+sicherstellen, dass Räume möglichst durch die Zufuhr von Frischluft gelüftet werden. 
+
+2Das Hygienekonzept nach Satz 1 kann Regelungen und Maßnahmen enthalten, die den Verzicht auf eine Mund-Nasen-Bedeckung 
+ermöglichen,  zum  Beispiel  durch  die  Verwendung  geeigneter  physischer  Barrieren  aus  Glas  oder  Plexiglas.  3Die  oder  der  jeweils 
+Verpflichtete hat die erforderlichen Maßnahmen zu treffen, um die Einhaltung des Hygienekonzepts zu gewährleisten. 4In den Fällen 
+der  Veranstaltungen  nach  den  §§ 10  und  11 sowie  beim  Betrieb  von  Diskotheken,  Clubs  und  ähnlichen  Einrichtungen  sowie  von 
+Einrichtungen, in denen Shisha-Pfeifen zum Konsum angeboten werden, nach § 12 hat die oder der Verpflichtete unaufgefordert, im 
+Übrigen auf Verlangen der zuständigen Behörde, das Hygienekonzept vorzulegen. 5Auf Verlangen der zuständigen Behörde hat die 
+oder der Verpflichtete über dessen Umsetzung Auskunft zu erteilen. 6Darüber hinausgehende Pflichten zur Aufstellung von Hygiene-
+plänen nach dem Infektionsschutzgesetz oder anderen Vorschriften bleiben unberührt. 
+
+(3) Abweichend von den Absätzen 1 und 2 sollen die Betreiberinnen und Betreiber des öffentlichen Personenverkehrs ein den 
+
+besonderen Anforderungen des öffentlichen Personenverkehrs entsprechendes Hygienekonzept erstellen. 
+
+§ 6 
+
+Datenerhebung und Dokumentation 
+
+(1) 1Im Rahmen des Zutritts oder der Nutzung einer Einrichtung oder der Teilnahme oder des Besuchs einer Veranstaltung hat   
+
+  1.  die Dienstleisterin oder der Dienstleister, die oder der eine Dienstleistung mit unmittelbarem Körperkontakt zu einer Kundin oder 
+
+einem Kunden erbringt, 
+
+  2.  die Betreiberin oder der Betreiber einer Fahrschule, Fahrlehrerausbildungsstätte, Flugschule, einer anerkannten Aus- und Wei-
+terbildungsstätte nach dem Berufskraftfahrer-Qualifikations-Gesetz oder einer Aus- und Weiterbildungsstätte für Triebwagenfüh-
+rer und anderes Personal im Bereich der Eisen- und Straßenbahnen oder einer ähnlichen Einrichtung, 
+
+  3.  die Betreiberin oder der Betreiber   
+
+a)    eines Beherbergungsbetriebs,   
+
+b) 
+
+eines Gastronomiebetriebs oder   
+
+c)    einer Diskothek, eines Clubs oder einer ähnlichen Einrichtung, auch einer Einrichtung, in der Shisha-Pfeifen zum Konsum 
+
+angeboten werden, im Sinne des § 12, 
+
+ 
+
+  4.  die Betreiberin oder der Betreiber einer Volkshochschule oder einer sonstigen öffentlichen oder privaten Bildungseinrichtung im 
+außerschulischen Bereich, wie zum Beispiel in der Erwachsenenbildung, Familienbildung, Jugendbildung oder beruflichen Aus-
+, Fort- oder Weiterbildung, oder einer Musikschule, 
+
+  5.  die Anbieterin oder der Anbieter von außerschulischer Lernförderung, 
+
+  6.  die anbietende Stelle in Bezug auf den Besuch und die Inanspruchnahme eines gruppenbezogenen, nicht stationären, offenen 
+
+Angebots der Kinder- und Jugendhilfe, insbesondere nach den §§ 11 und 13 SGB VIII, 
+
+  7.  die Leitung eines Krankenhauses, einer Vorsorgeeinrichtung oder einer Rehabilitationseinrichtung, 
+
+  8. 
+
+jede Person, die einen Test nach § 7 Abs. 1 Sätze 3 bis 5 beaufsichtigt oder durchführt, 
+
+  9.  die Betreiberin oder der Betreiber einer Spielbank, einer Spielhalle oder einer Wettannahmestelle,   
+
+10.  die Veranstalterin oder der Veranstalter einer Sitzung, Zusammenkunft oder Veranstaltung mit mehr als 25 bis zu 1 000 gleich-
+
+zeitig anwesenden Teilnehmerinnen und Teilnehmern,   
+
+11.    die Veranstalterin oder der Veranstalter einer Veranstaltung nach § 10 oder 11, 
+
+12.  die Unternehmerin oder der Unternehmer einer touristischen Busreise, 
+
+13.  die Betreiberin oder der Betreiber einer Sauna, Therme oder Schwimmhalle 
+
+personenbezogene Daten der besuchenden oder teilnehmenden Personen zu erheben und bei begründeten Zweifeln auf Plausibilität 
+zu überprüfen, zum Beispiel durch Vorlage eines Personalausweises. 2Nach Satz 1 sind der Familienname, der Vorname, die vollstän-
+dige Anschrift und eine Telefonnummer (Kontaktdaten) der jeweiligen Person sowie das Erhebungsdatum und die Erhebungsuhrzeit 
+zu dokumentieren; bei dienstlichen Tätigkeiten genügen die dienstlichen Kontaktdaten der jeweiligen Person. 3Die Kontaktdaten sind 
+für die Dauer von drei Wochen nach der Erhebung aufzubewahren. 4Es ist zu gewährleisten, dass unbefugte Dritte von den erhobenen 
+Kontaktdaten keine Kenntnis erlangen. 5Die Dokumentation ist dem zuständigen Gesundheitsamt auf Verlangen zu übermitteln. 6Die 
+Verwendung der Dokumentation ist auf die Vorlage auf Anforderung an das zuständige Gesundheitsamt beschränkt. 7Spätestens vier 
+Wochen nach der Erhebung sind die Kontaktdaten  zu löschen.  8Die Kontaktdatenerhebung soll elektronisch erfolgen  und kann im 
+Einzelfall in Papierform erfolgen, wenn eine elektronische Kontaktdatenerhebung nicht möglich ist; die Verpflichtungen nach den Sät-
+zen 2, 3, 5 und 7 entfallen, wenn die Nutzung einer Anwendungssoftware zur Verfügung gestellt wird, mittels der Kontaktdaten, Erhe-
+bungsdatum und -uhrzeit sowie Aufenthaltsdauer erfasst werden können und die Software für einen Zeitraum von vier Wochen eine 
+Übermittlung an das zuständige Gesundheitsamt ermöglicht.   
+
+(2) 1Das zuständige Gesundheitsamt ist berechtigt, die erhobenen Kontaktdaten nach Absatz 1 Satz 5 oder Absatz 1 Satz 8 Halb-
+satz 2 anzufordern, damit eine etwaige Infektionskette nachverfolgt werden kann. 2Die nach Satz 1 angeforderten Kontaktdaten dürfen 
+von dem zuständigen Gesundheitsamt nicht weitergegeben und nicht zu anderen Zwecken als der Nachverfolgung von Infektionsket-
+ten verwendet werden. 3Die nach Satz 1 angeforderten Kontaktdaten sind vom zuständigen Gesundheitsamt unverzüglich zu löschen, 
+sobald diese für die Nachverfolgung von Infektionsketten nicht mehr benötigt werden. 
+
+(3) 1Soweit gegenüber der oder dem zur Erhebung Verpflichteten Kontaktdaten angegeben werden, ist die besuchende oder teil-
+nehmende Person zur vollständigen und wahrheitsgemäßen Angabe verpflichtet. 2Verweigert die besuchende oder teilnehmende Per-
+son die Kontaktdatenerhebung oder verweigert sie im Fall des Absatzes 1 Satz 8 die Zustimmung zur Datenweitergabe, insbesondere 
+auch im Fall eines positiven Testergebnisses, oder erfüllt sie ihre Pflicht nach Satz 1 nicht, so darf ein Zutritt zu der jeweiligen Einrich-
+tung oder Veranstaltung nicht gewährt werden. 
+
+(4) 1Behörden, Gerichte und Stellen, die Aufgaben im öffentlichen Interesse erfüllen oder in Ausübung öffentlicher Gewalt handeln, 
+können im Rahmen des Zutritts zu den jeweiligen Gebäuden oder Räumlichkeiten ebenfalls Kontaktdaten nach Absatz 1 Satz 2 erhe-
+ben; Absatz 1 Sätze 3 bis 8, Absatz 2 und Absatz 3 Satz 1 gelten entsprechend. 2Wird die Angabe der Kontaktdaten verweigert oder 
+werden die Kontaktdaten nicht entsprechend Absatz 3 Satz 1 angegeben, so kann ein Zutritt zu den jeweiligen Gebäuden und Räum-
+lichkeiten verweigert werden. 
+
+§ 7 
+
+Testung 
+
+(1) 1In den in dieser Verordnung bestimmten Fällen, in denen auf diese Vorschrift Bezug genommen wird, muss der dort vorgese-
+
+hene Test auf das Vorliegen des Corona-Virus SARS-CoV-2 durchgeführt werden durch 
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+2. 
+
+3. 
+
+eine molekularbiologische Untersuchung mittels Polymerase-Kettenreaktion (PCR-Testung), deren Testungsergebnis dann bis 
+48 Stunden nach der Testung gültig ist, 
+
+einen PoC-Antigen-Test zur patientennahen Durchführung, der die Anforderungen nach § 1 Abs. 1 Satz 5 der Coronavirus-Test-
+verordnung (TestV) vom 24. Juni 2021 (BAnz AT 25.06.2021 V1), geändert durch Artikel 1 der Verordnung vom 18. August 2021 
+(BAnz AT 19.08.2021 V1), erfüllt, dessen Testungsergebnis dann bis 24 Stunden nach der Testung gültig ist, oder 
+
+einen Test zur Eigenanwendung (Selbsttest), der durch das Bundesinstitut für Arzneimittel und Medizinprodukte zugelassen und 
+auf der Website https://www.bfarm.de/DE/Medizinprodukte/Antigentests/_node.html gelistet ist, dessen Testungsergebnis dann 
+bis 24 Stunden nach der Testung gültig ist. 
+
+2Die Testung muss vor dem Betreten der Einrichtung, des Betriebs oder Veranstaltungsorts durch die Besucherin oder den Besucher 
+durchgeführt werden. 3Eine Testung nach Satz 1 Nr. 2 oder 3 muss 
+
+vor Ort unter Aufsicht der- oder desjenigen stattfinden, die oder der der jeweiligen Schutzmaßnahme unterworfen ist, 
+
+unter Aufsicht einer anderen Person stattfinden, die einer Schutzmaßnahme nach dieser Verordnung unterworfen ist, 
+
+im Rahmen einer betrieblichen Testung im Sinne des Arbeitsschutzes durch Personal, das die dafür erforderliche Ausbildung 
+oder Kenntnis und Erfahrung besitzt, erfolgen oder 
+
+ 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+4. 
+
+von einem Leistungserbringer nach § 6 Abs. 1 TestV vorgenommen oder überwacht werden. 
+
+4Im Fall einer Testung mittels eines Tests nach Satz 1 Nr. 1 oder 2 muss die Testung durch eine dafür geschulte Person durchgeführt 
+werden. 5Im Fall eines Selbsttests nach Satz 1 Nr. 3 ist der Test von der Besucherin oder dem Besucher unter Aufsicht der oder des 
+der Schutzmaßnahme Unterworfenen oder einer von ihr oder ihm beauftragten Person oder der Person nach Satz 3 Nr. 3 durchzufüh-
+ren.   
+
+(2) 1Die Person, die den Test gemäß Absatz 1 Satz 4 durchgeführt oder gemäß Absatz 1 Satz 5 beaufsichtigt hat, hat der Besu-
+cherin oder dem Besucher auf Verlangen das Ergebnis und den Zeitpunkt der Testung zu bescheinigen.  2Die Bescheinigung muss 
+Name, Vorname, Geburtsdatum und Adresse der getesteten Person, Name und Hersteller  des Tests, Testdatum  und Testuhrzeit, 
+Name und Firma der beaufsichtigenden Person sowie Testart und Testergebnis enthalten.   
+
+(3) Der Nachweis über eine negative Testung kann auch erbracht werden, indem die Besucherin oder der Besucher vor dem 
+
+Betreten der Einrichtung, des Betriebs oder Veranstaltungsorts 
+
+eine Bestätigung  über eine Testung mit negativem Testergebnis gemäß Absatz 2 oder im Fall einer Testung nach Absatz  1 
+Satz 1 Nr. 1 eine Bestätigung über eine Testung mit negativem Testergebnis durch die testausführende Stelle oder 
+
+einen Nachweis gemäß § 2 Nr. 7 der COVID-19-Schutzmaßnahmen-Ausnahmenverordnung (SchAusnahmV) vom 8. Mai 2021 
+(BAnz AT 08.05.2021 V1) 
+
+1. 
+
+2. 
+
+vorlegt.   
+
+(4) 1Ergibt eine Testung nach Absatz 1 das Vorliegen des Corona-Virus SARS-CoV-2, so hat die Betreiberin, der Betreiber, die 
+Veranstalterin oder der Veranstalter der Besucherin oder dem Besucher den Zutritt zu verweigern und sofort das örtlich zuständige 
+Gesundheitsamt über das Ergebnis der Testung zu informieren und dabei die Kontaktdaten der Besucherin oder des Besuchers im 
+Sinne des § 6 Abs. 1 Satz 2 mitzuteilen. 2Die Übermittlung des Ergebnisses der Testung kann auch mittels der Anwendungssoftware 
+nach § 6 Abs. 1 Satz 8 erfolgen; in diesem Fall darf die Besucherin oder der Besucher die Zustimmung zur Übermittlung nicht verwei-
+gern. 3§ 6 Abs. 1 Sätze 3, 4, 6 und 7 sowie § 6 Abs. 3 Satz 1 sind entsprechend anzuwenden. 
+
+Beschränkungen auf Geimpfte, Genesene und Getestete 
+
+Z w e i t e r   T e i l  
+
+§ 8 
+
+Beschränkung des Zutritts zu Veranstaltungen und Einrichtungen   
+
+und der Inanspruchnahme von Leistungen auf Geimpfte, Genesene und Getestete 
+
+(1) 1In Landkreisen und kreisfreien Städten, in denen gemäß § 3 mindestens die Warnstufe 1 festgestellt ist, sind der Zutritt zu den 
+in Satz 3 genannten Einrichtungen und die Inanspruchnahme der dort genannten Leistungen auf geimpfte, genesene und getestete 
+Personen beschränkt. 2Das Gleiche gilt, wenn in dem Landkreis oder in der kreisfreien Stadt, ohne dass eine Warnstufe festgestellt 
+ist, der Leitindikator „Neuinfizierte“ gemäß § 2 Abs. 3 mehr als 50 beträgt; der Landkreis oder die kreisfreie Stadt hat in entsprechender 
+Anwendung des § 3 die Voraussetzungen des Halbsatzes 1 festzustellen. 3Die Beschränkung gilt für 
+
+die  Teilnahme  an  einer  Sitzung,  Zusammenkunft  oder  Veranstaltung  in  geschlossenen  Räumen  mit  mehr  als  25  bis  zu 
+1 000 gleichzeitig anwesenden Teilnehmerinnen und Teilnehmern,   
+
+die Entgegennahme von Bewirtungsleistungen in geschlossenen Räumen eines Gastronomiebetriebs,   
+
+die Nutzung einer Beherbergungsstätte, 
+
+die Entgegennahme einer Dienstleistung eines Betriebs der körpernahen Dienstleistungen, 
+
+die Nutzung von Sportanlagen in geschlossenen Räumen, einschließlich Fitnessstudios, Kletterhallen, Schwimmhallen und ähn-
+lichen Einrichtungen wie Spaßbädern, Thermen und Saunen.   
+
+(2)  Die  Vorschriften  über  Sitzungen,  Zusammenkünfte  und  Veranstaltungen  nach  Absatz  1  Satz  3  Nr.  1  gelten  auch  für  die 
+Nutzung aller in  Theatern, Kinos und ähnlichen Kultureinrichtungen, in Spielhallen, Spielbanken  und Wettannahmestellen sowie in 
+Zoos,  botanischen  Gärten  und  Freizeitparks  für  den  Benutzerverkehr  zugänglichen  geschlossenen  Räume;  sanitäre  Anlagen  sind 
+nicht maßgeblich.   
+
+(3) Die Vorschriften über Sitzungen, Zusammenkünfte und Veranstaltungen nach Absatz 1 Satz 3 Nr. 1 gelten nicht   
+
+für Sitzungen, Zusammenkünfte und Veranstaltungen, die durch Rechtsvorschriften vorgeschrieben sind, 
+
+für religiöse Veranstaltungen,   
+
+im Zusammenhang mit der Ausübung einer beruflichen Tätigkeit oder im Zusammenhang mit einer Tätigkeit zur Gefahrenab-
+wehr,  einschließlich  der  entsprechenden  Fortbildung,  es  sei  denn,  dass  die  Tätigkeit  in  den  in  Absatz  1  Satz  3  Nrn.  2  bis  5 
+genannten Betrieben und Einrichtungen oder in geschlossenen Räumen der in Absatz 2 genannten Betriebe und Einrichtungen 
+erfolgt oder eine Dienstleistung bei einer Veranstaltung nach Absatz 1 Satz 3 Nr. 1 darstellt,,   
+
+im Bereich der beruflichen Aus-, Fort- oder Weiterbildung, 
+
+bei Veranstaltungen und Sitzungen des Niedersächsischen Landtags, seiner Gremien und Fraktionen, wobei das Hausrecht und 
+die Ordnungsgewalt der Präsidentin oder des Präsidenten des Niedersächsischen Landtages unberührt bleiben, 
+
+bei Veranstaltungen und Sitzungen von kommunalen Vertretungen, deren Gremien und Fraktionen, 
+
+für Versammlungen nach Artikel 8 des Grundgesetzes. 
+
+(4) 1Eine Person, die den Zugang oder die Nutzung einer in Absatz 1 Satz 3 genannten Einrichtung oder die Inanspruchnahme 
+
+ 
+
+einer dort genannten Leistung beabsichtigt, hat bei Betreten einen Impfnachweis gemäß § 2 Nr. 3 SchAusnahmV, einen Genesenen-
+nachweis gemäß § 2 Nr. 5 SchAusnahmV oder einen Nachweis über eine negative Testung nach § 7 vorzulegen. 2Die Veranstalterin, 
+der Veranstalter oder die Betreiberin oder der Betreiber der Einrichtung, hat den Nachweis aktiv einzufordern. 3Wird ein solcher Nach-
+weis nicht vorgelegt, so hat die Veranstalterin, der Veranstalter, die Betreiberin oder der Betreiber der Person den Zutritt zu verweigern. 
+4Eine Person, der im Fall des Absatzes 1 Satz 3 Nr. 3 die Nutzung einer Beherbergungsstätte aufgrund eines bei Anreise erbrachten 
+Nachweises über eine negative Testung gestattet ist, hat darüber hinaus während der Nutzung der Beherbergungsstätte mindestens 
+zwei Tests in jeder Woche der Nutzungsdauer durchzuführen. 5Erfüllt sie diese Pflicht nicht, so ist das Nutzungsverhältnis sofort zu 
+beenden. 
+
+(5) 1Die Betreiberin oder der Betreiber eines Betriebs oder einer Einrichtung, der oder die einer Beschränkung nach Absatz 1 Satz 
+3 Nrn. 1 bis 5 unterliegt, ist verpflichtet, die dort dienstleistenden Personen nach einem Testkonzept mindestens zweimal in der Woche 
+auf das Vorliegen des Corona-Virus SARS-CoV-2 zu testen, wenn diese Personen keinen Impfnachweis oder Genesenennachweis 
+nach Absatz 4 Satz 1 vorlegen. 2Das Testkonzept nach Satz 1 ist auf Verlangen der zuständigen Behörde vorzulegen.   
+
+(6) Die Regelungen der Absätze 1 bis 5 gelten nicht für Kinder, die das sechste Lebensjahr noch nicht vollendet haben oder noch 
+nicht eingeschult sind, sowie Schülerinnen und Schüler, die im Rahmen eines verbindlichen schulischen Testkonzepts regelmäßig 
+getestet werden.   
+
+(7) 1Für Mensen, Cafeterien und Kantinen gelten die Regelungen nach den Absätzen 1 bis 6 nicht, soweit diese Einrichtungen der 
+Versorgung von Betriebsangehörigen, Mitarbeiterinnen, Mitarbeitern oder Studierenden der jeweiligen Einrichtung dienen.  2Die Ab-
+sätze 1 bis 6 gelten auch nicht für 
+
+1.  Gastronomiebetriebe in Heimen nach § 2 Abs. 2 des Niedersächsischen Gesetzes über unterstützende Wohnformen (NuWG) 
+
+und in Einrichtungen des betreuten Wohnens zur Versorgung der Bewohnerinnen und Bewohner, 
+
+2.  Gastronomiebetriebe auf Raststätten und Autohöfen an Bundesautobahnen und 
+
+3. 
+
+Tafeln zur Versorgung bedürftiger Personen. 
+
+3Ausgenommen von den Regelungen der Absätze 1 bis 6 sind auch der Außer-Haus-Verkauf und der Lieferservice für Speisen und 
+alkoholfreie Getränke zum Verzehr außerhalb der jeweiligen Einrichtung.   
+
+D r i t t e r   T e i l  
+
+Inzidenzunabhängige Vorschriften für Bereiche   
+mit hohem Risiko für Mehrfachansteckungen 
+
+§ 9 
+
+Grundsatz 
+
+§ 10 
+
+Die Vorschriften für die in den §§ 10 bis 12 geregelten Bereiche mit hohem Risiko für Mehrfachansteckungen sind unabhängig von 
+
+der Geltung einer Warnstufe oder sonstigen Indikatoren zu beachten. 
+
+Sitzungen, Zusammenkünfte und Veranstaltungen   
+mit mehr als 1 000 bis zu 5 000 Teilnehmerinnen und Teilnehmern 
+
+(1) 1Eine Sitzung, Zusammenkunft oder Veranstaltung mit mehr als 1 000 bis zu 5 000 gleichzeitig anwesenden Teilnehmerinnen, 
+Teilnehmern, Besucherinnen und Besuchern sowohl unter freiem Himmel als auch in geschlossenen Räumen ist nur zulässig, wenn 
+dies auf Antrag der Veranstalterin oder des Veranstalters zuvor von den zuständigen Behörden zugelassen wird. 2Die Zulassung kann 
+erteilt werden, wenn die Veranstalterin oder der Veranstalter ein Hygienekonzept nach § 5 Abs. 1 vorlegt, das über die Anforderungen 
+des § 5 Abs. 2 Satz 1 hinaus bei Sitzungen, Zusammenkünften und Veranstaltungen in geschlossenen Räumen ein gesondertes Lüf-
+tungskonzept vorsieht. 3Die Zulassung muss mit dem Vorbehalt des Widerrufs in Bezug auf die Entwicklung des Infektionsgeschehens 
+versehen werden.   
+
+(2) 1Eine Person, die an der Sitzung, Zusammenkunft oder Veranstaltung teilnehmen will oder dort Dienste leistet, hat bei Betreten 
+einen Impfnachweis gemäß § 2 Nr. 3 SchAusnahmV, einen Genesenennachweis gemäß § 2 Nr. 5 SchAusnahmV oder einen Nach-
+weis über eine negative Testung nach § 7 vorzulegen; für das dienstleistende Personal bei mehrtägigen Sitzungen, Zusammenkünften 
+und Veranstaltungen gilt § 8 Abs. 5 entsprechend. 2Die Veranstalterin, der Veranstalter oder die Betreiberin oder der Betreiber der 
+Einrichtung hat den Nachweis aktiv einzufordern. 3Wird ein solcher Nachweis nicht vorgelegt, so hat die Veranstalterin, der Veranstal-
+ter, die Betreiberin oder der Betreiber der Person den Zutritt zu verweigern.   
+
+(3) Die Regelungen des Absatzes 2 gelten nicht für Kinder, die das sechste Lebensjahr noch nicht vollendet haben oder noch nicht 
+eingeschult sind, sowie Schülerinnen und Schüler, die im Rahmen eines verbindlichen schulischen Testkonzepts regelmäßig getestet 
+werden. 
+
+(4) Die Absätze 1 bis 3 gelten nicht für Versammlungen nach Artikel 8 des Grundgesetzes.   
+
+(5) Absatz 2 gilt ferner nicht für Wochenmärkte.   
+
+(6) 1Abweichend von Absatz 1 bis sind Messen für mehr als 1 000 bis zu 5 000 gleichzeitig anwesende Besucherinnen und Besu-
+cher zulässig, soweit die Zahl der Besucherinnen und Besucher 50 Prozent der Personenkapazität der gesamten Einrichtung nicht 
+überschreitet. 2Die Veranstalterin oder der Veranstalter muss ein zuvor mit der zuständigen Behörde abgestimmtes Hygienekonzept 
+nach § 5 Abs. 1 vorhalten. 3Die zuständige Behörde kann die Durchführung der Messe ab Bekanntgabe der Warnstufe 3 beschränken 
+oder untersagen.   
+
+(7) 1Zulassungen für Sitzungen, Zusammenkünfte und Veranstaltungen, die vor dem 25. August 2021 nach § 6 a Abs. 3 Satz 4 
+Halbsatz 2 und Sätze 5 und 6, Abs. 4 Sätze 5 und 6 sowie Abs. 7 Sätze 5 und 6 der Niedersächsischen Corona-Verordnung vom 
+
+ 
+
+30. Mai 2021 (Nds. GVBl. S. 297), zuletzt geändert durch Verordnung  vom 27. Juli 2021 (Nds. GVBl. S. 559), erteilt worden sind, 
+gelten bis zu einem Widerruf fort. 2Anforderungen nach den Regelungen dieser Verordnung, die über die Anforderungen der Nieder-
+sächsischen Corona-Verordnung vom 30. Mai 2021 (Nds. GVBl. S. 297), zuletzt geändert durch Verordnung vom 27. Juli 2021 (Nds. 
+GVBl. S. 559), hinausgehen, müssen in den Fällen des Satzes 1 nicht erfüllt werden. 
+
+§ 11 
+
+Großveranstaltungen 
+
+(1) Veranstaltungen sowohl unter freiem Himmel als auch in geschlossenen Räumen für mehr als 5 000 gleichzeitig anwesende 
+Besucherinnen und Besucher (Großveranstaltungen) können unter den Anforderungen der Absätze 2 bis 4 von den zuständigen Be-
+hörden zugelassen werden.   
+
+(2) 1Die Veranstalterin oder der Veranstalter muss ein Hygienekonzept nach § 5 Abs. 1 vorlegen, das über die Anforderungen des 
+
+§ 5 Abs. 2 Satz 1 hinaus besondere Maßnahmen vorsieht 
+
+1. 
+
+zur Einhaltung des Abstands nach § 1 Abs. 2, zum Beispiel durch 
+
+die Zuweisung eines festen Sitzplatzes für jede Besucherin und jeden Besucher, 
+
+c)  Maßnahmen zur Lenkung und Aufteilung der Besucherströme beim Zugang, während der Veranstaltungspausen und beim 
+
+a) 
+
+b) 
+
+sowie 
+
+eine Schachbrettbelegung der Sitzplätze,   
+
+Verlassen der Veranstaltung, 
+
+2. 
+
+für eine Einschränkung des Alkoholkonsums durch die Besucherinnen und Besucher während der Veranstaltung und zum Aus-
+schluss erkennbar alkoholisierter Personen von der Veranstaltung.   
+
+2Die Kontaktdaten jeder Besucherin und jedes Besuchers sind nach § 6 Abs. 1 zu erheben und zu dokumentieren, indem die Kontakt-
+daten  durch  den  Verkauf  personalisierter  Tickets  erhoben  und  dokumentiert  werden.  3Werden für  die  Veranstaltung  keine  Tickets 
+ausgegeben, so ist die Kontaktdatennachverfolgung in anderer Weise sicherzustellen. 4Bei Veranstaltungen in geschlossenen Räu-
+men hat die Veranstalterin oder der Veranstalter für eine hinreichende Lüftung durch eine Lüftungsanlage mit Frischluftzufuhr oder 
+durch eine Luftdesinfektion oder Luftfilterung zu sorgen.   
+
+(3) 1Eine Person, die an der Veranstaltung teilnehmen will oder dort Dienste leistet, hat bei Betreten einen Impfnachweis gemäß 
+§ 2 Nr. 3 SchAusnahmV, einen Genesenennachweis gemäß § 2 Nr. 5 SchAusnahmV oder einen Nachweis über eine negative Tes-
+tung nach § 7 vorzulegen; für das dienstleistende Personal bei mehrtägigen Veranstaltungen gilt § 8 Abs.5 entsprechend. 2Die Veran-
+stalterin, der Veranstalter oder die Betreiberin oder der Betreiber der Einrichtung hat den Nachweis aktiv einzufordern. 3Wird ein solcher 
+Nachweis  nicht  vorgelegt,  so  hat  die  Veranstalterin,  der  Veranstalter,  die  Betreiberin  oder  der  Betreiber  der  Person  den  Zutritt  zu 
+verweigern.   
+
+(4) Die Regelungen des Absatzes 3 gelten nicht für Kinder, die das sechste Lebensjahr noch nicht vollendet haben oder noch nicht 
+eingeschult sind, sowie Schülerinnen und Schüler, die im Rahmen eines verbindlichen schulischen Testkonzepts regelmäßig getestet 
+werden. 
+
+(5) 1Die Zulassung darf nicht erteilt werden für Veranstaltungen mit mehr als 25 000 Besucherinnen und Besuchern und für Ver-
+anstaltungen, bei denen die Zahl der Besucherinnen und Besucher 50 Prozent der Personenkapazität der gesamten Einrichtung über-
+schreitet. 2Die Zulassung muss mit dem Vorbehalt des Widerrufs in Bezug auf die Entwicklung des Infektionsgeschehens versehen 
+werden. 
+
+(6) Die Absätze 1 bis 5 gelten nicht für Versammlungen nach Artikel 8 des Grundgesetzes. 
+
+(7) 1Abweichend von den Absätzen 1 bis 5 sind Messen für mehr als 5 000 gleichzeitig anwesende Besucherinnen und Besucher 
+zulässig, soweit die Zahl der Besucherinnen und Besucher 50 Prozent der Personenkapazität der gesamten Einrichtung nicht über-
+schreitet. 2Die Veranstalterin oder der Veranstalter muss ein zuvor mit der zuständigen Behörde abgestimmtes Hygienekonzept nach 
+§ 5 Abs. 1 vorhalten. 3Die zuständige Behörde kann die Durchführung der Messe ab Bekanntgabe der Warnstufe 3 beschränken oder 
+untersagen. 4Absatz 2 Sätze 2 bis 4 sowie die Absätze 3 und 4 gelten entsprechend.   
+
+(8) 1Zulassungen für Veranstaltungen, die vor dem 25. August 2021 nach § 6 c der Niedersächsischen Corona-Verordnung vom 
+30. Mai 2021 (Nds. GVBl. S. 297), zuletzt geändert durch Verordnung vom 27. Juli 2021 (Nds. GVBl. S. 559), erteilt worden sind, 
+gelten bis zu einem Widerruf fort. 2Anforderungen nach den Regelungen dieser Verordnung, die über die Anforderungen der Nieder-
+sächsischen Corona-Verordnung vom 30. Mai 2021 (Nds. GVBl. S. 297), zuletzt geändert durch Verordnung vom 27. Juli 2021 (Nds. 
+GVBl. S. 559), hinausgehen, müssen in den Fällen des Satzes 1 nicht erfüllt werden. 
+
+Diskotheken, Clubs, Shisha-Bars und ähnliche Einrichtungen 
+
+§ 12 
+
+(1) 1Der Betrieb einer Diskothek, eines Clubs oder einer ähnlichen Einrichtung oder einer Einrichtung, in der Shisha-Pfeifen zum 
+Konsum angeboten werden, ist unter den Anforderungen der Sätze 2 bis 5 zulässig. 2Die Betreiberin oder der Betreiber einer Einrich-
+tung im Sinne des Satzes 1 hat Maßnahmen aufgrund eines Hygienekonzepts nach § 5 zu treffen. 3Die Zahl der Gäste darf die Hälfte 
+der zulässigen Personenkapazität der Einrichtung nicht überschreiten. 4Die Regelungen über die Datenerhebung und Dokumentation 
+nach § 6 sind anzuwenden, wobei abweichend von § 6 Abs. 1 Satz 8 Halbsatz 1 die Kontaktdatenerhebung ausschließlich elektronisch 
+erfolgen  muss.  5Abweichend  von  § 4  Abs. 1  müssen  Gäste  keine  Mund-Nasen-Bedeckung  tragen,  wenn  die  Betreiberin  oder  der 
+Betreiber den Zugang auf Gäste beschränkt, die einen Impfnachweis oder Genesenennachweis nach § 8 Abs. 4 vorlegen. 
+
+(2) 1Jeder Gast hat bei Betreten einen Impfnachweis gemäß § 2 Nr. 3 SchAusnahmV, einen Genesenennachweis gemäß § 2 Nr. 5 
+SchAusnahmV oder einen Nachweis über eine negative Testung nach § 7 vorzulegen. 2Die Veranstalterin, der Veranstalter oder die 
+Betreiberin oder der Betreiber der Einrichtung hat den Nachweis aktiv einzufordern. 3Wird ein solcher Nachweis nicht vorgelegt, so hat 
+
+ 
+
+die Veranstalterin, der Veranstalter, die Betreiberin oder der Betreiber der Person den Zutritt zu verweigern.   
+
+(3) 1Die Betreiberin oder der Betreiber eines Betriebs oder einer Einrichtung nach Absatz 1 Satz 1 ist verpflichtet, das von ihr oder 
+ihm eingesetzte Personal nach einem Testkonzept mindestens zweimal in der Woche auf das Vorliegen des Corona-Virus SARS-
+CoV-2 zu testen, wenn diese Personen keinen Impfnachweis oder Genesenennachweis nach § 8 Abs. 4 Satz 1 vorlegen. 2Das Test-
+konzept nach Satz 1 ist auf Verlangen der zuständigen Behörde vorzulegen.   
+
+(4) Die Regelungen der Absätze 2 und 3 gelten nicht für Schülerinnen und Schüler, die im Rahmen eines verbindlichen schulischen 
+
+Testkonzepts regelmäßig getestet werden.   
+
+V i e r t e r   T e i l  
+
+Besondere Vorschriften 
+
+§ 13 
+
+Regelungen für die Beschäftigung von Personen in bestimmten Betrieben 
+
+(1) 1Unternehmen und landwirtschaftliche Betriebe, die Personen beschäftigen, die in Sammelunterkünften oder in betriebseigenen 
+oder angemieteten Unterkünften untergebracht sind, haben sicherzustellen, dass die beschäftigten Personen auf die aktuellen Hygie-
+neregeln hingewiesen werden und sie diese verstanden haben. 2Die Unternehmen und landwirtschaftlichen Betriebe haben die Ein-
+haltung der Hygieneregeln regelmäßig zu überprüfen und zu dokumentieren. 3Die von der Bundeszentrale für gesundheitliche Aufklä-
+rung herausgegebenen Infografiken mit den wichtigsten Hygienehinweisen sollen in allen Unterkünften gut sichtbar und für alle Be-
+wohnerinnen und Bewohner zugänglich ausgehängt werden. 4Eine Unterbringung in den in Satz 1 genannten Unterkünften soll mög-
+lichst nur in Einzelzimmern erfolgen. 5Küche und Bad sind so zu nutzen, dass eine ausreichende Distanz zwischen den Bewohnerinnen 
+und Bewohnern gewährleistet ist. 
+
+(2)  1Unternehmen und landwirtschaftliche Betriebe,  die temporär Personen als  Erntehelferinnen oder Erntehelfer beschäftigen, 
+welche in Sammelunterkünften untergebracht werden, dürfen nur Personen einsetzen, die einmal bei der ersten Ankunft und später 
+mindestens zweimal wöchentlich auf eine Infektion mit dem Coronavirus SARS-CoV-2 gemäß § 7 Abs. 1 getestet worden sind und 
+das Testergebnis negativ ist. 2Selbsttests gemäß § 7 Abs. 1 Satz 1 Nr. 3 sind nur zulässig, wenn sie unter Aufsicht einer geschulten 
+Person des Betriebs vorgenommen werden. 3Dokumentationen über die Testung sind auf dem Betriebsgelände für mindestens einen 
+Monat vorzuhalten. 4Die Kosten der Testung hat die Betriebsinhaberin oder der Betriebsinhaber zu tragen. 5Die zuständige Behörde 
+kann im Einzelfall begründete Ausnahmen von der Testverpflichtung zulassen. 6Die Testpflicht gilt nicht für Personen, die einen Impf-
+nachweis oder Genesenennachweis nach § 8 Abs. 4 Satz 1 vorlegen. 
+
+(3) 1Schlacht- und Zerlegebetriebe dürfen nur Personen in der Produktion einsetzen, die mindestens einmal je Woche auf eine 
+Infektion mit dem Coronavirus SARS-CoV-2 gemäß § 7 Abs. 1 getestet worden sind und das Testergebnis negativ ist; ausgenommen 
+von  der  Testpflicht  durch  die  Betriebe  sind  Personen,  die  ausschließlich  hoheitliche  Aufgaben  ausführen.  2Selbsttests  gemäß  § 7 
+Abs. 1 Satz 1 Nr. 3 sind nur zulässig, wenn sie unter Aufsicht einer geschulten Person des Betriebs vorgenommen werden. 3Doku-
+mentationen über die Testung sind auf dem Betriebsgelände für mindestens einen Monat vorzuhalten. 4Die Kosten der Testung hat 
+die Betriebsinhaberin oder der Betriebsinhaber zu tragen. 5Die zuständige Behörde kann im Einzelfall begründete Ausnahmen von der 
+Testverpflichtung zulassen. 6Der Testverpflichtung unterfallen nicht Betriebe des Fleischerhandwerks, die 
+
+1. 
+
+ihre Tätigkeiten nach § 1 Abs. 2 der Handwerksordnung handwerksmäßig betreiben und in die Handwerksrolle des zulassungs-
+pflichtigen Handwerks eingetragen sind oder 
+
+2. 
+
+in das Verzeichnis des zulassungsfreien Handwerks oder handwerksähnlichen Gewerbes eingetragen sind,   
+
+wenn sie in der Regel nicht mehr als 49 Personen in der Produktion tätig werden lassen. 7Die Testpflicht gilt nicht für Personen, die 
+einen Impfnachweis oder Genesenennachweis nach § 8 Abs. 4 Satz 1 vorlegen.   
+
+(4) Unternehmen im Sinne des § 6 Abs. 9 des Arbeitnehmer-Entsendegesetzes sind verpflichtet, von jeder Arbeitnehmerin und 
+jedem Arbeitnehmer sowie von jeder bei ihnen eingesetzten Person Kontaktdaten nach § 6 Abs. 1 zu erheben, zu dokumentieren und 
+den zuständigen Behörden auf Verlangen unverzüglich zu übermitteln.   
+
+Kindertagespflege, private Kinderbetreuung, Jugendfreizeiten 
+
+§ 14 
+
+(1) 1Ausgenommen von der Pflicht zum Tragen einer Mund-Nasen-Bedeckung nach § 4 Abs. 1 sind Personen bei der Betreuung 
+von Kindern in Kindertagespflege nach § 43 SGB VIII und der sonstigen privaten Betreuung von fremden Kindern in Kleingruppen 
+einschließlich des Bringens und Abholens der Kinder. 2Die betreuende Person hat geeignete Maßnahmen zu ergreifen, um die Gefahr 
+einer Infektion der eigenen Person und der betreuten Kinder mit dem Corona-Virus SARS-CoV-2 zu vermindern. 3Während des ge-
+samten Betreuungszeitraums ist die betreuende Person zur Dokumentation der Zeiten, in denen sie Kinder nach Satz 1 betreut, sowie 
+zur Datenerhebung und Dokumentation nach § 6 Abs. 1 Satz 2 verpflichtet; § 6 Abs. 1 Sätze 3 bis 8, Abs. 2 und 3 Satz 1 gilt entspre-
+chend.  4Für die Betreuung  von Kindern in Kindertagespflege nach  § 43 SGB VIII und die sonstige private Betreuung von fremden 
+Kindern in Kleingruppen gilt § 15 Abs. 5 entsprechend. 
+
+(2) Abweichend von Absatz 1 gilt für die Betreuung fremder Kinder durch mehrere Kindertagespflegepersonen in Zusammenarbeit, 
+
+also in der sogenannten Großtagespflege, § 15 Abs. 4 entsprechend. 
+
+(3)  1Absatz 1 gilt für Betreuungsangebote für Gruppen von Kindern und Jugendlichen in Jugendherbergen, Familienferien- und 
+Freizeitstätten, Zeltlagern, Jugend- und Erwachsenenbildungsstätten sowie in Kreissportschulen, Landessportschulen, vergleichbaren 
+verbandseigenen Einrichtungen, Mehrgenerationenhäusern und ähnlichen Einrichtungen entsprechend. 2Es muss zudem ein Hygie-
+nekonzept vorliegen und die Aufsicht durch pädagogische Fachkräfte oder ehrenamtlich Tätige mit Jugendleiterausbildung erfolgen. 
+3In einem Landkreis oder einer kreisfreien Stadt, in dem oder in der mindestens Warnstufe 1 nach § 2 festgestellt ist,   
+
+1. 
+
+dürfen die Betreuungsangebote nicht mehr als 50 gleichzeitig anwesende fremde Kinder und Jugendliche umfassen,   
+
+ 
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+3. 
+
+2. 
+
+ist bei mehrtägigen Angeboten vor Beginn ein Test nach § 7 Abs. 1 durchzuführen oder das negative Ergebnis eines Tests nach 
+§ 7 Abs. 1 nachzuweisen und   
+
+3. 
+
+sind während des Betreuungsangebots jeweils mindestens zwei Tests je Woche durchzuführen.   
+
+§ 15 
+
+Kindertageseinrichtungen 
+
+(1) Der Betrieb von Kindertageseinrichtungen einschließlich Kinderhorten ist unter Beachtung des „Niedersächsischen Rahmen-
+Hygieneplans  Corona  Kindertagesbetreuung“  vom  25.  August  2021,  veröffentlicht  auf  der  Internetseite  des  Kultusministeriums 
+(https://www.mk.niedersachsen.de/startseite/aktuelles/fragen_und_antworten_zum_betrieb_an_kindertageseinrichtungen/faq-
+194362.html), in Ergänzung zu den Hygieneplänen nach § 36 IfSG zulässig. 
+
+(2) 1Die örtlich zuständige Behörde kann den Betrieb an Kindertagesstätten einschließlich Kinderhorten bei lokalen Infektionsge-
+schehen einschränken. 2Der eingeschränkte Betrieb sieht ein Betreuungsangebot für alle Kinder vor, die in der jeweiligen Kinderta-
+geseinrichtung einen Betreuungsplatz haben. 3Soweit genehmigte Plätze nicht belegt sind, ist die Neuaufnahme von Kindern zulässig. 
+4In den Kindertageseinrichtungen sollen Kinder während des eingeschränkten Betriebs in Gruppen betreut werden, die in ihrer Perso-
+nenzusammensetzung in der Regel unverändert bleiben. 5Offene Gruppenkonzepte sowie die Durchmischung von zeitgleich in einer 
+Kindertagesstätte betriebenen Gruppen sind nicht zulässig. 6Jeder Gruppe werden von vornherein bestimmte Räumlichkeiten zuge-
+ordnet; die Nutzung einer gruppenübergreifend vorgehaltenen Räumlichkeit, wie zum Beispiel eines Bewegungsraums, oder des Au-
+ßengeländes der Einrichtung durch verschiedene Gruppen ist möglich, wenn die Räumlichkeit oder das Außengelände zeitgleich im-
+mer nur durch eine Gruppe genutzt wird. 7Satz 6 gilt nicht bei ausreichend großen Außenflächen, bei denen eindeutig abgrenzbare 
+Spielbereiche für einzelne Gruppen geschaffen werden, die eine Durchmischung von zeitgleich in einer Kindertageseinrichtung betrie-
+benen Gruppen wirksam unterbinden. 8Zugleich müssen die Spielbereiche nach Satz 7 derart eingegrenzt sein, dass zwischen den 
+einzelnen Spielbereichen ein Korridor mit einer Breite von mindestens 1,5 Metern besteht. 9Ausgenommen von den Sätzen 1 bis 8 ist 
+die Betreuung in Gruppen, in denen sich ausschließlich Kinder befinden, denen Hilfe nach dem Neunten Buch des Sozialgesetzbuchs 
+(SGB IX) gewährt wird. 10Eine Untersagung des Betriebs einer Kindertageseinrichtung durch eine Einzelanordnung bleibt unberührt. 
+
+(3) 1Für die Dauer einer Untersagung des Betriebs einer Kindertageseinrichtung durch eine Einzelanordnung ist die Notbetreuung 
+in  kleinen  Gruppen  zulässig.  2Die  Notbetreuung  ist  unter  Berücksichtigung  der  vorhandenen  Kapazitäten  auf  das  notwendige  und 
+epidemiologisch vertretbare Maß zu begrenzen.  3Die höchstens zulässige Zahl der in einer kleinen Gruppe  nach Satz 1 betreuten 
+Kinder richtet sich nach der Altersstruktur in dieser Gruppe. 4Die höchstens zulässige Zahl der betreuten Kinder darf in einer kleinen 
+Gruppe, in der 
+
+überwiegend Kinder unter drei Jahren betreut werden, in der Regel 8 Kinder, 
+
+überwiegend Kinder von der Vollendung des dritten Lebensjahres bis zur Einschulung betreut werden, in der Regel 13 Kinder, 
+und 
+
+3. 
+
+überwiegend Kinder von der Einschulung bis zur Vollendung des 14. Lebensjahres betreut werden, in der Regel 10 Kinder, 
+
+nicht überschreiten. 5Eine Überschreitung der höchstens zulässigen Zahl der betreuten Kinder in einer kleinen Gruppe ist unter Be-
+rücksichtigung der räumlichen, personellen und organisatorischen Kapazitäten zulässig. 6Die Notbetreuung dient dazu, Kinder aufzu-
+nehmen, 
+
+bei  denen  mindestens  eine  Erziehungsberechtigte  oder  ein  Erziehungsberechtigter  in  betriebsnotwendiger  Stellung  in  einem 
+Berufszweig von allgemeinem öffentlichem Interesse tätig ist, 
+
+bei denen ein Unterstützungsbedarf, insbesondere ein Sprachförderbedarf, besteht oder 
+
+die zum kommenden Schuljahr schulpflichtig nach § 64 Abs. 1 Satz 1 des Niedersächsischen Schulgesetzes (NSchG) werden. 
+
+7Zulässig ist auch die Betreuung in besonderen Härtefällen wie  etwa für Kinder, deren  Betreuung zur Sicherung  des Kindeswohls 
+erforderlich ist, sowie bei drohender Kündigung oder erheblichem Verdienstausfall für mindestens eine Erziehungsberechtigte oder 
+einen Erziehungsberechtigten. 8Die Sätze 1 bis 7 finden auch Anwendung auf die Betreuung von Gruppen, in denen sich ausschließ-
+lich Kinder befinden, denen Hilfe nach dem Neunten Buch des Sozialgesetzbuchs gewährt wird. 
+
+(4) Jede Person hat während der Betreuung in geschlossenen Räumen in einer Gruppe, in der überwiegend Kinder von der Ein-
+schulung bis zur Vollendung des 14. Lebensjahres betreut werden, eine Mund-Nasen-Bedeckung zu tragen, wenn aufgrund der örtli-
+chen Gegebenheiten die Einhaltung des Abstands nach § 1 Abs. 2 Satz 1 nicht gewährleistet werden kann. 2Ausgenommen davon 
+sind Kinder bis zur Einschulung.   
+
+(5)  Der  Betreiberin  oder  dem  Betreiber  einer  Kindertageseinrichtung  oder  eines  Kinderhortes  wird  empfohlen,  für  die  in  der 
+Kindertageseinrichtung  oder  dem  Kinderhort  tätigen  Personen  ein  Testkonzept  zu  entwickeln,  wobei  Personen,  die  einen  Impf-
+nachweis gemäß § 2 Nr. 3 SchAusnahmV oder einen Genesenennachweis gemäß § 2 Nr. 5 SchAusnahmV vorlegen, von einer 
+Testverpflichtung auszunehmen sind. 
+
+§ 16 
+
+Schulen 
+
+(1) 1An allen Schulen finden der Unterricht, außerunterrichtliche Angebote der Ganztagsschule sowie sonstige schulische Veran-
+staltungen in festgelegten Gruppen statt, die aus mehreren Lerngruppen bestehen können und in ihrer Personenzusammensetzung 
+möglichst unverändert sind (Kohorte). 2Jede Gruppe im Sinne des Satzes 1 muss nach der Zahl der ihr angehörenden Personen und 
+ihrer Zusammensetzung so festgelegt sein, dass eine etwaige Infektionskette nachvollzogen werden kann. 3Zwischen Personen, die 
+nicht derselben Gruppe im Sinne des Satzes 1 angehören, ist ein Abstand von mindestens 1,5 Metern einzuhalten. 4In einem Schul-
+gebäude hat jede Person während des Schulbetriebs eine Mund-Nasen-Bedeckung zu tragen.   
+
+(2) 1Für die Dauer der vollständigen oder teilweisen Schließung der Schule ist die Notbetreuung in kleinen Gruppen an Schulen 
+
+ 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+für Kinder in Schulkindergärten und für Schülerinnen und Schüler in der Regel der Schuljahrgänge 1 bis 6 in der Zeit von 8 bis 13 Uhr 
+zulässig. 2Über diesen Zeitraum hinaus kann eine zeitlich erweiterte Notbetreuung an Ganztagsschulen stattfinden. 3Die Notbetreuung 
+ist auf das notwendige und epidemiologisch vertretbare Maß zu begrenzen. 4Die Notbetreuung dient dazu, Kinder aufzunehmen, bei 
+denen mindestens eine Erziehungsberechtigte oder ein Erziehungsberechtigter in betriebsnotwendiger Stellung in einem Berufszweig 
+von allgemeinem öffentlichem Interesse tätig ist. 5Zulässig ist auch die Betreuung in besonderen Härtefällen wie etwa für Kinder, deren 
+Betreuung aufgrund einer Entscheidung des Jugendamtes zur Sicherung des Kindeswohls erforderlich ist, sowie bei drohender Kün-
+digung oder erheblichem Verdienstausfall für mindestens eine Erziehungsberechtigte oder einen Erziehungsberechtigten. 
+
+(3) 1Einer Person, ausgenommen Personen in Notfalleinsätzen der Polizei, der Feuerwehr, eines Rettungsdienstes und der tech-
+nischen Notdienste, ist der Zutritt zu einem Schulgelände während des Schulbetriebs verboten, wenn sie nicht einen Nachweis über 
+eine negative Testung gemäß § 7 Abs. 3 vorlegt. 2Abweichend von Satz 1 genügt für Schülerinnen und Schüler, Lehrkräfte, an der 
+Schule tätige Mitarbeiterinnen und Mitarbeiter im Sinne des § 53 NSchG sowie Personen im Rahmen der Hilfen zu einer Schulbildung 
+nach den §§ 75 und 112 Abs. 1 Nr. 1 SGB IX und § 35 a SGB VIII in Verbindung mit den §§ 75 und 112 Abs. 1 Satz 1 Nr. 1 SGB IX 
+und  Mitarbeiterinnen  und  Mitarbeiter  von  Tagesbildungsstätten  der  Nachweis  der  dreimaligen Durchführung  eines  Tests  nach  § 7 
+Abs. 1 Satz 1 je Woche; die Personen nach Halbsatz 1 dürfen bei der Durchführung eines Selbsttests im Sinne des § 7 Abs. 1 Satz 1 
+Nr. 3 die Dokumentation des Testergebnisses selbst erbringen. 3Abweichend von Satz 2 Halbsatz 1 muss an den ersten sieben Schul-
+tagen des Schuljahres 2021/2022 ein Test an jedem Präsenztag durchgeführt werden. 4Das Zutrittsverbot nach Satz 1 gilt nicht für 
+
+Personen, die unmittelbar nach dem Betreten des Geländes der Schule einen Test auf das Vorliegen des Corona-Virus SARS-
+CoV-2 durchführen oder durchführen lassen, wenn der Test ein negatives Ergebnis aufweist, 
+
+Schülerinnen und Schüler bei der Teilnahme an schriftlichen Arbeiten sowie an Abschluss- und Abiturprüfungen, 
+
+Personen, die das Schulgelände aus einem wichtigen Grund betreten und während des Aufenthalts voraussichtlich keinen Kon-
+takt zu Schülerinnen und Schülern sowie zu Lehrkräften haben, und 
+
+Personen, die einen Impfnachweis gemäß § 2 Nr. 3 SchAusnahmV oder einen Genesenennachweis gemäß § 2 Nr. 5 SchAus-
+nahmV vorlegen, 
+
+5. 
+
+Personen des öffentlichen Gesundheitsdienstes.   
+
+5Das Zutrittsverbot nach Satz 1 gilt nur in Bezug auf die Schulen, in denen für Personen nach Satz 2 Tests im Sinne des § 7 Abs. 1 
+Satz 1 Nrn. 2 und 3 in hinreichender Zahl zur Verfügung stehen. 6Ergibt eine Testung das Vorliegen einer Infektion mit dem Corona-
+Virus SARS-CoV-2, so haben die in Satz 2 genannten Personen die Schulleitung darüber zu informieren.   
+
+(4) 1Ergibt eine Testung das Vorliegen einer Infektion mit dem Corona-Virus SARS-CoV-2 bei einer Schülerin oder einem Schüler 
+einer Kohorte im Sinne des Absatzes 1 Satz 1, so ist jeder anderen Schülerin und jedem anderen Schüler der Kohorte der Zutritt zum 
+Schulgelände verboten, bis sie oder er durch einen Test nach Absatz 3, der nach dem Beginn des Zutrittsverbots durchgeführt sein 
+muss, den Nachweis eines negativen Testergebnisses erbringt. 2Das Zutrittsverbot nach Satz 1 gilt nicht für Schülerinnen oder Schüler, 
+die einen Impfnachweis gemäß § 2 Nr. 3 SchAusnahmV oder einen Genesenennachweis gemäß § 2 Nr. 5 SchAusnahmV vorlegen.   
+
+(5) Im Übrigen ist an allen Schulen der „Niedersächsische Rahmen-Hygieneplan Corona Schule“ vom 25. August 2021, veröffent-
+licht  auf  der  Internetseite  des  Kultusministeriums  (https://www.mk.niedersachsen.de/startseite/aktuelles/schuleneues-schuljahr-
+190409.html), ergänzend zu den Hygieneplänen nach § 36 IfSG zu beachten.   
+
+(6) Schulen im Sinne des Absatzes 1 sind alle öffentlichen allgemeinbildenden und berufsbildenden Schulen, Schulen in freier 
+
+Trägerschaft einschließlich der Internate, Tagesbildungsstätten sowie Landesbildungszentren.   
+
+§ 17 
+
+Heime, unterstützende Wohnformen, 
+Intensivpflege-Wohngemeinschaften, Einrichtungen der Tagespflege   
+und Angebote zur Unterstützung im Alltag 
+
+(1) 1Die Leitung von Heimen nach § 2 Abs. 2 NuWG und von unterstützenden Wohnformen nach § 2 Abs. 3 und 4 NuWG hat in 
+einem Hygienekonzept nach § 5 auch Regelungen zur Neuaufnahme, zur Wahrung und Förderung der Teilhabe der Bewohnerinnen 
+und Bewohner am gemeinschaftlichen und kulturellen Leben in den Einrichtungen und zum Besuch von Bewohnerinnen und Bewoh-
+nern in den Einrichtungen zu treffen mit der Maßgabe, dass deren Teilhabe- und Besuchsrechte nicht unverhältnismäßig eingeschränkt 
+werden. 2Mit diesen Regelungen im Hygienekonzept soll Besuch bei Bewohnerinnen und Bewohnern auch dann ermöglicht werden, 
+wenn es in der Einrichtung ein aktuelles SARS-CoV-2-Infektionsgeschehen gibt, soweit dies mit dem Interesse des Gesundheitsschut-
+zes vereinbar ist und die örtlich zuständigen Behörden dem zustimmen. 3Die Einrichtung ist nach § 6 Abs. 1 zur Datenerhebung und 
+Dokumentation der Kontaktdaten jeder Besucherin und jedes Besuchers verpflichtet. 
+
+(2) 1Beschäftigte in Heimen nach § 2 Abs. 2 NuWG, unterstützenden Wohnformen nach § 2 Abs. 3 und 4 NuWG sowie in Tages-
+pflegeeinrichtungen nach § 2 Abs. 7 NuWG, in ambulanten Pflegeeinrichtungen nach § 71 Abs. 1 des Elften Buchs des Sozialgesetz-
+buchs sowie in ambulanten Pflegediensten, die Leistungen der häuslichen Krankenpflege nach § 37 des Fünften Buchs des Sozialge-
+setzbuchs erbringen, und in diesen eingesetzte Leiharbeitnehmerinnen und Leiharbeitnehmer, Praktikantinnen und Praktikanten, eh-
+renamtlich Tätige, Bundesfreiwilligendienstleistende und Freiwilligendienstleistende haben an drei Tagen je Woche, an denen sie in 
+den Einrichtungen oder für die ambulanten Pflegedienste tätig sind, einen  Test nach  § 7 nachzuweisen.  2Das Testergebnis ist der 
+Leitung oder einer von der Leitung beauftragten beschäftigen Person vorzulegen. 3Der Dienst darf bei einem positiven Testergebnis 
+nicht verrichtet werden, solange eine Überprüfung des Ergebnisses nicht abgeschlossen ist und das Gesundheitsamt im Fall eines 
+positiven Befundes nicht eine weitere Beschäftigung gebilligt hat. 4Die Leitung oder die von ihr beauftragten beschäftigten Personen 
+sollen die Tests durchführen. 5Die in Satz 1 genannten Personen müssen einen Nachweis über eine Testung nach § 7 nicht erbringen, 
+soweit sie über einen Impfnachweis gemäß § 2 Nr. 3 SchAusnahmV oder über einen Genesenennachweis gemäß § 2 Nr. 5 SchAus-
+nahmV verfügen. 6Die nach Satz 1 verpflichteten Personen haben zudem abweichend von § 4 Abs. 1 eine Atemschutzmaske mindes-
+tens des Schutzniveaus FFP2, KN 95 oder eines gleichwertigen Schutzniveaus zu tragen, soweit und solange sie Kontakt zu einer 
+Bewohnerin, einem Bewohner, einer Kundin, einem Kunden oder einem Gast haben, es sei denn, sie verfügen über eine Impfnachweis 
+
+ 
+
+1. 
+
+2. 
+
+gemäß § 2 Nr. 3 SchAusnahmV oder über einen Genesenennachweis gemäß § 2 Nr. 5 SchAusnahmV; Atemschutzmasken mit Aus-
+atemventil sind nicht zulässig. 
+
+(3) 1In Heimen nach § 2 Abs. 2 NuWG gilt ergänzend, dass der Besuch von Bewohnerinnen und Bewohnern und das Betreten 
+durch Dritte zur erweiterten Grundversorgung, zur Erbringung von Dienstleistungen oder zu anderen Zwecken bei der Leitung oder 
+einer von der Leitung  beauftragten  beschäftigten Person anzumelden ist.  2Andernfalls kann  die  Leitung oder eine  von  der Leitung 
+beauftragte beschäftigte Person den Besuch oder das Betreten untersagen.  3Die Heimleitung oder die von dieser beauftragten Be-
+schäftigten sind verpflichtet, den Besucherinnen und Besuchern sowie den Personen, die die Einrichtung betreten wollen, die Durch-
+führung eines Tests nach § 7 Abs. 1 Satz 1 Nr. 2 oder 3 anzubieten, um den Besuch bei Bewohnerinnen und Bewohnern oder das 
+Betreten zu ermöglichen. 4Ein Besuch und ein Betreten dürfen erst bei Vorliegen eines negativen Testergebnisses nach § 7 ermöglicht 
+werden. 5Eine Testung ist nicht erforderlich, wenn die jeweils zu testende Person ein schriftliches oder elektronisches negatives Test-
+ergebnis  in  Bezug  auf  eine  Infektion  mit  dem  Corona-Virus  SARS-CoV-2  nachweist  und  die  dem  Testergebnis  zugrundeliegende 
+Testung bei einem Test nach § 7 Abs. 1 Nr. 1 höchstens 48 Stunden, bei einem Test nach § 7 Abs. 1 Nr. 2 oder 3 höchstens 24 Stun-
+den vor dem Besuch oder dem Betreten vorgenommen wurde. 6Für Dritte, die in den Einrichtungen eine Tätigkeit der körpernahen 
+Dienstleistungen erbringen, gilt Absatz 2 Satz 6 entsprechend. 7Die Sätze 3 bis 6 gelten für Dritte, die in unterstützenden Wohnformen 
+nach § 2 Abs. 3 und 4 NuWG, Tagespflegeeinrichtungen nach § 2 Abs. 7 NuWG und ambulant betreuten Wohngemeinschaften zum 
+Zweck der Intensivpflege, die nicht in den Geltungsbereich des Niedersächsischen Gesetzes über unterstützende Wohnformen fallen, 
+eine Tätigkeit der körpernahen Dienstleistungen erbringen, entsprechend. 8Besucherinnen und Besucher sowie sonstige Personen, 
+die die Einrichtung betreten wollen, müssen einen Nachweis über eine Testung nach § 7 nicht erbringen, soweit sie vor dem Besuch 
+oder dem Betreten einen Impfnachweis gemäß § 2 Nr. 3 SchAusnahmV oder einen Genesenennachweis gemäß § 2 Nr. 5 SchAus-
+nahmV vorlegen. 
+
+(4) In ambulant betreuten Wohngemeinschaften zum Zweck der Intensivpflege, die nicht in den Geltungsbereich des Niedersäch-
+sischen Gesetzes über unterstützende Wohnformen fallen, treffen die Verpflichtungen nach Absatz 1 die Bewohnerinnen und Bewoh-
+ner oder deren gesetzliche oder rechtsgeschäftliche Vertreterinnen oder Vertreter. 
+
+(5) 1Die seelsorgerische Betreuung der Bewohnerinnen und Bewohner sowie die Begleitung Sterbender bleiben jederzeit zulässig. 
+
+2Satz 1 gilt für stationäre Hospize entsprechend. 
+
+(6) 1Unter Beachtung eines von der Leitung der Einrichtung nach § 5 erstellten Hygienekonzepts sind 
+
+der Betrieb von Einrichtungen der Tagespflege nach § 2 Abs. 7 NuWG sowie   
+
+die Betreuung von Pflegebedürftigen in Gruppen im Rahmen der Angebote zur Unterstützung im Alltag nach § 45 a Abs. 1 Satz 2 
+Nr. 1 des Elften Buchs des Sozialgesetzbuchs 
+
+zulässig. 2Das Abstandsgebot nach § 1 Abs. 2 und die Pflicht zum Tragen einer Mund-Nasen-Bedeckung nach § 4 Abs. 1 gelten nicht 
+für die Gäste einer Tagespflegeeinrichtung, soweit alle anwesenden Gäste einen Impfnachweis gemäß § 2 Nr. 3 SchAusnahmV, einen 
+Genesenennachweis gemäß § 2 Nr. 5 SchAusnahmV oder einen Nachweis über eine Testung nach § 7 vorlegen. 
+
+§ 18 
+
+Werkstätten und Tagesförderstätten für behinderte Menschen   
+sowie vergleichbare Angebote der Eingliederungshilfe 
+
+(1) 1Die Leitung einer Werkstatt für behinderte Menschen oder eines mit einer Werkstatt für behinderte Menschen vergleichbaren 
+Angebots der Eingliederungshilfe sowie die Leitung einer Tagesförderstätte für behinderte Menschen oder eines mit einer Tagesför-
+derstätte für behinderte Menschen vergleichbaren Angebots der Eingliederungshilfe hat in einem angebotsspezifischen Hygiene- und 
+Schutzkonzept, das auch Fahrdienste zwischen dem Angebots- und Wohnort umfasst und sich nach der SARS-CoV-2-Arbeitsschutz-
+verordnung vom 25. Juni 2021 (BAnz AT 28.06.2021 V1) richtet, Maßnahmen zu treffen, die geeignet sind, die Gefahr einer Infektion 
+mit dem Corona-Virus SARS-CoV-2 zu vermindern. 2Dabei ist den Besonderheiten der jeweils betroffenen Personengruppe Rechnung 
+zu tragen.   
+
+(2) In Tagesförderstätten für behinderte Menschen oder in mit Tagesförderstätten vergleichbaren Angeboten der Eingliederungs-
+
+hilfe muss jeder Mensch mit Behinderungen der Wiederaufnahme seiner Betreuung zugestimmt haben. 
+
+Krankenhäuser, Vorsorge- und Rehabilitationseinrichtungen 
+
+1Der Zutritt zu Krankenhäusern, Vorsorge- und Rehabilitationseinrichtungen zum Zweck des Besuchs von Patientinnen und Pati-
+enten ist auf geimpfte, genesene und getestete Personen beschränkt; § 8 Abs. 4 gilt entsprechend. 2Die seelsorgerische Betreuung 
+der Bewohnerinnen und Bewohner sowie die Begleitung Sterbender ist jederzeit zulässig. 
+
+§ 19 
+
+§ 20 
+
+Wahlen 
+
+(1)  1Für  die Wahlhandlung und  die  Ermittlung  und Feststellung  des Wahlergebnisses bei  öffentlichen Wahlen sowie sonstigen 
+Sitzungen von Wahlausschüssen gelten ergänzend zu den Regelungen dieser Verordnung die Absätze 2 bis 5. 2Das Wahlgebäude 
+im Sinne dieser Regelung umfasst außer den Wahlräumen und Sitzungsräumen der Wahlvorstände und Wahlausschüsse auch alle 
+sonstigen Räume im Gebäude, die während der Wahlzeit und der Ermittlung und Feststellung des Wahlergebnisses sowie sonstigen 
+Sitzungen der Wahlausschüsse öffentlich zugänglich sind. 
+
+(2) 1Die Gemeinde, in Samtgemeinden die Samtgemeinde, hat die Hygieneanforderungen nach § 5 Abs. 1 und 2 Sätze 1 bis 3 
+sicherzustellen. 2Der Mindestabstand von 1,5 Metern zu anderen Personen nach § 1 Abs. 2 gilt nicht für zulässige Hilfspersonen der 
+wahlberechtigten Person. 3Er gilt ebenfalls nicht beim Transport von Wahlunterlagen zu einem anderen Wahlbezirk, wobei die Fahr-
+zeuginsassen eine medizinische Maske zu tragen haben. 4Vor dem Betreten des Wahlraumes soll sich jede Person die Hände desin-
+fizieren.   
+
+ 
+
+ 
+
+(3) Abweichend von § 8 ist der Zutritt zum Wahlgebäude den Mitgliedern der Wahlvorstände und den wahlberechtigten Personen 
+
+zur Ausübung ihres Wahlrechts auch dann zu gewähren, wenn sie nicht geimpft, genesen oder getestet sind.   
+
+(4)  1Die Verpflichtung zum Tragen einer medizinischen Maske im Wahlgebäude nach § 4 Abs. 1 Satz 1 gilt nicht für die Dauer 
+einer  vom  Wahlvorstand  angeordneten  Abnahme  der  Maske  zur  Identitätsfeststellung.  2Sie  gilt  ferner  nicht  für  die  Wahlvorstände 
+während des Auszählens und der Ergebnisermittlung.   
+
+(5) 1Soweit Personen, die sich auf Grundlage des Öffentlichkeitsgrundsatzes im Wahlgebäude aufhalten (insbesondere Wahlbe-
+obachterinnen und Wahlbeobachter), nach § 4 Abs. 5 von der Verpflichtung zum Tragen einer Mund-Nasen-Bedeckung ausgenom-
+men sind, dürfen sie sich in Wahlräumen zwischen 8 und 13 Uhr, zwischen 13 und 18 Uhr und ab 18 Uhr für jeweils längstens 15 Mi-
+nuten aufhalten, in Briefwahlräumen für längstens 15 Minuten; zu den Mitgliedern des Wahlvorstands und den Hilfskräften muss jeweils 
+ein  Mindestabstand  von  2  Metern  eingehalten  werden.  2Die  zeitliche  Beschränkung  nach  Satz  1  gilt  nicht,  wenn  die  Person  dem 
+Wahlvorstand eine Testung im Sinne des § 7 Abs. 1 Satz 1 Nr. 1 oder 2 in Verbindung mit Satz 3 Nr. 4 mit negativem Testergebnis 
+nachweist. 
+
+F ü n f t e r   T e i l 
+
+Schlussbestimmungen 
+
+§ 21 
+
+Weitergehende Regelungen und Anordnungen 
+
+(1) 1Die örtlich zuständigen Behörden können weitergehende Anordnungen treffen, soweit es im Interesse des Gesundheitsschut-
+
+zes erforderlich ist. 2Dies gilt insbesondere beim Erreichen der Warnstufen 2 und 3.   
+
+(2) 1Bei Anordnungen nach Absatz 1, die Kindertageseinrichtungen oder Schulen betreffen, sind vorrangig Maßnahmen in Betracht 
+zu  ziehen,  die  ein  Aufrechterhalten  des  jeweiligen  Betriebs  ermöglichen. 2Der  Schulbesuch  für  die  Teilnahme  an  Abschluss-  oder 
+Abiturprüfungen darf nicht untersagt werden. 
+
+(3) Bei Anordnungen nach Absatz 1, die Berufsbildungseinrichtungen nach § 2 Abs. 1 Nr. 3 des Berufsbildungsgesetzes betreffen, 
+darf der Besuch der Einrichtungen für die Durchführung und Teilnahme an berufsbezogenen Maßnahmen und Prüfungen nicht unter-
+sagt werden.   
+
+§ 22 
+
+Ordnungswidrigkeiten 
+
+Verstöße gegen die §§ 4 bis 13 und die §§ 17 bis 20 stellen Ordnungswidrigkeiten nach § 73 Abs. 1 a Nr. 24 IfSG dar und können 
+
+mit Geldbuße bis zu 25 000 Euro geahndet werden. 
+
+ 
+
+ 
+
+ 
+
+§ 23 
+
+Inkrafttreten, Außerkrafttreten 
+
+(1) Diese Verordnung tritt am 25. August 2021 in Kraft und mit Ablauf des 22. September 2021 außer Kraft. 
+
+(2) Gleichzeitig mit dem Inkrafttreten dieser Verordnung tritt die Niedersächsische Corona-Verordnung vom 30. Mai 2021 (Nds. 
+
+GVBl. S. 297), zuletzt geändert durch Verordnung vom 27. Juli 2021 (Nds. GVBl. S. 559), außer Kraft.   
+
+Hannover, den 24. August 2021 
+
+Niedersächsisches Ministerium 
+für Soziales, Gesundheit und Gleichstellung 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Ministerin 
+
+ 
+
+ 
+
+I. Anlass und wesentliche Ziele der Regelung 
+
+Begründung 
+
+Nach § 32 Satz 1 des Infektionsschutzgesetzes (IfSG) dürfen unter den Voraussetzungen, die für Maßnahmen nach den §§ 28 bis 31 
+IfSG maßgebend sind, durch Rechtsverordnung entsprechende Gebote und Verbote zur Bekämpfung übertragbarer Krankheiten er-
+lassen werden. Hiervon hat das Land Niedersachsen zur Bekämpfung der Corona-Pandemie Gebrauch gemacht und passt die not-
+wendigen Maßnahmen an den Verlauf der Pandemie an. Die Rechtsverordnung ist nach § 28 a Abs. 5 IfSG mit einer allgemeinen 
+Begründung zu versehen. 
+
+Die weltweite Ausbreitung von COVID-19, der durch den Corona-Virus SARS-CoV-2 als Krankheitserreger ausgelöste Erkrankung, 
+wurde am 11. März 2020 von der WHO zur Pandemie erklärt. In Deutschland sind seit dem Ausbruch des Corona-Virus SARS-CoV-
+2  mehr  als  3 877 000 Menschen  an  COVID-19  erkrankt.  Es  gab  mehr  als  92 000  Todesfälle  (veröffentlicht  unter: 
+https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Aug_2021/2021-08-24-de.pdf?__blob=publica-
+tionFile, Stand: 24. August 2021). 
+
+In Niedersachsen sind aktuell insgesamt etwa 272 500 Menschen infiziert worden, wobei mehr als 5 800 Menschen verstorben sind 
+(vgl.  Täglicher  Lagebericht  des  Robert  Koch-Instituts  (RKI)  zur  Coronavirus-Krankheit-2019  (COVID-19),  veröffentlicht  unter: 
+https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Aug_2021/2021-08-24-de.pdf?__blob=publica-
+tionFile, Stand 24. August 2021). 
+
+Das Robert Koch-Institut schätzt aufgrund der trotz des Rückgangs noch immer hohen Fallzahlen und der Verbreitung von einigen 
+SARS-CoV-2 Varianten die Gefährdung für die Gesundheit der Bevölkerung in Deutschland insgesamt als weiterhin hoch ein. Für 
+vollständig Geimpfte wird die Gefährdung als moderat eingeschätzt. Diese Einschätzung kann sich kurzfristig durch neue Erkenntnisse 
+ändern  (https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Wochenbericht/Wochenbericht_2021-08-
+19.pdf?__blob=publicationFile, Stand 24. August 2021). 
+
+Die anhaltende Viruszirkulation in der Bevölkerung (Community Transmission) mit zahlreichen Ausbrüchen in Privathaushalten, Kitas 
+und auch in Schulen sowie dem beruflichen Umfeld erfordert weiterhin die konsequente Umsetzung kontaktreduzierender Maßnahmen 
+und Schutzmaßnahmen, insbesondere die regelmäßige und intensive Lüftung von Innenräumen sowie massive Anstrengungen zur 
+Eindämmung von Ausbrüchen und Infektionsketten. Es ist weiterhin erforderlich, und wird aufgrund der steigenden Fallzahlen noch 
+wichtiger,  dass  alle  Menschen  ihr  Infektionsrisiko  entsprechend  den  Empfehlungen  des  RKI  (AHA  +  L)  minimieren,  möglichst  die 
+Corona-Warn-App nutzen, Situationen, bei denen sogenannte Super-Spreading-Events auftreten können, möglichst meiden, und sich 
+selbst bei leichten Symptomen der Erkrankung (unabhängig vom Impfstatus) testen lassen und zuhause bleiben. Dies ist vor dem 
+Hintergrund der raschen Ausbreitung leichter übertragbarer besorgniserregender Varianten (VOC) von entscheidender Bedeutung, 
+um die Zahl der neu Infizierten deutlich zu senken und schwere Krankheitsverläufe, intensivmedizinische Behandlungen und Todes-
+fälle zu vermeiden. Es handelt sich in Deutschland und insgesamt weltweit noch immer um eine überaus dynamische und ernst zu 
+nehmende Situation. 
+
+COVID-19 ist eine übertragbare Krankheit im Sinne des § 2 Nr. 3 IfSG. Der Krankheitsverlauf ist sehr unbeständig und kann sich von 
+einem  leichten  Verlauf  mit  Erkältungssymptomen  bis  hin  zu  einem  tödlichen  Verlauf  variieren.  Obwohl  schwere  Verläufe  auch  bei 
+Personen ohne Vorerkrankung auftreten und selbst bei jüngeren Patientinnen und Patienten beobachtet wurden, haben ältere Perso-
+nen und Personen mit Vorerkrankungen ein erhöhtes Risiko für schwere Krankheitsverläufe. Die Erkrankung ist sehr infektiös, und 
+zwar nach Schätzungen beginnend etwa ein bis zwei Tage vor Symptombeginn und endend zehn Tage nach Symptombeginn. Die 
+Übertragung erfolgt hauptsächlich durch respiratorische Aufnahme virushaltiger Partikel (größere Tröpfchen und kleinere Aerosole), 
+die beim Atmen, Husten, Sprechen und Niesen entstehen. 
+
+Die 7-Tage-Inzidenz je 100 000 Einwohnerinnen und Einwohner für ganz Deutschland stieg seit Mitte Februar 2021 stark an. Der von 
+Ende April 2021 bis Ende Juni 2021 zu beobachtenden Rückgang der 7-Tage-Inzidenz setzt sich nicht weiter fort. Seit Anfang Juli ist 
+ein Anstieg der Fallzahlen zu beobachten. Das bedeutet, dass sich SarS-Cov-2-Infektionen wieder stärker in Deutschland ausbreiten. 
+Der  derzeitige  Anstieg  der  Inzidenz  ist  vor  allem  in  den  Altersgruppen  der  10-  bis  34-Jährigen  zu  beobachten,  obwohl  sich  diese 
+Tendenz inzwischen auch in den Altersgruppen bis 49 Jahre abzeichnet. Auch der Anteil der positiv getesteten Proben unter den in 
+den Laboren durchgeführten PCR-Tests steigt wieder an. Der Positivanteil lag in der 32. Meldewoche (MW) 2021 bei 6 Prozent. 
+
+Der Rückgang der Anzahl der hospitalisierten und intensivpflichten Patientinnen und Patienten setzt sich aktuell ebenfalls nicht weiter 
+fort. Der Anteil der hospitalisierten und intensivpflichtigen Patienten mit COVID-19-Diagnose an allen Fällen mit schweren Atemwegs-
+infektionen steigt in der 32. MW im Vergleich zur Vorwoche weiter an. In Deutschland, wie auch im europäischen Ausland werden die 
+meisten Infektionen durch besorgniserregende Varianten verursacht. (vgl. wöchentlicher Lagebericht des RKI zur Coronavirus-Krank-
+heit 2019 (COVID-19) vom 19. August 2021 – aktualisierter Stand für Deutschland, veröffentlicht unter: https://www.rki.de/DE/Con-
+tent/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Gesamt.html). 
+
+Gleichzeitig steigt die Impfquote in Niedersachsen fortwährend. Bis einschließlich 23. August 2021 waren 66,8 Prozent der nieder-
+sächsischen  Bevölkerung  mindestens  einmal  geimpft  und  60,3  Prozent  vollständig  geimpft  (https://www.rki.de/DE/Content/In-
+fAZ/N/Neuartiges_Coronavirus/Daten/Impfquotenmonitoring.html;jsessionid=479BF35FF7F1E3C0A9FDF376344D788C.inter-
+net072?nn=13490888, Stand 24. August 2021). Alle Impfstoffe, die zurzeit in Deutschland zur Verfügung stehen, schützen nach der-
+zeitigem Erkenntnisstand bei vollständiger Impfung wirksam vor einer Erkrankung durch die beiden hauptsächlich zirkulierenden VOC, 
+Delta und Alpha.   
+
+Dass eine sehr hohe Impfquote erforderlich ist, liegt insbesondere daran, dass die inzwischen in Deutschland vorherrschende Virus-
+variante Delta nochmal erheblich ansteckender ist, als die bisherigen Virusvarianten. Gut ist allerdings, dass die Impfstoffe auch gegen 
+diese Variante eine hohe Wirksamkeit aufweisen. Wer nicht geimpft ist, muss sich absehbar regelmäßig testen lassen, wenn er in 
+Innenräumen mit anderen Menschen zusammentrifft, um eine Ausbreitung des Virus zu verhindern. In Ergänzung zu den geltenden 
+Abstands- und Hygieneregelungen bieten umfangreiche Testkonzepte eine sichere Grundlage, um die Infektionsdynamik weiter zu 
+verlangsamen. 
+
+Im Rahmen einer Neufassung der Niedersächsischen Corona-Verordnung sollen dennoch weitere Lockerungen der Beschränkungen 
+im Hinblick auf das sinkende Infektionsgeschehen ermöglicht werden. Insbesondere den geimpften oder genesenen Bürgerinnen und 
+Bürgern, aber auch den Personen, die sich den Testverfahren unterziehen, ist es zu verdanken, dass aufgrund ihrer aktiven Mitwirkung 
+
+ 
+
+perspektivisch eine gesicherte  und kontrollierte  Rückkehr zur Normalität ermöglicht werden kann. Es ist daher  auch  gerechtfertigt, 
+bestimmte Zugänge zu Einrichtungen oder Dienstleistungen den sogenannten 3-G-Personen (Geimpfte, Genesene, Getestete) weit-
+gehend einschränkungsfrei zu ermöglichen. Hiervon profitiert auch in besonderem Maße die Wirtschaft und das gesamte öffentliche 
+Leben. Obgleich im Rahmen der 3-G-Strategie ein hohes Schutzniveau erreicht werden kann, bleiben angesichts gleichwohl möglicher 
+Impfdurchbrüche oder Zweitinfektionen die allgemeinen inzidenzunabhängigen Schutzvorkehrungen, insbesondere die sogenannten 
+AHA + L-Regelungen, also ein Abstand von mindestens 1,5 Metern zu halten, die erforderliche Hygiene einzuhalten, eine Maske im 
+Alltag zu tragen und geschlossene Räume ausreichend zu lüften, allgemein notwendig, da die Pandemielage keineswegs als über-
+wunden angesehen werden kann.   
+
+Bund und Länder sind sich einig, dass die seit wenigen Wochen tagesaktuell erhobene Hospitalisierung von COVID-19-Patienten als 
+Indikator für schwere Krankheitsverläufe eine wichtige Größe zur Beurteilung des Infektionsgeschehens ist. So kann in Zukunft schnell 
+und präzise abgeschätzt werden, in welchem Umfang das Neuinfektionsgeschehen noch immer angesichts der wachsenden Immuni-
+tät in der Bevölkerung zu schweren Verläufen führt und damit sowohl für die Betroffenen als auch für die Belastung des Gesundheits-
+systems  eine  Gefahr  darstellt.  Bund  und  Länder  werden  alle  Indikatoren,  insbesondere  die  Belegung  der  Krankenhausbetten,  die 
+Impfquote, und die Zahl der schweren Krankheitsverläufe sowie die resultierende Belastung des Gesundheitswesens berücksichtigen, 
+um das weitere Infektionsgeschehen zu kontrollieren. 
+
+Gleichwohl bleibt auch die Inzidenz der Neuinfizierungen (7-Tage-Inzidenz) ein wichtiges Instrument, um frühzeitig besorgniserregende 
+Pandemieverläufe zu erkennen und die dafür notwendigen Maßnahmen zu ergreifen. Es werden jedoch angesichts der fortschreiten-
+den Impfquote, der Immunisierung genesener Personen und die Überwachung getesteter Personen Maßnahmen ergriffen, die den 
+besonderen Schutzstatus dieser Personen in Rechnung stellt. Gleichzeitig werden für die Festlegung von Eingriffsschwellen für Maß-
+nahmen zwei weitere Leitindikatoren betrachtet und in sogenannten Warnstufen zugrunde gelegt.   
+
+Das dreistufige Warnstufenmodell sieht vor, dass die festgelegten Wertebereiche von mindestens zwei Leitindikatoren erreicht werden 
+müssen, bevor eine Feststellung erfolgt. Diese Feststellung ist nur bei gesicherter Pandemielage möglich, das heißt erst dann, wenn 
+die Wertebereiche in einem Fünftagezeitraum ununterbrochen erreicht wurden.   
+
+Eine Warnstufe tritt dann am zweiten Tag nach dem Fünftagezeitraum in Kraft, sodass sich Betroffene auf die dann geltenden Schutz-
+bestimmungen einstellen können.   
+
+Betrachtet wird der Leitindikator „Neuinfizierte“. Hierbei handelt es sich um die schon bisher zugrunde gelegte sogenannte 7-Tage-
+Inzidenz (Fälle/100 000 Einwohnerinnen und Einwohner im Landkreis bzw. kreisfreien Stadt). 
+
+Daneben ist der Leitindikator „Hospitalisierung“ maßgeblich, der die landesweite 7-Tage-Inzidenz Hospitalisierungsfälle-Fälle/100 000 
+Einwohnerinnen und Einwohner betrachtet. 
+
+Schließlich wird ein dritter Leitindikator „Intensivbetten“ betrachtet, der den landesweiten Anteil der Belegung von Intensivbetten mit 
+COVID-19-Erkrankten an der zur Verfügung stehenden Intensivbettenkapazität (in Prozent) wiedergibt. 
+
+Die Kombination der festgelegten Betrachtung der Leitindikatoren ermöglicht es, die spezifischen Gefahrenlagen des Gesundheits-
+systems als Ganzes zu erkennen und mit gezielten Schutzmaßnahmen und damit auch Beschränkungen für Personen, Gruppen oder 
+Einrichtungen zu begegnen. Dabei geht es gerade auch darum, in differenzierter Weise die notwendigen Vorsorgemaßnahmen so 
+rechtzeitig, das heißt mit dem erforderlichen Zeitversatz des Ursache-Folgeprinzips, einleiten zu können, dass Eskalationen der Ge-
+fährdungslage nicht entstehen. 
+
+Öffnungsschritte werden in vielen Fällen weiterhin an negative Testergebnisse geknüpft, um durch umfassende Testkonzepte Infekti-
+onsketten schnell und gezielt unterbrechen zu können. Auf eine Verpflichtung zur Testung kann verzichtet werden, soweit dies von 
+den Gesamtumständen in Hinblick auf das Infektionsgeschehen zugelassen werden kann. Wie in der COVID-19-Schutzmaßnahmen-
+Ausnahmeverordnung festgelegt, stehen Geimpfte und Genesene den negativ Getesteten gleich.   
+
+Die zu treffenden Maßnahmen zur Eindämmung der Pandemie orientieren sich an den Grundsätzen der Geeignetheit, Erforderlichkeit 
+und  Angemessenheit.  Hierdurch  wird  ein  fairer  Ausgleich  zwischen  dem  Allgemeininteresse  des  Infektionsschutzes,  welches  dem 
+Schutze von Leben und Gesundheit der Bevölkerung und der Funktionsfähigkeit des Gesundheitssystems dient, einerseits, und dem 
+Recht der Bürgerinnen und Bürger an der uneingeschränkten Wahrnehmung ihrer Freiheitsrechte, andererseits, ermöglicht. 
+
+Durch die Differenzierung nach den Leitindikatoren in der jeweiligen Kommune sowie mit der Berücksichtigung des Schutzstatus der 
+teilnehmenden Personen (geimpft, genesen, getestet: 3-G) soll sichergestellt werden, dass die beschränkenden Maßnahmen weiterhin 
+dem Grundsatz der Verhältnismäßigkeit genügen. 
+
+Dies entspricht auch den Vorgaben des Infektionsschutzgesetzes. § 28 a Abs. 3 Satz 2 IfSG sieht in einer Sollbestimmung, also für 
+den Regelfall vor, dass die Schutzmaßnahmen der Länder unter Berücksichtigung des jeweiligen Infektionsgeschehens regional be-
+zogen auf die Ebene der Landkreise, Bezirke oder kreisfreien Städte an den Schwellenwerten nach den Sätzen 4 bis 12 ausgerichtet 
+werden (sollen), soweit das Infektionsgeschehen innerhalb eines Landes nicht regional übergreifend oder gleichgelagert ist. Dabei 
+geht der Gesetzgeber davon aus, dass insbesondere die Anzahl der Neuinfektionen mit dem Coronavirus SARS-CoV-2 je 100 000 Ein-
+wohnerinnen und Einwohnern innerhalb von sieben Tagen ein maßgeblicher Maßstab für die zu ergreifenden Schutzmaßnahmen ist. 
+Nach dieser Verordnung wird dieser Maßstab als Leitindikator „Neuinfizierte“ berücksichtigt und bei der Festlegung von Schutzmaß-
+nahmen entsprechend den Vorgaben des Infektionsschutzgesetzes zugrunde gelegt. § 28 a IfSG schließt jedoch auch nicht aus, dass 
+zur  Beurteilung  der  gesamten  Pandemielage  und  der  erforderlichen  zu  ergreifenden  Schutzmaßnahmen  auch  weitere  Indikatoren 
+betrachtet und in die Gesamtbewertung bei der Festlegung von Maßnahmen einbezogen werden dürfen. Dies ermöglicht in besonderer 
+Weise die Befolgung der dem § 28 a Abs. 3 zugrundeliegenden Regelungsintention zur Umsetzung und konsequenten Beachtung des 
+Grundsatzes der Verhältnismäßigkeit. Eine differenzierte Entscheidungsgrundlage zur Festlegung von Maßnahmen genügt auf dieser 
+Grundlage in besonderer Weise der erforderlichen Gesamtbetrachtung und entspricht sowohl den inzidenzbezogenen Stufenregelun-
+gen des Infektionsschutzgesetzes als auch einer durch die Rechtsprechung zu Recht vielfach angemahnten Heranziehung von diffe-
+renzierteren Betrachtungsgrundlagen, auch wenn der Bundesgesetzgeber diese im Infektionsschutzgesetz nicht ausdrücklich festge-
+legt hat.   
+
+Sachgerecht ist es zudem, die regionale erforderliche Steuerung durch die Feststellung von Warnstufen und Inzidenzen, mit der be-
+stimmte Schutzmaßnahmen wirksam werden, der kommunalen Entscheidungsebene vorzubehalten. 
+
+ 
+
+II. Die Regelungen im Einzelnen 
+
+Erster Teil (Allgemeine Vorschriften) 
+
+Zu § 1 (Regelungsbereich, generelle Verhaltenspflichten): 
+
+Zu Absatz 1: 
+
+Die Regelunge in § 28 c IfSG sieht vor, dass die Bundesregierung inzidenzunabhängig ermächtigt wird, durch Rechtverordnung Er-
+leichterungen oder Ausnahmen von Geboten und Verboten für Personen zu regeln, bei denen von einer Immunisierung gegen das 
+Coronavirus  SARS-CoV-2  auszugehen  ist  oder  ein  negatives  Testergebnis  auf  eine  Infektion  mit  dem  Coronavirus  SARS-CoV-  2 
+vorliegt.   
+
+Durch wissenschaftliche Belege kann mittlerweile davon ausgegangen werden, dass von geimpften und genesenen Personen eine 
+erheblich geringere Ansteckungsgefahr ausgeht. Daher können Erleichterungen für diese Personengruppe vorgesehen werden.   
+
+Zu Absatz 2: 
+
+Zu § 2 (Warnstufen): 
+
+Grundsätzlich sind im Alltag, die AHA + L Regeln zu beachten und einzuhalten. Dabei wird empfohlen, einen Abstand von mindestens 
+1,5 Metern zu halten, die erforderliche Hygiene einzuhalten, eine Maske im Alltag zu tragen und geschlossene Räume ausreichend 
+zu lüften. Durch die Einhaltung können Personen und Gruppen zum Schutz vor einer Ansteckung beitragen. Dies ist vor dem Hinter-
+grund der raschen Ausbreitung leichter übertragbarer besorgniserregender Varianten (VOC) von entscheidender Bedeutung, um die 
+Zahl der neu Infizierten deutlich zu senken und schwere Krankheitsverläufe, intensivmedizinische Behandlungen und Todesfälle zu 
+vermeiden. Es handelt sich in Deutschland und insgesamt weltweit noch immer um eine überaus dynamische und ernst zu nehmende 
+Situation. 
+
+Die Verordnung sieht zur Steuerung des Pandemiegeschehens zum einen allgemein geltende inzidenzunabhängige Schutzmaßnah-
+men vor, zum anderen gelten besondere Schutzmaßnahmen, wenn die Pandemielage dies erfordert, namentlich, wenn Schutzmaß-
+nahmen unter den Vorbehalt der Feststellung einer Warnstufe gestellt werden. 
+
+Nachdem im Frühjahr die Infektionszahlen gesunken sind und sich im Sommer auf niedrigem Niveau befunden haben, steigen diese 
+in den letzten Wochen wieder an. Wie sich die Infektionszahlen entwickeln, hängt maßgeblich davon ab, wie hoch die Impfquote in 
+Deutschland ist. Deshalb werben die Bundeskanzlerin und die Regierungschefinnen und -chefs der Länder dafür, dass alle Bürger 
+sich nun zügig impfen lassen. Genug Impfstoff ist inzwischen vorrätig. Das Versprechen, jedem Bürger im Sommer ein Impfangebot 
+zu machen, ist inzwischen erfüllt. Dass eine sehr hohe Impfquote erforderlich ist, liegt insbesondere daran, dass die inzwischen in 
+Deutschland vorherrschende Virusvariante „Delta“ nochmal erheblich ansteckender ist, als die bisherigen Virusvarianten. Gut ist aller-
+dings, dass die Impfstoffe auch gegen diese Variante eine hohe Wirksamkeit aufweisen. Wer nicht geimpft ist, muss sich absehbar 
+regelmäßig testen lassen, wenn er in Innenräumen mit anderen Menschen zusammentrifft, um eine Ausbreitung des Virus zu verhin-
+dern. Damit steht aber auch fest, das zum gegenwärtigen Zeitpunkt ein Abstellen auf eine Impfquote nicht geeignet ist, um das Infek-
+tionsgeschehen steuern zu können.   
+
+Gleichwohl ist es vor diesem Hintergrund und angesichts der fortschreitenden individuellen Anstrengungen der Bevölkerung möglich 
+und auch vertretbar, dass der Verordnungsgeber einen weitergehenden Beurteilungsrahmen eröffnet, um für den Geltungseintritt der 
+Schutzmaßnahmen nicht mehr nur auf den Maßstab der Inzidenzen abzustellen, sondern über die Feststellung einer Warnstufe nach 
+Absatz 2 weitere Leitindikatoren einzubeziehen.   
+
+Das bisher geltende reine inzidenzbasierte Stufenmodell wird modifiziert und durch das sogen. Warnstufenmodell ersetzt. Damit wer-
+den sehr unterschiedliche Indikatoren zugrunde gelegt, die - auch bezüglich der unterschiedlichen regionalen und landesweiten Be-
+trachtung der Inzidenzen - ein gegenseitiges Korrektiv der Leitindikatoren darstellt, die eine angemessene Reaktion auf das Pande-
+miegeschehen ermöglicht. 
+
+Neben dem Leitindikator der „Neuinfizierten“ (7-Tage-Inzidenz) sind als weitere Leitindikatoren die - das Gesundheitssystem in beson-
+derer Weise - kapazitätsbegrenzenden Indikatoren der „Hospitalisierung“ und die der zur Verfügung stehenden „Intensivbetten“ zu 
+berücksichtigen. Sowohl das Risiko, sich zu infizieren als auch das Risiko schwerer Krankheitsverläufe sind durch eine Impfung dras-
+tisch reduziert. Mit steigender Impfquote sinkt daher die Gefahr der Überlastung des stationären Gesundheitssystems deutlich. Nach 
+den Auswertungen des DIVI Registers sind aktuell durchschnittlich 85 Prozent der COVID-19 Krankenhauspatientinnen und Patienten 
+nicht geimpft. Die tagesaktuell erhobene Hospitalisierung von COVID-19-Patienten  als Indikator  für schwere  Krankheitsverläufe ist 
+daher eine wichtige Größe zur Beurteilung der Auswirkungen des Infektionsgeschehen für die stationäre Versorgung. Sie ermöglicht, 
+präzise abzuschätzen, in welchem Umfang das Neuinfektionsgeschehen noch immer angesichts der wachsenden Immunität in der 
+Bevölkerung zu schweren Verläufen führt und damit sowohl für die Betroffenen als auch für die Belastung des Gesundheitssystems 
+eine Gefahr darstellt. Im Frühjahr 2021 auf dem Höhepunkt der dritten Welle lag die Quote der COVID-19 Behandlungsfälle, die auf 
+die Intensivstation (ITS) verlegt werden mussten zeitweilig bei ca. 33 Prozent (zuletzt am 24. April 2021 „Bundesnotbremse“ hat der 
+Anteil mit 321 ITS Betten von insgesamt 1 121 belegten COVID-19 Betten noch immer 29 Prozent betragen), mittlerweile ist die Quote 
+auf knapp 20 Prozent gesunken, auch das eine Folge des Impffortschritts. Die ITS-Kapazitäten sind neben der rein sächlichen Aus-
+stattung insbesondere zwingend abhängig von der erforderlichen hochqualifizierten Personalressource und kann daher auch im Notfall 
+nicht kurz- oder mittelfristig gesteigert werden. Daher werden zusätzlich die schweren Krankheitsverläufe und die dafür erforderliche 
+Kapazität der Intensivbetten sowie die daraus resultierende Belastung des Gesundheitswesens berücksichtigt, um das Infektionsge-
+schehen zu kontrollieren und zu lenken. 
+
+Andererseits kann es, z. B. erforderlich sein, zielgerichtete Schutzmaßnahmen aufgrund der gegebenen Inzidenzwerte einzelner Leit-
+indikatoren vorzusehen, auch wenn die Wertebereiche nicht oder nur bei einem der Indikatoren erreicht werden, sodass eine Warn-
+stufe noch nicht feststellt werden kann. Denn es besteht insbesondere nach wie vor ein hohes virologisches Erfordernis, die Verbrei-
+tung des Coronavirus SARS-CoV-2 und damit z. B. Neuinfektionen zu minimieren, um so eine dynamische Veränderung und Weiter-
+entwicklung des Virus und damit einhergehend ein Unterlaufen der Schutzwirkung der bisher ergriffenen Maßnahmen, namentlich der 
+Impfungen, zu verhindern. Zudem sind auch – unabhängig vom Eintritt einer Warnstufe oder einer Überschreitung eines Leitindikators 
+- bei besonderen Dispositionen oder Überlastungssituationen des Gesundheitssystems oder Einrichtungen usw. besondere Schutz-
+maßnahmen erforderlich und aufgrund der Regelungsstruktur der Verordnung auch weiterhin möglich.   
+
+ 
+
+Zu Absatz 2: 
+
+Zu Absatz 3:   
+
+Zu Absatz 4: 
+
+Zu Absatz 5: 
+
+Zur Feststellung einer Warnstufe werden drei Leitindikatoren betrachtet. Die Verordnung sieht drei Warnstufen vor, die gestuft nach 
+den jeweils geltenden Wertebereichen aufsteigend geregelt sind. Mit den Eskalationsstufen wird die Grundlage gelegt, Schutzmaß-
+nahmen an das jeweilige Pandemiegeschehen differenzierter auszurichten und die geeigneten und erforderlichen Maßnahmen ent-
+sprechend der jeweiligen Situation in angemessener und zumutbarer Weise vorzusehen, um das Pandemiegeschehen zu steuern 
+ohne die Rechte der Betroffenen unangemessen einzuschränken. 
+
+Die Landkreise sind verpflichtet, die Warnstufe festzustellen, wenn die für sie jeweils festgelegten Wertbereiche bei mindestens zwei 
+der Leitindikatoren erreicht sind.   
+
+In der Tabelle werden die maßgeblichen Wertebereiche der Leitindikatoren in den jeweiligen Warnstufen bestimmt, um den Rahmen 
+der Leitindikatoren innerhalb der jeweiligen Warnstufe zu bestimmen. Das bedeutet, dass ein Wertebereich eines Leitindikators in der 
+jeweiligen Warnstufe erreicht ist, sobald die indikatorenbezogenen tatsächlichen Werte den untersten in der Tabelle angegebenen 
+Wert des jeweiligen Wertebereiches eines Leitindikators in der jeweiligen Warnstufe erreichen. Es wird dadurch ermöglicht, mit diffe-
+renzierten Schutzmaßnahmen flexibel auf das Pandemiegeschehen zu reagieren.   
+
+Zu den Absätzen 3 bis 5: 
+
+Es werden die in der Tabelle gegebenen Leitindikatoren definiert. Damit werden sehr unterschiedliche Indikatoren zugrunde gelegt, 
+die - auch bezüglich der unterschiedlichen regionalen und landesweiten Betrachtung der Inzidenzen - ein gegenseitiges Korrektiv der 
+Leitindikatoren darstellt, die eine angemessene Reaktion auf das Pandemiegeschehen ermöglicht. 
+
+Mit dem Leitindikator „Neuinfizierte“ wird die schon bisher geltende vom Robert Koch-Institut festgestellte 7-Tage-Inzidenz der Neuin-
+fektionen in einem Landkreis oder einer kreisfreien Stadt erfasst. 
+
+Mit dem Leitindikator „Hospitalisierung“ ist die landesweite Zahl der im Krankenhaus behandelten COVID-19 Fälle je 100 000 Einwoh-
+nerinnen und Einwohner im Durchschnitt der letzten sieben Tage bestimmt. 
+
+Die Hospitalisierung zeigt schwer verlaufende Coronavirus-Infektionen an. Das Risiko eines schweren Krankheitsverlaufes nach In-
+fektion steigt einerseits unverändert mit dem Alter und Vorerkrankungen der infizierten Personen, fällt aber andererseits nach vollstän-
+diger Impfung. 
+
+Mit dem Leitindikator „Intensivbetten“ wird der landesweite prozentuale Anteil der mit COVID-19- Patientinnen und Patienten belegten 
+Intensivbetten, gemessen an der gesamten Intensivbettenkapazität des Landes Niedersachsen, bestimmt.   
+
+Die Belastung des Gesundheitsvorsorgesystems wird vor allem durch die Dauer der notwendigen Hospitalisierung (Liegezeit) und die 
+(personellen) Aufwände bei der Behandlung bestimmt, weniger durch die reine Zahl der aufgenommenen Patienten. Intensivpflichtige 
+COVID-19-Patienten erfordern durchschnittlich einen deutlich höheren Betreuungsaufwand als andere intensivmedizinisch versorgte 
+Patienten. 
+
+Die maximale Kapazität an Intensivbetten in Niedersachsen beträgt nach Rückmeldung der Krankenhäuser 2 424 Betten, die im äu-
+ßersten Notfall, wenn sämtliche elektiven Eingriffe ausgesetzt werden, mit Personal (das in diesem Fall aus allen Stationen des Kran-
+kenhauses zusammengezogen wird) betrieben werden können. In der Intensivbehandlung ist das im Notfall höchstens zur Verfügung 
+stehende fachlich qualifizierte Personal der limitierende Faktor. Die Zahl der „Intensivkapazität“ ist daher höher als die Zahl der „täglich 
+am Netz befindlichen“ Intensivbetten, da hierbei nur die Betten gezählt werden, für die an dem Tag dienstplanmäßig tatsächlich Per-
+sonal eingeteilt ist. Dies waren beispielsweise am 20. August 2021 rund 1 700. Die Krankenhäuser kalkulieren wie folgt: 
+
+Durchschnittlich wird die Hälfte der zur Verfügung stehenden Intensivbetten durch nicht beeinflussbare Ereignisse wie Unfall, Herzin-
+farkt, Schlaganfall und ähnliches belegt, ein Viertel der Betten ist durch elektive Eingriffe belegt und ein Viertel der belegbaren Kapa-
+zitäten steht durchschnittlich für COVID-19 Fälle zur Verfügung. In der ersten Pandemiewelle hat das Land durch Rechtsverordnung 
+alle  elektiven  Eingriffe  untersagt.  Damit  konnte  innerhalb  von  14  Tagen  dieses  Viertel  der  Intensivkapazitäten  für  COVID-19  Fälle 
+freigezogen werden. Im Anschluss haben die niedersächsischen Krankenhäuser ihre Intensivkapazitäten in der Bettenzahl und bei 
+den Personalressourcen auf die oben genannte Zahl aufgestockt.   
+
+Am Höhepunkt der dritten Welle, im Zeitpunkt der Einführung der Bundesnotbremse, sind rund 33 Prozent aller hospitalisierten Fälle 
+auf die Intensivstation überwiesen worden. Im Zuge des Impffortschritts in der Gruppe der Über-60-jährigen (aktuell > 84 Prozent) ist 
+dieser Prozentsatz auf derzeit 20 Prozent gesunken, gleichzeitig ist der Altersmedian im Krankenhaus von 77 Jahren im Januar 2021 
+auf 48 Jahre im August 2021 gesunken. Durch diese Erfahrungswerte kann prognostiziert werden, wie viel Hospitalisierungsfälle mit 
+zeitlicher Verzögerung voraussichtlich zu Intensivfällen werden. 
+
+Die Bettenbelegungszahlen werden über die webbasierte Sonderlage des Interdisziplinären Versorgungsnachweises IVENA eHealth 
+bestimmt, über den die Krankenhäuser in Echtzeit ihre Bettbelegungszahlen melden. 
+
+Die Leitindikatoren stellen sicher, dass eine Überlastung des Gesundheitssystems mit der Folge fehlender Behandlungsmöglichkeiten 
+für schwere Krankheitsverläufe verhindert wird. 
+
+Zu Absatz 6:   
+
+Zu Absatz 7: 
+
+Die aktuellen Werte der Leitindikatoren „Hospitalisierung“ und „Intensivbetten“ werden täglich auf der Internetseite https://www.nieder-
+sachsen.de/Coronavirus/aktuelle_lage_in_niedersachsen/niedersachsen-und-corona-aktuelle-leitindikatoren-203487.html  veröffent-
+licht. 
+
+Es  wird  klargestellt,  dass  Schutzmaßnahmen  auf  der  Grundlage  der  vorgegebenen Warnstufen  2  und  3  mit  Blick  auf  die  künftige 
+
+ 
+
+Gesamtinfektionslage geregelt werden müssen. Das bedeutet, dass Schutzmaßnahmen konkretisiert werden, wenn dies unter Beach-
+tung der gegebenen Pandemielage und der die Warnstufen auslösenden Leitindikatoren erforderlich wird. Es handelt sich stets um 
+vorsorgende aber auch das Infektionsgeschehen bekämpfende Maßnahmen, die im Rahmen einer Prognoseentscheidung bezüglich 
+ihrer Notwendigkeit und Wirkungserwartungen zu treffen sind. Sie können jedoch nicht  jedoch nicht zu früh, das heißt ohne einen 
+hinreichenden  Konkretisierungsgrad  der  Pandemieentwicklung  festgelegt  werden.  Schutzmaßnahmen  sollen  somit  einerseits  aus 
+Gründen der Planungssicherheit möglichst frühzeitig bestimmt werden, andererseits jedoch zielorientiert zur Bekämpfung der konkret 
+erkennbaren Pandemielage an die auslösenden Faktoren angepasst sein. Diese Gesamtbetrachtung hängt ganz wesentlich von einer 
+Vielzahl von Faktoren ab, die derzeit weder zeitlich noch sachlich mit der erforderlichen und dem Grundsatz der Verhältnismäßigkeit 
+genügenden rechtssicheren Konkretisierungsgrad bestimmt werden können. Dazu gehören insbesondere die Dynamik und Entwick-
+lung  der  Impfquote  und  ihrer Wirksamkeit,  der  –  auch  nach  demografischen  Bereichen  differenzierten  -  Infektionsentwicklung,  die 
+konkreten Auswirkungen der Urlaubs- und Feriensaison, der Umfang und die Entwicklung der benötigten Kapazitäten des Gesund-
+heitssystems und nicht zuletzt die für einen hohen Wirkungsgrad der bereits bestehenden Schutzmaßnahmen erforderlichen Akzep-
+tanz und konsequenten Umsetzung durch die Bevölkerung. 
+
+Zu § 3 (Feststellung der Warnstufen für den Landkreis oder die kreisfreie Stadt): 
+
+Zu Absatz 1: 
+
+Die Landkreise und kreisfreien Städte stellen den Zeitpunkt, ab dem die jeweilige Warnstufen in seinem oder ihrem Gebiet gilt, fest. 
+Die Feststellung erfolgt durch öffentlich bekannt zu gebende Allgemeinverfügung. Die Feststellung hat zu erfolgen, wenn an fünf auf-
+einander folgenden Werktagen (Fünftagesabschnitt) jeweils zwei der drei Leitindikatoren mindestens den in dieser Verordnung fest-
+gelegten Wertebereich überschreiten. Bezüglich des Zeitpunktes bestehen keine Feststellungsspielräume, sondern der Zeitpunkt ist 
+durch die Verordnung mit der Definition des Fünftageabschnitts verbindlich vorgegeben. Sonn- und Feiertage unterbrechen die Zäh-
+lung der Werktage nicht. 
+
+Satz 1 zweiter Halbsatz bestimmt, ab wann die jeweilige Warnstufe in dem Gebiet des Landkreises oder der kreisfreien Stadt gilt. Es 
+handelt sich um eine normative Anfangsbefristung für den Eintritt der Regelungswirkungen der festgestellten Warnstufe und damit der 
+Schutzbestimmungen, die unter dem Vorbehalt der Feststellung der Warnstufe stehen. Sie gelten ab dem übernächsten Tag nach 
+Ablauf des Fünftageabschnitts.   
+
+Es ist daher zwingend, dass die Bekanntgabe der Allgemeinverfügung zwischen dem Zeitpunkt der Geltung der Warnstufe (ab dem 
+Fünftageabschnitt) und dem normierten Eintritt der Rechtswirkungen der Schutzbestimmungen aufgrund der festgestellten Warnstufe 
+zu erfolgen hat. Dies ist möglich, da die zugrundeliegenden Werte tagesaktuell vorliegen und eine kurzfristige Reaktion hierauf ohne 
+weiteres möglich ist. Dies wird durch Satz 3 klargestellt, dass die Allgemeinverfügung unverzüglich zu erfolgen hat, nachdem aufgrund 
+der veröffentlichen Daten und Zahlen erkennbar wurde, dass die jeweiligen Wertebereiche erreicht sind. Das bedeutet, dass unmittel-
+bar im Anschluss an den sogen. Fünftagesabschnitt eine Bekanntgabe, spätestens am Folgetag erfolgen muss.   
+
+Die Sätze 3 und 4 regeln die Voraussetzungen unter denen ein Landkreis oder eine kreisfreie Stadt von der Feststellung einer Warn-
+stufe absehen darf.   
+
+Hängt die Feststellung einer Warnstufe vom Leitindikator „Neuinfizierte“ ab, darf der Landkreis oder die kreisfreie Stadt nach Satz 3 
+von der Feststellung  nach Satz  1 absehen, solange die Überschreitung des Wertebereichs das  Erreichen des für die  Feststellung 
+maßgeblichen  höheren Wertebereichs  auf  einem  Infektionsgeschehen  beruht,  das  mit  hinreichender  Sicherheit  einem  bestimmten 
+räumlich abgrenzbaren Bereich zugeordnet werden kann, und deshalb die Gefahr einer nicht mehr kontrollierbaren Verbreitung des 
+Corona-Virus SARS-CoV-2 nicht besteht.   
+
+Ein Landkreis oder eine kreisfreie Stadt darf nach Satz 4 von der Feststellung auch absehen, wenn die Feststellung einer Warnstufe 
+aufgrund der Überschreitung der Wertebereiche in den Leitindikatoren „Hospitalisierung“ und „Intensivbetten“ erfolgen müsste. Vo-
+raussetzung ist, dass der Wertebereich des Leitindikators „Neuinfektion“ deutlich und voraussichtlich auf Dauer die maßgebliche Warn-
+stufe unterschreitet. Es ist die Gesamtsituation der betroffenen überschrittenen Leitindikatoren zu bewerten, das heißt insbesondere, 
+ob etwa trotz niedriger Inzidenzwerte der Überlastung des Gesundheitswesens gleichwohl zu begegnen ist. Die Unterschreitung des 
+Leitindikators „Neuinfektionen“ eröffnet lediglich die Entscheidungsoption.   
+
+Es bedarf der Aufhebung der Feststellung einer Warnstufe sobald die Voraussetzungen für eine Feststellung nicht mehr gegeben sind. 
+Absatz 3 regelt insoweit die konkreten Voraussetzungen für eine Allgemeinverfügung, mit der die Beendigung der Warnstufe bekannt 
+zu geben. 
+
+Zu Absatz 3: 
+
+Zu § 4 (Mund-Nasen-Bedeckung): 
+
+Zu Absatz 1: 
+
+Es bleibt bei der bisher bewährten Regelungsstruktur zu den allgemeinen Pflichten zum Tagen einer Mund-Nasen-Bedeckung. Diese 
+Pflicht wird nunmehr vereinheitlich auf eine Pflicht zum Tragen einer medizinischen Maske als Mund-Nase-Bedeckung. 
+
+Grundsätzlich gilt, dass in allen geschlossenen Räumen, die öffentlich oder im Rahmen eines Besuchs- und Kundenverkehrs zugäng-
+lich  sind,  eine  medizinische  Maske  als  Mund-Nasen-Bedeckung  zu  tragen  ist.  Die  betrifft  namentlich  weiterhin  die  Geschäfte  des 
+Einzelhandels.   
+
+Nach Satz 2 werden darüber hinaus bestimmte Einrichtungen und Bereiche bestimmt, in denen unabhängig davon ob sie öffentlich 
+oder im Rahmen eines Besuchs- und Kundenverkehr zugänglich sind oder nicht, eine medizinische Maske als Mund-Nasen-Bede-
+ckung zu tragen ist.   
+
+Zu Absatz 1 Nr. 1: 
+
+Die Pflicht zum Tragen einer Mund-Nasen-Bedeckung gilt bei privaten Veranstaltungen in geschlossenen Räumen - unabhängig vom 
+Veranstaltungsort - nur, sofern die Teilnehmerzahl 25 Teilnehmerinnen und Teilnehmer übersteigt, die nicht über einen Impf- Genese-
+nen- oder negativen Testnachweis verfügen; ebenso nicht mit eingerechnet werden Schülerinnen und Schüler, die im Rahmen eines 
+verbindlichen schulischen Schulkonzepts regelmäßig getestet werden und Kinder bis zum sechsten Lebensjahr.   
+
+ 
+
+Zu Absatz 1 Nr. 2:   
+
+Zu Absatz 1 Nr. 3: 
+
+Zu Absatz 1 Nr. 4: 
+
+Nummer 2 entspricht weitgehend den schon bisher geltenden der mit dieser Verordnung aufgehobenen Regelungen.   
+
+Besitzen alle Fahrgäste die an touristischen Bus,- Schiffs- und Kutschfahrt teilnehmen, nach § 8 Abs. 4 Satz 1 einen Impfnachweis, 
+einen Genesenennachweis oder einen Nachweis über eine negative Testung, so ist das Tragen einer Mund-Nasen-Bedeckung ent-
+behrlich. Durch wissenschaftliche Belege kann mittlerweile davon ausgegangen werden, dass von geimpften und genesenen Perso-
+nen eine erheblich geringere Ansteckungsgefahr ausgeht. Wichtig ist, dass alle Fahrgäste einen Nachweis über eine Impfung, Gene-
+sung oder Testung vorlegen können. 
+
+Eine Mund-Nasen-Bedeckung zum Schutz vor einer Infektion ist auch zu tragen in einer Sitzung, Zusammenkunft oder Veranstaltung 
+im Sinne des § 8 Abs. 1 Satz 2 Nr. 1 und der §§ 10 und 11 dieser Verordnung. Bei diesen Sitzungen, Zusammenkünften oder Veran-
+staltungen ist aufgrund der zu erwartenden Personenzahl oder der zu erwartenden nicht möglichen Einhaltung des Abstandsgebots 
+mit einer erhöhten Infektionsgefahr zu rechnen.   
+
+Nach § 8 Abs. 1 Satz 2 Nr. 1 richtet sich an Teilnehmerinnen und Teilnehmer an einer Sitzung, Zusammenkunft oder Veranstaltung in 
+geschlossenen Räumen mit mehr als 25 bis zu 1 000 Teilnehmerinnen und Teilnehmern, die nicht durch Rechtsvorschriften vorge-
+schrieben ist. 
+
+Nach § 10 richtet sich an Teilnehmerinnen und Teilnehmer einer Sitzung, Zusammenkunft oder Veranstaltung sowohl unter freiem 
+Himmel als auch in geschlossenen Räumen mit mehr als 1 000 bis zu 5 000 Personen. 
+
+Nach § 11 richtet sich an Teilnehmerinnen und Teilnehmer an Großveranstaltungen sowohl unter freiem Himmel als auch in geschlos-
+senen Räumen mit mehr als 5 000 Besucherinnen und Besuchern. 
+
+Veranstaltungen mit mehr als 25 000 Personen sind nicht zugelassen. 
+
+Die MNB Pflicht erstreckt sich auf den theoretischen und praktischen Unterricht 
+
+Zu Absatz 1 Nr. 5: 
+
+Zu Absatz 1 Nr. 6: 
+
+Zu Absatz 2: 
+
+Zu Absatz 3: 
+
+Zu Absatz 3 Nr. 2: 
+
+Zu Absatz 3 Nr. 3: 
+
+Hierunter fallen insbesondere alle körpernahen Dienstleistungen zu kosmetischen und medizinischen Zwecken sowie des Handels. 
+Prostitution stellt eine körpernahe Dienstleistung dar. 
+
+Die Landkreise und kreisfreien Städte können durch Allgemeinverfügungen bestimmte Vorgaben für Örtlichkeiten in der Öffentlichkeit 
+unter freiem Himmel regeln. 
+
+Absatz 3 regelt die Ausnahmen, in denen eine Mund-Nasen-Bedeckung infektiologisch vertretbar nicht erforderlich ist. Die Ausnahmen 
+nach Nrn. 1, 4 bis 10 entsprechen den Ausnahmen, wie sie schon in der durch diese Verordnung aufgehobenen Verordnung vorge-
+sehen waren.   
+
+Neu aufgenommen wurde die Ausnahme für Veranstaltungen mit höchstens 25 Teilnehmerinnen und Teilnehmern, um zu regeln, dass 
+sowohl bei öffentlich zugänglichen Veranstaltungen als auch solchen mit Kundenverkehr bis zu einer Teilnehmerzahl von 25 Personen 
+eine Pflicht zum Tragen einer Mund-Nasen-Bedeckung nicht besteht. 25 der teilnehmenden Personen müssen nicht über einen der 
+G3-Nachweise verfügen; Personen,  die  über solche Nachweise  verfügen, Schüler, die regelmäßig im Rahmen einer  Schultestung 
+getestet werden oder Kinder bis zum sechsten Lebensjahr werden bei der Anzahl der Personen nicht mit eingerechnet und können 
+zusätzlich zu den 25 Personen in unbegrenzter Zahl hinzukommen, ohne dass eine Mund-Nasen-Bedeckung genutzt werden müsste. 
+Bezüglich privater Veranstaltungen korrespondiert die Regelung mit Absatz 1 Nr. 1.   
+
+Es gilt eine Ausnahme im Zusammenhang mit der Ausübung einer beruflichen Tätigkeit oder im Zusammenhang mit einer Tätigkeit 
+zur Gefahrenabwehr, einschließlich der entsprechenden Fortbildung soweit diese nicht in §§ 8 Abs. 3, 10 Abs. 2 oder 11 Abs. 3 ge-
+nannt  ist.  Es  handelt  sich  bei  den  in  Bezug  genommenen  Regelungen  um  Testpflichten  des  Personals  bzw.  der  dienstleistenden 
+Personen in den dort genannten Einrichtungen, Sitzungen oder Veranstaltungen. Für diese Einrichtungen sind aufgrund ihrer beson-
+deren Disposition einschränkende indikationsabhängige Regelungen für Teilnehmerinnen und Teilnehmer erforderlich oder es handelt 
+sich um Veranstaltungen, die mit einem hohen Risiko für Mehrfachansteckungen verbunden sind. In diesen Fällen ist es gerechtfertigt, 
+indikationsunabhängig Pflichten zum Tragen von Mund-Nasen-Bedeckungen für das dort tätige Personal auch zum Schutz der zu-
+trittsberechtigten Personen vorzusehen. 
+
+Zu den in diesen Vorschriften genannten beruflichen Tätigkeiten gehören:   
+
+§ 8 Abs. 1 Satz 2   
+
+Gaststättengesetzes,   
+
+Nr. 3    die Nutzung einer Beherbergungsstätte, 
+
+Nr. 2    Bewirtungsleistungen in geschlossenen Räumen eines Gastronomiebetriebs im Sinne des § 1 Abs. 3 des Niedersächsischen 
+
+Nr. 4  die Entgegennahme einer Dienstleistung eines Betriebs der körpernahen Dienstleistungen,   
+
+Nr. 5  die Nutzung von Sportanlagen in geschlossenen Räumen, einschließlich Fitnessstudios, Kletterhallen, Schwimmhallen und 
+
+ähnlichen Einrichtungen wie Spaßbädern, Thermen und Saunen. 
+
+ 
+
+Zu Absatz 3 Nr. 11: 
+
+Zu Absatz 3 Nr. 12: 
+
+Zu Absatz 4: 
+
+Zu Absatz 5: 
+
+Zu Absatz 6: 
+
+§ 10 Abs. 2: Eine Person, die bei der Sitzung, Zusammenkunft oder Veranstaltung mit mehr als 1 000 bis zu 5 000 Personen Dienste 
+leistet 
+
+§ 11 Abs. 3: Eine Person, die bei der Sitzung, Zusammenkunft oder Veranstaltung mit mehr als 5 000 Besucherinnen und Besuchern 
+Dienste leistet. 
+
+Neu eingeführt wurde Nummer 11. Wird eine körpernahe Dienstleistung entgegengenommen, bei der das Gesicht frei bleiben muss, 
+muss eine Mund-Nasen-Bedeckung nicht getragen werden. 
+
+Das Tragen einer Mund-Nasen-bedeckung kann durch das Hygienekonzept nach § 5 ausgeschlossen werden, soweit andere effektive 
+Schutzvorkehrungen getroffen worden sind, um vor einer möglichen Ansteckung mit dem SARS COV- 2 Virus zu schützen.   
+
+Es wird weiterhin wie bisher geregelt, in welchen Fällen eine Pflicht zum Tragen einer Mund-Nasen-Bedeckung nicht gegeben ist, 
+solange und soweit die teilnehmenden Personen Sitzplätze eingenommen haben. Eine solche Regelung ist vertretbar, da insbeson-
+dere bei Einhalten des Abstandsgebotes eine Infektionsgefahr situationsbedingt als niedrig einzuschätzen ist. Wer während der Teil-
+nahme an einer Veranstaltung sitzt oder in einer Gaststätte, in der Disco oder in der Shisha-Bar einen Sitzplatz eingenommen hat und 
+dabei einen ausreichenden Abstand von 1,5 m zu anderen Gästen einhält, darf die Mund-Nasen-Bedeckung abnehmen. Das Einhalten 
+des Hygienekonzeptes ist bei diesen Fällen von besonders großer Bedeutung.   
+
+Die Regelung über die Unzumutbarkeit der Pflicht zum Tragen einer Mund-Nasen-Bedeckung entspricht weitgehend den Regelungen, 
+wie sie schon bisher in der durch diese Verordnung aufgehobenen Verordnung vorgesehen waren. 
+
+Die Hinweis- und Mitwirkungspflichten für Betreiberinnen, Betreiber und verantwortlichen Personen bezüglich der geltenden pande-
+miebedingten Einschränkungen, entspricht weitgehend den Regelungen, wie sie schon bisher in der durch diese Verordnung aufge-
+hobenen Verordnung vorgesehen waren. 
+
+Es wurden redaktionelle Folgeänderungen vorgenommen, um die Regelung an den neuen Verordnungstext anzupassen.   
+
+Zu § 5 (Hygienekonzept): 
+
+Zu Absatz 1: 
+
+Zu Absatz 1 Nr. 1: 
+
+Zu Absatz 1 Nr. 2: 
+
+Zu Absatz 2: 
+
+Zu Absatz 2 Sätze 4 und 5: 
+
+Zu Absatz 3: 
+
+Der Betrieb einer öffentlich zugänglichen Einrichtung mit Kunden- oder Besuchsverkehr jeglicher Art sowie die Durchführung einer 
+Veranstaltung oder Versammlung setzen ein Hygienekonzept voraus. Ausnahmen bestehen nach Nrn. 1 und 2. 
+
+Im privaten Bereich sind Veranstaltungen mit höchstens 25 Teilnehmerinnen und Teilnehmern, zuzüglich Personen, die entsprechend 
+§ 8 Abs. 4 Satz 1 einen Impfnachweis, einen Genesenennachweis oder einen Nachweis über eine negative Testung vorlegen, Kindern, 
+die das sechste Lebensjahr noch nicht vollendet haben oder noch nicht eingeschult sind, sowie Schülerinnen und Schülern, die im 
+Rahmen eines verbindlichen schulischen Testkonzepts regelmäßig getestet werden, von der Einhaltung eines Hygienekonzepts be-
+freit. Dieses wurde aus Klarstellungsgründen ausgenommen. 
+
+Auch sind wegen des Hausrechts und der Ordnungsgewalt der Präsidentin oder des Präsidenten des Niedersächsischen Landtags 
+der Niedersächsische Landtag, seine Gremien und Fraktionen von der Einhaltung eines Hygienekonzepts ausgenommen. Die Rege-
+lung entspricht der bisherigen Handhabung und zudem dem bisherigen Verständnis des Landtags und der Landesregierung. 
+
+In Absatz 2 sind mögliche Hygienemaßnahmen aufgelistet. Die Aufzählung ist nicht abschließend. 
+
+Bei Veranstaltungen nach §§ 10 und 11 sowie beim Betrieb von Diskotheken, Clubs und ähnlichen Einrichtungen sowie von Einrich-
+tungen, in der Shisha-Pfeifen zum Konsum angeboten werden (gemäß § 12) muss auf die Einhaltung des Hygienekonzeptes beson-
+ders geachtet werden. Da in diesen Einrichtungen und Veranstaltungen Menschenmengen aufeinandertreffen die in der Regel nicht 
+nur von kurzer Dauer zusammen verweilen, sind die ergriffenen Schutzmaßnahmen unaufgefordert, im Übrigen auf Verlangen der 
+zuständigen Behörde durch das Hygienekonzept vorzuweisen. 
+
+Typisch für den öffentlichen Personenverkehr ist ein durchgängig lebhafter Kundenverkehr – insbesondere zu den Stoßzeiten. Daher 
+ist es wichtig und sinnvoll ein Hygienekonzept zu erstellen, welches den besonderen Anforderungen des öffentlichen Personenver-
+kehrs gerecht wird, um so eine Mehrfachansteckung zu vermeiden. 
+
+Zu § 6 (Datenerhebung und Dokumentation): 
+
+Zu Absatz 1: 
+
+Eine Datenerhebung und Datendokumentation ist im Rahmen des Zutritts oder der Nutzung einer Einrichtung oder der Teilnahme oder 
+des Besuchs einer Veranstaltung notwendig. 
+
+Zu Absatz 1 Satz 1 Nrn. 1 und 2, 3, 4, 5, 6, 7, 8, 9, 12:   
+
+Die Nummern 1 bis 12 entsprechen weitgehend den schon bisher geltenden der mit dieser Verordnung aufgehobenen Regelungen. 
+
+ 
+
+Zu Absatz 1 Satz 1 Nr. 10: 
+
+Zu Absatz 1 Satz 1 Nr. 11: 
+
+Zu Absatz 1 Satz 1 Nr. 13: 
+
+Zu Absatz 1 Satz 2: 
+
+Zu Absatz 1 Satz 6: 
+
+Zu Absatz 1 Satz 8: 
+
+Zu Absatz 2 Sätze 1 bis 3: 
+
+Zu Absatz 3: 
+
+Zu Absatz 4 Sätze 1 bis 2: 
+
+Zu § 7 (Testung): 
+
+Zu Absatz 1: 
+
+Neu einfügt wurde Nummer 10. Die Veranstalterin oder der Veranstalter einer Sitzung, Zusammenkunft oder Veranstaltung mit mehr 
+als 25 bis zu 1 000 gleichzeitig anwesenden Teilnehmerinnen und Teilnehmern muss ebenfalls eine Datenerhebung und Datendoku-
+mentation durchführen. Hiervon sind Veranstaltungen in geschlossen Räumen sowie unter freien Himmel erfasst.   
+
+Neu eingefügt wurde zudem Nummer 11. Veranstaltungen nach § 10 oder § 11 unterliegen einer Datenerhebung und Datendokumen-
+tationspflicht.   
+
+Neu einfügt wurde Nummer 13. Die Datenerhebungs- und Dokumentationspflicht besteht ebenfalls für die Betreiberin oder den Betrei-
+ber von Sauna-, Thermen- oder Schwimmhalleneinrichtungen. 
+
+Wohnungslose Personen können auch die Daten einer Kontaktstelle angeben. 
+
+Die Verwendung der Dokumentation ist aus datenschutzrechtlichen Gesichtspunkten an das zuständige Gesundheitsamt beschränkt. 
+
+In Satz 8 wird der Vorrang der digitalen Kontaktdatenerfassung vor der papiergestützten Datenerfassung definiert. Grundsätzlich hat 
+der Verordnungsgeber die digitale Kontaktdatennachverfolgung als verbindliche Rechtsanforderung getroffen. Daraus folgt, dass die 
+Regelanwendung die elektronische Kontaktdatenerhebung darstellt und hilfsweise, und nur in Ausnahmefällen, in Papierform erfolgen 
+darf. Dass ein besonders gelagerter (atypischer) Fall vorliegt, der ein Abweichen von der Norm und damit vom verordnungsgebenden 
+Willen rechtfertigt, muss dargelegt werden. Denkbar ist insbesondere, dass eine elektronische Aufzeichnung wegen technischer Prob-
+leme nicht möglich ist oder praktisch nicht umsetzbar ist.   
+
+Das  zuständige  Gesundheitsamt  ist  ausschließlich  im  Rahmen  der  Infektionskettennachverfolgung  berechtigt  eine  Dokumentation 
+anzufordern. Um den Datenschutz zu wahren, sind die verwendeten Daten unverzüglich nach erfolgreicher Kontaktnachverfolgung zu 
+löschen oder dann zu löschen, wenn sie nicht mehr gebraucht werden.   
+
+Die Betroffenen sind verpflichtet wahrheitsgemäße Angaben zu Ihren personenbezogenen Daten im Rahmen der Datenerhebung und 
+Datendokumentation zu machen. Bei unwahren Angaben, oder einer Verweigerung der Datenweitergabe sind die Betreiberin oder der 
+Betreiber der Einrichtung oder Veranstaltung berechtigt, den Zutritt zu verweigern.    Nur durch eine lückenlose und realistische Kon-
+taktnachverfolgung kann das Infektionsgeschehen eingedämmt und erforderliche Gegenmaßnahmen ergriffen werden.   
+
+Absatz 4 Satz 1 bis Satz 2 regelt die Datenerhebung für Behörden, Gerichte und Stellen, die öffentliche Interessen wahrnehmen. Für 
+die Datenerhebung für Behörden, Gerichte und Stellen, die öffentliche Interessen wahrnehmen, gelten die inhaltsgleichen Ausführun-
+gen gemäß Absatz 1, Sätze 1 und 2, Absatz 1 Sätze 3 bis 8, Absatz 2 und Absatz 3 Satz 1 entsprechend. 
+
+Es wurden redaktionelle Folgeänderungen vorgenommen, um die Regelung an den neuen Verordnungstext anzupassen.   
+
+In den Fällen, in denen eine Testpflicht in dieser Verordnung normiert ist, wird nach Absatz 1 Satz 1 Nrn. 1 bis 3 geregelt, dass dieser 
+Test durch einen sogenannten PCR-Test, einen Antigen-Schnelltest oder durch einen Selbsttest durchgeführt werden darf. Aus Satz 2 
+folgt, dass eine Testung vor dem Betreten einer Einrichtung, des Betriebs oder des Veranstaltungsortes stattzufinden hat. Maßgeblich 
+für  die  Geltungsdauer  von  einem  Antigen-Schnelltest  oder  Selbsttest  mit  maximal  24  Stunden  oder  einem  PCR  Test  mit  maximal 
+48 Stunden ist der Zeitpunkt der Abstrichnahme und des Zeitpunktes des jeweiligen Nutzungsbeginns. Nicht ausreichend ist es, wenn 
+der Test nach § 1 Satz 1 Nr. 2 oder 3 allein durch die Besucherin oder den Besucher durchgeführt wird. In diesem Fall ist eine nach-
+vollziehbare Zuordnung des Testnachweises zu der testpflichtigen Person nicht möglich. Daher darf die Testung nach § 1 Satz 1 Nr. 2 
+oder 3 nur vor Ort unter Aufsicht der- oder desjenigen stattfinden, die oder der jeweiligen Schutzmaßnahme unterworfen ist, oder unter 
+Aufsicht einer oder eines anderen stattfinden, die oder der einer Schutzmaßnahme nach dieser Verordnung unterworfen ist. Auch ist 
+es  möglich,  dass  die  Testung  nach  § 1  Nr. 2  oder  3  im  Rahmen  einer  betrieblichen  Testung  im  Sinne  des  Arbeitsschutzes  durch 
+Personal, das die dafür erforderliche Ausbildung oder Kenntnis und Erfahrung besitzt oder von einem Leistungserbringer nach § 6 
+Abs. 1 TestV vorgenommen oder überwacht werden kann. 
+
+Die Testpflicht durch die Vornahme eines Selbsttestes ist nur erfüllt, wenn dieser unter der Aufsicht der in Satz 5 genannten Personen 
+erfolgt.   
+
+Zu Absatz 2: 
+
+Nach Absatz 2 Satz 1 und Satz 2 besteht ein Anspruch auf die Erstellung einer Bescheinigung durch die Person, die den Test nach 
+Absatz 1 Nr. 1 oder 2 durchgeführt oder nach Absatz 1 Nr. 3 beaufsichtigt hat. Diese Bescheinigung kann auch für weitere Besuche 
+genutzt werden, die unter einem Testvorbehalt zulässig sind. Anerkannt ist ebenfalls ein Nachweis gemäß § 2 Nr. 7 COVID-19-Schutz-
+maßnahmen-Ausnahmenverordnung vom 8. Mai 2021 (BAnz AT 08.05.2021 V1). Es handelt sich um eine Harmonisierung der bun-
+desrechtlichen und landesrechtlichen Regelungen bezüglich der anerkannten Testnachweise. Der Veranstalter oder die Veranstalterin 
+ist verpflichtet, den Zutritt bei einem positiven Testergebnis zu verweigern und das Gesundheitsamt über das Testergebnis zu unter-
+richten. Dabei sind die Kontaktdaten der getesteten Person mitzuteilen. Die Übermittlung darf auch ohne die Zustimmung der betroffe-
+nen Person erfolgen.   
+
+ 
+
+Zweiter Teil (Beschränkungen auf Geimpfte, Genesene und Getestete) 
+
+Zu  § 8  (Beschränkung  des  Zutritts  zu  Veranstaltungen  und  Einrichtungen  und  der  Inanspruchnahme  von  Leistungen  auf 
+geimpfte, genesene und getestete Personen): 
+
+Um den weiteren Anstieg der Infektionszahlen in Deutschland zu vermeiden, gelten bei bestimmten Pandemielagen Beschränkungen 
+für den Zutritt zu Veranstaltungen und Einrichtungen und der Inanspruchnahme von Leistungen. Zugang haben nur geimpfte, gene-
+sene und getestete Personen (3-G-Regel) sowie Kinder bis zum 6. Lebensjahr generell und darüber hinaus Schüler, weil Schüler im 
+Rahmen eines verbindlichen schulischen Schutzkonzeptes regelmäßig getestet werden.   
+
+Zu Absatz 1 Sätze 1 und 2: 
+
+Nach Satz 1 gelten die Beschränkungen, wenn mindestens die Warnstufe 1 festgestellt ist.   
+
+Unabhängig davon, ob eine Warnstufe festgestellt ist oder nicht, gelten nach Satz 2 die nachweisgebundenen Beschränkungen in 
+jedem Fall, wenn der Leitindikator „Neuinfizierte“ (7-Tage Inzidenz) mehr als 50 beträgt. Ein Landkreis oder eine kreisfreie Stadt ist 
+verpflichtet, die Überschreitung in entsprechender Anwendung des § 3 durch Allgemeinverfügung festzustellen, sobald für sein oder 
+ihr Gebiet eine Überschreitung an fünf aufeinander folgenden Werktagen (Fünftagesabschnitt) erreicht wird. Die Beschränkungen nach 
+§ 8 gelten ab dem übernächsten Tag nach dem Ablauf des Fünftagesabschnitts (§ 3 Abs. 1 2. Halbsatz). 
+
+Zu Absatz 1 Satz 3: 
+
+Die nachweisgebundenen Zugangsbeschränkungen gelten nur für die in Satz 1 Nrn. 1 bis 5 aufgezählten Einrichtungen. Es handelt 
+sich um herausgehobene besonders sensible Lebensbereiche mit diffusen, wechselnden und vielfältigen, körpernahen und/oder zeit-
+lich andauernden engen Kontakten, die auf eine besonders geschützte Umgebung angewiesen sind, um ihren Betrieb, die Nutzung 
+bzw. ihre Leistungserbringung auch bei erhöhtem Pandemiegeschehen aufrecht erhalten zu können. Es wird auch nicht geimpften 
+bzw.  genesenen  Personen  ermöglicht,  unter  der  Voraussetzung  von  negativen  Testnachweisen  die  genannten  Einrichtungen  und 
+Leistungen in Anspruch zu nehmen, sodass ein jederzeitiger Zugang hierzu allen Personen eröffnet ist. Eine Beschränkung auf die 
+allgemeinen Hygieneregeln reicht allein nicht aus, um das gegebene dann bereits hoch angespannte Pandemiegeschehen zu begren-
+zen. Die nachweisgebundenen Beschränkungen sind unter Berücksichtigung der vorausgesetzten Pandemielage angemessen und 
+zumutbar. 
+
+Die  Beschränkungen  gelten  für  private  und  kommerzielle  Sitzungen,  Zusammenkünfte  oder  Veranstaltungen  mit  25  bis  zu  1 000 
+gleichzeitig anwesenden Teilnehmerinnen und Teilnehmern. Die Regelung gilt nur für Veranstaltungen in geschlossenen Räumen. 
+Anforderungen für größere Veranstaltungen mit mehr als 1 000 Personen sind – inzidenzunabhängig - in den §§ 10 und 11 geregelt. 
+Dies gilt auch für Veranstaltungen unter freiem Himmel; Anforderungen sind hier aber erst ab einer Teilnehmerschaft von mehr als 
+1 000 Personen vorgesehen.   
+
+Die Beschränkungen gelten für die Entgegennahme von Bewirtungsleistungen in geschlossenen Gastronomiebetrieben. Unberührt 
+bleiben der Zugang zu Toiletten für Nutzer der Außenbewirtschaftung und reine Essensabholungen aus Innenräumen. 
+
+Beherbergungsstätten sind unter anderem Hotels, Pensionen, Campingplätze, Stellplatzanlagen für Wohnmobile oder die die gewerb-
+liche oder private Vermietung einer Ferienwohnung oder eines Ferienhauses. Auch Anlagen für Bootsanliegeplätze können Beherber-
+gungsstätten im Sinne dieser Verordnung sein, sofern eine Beherbergung an Ort und Stelle stattfindet.   
+
+Beschränkungen unterliegen die Entgegennahme von Dienstleistungen von Betrieben von körpernahen Dienstleistungen. Dienstleis-
+tungen im Sinne dieser Regelung sind mit einem erhöhten Gefährdungspotential bezüglich der Übertragung des Coronavirus SARS-
+CoV-2 verbunden, wenn sie mit einem engen Körperkontakt zwischen Dienstleister und Kunde oder zwischen gleichzeitig bedienten 
+Kunden untereinander einhergehen oder diesen erfordern, bei dem notwendigerweise ein Mindestabstand von 1,5 m nicht durchgängig 
+eingehalten werden kann. Das ist z. B. bei Dienstleistern, wie Optikern, Hörgeräteakustikern, Frisören, Tattoo-Studios, Nagelstudios, 
+Kosmetikstudios, Massagepraxen, praktischen Fahrschulen und Maniküre- und Pedikürestudios sowie anderen vergleichbaren Ein-
+richtungen gegeben. Gleiches gilt für Einrichtungen für therapeutische medizinische Behandlungen wie Praxen für die Physiotherapie, 
+Ergotherapie, Podologie oder Fußpflege, die Betriebe des Orthopädieschuhmacher-Handwerks und des Handwerks der Orthopädiet-
+echnik sowie die Praxen der Heilpraktikerinnen und Heilpraktikern.   
+
+Die Regelungen über körpernahe Dienstleistungen gelten auch für Prostitution. 
+
+Gegenstand der Beschränkungen ist die Nutzung von Sportanlagen in geschlossenen Räumen, einschließlich der ausdrücklich auf-
+gezählten Einrichtungen, wie Fitnessstudios, Kletterhallen, Schwimmhallen und ähnlichen Einrichtungen wie Spaßbädern, Thermen 
+und Saunen. 
+
+Zu Absatz 2: 
+
+Zu Absatz 3: 
+
+Nach Absatz 2 wird ausdrücklich geregelt, dass Absatz 1 Satz 3 Nr. 1 auch gilt für die Nutzung von Theatern, Kinos und ähnlichen 
+Kultureinrichtungen, in Spielhallen, Spielbanken und Wettannahmestellen sowie Zoos, botanischen Gärten und Freizeitparks in allen 
+für den Benutzerverkehr zugänglichen geschlossenen Räumen dieser Einrichtung. Die Außenbereiche sind hiervon nicht erfasst. Aus-
+genommen ist die Nutzung von sanitären Einrichtungen, die uneingeschränkt zugänglich bleiben sollen. Ähnliche Kultureinrichtungen 
+sind beispielsweise Museen. Die Regelungen des Absatzes 2 gelten nicht nur bei Veranstaltungen in diesen Einrichtungen, sondern 
+auch während des regulären Betriebs. 
+
+Es wird geregelt, in welchen Fällen die Vorschriften nach Absatz 1 Satz 3 Nr. 1 für die in den Nummern 1 bis 7 genannten Sitzungen, 
+Zusammenkünften und Versammlungen nicht gelten.   
+
+Zu Absatz 1 Satz 3 Nr. 1: 
+
+Zu Absatz 1 Satz 3 Nr. 2: 
+
+Zu Absatz 1 Satz 3 Nr. 3: 
+
+Zu Absatz 1 Satz 3 Nr. 4: 
+
+ 
+
+Zu Absatz 4: 
+
+Zu Absatz 5: 
+
+Zu Absatz 6: 
+
+Nicht erfasst von den Beschränkungen sind nach Nummer 1 Sitzungen, Zusammenkünfte und Veranstaltungen, die durch Rechtsvor-
+schriften vorgeschrieben sind und nach Nummer 2 religiöse Veranstaltungen. 
+
+Nach Nummer 3 gelten keine Beschränkungen im Zusammenhang mit der Ausübung einer beruflichen Tätigkeit oder im Zusammen-
+hang mit einer Tätigkeit zur Gefahrenabwehr, einschließlich der entsprechenden Fortbildung. Es gelten Rückausnahmen in folgenden 
+Fällen: Die Ausnahme gilt nicht, sofern die Tätigkeiten in den in Absatz 1 Satz 3 Nummern 2 bis 5 genannten Betrieben und Einrich-
+tungen erfolgen.  Stellt die berufliche oder die gefahrenabwehrrechtliche  Tätigkeit eine Dienstleistung bei  einer Veranstaltung nach 
+Absatz 1 Satz 3 Nr. 1 (25 bis 1 000 Personen) dar, gilt die Bereichsausnahme ebenfalls nicht; die Beschränkungen sind in jedem Falle 
+auch von den dienstleistenden Personen einzuhalten (z. B. Feuerwehr, Polizei, Ordnungsdienste und sonstige dort tätige Personen). 
+
+Nach Nummer 4 bleibt die berufliche Aus-, Fort- und Weiterbildung möglich. 
+
+Uneingeschränkt möglich bleiben nach Nummer 5 die genannten Bereiche des Landtags und nach Nummer 6 der Kommunalvertre-
+tungen.   
+
+Nummer 7 stellt klar, dass die Vorschriften für Veranstaltungen nach Absatz 1 Satz 3 Nr. 1 nicht für Versammlungen nach Artikel 8 
+des Grundgesetzes gelten. 
+
+Es gilt eine Pflicht zur Vorlage von Impf-, Genesenen- oder Testnachweisen bei dem Betreten der jeweiligen Einrichtung für Personen, 
+die den Zugang oder die Nutzung einer in Absatz 1 Satz 3 genannten Einrichtung oder die Inanspruchnahme einer dort genannten 
+Leistung beabsichtigen. Bezüglich der Definitionen der Impf- und Genesenennachweise gelten die Regelungen der SchAusnahmV 
+des Bundes; für die Testnachweise gilt § 7 dieser Verordnung. Verpflichtet werden die Veranstalterin, der Veranstalter oder die Betrei-
+berin  oder der Betreiber der Einrichtung, den jeweiligen Nachweis einzufordern, sich vorlegen zu lassen und bei Nichtvorlage den 
+Zutritt zu verweigern.   
+
+Nach Satz 4 gilt für Beherbergungsstätten, dass Personen, die nur aufgrund eines negativen Testnachweises Zugang zu der Beher-
+bergungsstätte haben, während der der Nutzung der Einrichtung mindestens zwei Tests in jeder Woche der Nutzungsdauer durchzu-
+führen haben. Für Personen mit Impf- oder Genesenennachweis gilt diese Testpflicht während des Aufenthaltes nicht. Wird ein Test 
+nicht durchgeführt, ist das Nutzungsverhältnis zu beenden.   
+
+Im Personalbereich der Betriebe nach Nrn. 1 bis 5 sind die Betreiberinnen und Betreiber verpflichtet, ein Testkonzept aufzustellen, auf 
+dessen Grundlage nicht geimpfte oder genesene dienstleistende Personen mindestens zweimal in der Woche getestet werden. Die 
+zuständigen Behörden sind befugt, die Vorlage des Testkonzepts zu verlangen. Auch das Personal einer Veranstaltung nach Absatz 1 
+Satz 3 Nr. 1 soll nicht generell, sondern nur warnstufen bzw. inzidenzabhängig einer Testpflicht unterliegen. Umfang und Vornahme-
+zeitpunkte der Testungen sind in dem Testkonzept festlegen.   
+
+Keiner gesonderten Nachweispflicht unterliegen Kinder, die das sechste Lebensjahr noch nicht vollendet haben. ausgenommen sind 
+ebenfalls Kinder ab sechs Jahren, wenn sie noch nicht eingeschult sind. Es ist sachgerecht, sie Kindern bis zur Vollendung des sechs-
+ten Lebensjahres gleichzustellen. Freigestellt sind auch Schülerinnen und Schüler, die im Rahmen eines verbindlichen schulischen 
+Schulkonzepts regelmäßig getestet werden. Die Regelung erfasst auch Ferienzeiten, sodass Schülerinnen und Schüler auch in dieser 
+Zeit keiner gesonderten Nachweispflicht unterliegen. 
+
+Absatz 7 sieht weitere Ausnahmen von den Regelungen nach den Absätzen 1 bis 6 vor, die besondere soziale und infrastrukturelle 
+Bedeutung für die erfassten Versorgungsbereiche haben und grundsätzlich uneingeschränkt bereitgestellt werden müssen.   
+
+-  Mensen, Cafeterien und Kantinen, soweit sie der Versorgung von Betriebsangehörigen, Mitarbeiterinnen, Mitarbeitern oder Stu-
+
+dierenden der jeweiligen Einrichtung dienen (Satz 1) 
+
+-  Gastronomiebetriebe in Heimen nach § 2 Abs. 2 NuWG und in Einrichtungen des betreuten Wohnens zur Versorgung der Be-
+
+wohnerinnen und Bewohner (Satz 2 Nr. 1)   
+
+-  Gastronomiebetriebe auf Raststätten und Autohöfen an Bundesautobahnen (Satz 2 Nr. 2)   
+
+Tafeln zur Versorgung bedürftiger Personen (Satz1 Nr. 3)   
+
+Außer-Haus-Verkauf und der Lieferservice für Speisen und alkoholfreie Getränke zum Verzehr außerhalb der jeweiligen Einrich-
+tung (Satz 3). 
+
+Dritter Teil (Inzidenzunabhängige Vorschriften für Bereiche mit hohem Risiko für Mehrfachansteckungen) 
+
+Es  handelt  sich  um  eine  Klarstellung,  dass  die  Regelungen  des  dritten  Teils  (§§ 10  bis  12)  unabhängig  von  der  Feststellung  von 
+Warnstufen oder sonstigen Indikatoren zu beachten sind. Das bedeutet, dass die hier geregelten Einrichtungen unter Einhaltung der 
+geregelten Anforderungen zulässig sind, wenn eine Warnstufe festgestellt wird oder Wertebereiche für Indikatoren nach § 2 erreicht 
+sind. Umgekehrt gelten die Anforderungen auch unterhalb der Feststellung von Warnstufen oder Wertebereichen für Leitindikatoren 
+nach § 2.   
+
+Es handelt sich um Vorsorgeregelungen, die eine Ausbreitung des Coronavirus SARS-CoV2 in besonders risikoreichen Situationen 
+und Bereichen minimieren sollen. Erfasst werden die besonders sensiblen Bereiche, die nach den Erfahrungen des bisherigen Pan-
+demieverlaufs mit einem hohen Risiko für Mehrfachansteckungen (sogen. „superspreading events“) verbunden sind. Eine solche Ge-
+fährdungslage drängt bei Zusammenkünften mit hohen Teilnehmerzahlen auf, die aus einem gemischten heterogen zusammenge-
+setzten Publikum bestehen. Hierfür sind unabhängig von Warnstufen oder Inzidenzen Vorkehrungen zu treffen aber auch ausreichend, 
+die das besondere Gefährdungspotential dieser Veranstaltungen minimieren und einem unkontrollierten Verbreiten des Coronavirus 
+
+Zu Absatz 7: 
+
+Nicht erfasst sind   
+
+- 
+
+- 
+
+Zu § 9 (Grundsatz): 
+
+ 
+
+Zu Absatz 1: 
+
+vorbeugen. Infektionen einzelner Personen können in den geregelten punktuell bestehenden Konstellationen und Situationen ein er-
+hebliches Verteilungs- und Übertragungsrisiko für eine Vielzahl der anwesenden Personen darstellen und sind nicht erst gegeben, 
+wenn ein festgelegter Wertebereich oder Inzidenzwert allgemein erreicht oder überschritten wird. 
+
+Zu § 10 (Sitzungen, Zusammenkünfte und Veranstaltungen  mit mehr als 1 000 bis zu 5 000 Teilnehmerinnen und Teilneh-
+mern): 
+
+Gegenstand der Regelung sind Sitzungen, Zusammenkünfte und Veranstaltungen in geschlossenen Räumen oder unter freiem Him-
+mel für mehr als 1 000 bis zu 5 000 gleichzeitig anwesenden Teilnehmerinnen und Teilnehmern, da diese mit einem hohen Risiko für 
+Mehrfachansteckungen (sogen. „superspreading events“) verbunden sind. Dieses Risiko steigt in den hier erfassten Veranstaltungen 
+noch einmal erheblich, wenn von den Teilnehmern nicht während des gesamten Verlaufs feste Sitzplätze mit entsprechenden Abstän-
+den eingenommen werden. In Innenräumen spielt der Luftaustausch, etwa durch raumlufttechnische Anlagen, eine erhebliche Rolle. 
+(vgl. Nummer 6 des MPK-Beschlusses vom 10. August 2021).   
+
+Die Beschränkung auf die „gleichzeitig anwesenden“ Teilnehmerinnen und Teilnehmer ist eine Klarstellung, dass während der Veran-
+staltung  nicht nur dieselben Personen anwesend sein  müssen,  sondern  auch  eine wechselnde  Personenzusammensetzung (Aus-
+tausch) möglich ist, sofern die Gesamtkapazität der Veranstaltung zu keinem Zeitpunkt überschritten wird. Dafür haben die Betreiberin 
+oder der Betreiber oder die Veranstalterin oder der Veranstalter zu sorgen und bei dem Antrag auf Zulassung darzulegen, wie dies 
+sichergestellt wird. 
+
+Maßgeblich für das Zulassungserfordernis ist die geplante Kapazität der Veranstaltung. Sie ist zugleich auch im tatsächlichen Verlauf 
+nur in dem zugelassenen Rahmen zulässig. Unterschreitet die tatsächliche Teilnehmerzahl die  Mindestgröße von  1 000 Personen 
+bleibt es bei der Anwendung des § 10. 
+
+Die Durchführung der Veranstaltungen steht unter dem Vorbehalt der Zulassung der zuständigen Behörden. Die Zulassung ist an-
+tragsgebunden und steht im pflichtgemäßen Ermessen der zuständigen Behörde. Voraussetzung der Zulassung ist die Vorlage eines 
+Hygienekonzeptes im Sinne des § 5 Abs. 1. Bei Sitzungen, Zusammenkünften und Veranstaltungen in geschlossenen Räumen ist das 
+Hygienekonzept um ein gesondertes Lüftungskonzept zu ergänzen (Satz 2). Eine Zulassung ist zwingend unter Widerrufsvorbehalt zu 
+stellen. Weitere Auflagen, insbesondere auch zur Sicherstellung der Einhaltung der Anforderungen des Hygienekonzepts, stehen im 
+pflichtgemäßen Ermessen der zuständigen Behörden. Es gelten die Anforderungen bezüglich der Kontaktdatennachverfolgung nach 
+§ 6 (vgl. § 6 Abs. 1 Nr. 11). 
+
+Es gilt eine Pflicht zur Vorlage eines Impf-, Genesenen- oder negativen Testnachweises bei dem Betreten der jeweiligen Einrichtung 
+oder des Veranstaltungsortes für alle Personen, die an der Sitzung, Zusammenkunft oder Veranstaltung teilnehmen wollen oder dort 
+Dienste leisten. Für die in der Veranstaltung dienstleistenden Personen gelten somit dieselben 3-G-Regelungen wie für die teilneh-
+menden Personen. Nicht geimpfte oder genesene Personen müssen daher über einen aktuellen negativen Testnachweis verfügen, 
+bevor sie die Veranstaltung betreten und ihren Dienst aufnehmen. Sofern es sich um eine mehrtägige Veranstaltung handelt, gilt § 8 
+Abs. 5  entsprechend,  das  heißt  es  gilt  die  Verpflichtung,  die  dort  dienstleistenden  Personen  nach  einem  Testkonzept  mindestens 
+zweimal in der Woche auf das Vorliegen des Corona-Virus SARS-CoV-2 zu testen. Bezüglich der Definitionen der Impf- und Genese-
+nennachweise gelten die Regelungen der SchAusnahmV des Bundes (§ 2 Nrn. 3 und 5 SchAusnahmV); für die Testnachweise gilt 
+§ 7 dieser Verordnung. Verpflichtet werden die Veranstalterin, der Veranstalter oder die Betreiberin oder der Betreiber der Einrichtung, 
+den jeweiligen Nachweis einzufordern, sich vorlegen zu lassen und bei Nichtvorlage den Zutritt zu verweigern. 
+
+Keiner gesonderten Nachweispflicht unterliegen Kinder, die das sechste Lebensjahr noch nicht vollendet haben. ausgenommen sind 
+ebenfalls Kinder ab sechs Jahren, wenn sie noch nicht eingeschult sind. Es ist sachgerecht, sie Kindern bis zur Vollendung des sechs-
+ten Lebensjahres gleichzustellen. Freigestellt sind auch Schülerinnen und Schüler, die im Rahmen eines verbindlichen schulischen 
+Schulkonzepts regelmäßig getestet werden. Die Regelung erfasst auch Ferienzeiten, sodass Schülerinnen und Schüler auch in dieser 
+Zeit keiner gesonderten Nachweispflicht unterliegen.   
+
+Es wird klargestellt, dass die Absätze 1 bis 3 nicht für Versammlungen nach Artikel 8 des Grundgesetztes gelten. Demonstrationen, 
+bei denen seuchenhygienische Problemlagen drohen, sind von den Versammlungsbehörden im Rahmen der versammlungsrechtli-
+chen Auflagen und Maßnahmen zu steuern. 
+
+Die Beschränkungen des Absatzes 2 (3-G-Regel für Besucherinnen, Besucher und dienstleistende Personen) gelten nicht für Wo-
+chenmärkte. Der Zulassungsvorbehalt nach Absatz 1 bleibt – soweit die Voraussetzungen hierfür gegeben sind - unberührt.   
+
+Zu Absatz 2: 
+
+Zu Absatz 3: 
+
+Zu Absatz 4: 
+
+Zu Absatz 5: 
+
+Zu Absatz 6: 
+
+Nach  Absatz 6  sind  Messen für  mehr  als  1 000  bis  zu  5 000  gleichzeitig  anwesende  Besucherinnen  oder  Besucher  zulässig.  Die 
+Besucherzahl ist grundsätzlich auf 50 Prozent der Personenkapazität der gesamten Einrichtung (maximal aber auf 5 000 Personen) 
+beschränkt. Die 3-G-Regel für Besucherinnen, Besucher und dienstleistende Personen des Absatzes 2 gilt auch hier. 
+
+Es handelt sich um eine generelle Zulassungsregelung, der Zulassungsvorbehalt im Einzelfall nach Absatz 1 gilt nicht. Erforderlich ist 
+ein Hygienekonzept nach § 5 Abs. 1. Dieses ist vor der Durchführung der Veranstaltung mit der zuständigen Behörde abzustimmen.   
+
+Eine spezielle Befugnisnorm zur Einschränkung oder Untersagung sieht Satz 3 vor, sobald die Warnstufe 3 durch Allgemeinverfügung 
+bekannt gegeben wurde. Die Entscheidung steht im pflichtgemäßen Ermessen der zuständigen Behörde, die neben den konkret ge-
+gebenen Voraussetzungen für die Bekanntgabe der Warnstufe 3 die Gesamtumstände des Pandemiegeschehens in die Entscheidung 
+einzustellen hat. 
+
+ 
+
+Zu Absatz 7: 
+
+Zu § 11 (Großveranstaltungen): 
+
+Zu Absatz 1: 
+
+Es wird Bestandsschutz bezüglich der nach bisherigem Recht für die bis zum 25. August 2021 erteilten Genehmigungen sichergestellt. 
+
+Gegenstand der Regelung sind Veranstaltungen sowohl unter freiem Himmel als auch in geschlossenen Räumen für mehr als 5 000 
+gleichzeitig anwesenden Teilnehmerinnen und Teilnehmer, da diese mit einem hohen Risiko für Mehrfachansteckungen (sogen. „su-
+perspreading events“) verbunden sind. Großveranstaltungen dürfen nur bis zu einer maximalen Teilnehmerzahl von 25 000 Personen 
+stattfinden und zugelassen werden (Absatz 5). Im Übrigen begrenzt die Kapazität der Einrichtung die Teilnehmerzahl (Absätze 5, 6 
+und 7).   
+
+Die Beschränkung auf die „gleichzeitig anwesenden“ Teilnehmerinnen und Teilnehmer ist eine Klarstellung, dass während der Veran-
+staltung  nicht nur dieselben Personen anwesend sein  müssen,  sondern  auch  eine wechselnde  Personenzusammensetzung (Aus-
+tausch) möglich ist, sofern die zulässige Gesamtkapazität der Veranstaltung zu keinem Zeitpunkt überschritten wird. Dafür haben die 
+Betreiberin oder der Betreiber oder die Veranstalterin oder der Veranstalter zu sorgen und bei dem Antrag auf Zulassung darzulegen, 
+wie dies sichergestellt wird. 
+
+Die Durchführung der Veranstaltungen steht unter dem Vorbehalt der Zulassung der zuständigen Behörde, die unter den Anforderun-
+gen der Absätze 2 bis 4 nach pflichtgemäßem Ermessen entscheiden. 
+
+Zu Absatz 2: 
+
+Voraussetzung einer Zulassung ist die Vorlage eines Hygienekonzeptes im Sinne des § 5 Abs. 1. Das Hygienekonzept ist über die 
+Anforderungen des § 5 Abs. 2 Satz 1 hinaus um die in den Nummern 1 und 2 genannten Maßnahmen zu ergänzen. Bei Veranstaltun-
+gen in geschlossenen Räumen muss die Veranstalterin oder der Veranstalter für eine hinreichende Lüftung zu sorgen. Vorgegeben 
+ist nach Satz 3 eine Lüftungsanlage mit Frischluftzufuhr, eine Luftdesinfektion oder eine Luftfilterung. Ob eine bereits vorhandene oder 
+eine neu einzurichtende Maßnahme den infektiologisch erforderlichen Lüftungszweck erfüllt, bestimmt sich nach Art und Umständen 
+des jeweiligen Veranstaltungsortes. Es ist zweckmäßig, dieses ebenfalls im Hygienekonzept nachvollziehbar dazulegen. Alle Schutz-
+maßnahmen dienen dem virologisch erforderlichen Schutz zur Eindämmung von Infektionen während der Veranstaltung. Sie dienen 
+auch dazu, den in § 1 Abs. 2 genannten Mindestabstand zwischen einzelnen Personen einzuhalten, der grundsätzlich bei erhöhten 
+Infektionslagen, wie den hier in Rede stehenden Veranstaltungen, aus Gründen eines wirksamen Infektionsschutzes erforderlich ist. 
+Dies kann bei Großveranstaltungen mit hohen Teilnehmerzahlen nur erreicht werden, wenn entsprechend geplante Lenkungsmaß-
+nahmen ergriffen und die notwendigen Rahmenbedingungen geschaffen werden, die es dem Publikum erst ermöglichen, die Abstände 
+überhaupt einhalten zu können. Dies kann maßvoll dadurch erreicht werden, indem die Mobilität der Teilnehmerinnen und Teilnehmer 
+während der Veranstaltung gelenkt und auf ein Mindestmaß beschränkt wird. Dies ist insbesondere angesichts der großen Teilneh-
+merzahl nur bei einem überwiegend sitzenden Publikum und unter Vorgabe von Sitzordnungen möglich. Ebenso ist ein planvolles 
+Vorgehen bei der Steuerung der notwendigen Besucherströme beim Zugang, während der Pausen oder beim Verlassen der Veran-
+staltung unumgänglich.   
+
+Ein Alkoholkonsum soll bei und während der Veranstaltung zwar nicht von vornherein vollständig ausgeschlossen werden müssen, 
+jedoch aufgrund des Hygienekonzept so gesteuert und eingeschränkt werden, dass ein unkontrolliertes, insbesondere distanzloses 
+Verhalten und eine Unterschreitung der notwendigen Abstandsregelungen durch einzelne übermäßig alkoholisierte Personen ausge-
+schlossen werden. Dabei kann auch eine komplette Einschränkung bis zum Ausschluss des Alkoholkonsums, des Ausschanks usw. 
+durchaus nach Art und Umstände einer Veranstaltung in Betracht kommen und ist durch die Regelung nicht ausgeschlossen. Die Art 
+und  Weise  der  erforderlichen  Vorkehrungen  hängen  von  der  Art;  Zeitpunkt  und  Zeitraum  sowie  den  örtlichen  Gegebenheiten  der 
+Veranstaltung ab und sind in dem jeweiligen Hygienekonzept zu konkretisieren.   
+
+Um eine Kontaktdatennachverfolgung (vgl. Satz 2) bei Infektionen, die trotz der Vorkehrungen nicht vollständig ausgeschlossen wer-
+den können, zu ermöglichen, besteht eine Pflicht zur Kontaktdatenerhebung nach § 6 (vgl. § 6 Abs. 1 Nr. 11). Diese erfolgt durch den 
+Verkauf personalisierter Tickets. Dadurch wird die Möglichkeit der Angabe unrichtiger Daten minimiert und der Aufwand der Kontakt-
+datenerhebung bei der Durchführung der Veranstaltung erheblich minimiert. Werden für eine Veranstaltung keine Tickets ausgegeben, 
+ist die Kontaktdatenerhebung in anderer Weise sicherzustellen. Die Vorgaben des § 6 sind zu beachten.   
+
+Es gilt eine Pflicht zur Vorlage eines Impf-, Genesenen- oder negativen Testnachweises bei dem Betreten der jeweiligen Einrichtung 
+oder des Veranstaltungsortes für alle Personen, die an der Sitzung, Zusammenkunft oder Veranstaltung teilnehmen wollen oder dort 
+Dienste leisten. Für die in der Veranstaltung dienstleistenden Personen gelten somit dieselben 3-G-Regelungen wie für die teilneh-
+menden Personen. Nicht geimpfte oder genesene Personen müssen daher über einen aktuellen negativen Testnachweis verfügen, 
+bevor sie die Veranstaltung betreten und ihren Dienst aufnehmen. Sofern es sich um eine mehrtägige Veranstaltung handelt, gilt § 8 
+Abs. 5  entsprechend,  das  heißt  es  gilt  die  Verpflichtung,  die  dort  dienstleistenden  Personen  nach  einem  Testkonzept  mindestens 
+zweimal in der Woche auf das Vorliegen des Corona-Virus SARS-CoV-2 zu testen. Bezüglich der Definitionen der Impf- und Genese-
+nennachweise gelten die Regelungen der SchAusnahmV des Bundes (§ 2 Nrn. 3 und 5 SchAusnahmV); für die Testnachweise gilt 
+§ 7 dieser Verordnung. Verpflichtet werden die Veranstalterin, der Veranstalter oder die Betreiberin oder der Betreiber der Einrichtung, 
+den jeweiligen Nachweis einzufordern, sich vorlegen zu lassen und bei Nichtvorlage den Zutritt zu verweigern. 
+
+Keiner gesonderten Nachweispflicht unterliegen Kinder, die das sechste Lebensjahr noch nicht vollendet haben. ausgenommen sind 
+ebenfalls Kinder ab sechs Jahren, wenn sie noch nicht eingeschult sind. Es ist sachgerecht, sie Kindern bis zur Vollendung des sechs-
+ten Lebensjahres gleichzustellen. Freigestellt sind auch Schülerinnen und Schüler, die im Rahmen eines verbindlichen schulischen 
+Schulkonzepts regelmäßig getestet werden. Die Regelung erfasst auch Ferienzeiten, sodass Schülerinnen und Schüler auch in dieser 
+Zeit keiner gesonderten Nachweispflicht unterliegen. 
+
+Absatz 5 sieht zwingende Versagungsgründe der Zulassung nach Absatz 1 vor. Zugelassen werden können nur Veranstaltungen bis 
+
+Zu Absatz 3: 
+
+Zu Absatz 4: 
+
+Zu Absatz 5: 
+
+ 
+
+Zu Absatz 6: 
+
+Zu Absatz 7: 
+
+zu maximal 25 000 Besucherinnen und Besuchern. Größere Veranstaltungen sind ausgeschlossen.   
+
+Darüber hinaus dürfen Veranstaltungen auch bei einer Teilnehmerzahlt unter 25 000  nicht zugelassen werden, wenn die konkrete 
+Teilnehmerzahl 50 Prozent der Personenkapazität der gesamten Einrichtung überschreiten. Die Gesamtkapazität des Veranstaltungs-
+ortes begrenzt insoweit objektiv die Teilnehmerzahl.   
+
+Eine Zulassung darf nur unter einem Widerrufsvorbehalt erfolgen.   
+
+Es wird klargestellt, dass die Absätze 1 bis 3 nicht für Versammlungen nach Artikel 8 des Grundgesetztes gelten. Demonstrationen, 
+bei denen seuchenhygienische Problemlagen drohen, sind von den Versammlungsbehörden im Rahmen der versammlungsrechtli-
+chen Auflagen und Maßnahmen zu steuern. 
+
+Absatz 5 gibt modifizierte Vorgaben für die Durchführung von Messen für mehr als 1 000 bis zu 5 000 gleichzeitig anwesende Besu-
+cherinnen oder Besuchern vor. Die Besucherzahl grundsätzlich auf 50 Prozent der Personenkapazität der gesamten Einrichtung (ma-
+ximal aber auf 5 000 Personen) beschränkt.   
+
+Es handelt sich um eine generelle Zulassungsregelung, die Regelungen der Absätze 1 bis 6 gelten nicht. Insbesondere stehen Messen 
+nicht unter dem Zulassungsvorbehalt im Einzelfall. Erforderlich ist ein Hygienekonzept nach § 5 Abs. 1. Dieses ist vor der Durchführung 
+der Veranstaltung mit der zuständigen Behörde abzustimmen.   
+
+Eine spezielle Befugnisnorm zur Einschränkung oder Untersagung sieht Satz 3 vor, sobald die Warnstufe 3 durch Allgemeinverfügung 
+bekannt gegeben wurde. Die Entscheidung steht im pflichtgemäßen Ermessen der zuständigen Behörde, die neben den konkret ge-
+gebenen Voraussetzungen für die Bekanntgabe der Warnstufe 3 die Gesamtumstände des Pandemiegeschehens in die Entscheidung 
+einzustellen hat. 
+
+Abs. 2 Satz 2 und 3 gelten bei Messen entsprechend, das heißt es sind Kontaktdaten zu erheben und zu dokumentieren.   
+
+Absätze 3 und 4 gelten bei Messen entsprechend. Das bedeutet, dass die 3-G-Regel und die dort geregelten Voraussetzungen und 
+Anforderungen für allen teilnehmenden und dienstleistenden Personen auch bei Messen gelten. Die Ausnahmen von den Nachweis-
+pflichten für Kinder und Schülerinnen nach Absatz 4 gelten ebenfalls.     
+
+Zu Absatz 8: 
+
+Es wird Bestandsschutz bezüglich nach bisherigem Recht für die bis zum 25. August 2021 erteilten Genehmigungen sichergestellt. 
+Dies gilt allerdings nur bis zu einem rechtlich zulässigen Widerruf der Zulassungen. Solange eine Genehmigung nach altem Recht 
+fortbesteht, müssen danach erlassene Anforderungen nicht eingehalten werden. Wird nach einem Widerruf der bisherigen Zulassung 
+eine neue Zulassung erforderlich, ist diese auf Grundlage der aktuell geltenden Rechtslage zu prüfen.   
+
+Zu § 12 (Diskotheken, Clubs, Shisha-Bars und ähnliche Einrichtungen): 
+Zu Absatz 1: 
+
+Unabhängig von der Geltung einer Warnstufe oder sonstigen Indikatoren ist der Betrieb einer Diskothek, eines Clubs oder einer ähn-
+lichen Einrichtung oder einer Einrichtung, in der Shisha-Pfeifen zum Konsum angeboten werden, unter den Anforderungen nach den 
+Sätzen 2 bis 5 zulässig.   
+
+Auf Grund verstärkter und nahezu explosionsartiger Infektionsverbreitung des SARS-CoV2-Virus durch Besucherinnen und Besucher 
+von  Diskotheken  und  Clubs  sind  die  Regelungen  der  Schutzmaßnahmen  für  diese  Bereiche  und  für  die  Einrichtungen,  in  denen 
+Shisha-Pfeifen zum Konsum angeboten werden, weiterhin geboten. Dies gilt sowohl für eine Regelung der Personenkapazitäten in 
+den jeweiligen Einrichtungen auf die Hälfte der zulässigen Personenzahl als auch für die Vorgabe, dass Besucherinnen und Besucher 
+von Diskotheken, Clubs und ähnlichen Einrichtungen ausschließlich mittels einer elektronischen Kontaktdatenerhebung Einlass finden 
+dürfen. Die Praxis hat gezeigt, dass bei Feststellung eines Infektionsfalles eine schnelle und effiziente Nachverfolgung von Kontakten 
+dadurch erschwert wurde, dass papierbasierte Kontaktdaten unleserlich, zum Teil unbrauchbar und fehlerhaft ausgefüllt waren. Da die 
+unverzügliche Kontaktnachverfolgung jedoch ein äußerst wirkungsvolles Mittel zur schnellen Reduzierung der Verbreitung des Virus 
+ist, ist die Anpassung des Umgangs mit der Datenerfassung zur ausschließlichen elektronischen Kontaktnachverfolgung erforderlich, 
+um den Schutz vor Infektion mit SARS-CoV-2 der Besucherinnen und Besucher und auch der Bevölkerung gewährleisten zu können. 
+Diese Regelung ergänzt das komplexe Bündel verschiedenster Schutzmaßnahmen, die das Land Niedersachsen in der Corona-Ver-
+ordnung geregelt hat, mit Blick auf die besondere Situation in den Diskotheken, Clubs und ähnlichen Einrichtungen. Haben nur ge-
+impfte oder genesene Personen Zugang zu der Einrichtung, so müssen Gäste keine Mund-Nasen-Bedeckung tragen. Das Risiko einer 
+Übertragung des Coronavirus SARS-CoV-2 nach einer Impfung oder nach einer natürlichen Infektion erscheint nach gegenwärtigem 
+Kenntnisstand in dem Maß reduziert, dass geimpfte Personen und genesene Personen bei der Epidemiologie von COVID-19 wahr-
+scheinlich keine wesentliche Rolle mehr spielen. 
+
+Zu Absatz 2: 
+
+Der Zutritt zu den geregelten Einrichtungen ist nur geimpften, genesenen oder negativ getesteten Personen gestattet. Diese sogen. 
+3G-Regel ist geeignet, erforderlich und angemessen, um hier ein Mindestmaß an Schutzvorkehrungen zur Verhinderung bzw. Mini-
+mierung der Verbreitung des Coronavirus SARS-CoV-2 zu gewährleisten. Nach den Einschätzungen des RKI geht mehr als die Hälfte 
+der Infektionsfälle auf die Altersgruppen der 15 bis 35-Jährigen zurück. Tendenziell nimmt der demografische Anteil an den steigenden 
+Inzidenzzahlen für diese Altersgruppe weiter zu. Hierbei spielen auch die ebenfalls für diese Altersgruppen in Betracht zu ziehenden 
+Beiträge aufgrund von Reiserückkehren eine Rolle, die ebenfalls signifikant zu dem ansteigenden Infektionsgeschehen beitragen. Das 
+hat zur Folge, dass die Veranstaltungen und Treffen unter Jugendlichen und jungen Menschen zu einem erheblichen Maße an dem 
+Steigen der Inzidenzen beitragen. Aufgrund der spezifischen Aktivitäten ist den Einrichtungen immanent, dass es immer wieder zu 
+einer verstärkten und punktuell nahezu explosionsartigen Infektionsverbreitung des SARS-CoV2-Virus durch Besucherinnen und Be-
+sucher kommt. Eine mögliche Maßnahme, dieses Infektionsgeschehen nachhaltig zu verhindern, wäre eine Schließung der Einrich-
+tungen ab einer bestimmten Inzidenzzahl. Demgegenüber ist jedoch das mildere Mittel, einen Betrieb inzidenzunabhängig, also durch-
+gängig zu ermöglichen, wenn grundsätzliche Schutzmaßnahmen sowie Maßnahmen aufgrund eines Hygienekonzepts nach § 4 durch 
+
+ 
+
+Zu Absatz 3: 
+
+Zu Absatz 4: 
+
+Zu Absatz 1: 
+
+Zu Absatz 2: 
+
+die Betreiberin  oder den Betreiber getroffen werden. Als grundsätzlich geltende Schutzmaßnahme hat sich die Beschränkung  des 
+Zugangs nach der 3G-Regel in anderen hoch frequentierten Bereichen bewährt. Es gilt daher inzidenzunabhängig während der Pan-
+demielage eine Pflicht zur Vorlage eines Impf-, Genesenen- oder negativen Testnachweises bei dem Betreten der jeweiligen Einrich-
+tung für  alle Personen. Bezüglich der Definitionen  der Impf- Genesenennachweise gelten die Regelungen  der SchAusnahmV des 
+Bundes (§ 2 Nrn. 3 und 5 SchAusnahmV); für die Testnachweise gilt § 7 dieser Verordnung. Verpflichtet werden die Veranstalterin, 
+der Veranstalter oder die Betreiberin oder der Betreiber der Einrichtung, den jeweiligen Nachweis einzufordern, sich vorlegen zu lassen 
+und bei Nichtvorlage den Zutritt zu verweigern. 
+
+Im Personalbereich der Betriebe sind die Betreiberinnen und Betreiber verpflichtet, ein Testkonzept aufzustellen, auf dessen Grundlage 
+das eingesetzte nicht geimpfte oder genesene Personal mindestens zweimal in der Woche getestet werden. Die zuständigen Behör-
+den sind befugt, die Vorlage des Testkonzepts zu verlangen. 
+
+Es gelten Ausnahmen für Schülerinnen und Schüler, die im Rahmen eines verbindlichen Schulkonzeptes regelmäßig getestet werden. 
+Eine ausdrückliche Ausnahme für Kinder unter 6 Jahren bzw. noch nicht eingeschulte Kinder ist nicht erforderlich, da diese in der 
+Regel keinen Zugang zu den hier geregelten Einrichtungen haben. Die Regelung erfasst auch Ferienzeiten, sodass Schülerinnen und 
+Schüler auch in dieser Zeit keiner gesonderten Nachweispflicht unterliegen. 
+
+Vierter Teil (Besondere Vorschriften) 
+
+Zu § 13 (Regelungen für die Beschäftigung von Personen in bestimmten Betrieben): 
+
+§ 13 „Regelungen für die Beschäftigung von Personen in bestimmten Betrieben“ beinhaltet besondere Regelungen für Schlacht- und 
+Zerlegebetriebe, sowie für Unternehmen und landwirtschaftliche Betriebe, die Personen beschäftigen, die in Sammelunterkünften oder 
+in betriebseigenen oder angemieteten Unterkünften untergebracht sind. 
+
+Infolge einer redaktionellen Anpassung wurde der ehemalige § 10a Absatz 1 der Corona-Verordnung vom 30. Mai 2021 (Nds. GVBl. 
+S. 297), zuletzt geändert durch Verordnung vom 27. Juli 2021 (Nds. GVBl. S. 559) in dem neuen § 13 Absatz 1 inhaltsgleich geregelt.   
+
+Der nunmehr neu eingefügte Absatz 2 beinhaltet Regelungen für Testungen in landwirtschaftlichen Betrieben in Niedersachsen, die 
+temporär Entehelferinnen oder Erntehelfer beschäftigen und in Sammelunterkünften unterbringen.   
+
+Die Regelungen wurden zuvor inhaltsgleich mittels durch die Landkreise, kreisfreien Städten und der Region Hannover erlassenen 
+Allgemeinverfügungen umgesetzt. Entsprechende fachaufsichtliche Weisungen ergingen durch das niedersächsische Ministerium für 
+Soziales, Gesundheit und Gleichstellung. 
+
+Grundsätzlich unterliegen sämtliche Beschäftigte in vorgenannten Betrieben wie bisher einer Testpflicht.   
+
+Es hat sich gezeigt, dass es unter den Erntehelferinnen und Erntehelfern zu größeren Infektionsausbrüchen kommen kann. Die Ursa-
+che für die starke Ausbreitung von Infektionen in diesem Umfeld wird darin vermutet, dass die Erntehelferinnen und Erntehelfer häufig 
+in  großen  Sammelunterkünften  untergebracht  sind,  in  denen  Hygiene-  und  Abstandsregeln  nur  eingeschränkt  eingehalten  werden 
+können. Außerdem kann es zu Infektionen am Arbeitsplatz kommen, die durch körperliche Arbeit bei mangelndem Abstand begünstigt 
+werden. 
+
+Es muss alles getan werden, um eine Ausbreitung von COVID-19 unter den Beschäftigten so früh wie möglich zu erkennen und zu 
+stoppen. Deshalb müssen die Beschäftigten in landwirtschaftlichen Betrieben, die temporär Erntehelferinnen und Erntehelfer beschäf-
+tigen, die sie in Sammelunterkünften unterbringen, regelmäßig getestet werden.   
+
+Unter  dem  Begriff  Sammelunterkünfte  sind  Unterkünfte  zu  verstehen,  in  denen  mehrere  Personen  aus  unterschiedlichen  Fami-
+lien/Haushalten in einem Raum wohnen und/oder Sanitäreinrichtungen gemeinschaftlich genutzt werden.   
+
+Die Regelungen ermöglichen im Sinne des Vorsorgeprinzips eine frühzeitige Erkennung eines Ausbruchsgeschehens und sind damit 
+inhärent verbunden für einen unterbrechungsfreien Weiterbetrieb der Unternehmen und angesichts der erheblichen Gesundheitsge-
+fahren für eine Vielzahl  von Beschäftigten auch verhältnismäßig. Dies gilt umso mehr, da ohne diese Gefahrenabwehr durch eine 
+bestmögliche Infektionsvorbeugung der Weiterbetrieb der Unternehmen gefährdet ist.   
+
+Zu Absatz 3: 
+
+Der nunmehr neu eingefügte Absatz 3 beinhaltet Regelungen für Testungen in niedersächsischen Schlacht- und Zerlegebetrieben.   
+
+Die Regelungen wurden zuvor inhaltsgleich mittels durch die Landkreise, kreisfreien Städten und der Region Hannover erlassenen 
+Allgemeinverfügungen umgesetzt. Entsprechende fachaufsichtliche Weisungen ergingen durch das niedersächsische Ministerium für 
+Soziales, Gesundheit und Gleichstellung. 
+
+Grundsätzlich unterliegen sämtliche Beschäftigte in vorgenannten Betrieben wie bisher einer Testpflicht.   
+
+Verschiedene massive Infektionsgeschehen in industriellen Schlacht-und Zerlegebetrieben haben gezeigt, dass in diesen Betrieben 
+insbesondere  aufgrund  der  besonderen  klimatischen  Verhältnisse,  die  für  die  Fleischverarbeitung  erforderlich  sind,  der  Mitarbei-
+terstruktur  und  der  Arbeitsorganisation  in  der  Produktion  ein  erhebliches  Risiko  für  massenweise  auftretende  Infektionen  mit  dem 
+Coronavirus SARS-CoV-2 innerhalb der Belegschaft besteht.   
+
+Aufgrund erster vorliegender wissenschaftlicher Einschätzungen zu möglichen Ursachen ist davon auszugehen, dass unter anderem 
+die Belüftungsanlagen im Zusammenspiel mit der für diese Betriebe typischerweise erforderlichen Luftkühlung ein nicht unerhebliches 
+Infektionsrisiko  bergen.  Da  zudem  noch  nicht  eindeutig  aufgeklärt  ist,  welche  betriebsorganisatorischen  oder  technischen  Gründe 
+gegebenenfalls zusätzlich das Infektionsgeschehen begünstigen, muss alles getan werden, um schon den Eintrag möglicher Viren in 
+die Betriebe so weit wie möglich zu unterbinden. Deshalb müssen die Beschäftigten in der Produktion regelmäßig getestet werden.   
+
+ 
+
+Ausgenommen von dieser Verpflichtung sind die Personen, die sich in den Betrieben und in der Produktion aufhalten müssen, um die 
+gesetzlich vorgeschriebenen staatlichen und kommunalen Aufsichtsaufgaben ausführen zu können. Ausnahmen von der Testpflicht 
+bestehen entsprechend § 7 der COVID-19-Schutzmaßnahmen-Ausnahmenverordnung vom 8. Mai 2021 (BAnz AT 08.05.2021 V1) 
+für genesene und geimpfte Personen. 
+
+Das Fleischerhandwerk, das in der Regel kein betriebsfremdes Personal einsetzt, ist von der Testpflicht auszunehmen, da in diesen 
+Betrieben die Infektionsgefährdung vergleichsweise geringer ist und die Rückverfolgbarkeit im Falle eines Infektionsgeschehens effi-
+zienter gewährleistet werden kann als in Betrieben mit einer industriellen Arbeitsorganisation. 
+
+Die gewählte Anzahl von bis zu 49 tätigen Personen in der Produktion orientiert sich zum einen an der Empfehlung der EU-Kommission 
+für die Definition kleiner Unternehmen (Empfehlung 2003/361/EG) mit bis zu 49 Arbeitnehmerinnen und Arbeitnehmern. Zum anderen 
+zeigen für das Gebiet der Bundesrepublik Deutschland einschlägige Umsatzzahlen, dass die gewählte Größe geeignet ist, handwerk-
+liche Unternehmen von faktisch industriellen Unternehmen abzugrenzen. 
+
+Die Regelungen ermöglichen im Sinne des Vorsorgeprinzips eine frühzeitige Erkennung eines Ausbruchsgeschehens und sind damit 
+inhärent verbunden für einen unterbrechungsfreien Weiterbetrieb der Unternehmen und angesichts der erheblichen Gesundheitsge-
+fahren für eine Vielzahl  von Beschäftigten auch verhältnismäßig. Dies gilt umso mehr, da ohne diese Gefahrenabwehr durch eine 
+bestmögliche Infektionsvorbeugung der Weiterbetrieb der Unternehmen gefährdet ist.   
+
+Ausnahmen von der Testverpflichtung sind zulässig, wenn ein Betrieb darlegen kann, dass gegenüber anderen Produktionsbetrieben 
+kein erhöhtes Infektionsrisiko besteht, z. B., weil technische oder organisatorische Maßnahmen ergriffen wurden, die geeignet sind 
+das Infektionsrisiko innerhalb des Betriebes erheblich zu reduzieren.   
+
+Infolge einer redaktionellen Anpassung wurde der ehemalige § 10a Absatz 2 der Corona-Verordnung vom 30. Mai 2021 (Nds. GVBl. 
+S. 297), zuletzt geändert durch Verordnung vom 27. Juli 2021 (Nds. GVBl. S. 559) in dem neuen § 13 Absatz 4 inhaltsgleich geregelt. 
+
+Zu § 14 (Kindertagespflege, private Kinderbetreuung, Jugendfreizeiten): 
+
+Mit der Änderung in Absatz 1 entfällt künftig die Betriebsuntersagung in der Kindertagespflege ab einer 7-Tage-Inzidenz von über 165. 
+Die Streichung der generellen Betriebsuntersagung ist auch angemessen, weil die Anzahl der in der von einer einzelnen Kindertages-
+pflegeperson betreuten fremden Kinder grundsätzlich nicht mehr als fünf betragen kann.     
+
+Der Bereich der Kindertagespflege und die Betreuung von fremden Kindern in Kleingruppen sind weiterhin ausgenommen von der 
+Pflicht zum Tragen einer Mund-Nasen-Bedeckung (MNB-Pflicht) nach § 4 Abs. 1. Eine Ausnahme von dem in § 1 Abs. 2 Satz 1 nor-
+mierten Abstandsgebot ist nicht enthalten. Das Gebot sieht vor, wenn möglich einen Abstand von 1,5 Metern zu anderen Personen 
+einzuhalten. Diese Möglichkeit ist bei der Betreuung von Kindern in der Kindertagesbetreuung und von fremden Kindern in Kleingrup-
+pen nicht gegeben. Ein Nichteinhalten des Abstandes löst, anders als im Bereich der Kindertageseinrichtungen für Hortgruppen und 
+Gruppen mit überwiegend Schulkindern, keine MNB-Pflicht 
+
+Zu Absatz 4: 
+
+Zu Absatz 1: 
+
+Zu Absatz 3: 
+
+Ausgenommen von dem Tragen einer MNB sind Betreuungsangebote für Gruppen von Kindern und Jugendlichen in Jugendherber-
+gen,  Familienferien-  und  Freizeitstätten,  Zeltlagern,  Jugend-  und  Erwachsenenbildungsstätten  sowie  in  Kreissportschulen,  Lan-
+dessportschulen,  vergleichbaren  verbandseigenen  Einrichtungen,  Mehrgenerationenhäusern  und  ähnlichen  Einrichtungen.  Die  be-
+treuende Person hat geeignete Maßnahmen zu ergreifen, um die Gefahr einer Infektion der eigenen Person und der betreuten Kinder 
+mit dem Corona-Virus SARS-CoV-2 zu vermindern. Während des gesamten Betreuungszeitraums ist die betreuende Person zur Do-
+kumentation der Zeiten, in denen sie Kinder nach Abs. 3 betreut, sowie zur Datenerhebung und Dokumentation nach § 6 Abs. 1 Satz 2 
+verpflichtet; § 6 Abs. 1 Sätze 3 bis 8, Abs. 2 und Abs. 3 Satz 1 gelten entsprechend. Die Aufzählung wird um die Durchführung von 
+Betreuungsangeboten von Kindern und Jugendlichen in Zeltlagern ergänzt. Damit wird klargestellt, dass die regelmäßig sowie einmalig 
+stattfindenden Betreuungsangebote für Gruppen von Kindern und Jugendlichen in Zeltlagern zu den Einrichtungen im Sinne des § 11 
+Abs.4 zählen. 
+
+Wird mindestens die Warnstufe 1 gemäß § 2 festgestellt, so können die Betreuungsangebote nach Abs. 3 nur bis zu einer Personen-
+gruppe von bis zu 50 durchgeführt werden. Die Personenanzahl von nicht mehr als 50 umfasst dabei, gleichzeitig anwesende, fremde 
+Kinder und Jugendliche. Zusätzlich zu der Beschränkung der Personenzahl ist bei mehrtägig dauernden Betreuungsangeboten ein 
+Negativtest vor Beginn der Veranstaltung durchzuführen oder nachzuweisen. Während  des Betreuungsangebots von mehrtägigen 
+Veranstaltungen sind des Weiteren mindestens jeweils 2 Testungen jede Woche zwingend durchzuführen. Diese Angebote können 
+mit Übernachtungen in den genannten Einrichtungen nach Abs. 3 verbunden sein, müssen es aber nicht.   
+
+Bei mehrtägigen Betreuungsangeboten sind die Schutzmaßnahmen der Testung vor Beginn und während der Veranstaltung unum-
+gänglich und tragen zum Schutz der betreuten Kinder und der Fachkräfte bei. Der Maßstab der Testung richtet sich nach § 7.   
+
+Die Aufsicht der Betreuungsangebote sind durch geschulte Fachkräfte zu gewährleisten. Hierzu zählen pädagogische Fachkräfte und 
+ehrenamtliche Tätige mit Jugendleiterausbildung.   
+
+Zu § 15 (Kindertageseinrichtungen): 
+
+Zu Absatz 1: 
+
+Zu Absatz 2: 
+
+Mit der Änderung in Absatz 1 ist der Betrieb von Kindertageseinrichtungen einschließlich Kinderhorten künftig generell unter Beachtung 
+des Niedersächsischen Rahmen-Hygieneplans Corona Kindertagesbetreuung in der Fassung vom 25. August 2021 zulässig.   
+
+Abweichend davon ist in Absatz 2 festgelegt, dass die örtlich zuständige Behörde an Kindertageseinrichtungen einschließlich Kinder-
+horten den Betrieb bei lokalen Infektionsgeschehen einschränken kann. Was hier ein für die Einschränkung relevanten lokales Infek-
+tionsgeschehen ist, obliegt der Einschätzung der örtlich zuständigen Behörden. Die Regelung trägt dem Umstand Rechnung, dass bei 
+lokalen Infektionsgeschehen verschärfte Hygieneanforderungen  zur Eindämmung  der  Ausbreitung des Corona-Virus SARS-CoV-2 
+
+ 
+
+Zu Absatz 3: 
+
+Zu Absatz 4: 
+
+Zu Absatz 5: 
+
+Zu § 16 (Schulen): 
+
+Zu Absatz 1: 
+
+erforderlich und verhältnismäßig sein können. Es gilt in diesem Fall das Prinzip der strikten Gruppentrennung. Eine Untersagung des 
+Betriebs einer Kindertageseinrichtung durch eine Einzelanordnung der örtlich zuständigen Behörde bleibt unberührt.   
+
+Eine Betriebsuntersagung kann nicht mehr wie bisher generell, sondern zukünftig nur noch im Einzelfall erfolgen. Aus diesem Grunde 
+wird in Absatz 3 der zulässige Umfang der Notbetreuung nunmehr auch nur noch für den Einzelfall geregelt. Die Entscheidung, ob und 
+in welchem Umfang bis zu der zulässigen Obergrenze bei einer Betriebsuntersagung im Einzelfall aufgrund von Infektionsgeschehen 
+Notbetreuung möglich ist, entscheidet die örtlich zuständige Behörde in Abstimmung mit dem Träger der Kindertageseinrichtung.     
+
+In Absatz 4  wird die MNB-Pflicht in Hortgruppen  und Gruppen  mit überwiegend  Schulkindern in  geschlossenen Räumen  normiert, 
+wenn aufgrund der örtlichen Gegebenheiten die Einhaltung des Abstandsgebotes nicht gewährleistet werden kann. Die MNB-Pflicht 
+im Hort wird an die Regelung im schulischen Bereich angepasst.   
+
+Weiterhin wird der in § 12 der Corona-Verordnung vom 30. Mai 2021, zuletzt geändert durch VO vom 27. Juli 2021 enthaltene Absatz 5 
+gestrichen, da ein coronabedingter Personalausfall angesichts des Fortschritts der Impfkampagne allenfalls und wie bei anderen In-
+fektionskrankheiten auch im Einzelfall denkbar ist und es daher analog zu anderen krankheitsbedingten Personalausfällen keiner be-
+sonderen Regelung mehr bedarf. 
+
+Den Betreiberinnen und Betreibern einer Kindertageseinrichtung oder eines Kinderhortes wird empfohlen, für die in der Kindertages-
+einrichtung oder dem Kinderhort tätigen Personen ein Testkonzept zu entwickeln. Dabei ist zu beachten, dass Personen, die einen 
+Impfnachweis gemäß § 2 Nr. 3 SchAusnahmV oder einen Genesenennachweis gemäß § 2 Nr. 5 SchAusnahmV vorlegen, von einer 
+Testverpflichtung auszunehmen sind. 
+
+§ 16 regelt die Modalitäten des Schulbesuchs, der auch nach den Sommerferien grundsätzlich im eingeschränkten Regelbetrieb (Sze-
+nario A) nach dem sog. Kohortenprinzip stattfindet. Ein automatischer Wechsel in den Wechselunterricht (Szenario B) wird nicht mehr 
+vorgesehen, ebenso wie Ausnahmen zur Untersagung des Schulbesuchs nach § 28 b Abs. 3 IfSG, der nach § 28 b Abs. 10 IfSG mit 
+Ablauf des 30. Juni 2021 außer Kraft getreten ist. Diese Maßnahmen sollen künftig möglichst schulscharf durch die Gesundheitsämter 
+erfolgen. 
+
+Das Szenario A nach Absatz 1 bleibt nach den Sommerferien der Regelfall des Schulbesuchs. Ziel ist, die Schulen möglichst offen zu 
+halten und der Erteilung des Unterrichts in Präsenz höchste Priorität einzuräumen. Es muss davon ausgegangen werden, dass die 4. 
+Welle  insbesondere  im  Bereich  der  Kinder  und  Jugendlichen  (und  jungen  Erwachsenen)  stattfinden  wird.  Schulen  werden  also  in 
+quantitativer Hinsicht besonders betroffen sein. Vor diesem Hintergrund müssen die Sicherheitsvorkehrungen in Schulen intensiviert 
+werden, damit Schulen auch weiterhin sichere Orte sind und Präsenzunterricht stattfinden kann. Der neue Satz 4 bewirkt eine Verän-
+derung der Verpflichtung zum Tragen von MNB. Jede Person ist nunmehr verpflichtet, innerhalb von Schulgebäuden eine MNB zu 
+tragen.  Die  MNB-Pflicht  wird  im  Unterricht  ausgeweitet,  indem  sie  nun  inzidenzunabhängig  greift  und  alle  Schuljahrgänge  erfasst. 
+Diese Maßnahme ist notwendig, um den Präsenzunterricht für alle Schülerinnen und Schüler möglichst aufrecht zu erhalten. Im Falle 
+einer Infektion einer Schülerin oder eines Schülers trägt die MNB dazu bei, eine Verbreitung des Virus einzudämmen und eine Qua-
+rantänisierung von Mitschülerinnen und Mitschülern zu vermeiden. Demgegenüber belegen aktuelle Studien, dass keine besondere 
+Belastung durch das Tragen einer Maske entstehen. Die Maßnahme trägt der Tatsache Rechnung, dass die derzeit dominierende 
+Delta-Variante  besonders leicht  übertragbar ist und  jüngeren  Schülerinnen und  Schülern  eine Impfung  bisher  nicht offensteht.  Vor 
+diesem Hintergrund erfasst die MNB-Pflicht erstmals auch den Unterricht der Schuljahrgänge 1 bis 4. Die Schulen stellen sicher, dass 
+maskenfreie Zeiten gewährleistet sind. Schulische Veranstaltung mit Gästen werden nicht mehr gesondert geregelt. Diese dürfen im 
+Rahmen der schulischen Zutritts- und Hygieneregelungen stattfinden.   
+
+Absatz 2 regelt gegenüber § 13 Abs. 4 in der bis zum 24. August geltenden Fassung die Zulässigkeit von Notbetreuung an Schulen 
+und deren Voraussetzungen. Durch das Entfallen der Regelungen zum Wechselunterricht und der Untersagung des Unterrichts nach 
+§ 28 b Abs. 3 IfSG wird nunmehr an die teilweise oder vollständige Schließung der Schule angeknüpft. Diese können durch Anord-
+nungen nach § 28 a Abs. 1 Nr. 16 IfSG oder nach § 21 dieser Verordnung erfolgen. 
+
+Absatz 3 regelt den vom Nachweis einer negativen Testung abhängigen Zutritt zur Schule. In Satz 3 wird zur Absicherung des Prä-
+senzbetriebs an Schulen zu Beginn des Schuljahres 2021/2022 die Testfrequenz für Schülerinnen und Schüler und das Personal an 
+Schulen vorübergehend erhöht. Aufgrund der erhöhten Reisetätigkeit in den Sommerferien und den vielfach weggefallenen Testver-
+pflichtungen in den übrigen Lebensbereichen besteht das Risiko, dass ansonsten Ansteckungen unerkannt bleiben. Die Testwoche 
+ist notwendig, um eine Ausbreitung insbesondere der Delta-Variante in Schulen möglichst zu vermeiden. Dies dient zudem dem Schutz 
+des überwiegend nicht geimpften Personenkreises der Schülerinnen und Schüler. Anschließend sollen gemäß Satz 2 Schülerinnen 
+und Schüler sowie das schulische Personal drei Tests pro Woche durchführen, um etwaige Infektionen möglichst frühzeitig zu erken-
+nen. Die dreimalige Testung pro Woche entspricht der fachlichen Empfehlung des Robert-Koch-Instituts vom 22. Juli 2021 „Vorberei-
+tung auf Herbst/Winter 2021.“ Im Übrigen handelt es sich um Folgeänderungen bei inhaltlicher Beibehaltung des § 13 Abs. 5 in der bis 
+zum 24. August 2021 geltenden Fassung.   
+
+Zu Absatz 2: 
+
+Zu Absatz 3: 
+
+Zu Absatz 4: 
+
+Absatz 4 Satz 1 regelt für den Fall, dass eine Schülerin oder ein Schüler ein positives Testergebnis aufweist, das vorübergehende 
+Zutrittsverbot für alle anderen Schülerinnen und Schüler, die derselben Kohorte angehören. Durch die Untersagung des Schulbesuchs 
+der Lerngruppe der positiv getesteten Schülerin oder des positiv getesteten Schülers soll verhindert werden, dass sich das Corona-
+Virus SARS-CoV-2 weiter in  der Kohorte ausbreiten kann. Bei Vorliegen eines  aktuellen,  nach Auftreten des Falls durchgeführten 
+negativen Tests ist der Schulbesuch wieder zulässig. Der neue Satz 2 nimmt Schülerinnen und Schüler, die einen Impfnachweis oder 
+
+ 
+
+Zu Absatz 5: 
+
+Zu Absatz 6: 
+
+Zu Absatz 1: 
+
+Zu Absatz 2: 
+
+einen Genesenennachweis vorgelegt haben, von der Zutrittsbeschränkung  nach einem positiven Test bei einer anderen Schülerin 
+oder eines anderen Schülers der Kohorte aus. 
+
+Durch Absatz 5 wird der Niedersächsische Rahmen-Hygieneplan Corona Schule in seiner aktuellen Fassung für die Schulen verbind-
+lich.   
+
+Absatz 6 regelt den Anwendungsbereich der Vorschrift. 
+
+Zu  § 17  (Besuchsrechte  und  Neuaufnahmen  in  Heimen,  unterstützenden  Wohnformen  und  Intensivpflege-Wohngemein-
+schaften; Betreten von Heimen durch Dritte; Testungen von Beschäftigten; Einrichtungen der Tagespflege; Angebote zur 
+Unterstützung im Alltag): 
+
+Ein völliger Verzicht auf besondere Schutzmaßnahmen für Alten- und Pflegeheime sowie andere Pflegeeinrichtungen ist zum jetzigen 
+Zeitpunkt  nicht  geboten,  etwa  aufgrund  des  bisher  noch  nicht  abschließend  einschätzbaren  Immunitätsstatus  von  geimpften  bzw. 
+genesenen Personen bei besorgniserregenden SARS-CoV-2-Varianten. Die inzwischen in Deutschland vorherrschende „Delta“-Virus-
+variante ist wesentlich ansteckender als die bisherigen Virusvarianten. Außerdem baut ein kleiner Teil der geimpften Personen auch 
+nach zweifacher Impfung keine verlässliche Immunantwort auf (z. B. beeinträchtigte Immunkompetenz durch Erkrankung und Alter) 
+und ist somit weiterhin als vulnerabel anzusehen. Im Übrigen finden in Pflegeeinrichtungen kontinuierlich Neuaufnahmen statt, unter 
+denen sich zurzeit noch immer nichtgeimpfte Personen befinden können. Die Schutzwirkung der SARS-CoV-2-Impfung bewirkt nach 
+momentaner Erkenntnislage vor allem ein geringeres Risiko für einen schweren Krankheitsverlauf bei den geimpften Personen selbst.   
+
+Um ein erneutes Ansteigen der Infektionsgeschehen in den Einrichtungen zu verhindern, bleibt es daher – trotz der zahlreich durch-
+geführten Impfungen – bei den bereits getroffenen Maßnahmen wie beispielsweise die Erstellung und Umsetzung von Hygienekon-
+zepten.  Darüber  hinaus  haben  sich  die  Testpflicht  und  die  Pflicht  zum  Tragen  einer  medizinischen  Maske  bewährt,  um  das  Virus 
+weitestgehend aus den Einrichtungen fernzuhalten.   
+
+§ 17 Abs. 1 entspricht inhaltsgleich dem § 14 Abs. 1 der Verordnung, welche mit Ablauf des 24. August 2021 außer Kraft getreten ist.   
+
+Die bisherige Bestimmung des § 14 Abs. 1 hat sich bewährt und bleibt daher weitestgehend unverändert. Insbesondere die Erstellung 
+und Umsetzung von Hygienekonzepten in den Einrichtungen hat dazu beigetragen, individuell die geeigneten Infektionsschutzmaß-
+nahmen zu bestimmen und bei möglichen Infektionsgeschehen frühzeitig und wirksam tätig zu werden.   
+
+Der angepasste Satz 2 verdeutlicht, dass die Teilhabe- und Besuchsrechte der Bewohnerinnen und Bewohner in den Einrichtungen 
+durch die Regelungen in den Hygienekonzepten auch bei einem aktuellen SARS-CoV-2-Infektionsgeschehen nicht unverhältnismäßig 
+eingeschränkt werden dürfen. 
+
+Mit der Neufassung des Satzes 1 wird die Testfrequenz für die genannten Beschäftigten und Personen in den dort genannten Einrich-
+tungen vor dem Hintergrund der zwischenzeitlich durchgeführten Impfmaßnahmen vereinheitlicht. Die Anzahl der Infektionen mit dem 
+Coronavirus SARS-CoV-2 ist in den Einrichtungen aufgrund der hohen Impfquote unter den Bewohnerinnen und Bewohnern stark 
+gesunken, ebenso die Anzahl der an dem Corona-Virus verstorbenen Personen sowie der schweren Verläufe. Für alle Bereiche sind 
+nunmehr noch drei Tests in der Woche vorgesehen.   
+
+Die Verpflichtung, einen Test nach § 7 Abs. 1 auf das Corona-Virus SARS-CoV-2 nachzuweisen, besteht für die in Satz 1 genannten 
+Beschäftigten und Personen, soweit sie weder über eine Impfdokumentation nach § 2 Nr. 3 SchAusnahmV noch über einen Genese-
+nennachweis nach § 2 Nr. 5 SchAusnahmV verfügen.   
+
+Die Testpflicht gilt an drei Tagen der Woche, an denen die o. g. Beschäftigten und Personen in den Einrichtungen oder für die ambu-
+lanten Pflegedienste tätig sind. Es bleibt insoweit bei der bisherigen Rechtslage, dass die Tests nicht vor dem Betreten der Einrichtun-
+gen durchgeführt werden müssen. 
+
+Die nach Satz 1 verpflichteten Beschäftigten und Personen haben weiterhin eine qualifizierte Maske zu tragen, solange und soweit sie 
+Kontakt zu einer Bewohnerin, einem Bewohner, einer Kundin, einem Kunden oder einem Gast haben. Vorgeschrieben sind FFP2-
+Masken oder gleichwertige Masken. Die Verpflichtung zum Tragen von Schutzmasken hat ebenfalls dazu beigetragen, dass die Infek-
+tionszahlen in den Einrichtungen stark gesunken sind. Sie wird daher unverändert beibehalten.   
+
+Verfügen die v. g. Beschäftigten und Personen über eine Impfdokumentation nach über einen Genesenennachweis, so ist eine medi-
+zinische Maske zulässig. 
+
+Zu Absatz 3: 
+
+Zur Vermeidung eines erneuten Anstiegs der Infektionszahlen in den genannten Einrichtungen wird im Sinne der 3-G-Regel (Zutritt 
+nur für geimpfte, genesene oder getestete Personen) eine inzidenzunabhängige Testpflicht für Besucherinnen, Besucher und Dritte, 
+die die Einrichtung betreten wollen, bestimmt, soweit diese weder über eine Impfdokumentation nach § 2 Nr. 3 SchAusnahmV noch 
+über einen Genesenennachweis nach § 2 Nr. 5 SchAusnahmV verfügen. 
+
+Es muss sichergestellt werden, dass ein Eintrag des Coronavirus in die Einrichtungen so weit wie möglich ausgeschlossen wird. Dabei 
+kommt den Testungen bzw. der Vorlage negativer Testergebnisse beim Betreten der Einrichtungen besondere Bedeutung zu. Deshalb 
+wird auf Grundlage des gemeinsamen Beschlusses der Bundeskanzlerin mit den Regierungschefinnen und Regierungschefs vom 10. 
+August 2021 nach wie vor eine verpflichtende Testung für die Besucherinnen und Besucher sowie Dritte, die die genannten Einrich-
+tungen betreten wollen, angeordnet. Die Organisation der Testungen ist angesichts der hohen Verantwortlichkeit der Einrichtungen für 
+die ihnen anvertrauten Bewohnerinnen und Bewohner zumutbar. Absatz 3 gilt auch für Personen, die die Einrichtung zum Zweck der 
+Seelsorge betreten. 
+
+ 
+
+Zu Absatz 4: 
+
+Zu Absatz 5: 
+
+Zu Absatz 6: 
+
+Zu Absatz 1: 
+
+Zu Absatz 2: 
+
+§ 17 Abs. 4 entspricht inhaltsgleich dem § 14 Abs. 4 der Verordnung, welche mit Ablauf des 24. August 2021 außer Kraft getreten ist.   
+
+Die bisherige Bestimmung des § 14 Abs. 4 hat sich bewährt und bleibt daher unverändert. 
+
+In ambulant betreuten Wohngemeinschaften zum Zweck der Intensivpflege, die nicht in den Geltungsbereich des Niedersächsischen 
+Gesetzes über unterstützende Wohnformen fallen, gelten die Verpflichtungen des Absatzes 1 gleichermaßen. Mangels entsprechen-
+der Einrichtungsleitung wie in den Einrichtungen nach § 2 Abs. 2 bis 4 NuWG treffen diese Verpflichtungen hier jedoch die Bewohne-
+rinnen und Bewohner oder deren gesetzliche oder rechtsgeschäftliche Vertreterinnen oder Vertreter. 
+
+§ 17 Abs. 5 entspricht inhaltsgleich dem § 14 Abs. 5 der Verordnung, welche mit Ablauf des 24. August 2021 außer Kraft getreten ist.   
+
+Die bisherige Bestimmung des § 14 Abs. 5 hat sich bewährt und bleibt daher unverändert. 
+
+Mit  dieser  Regelung  soll  insbesondere  eine  soziale  Isolation  der  Menschen  an  ihrem  Lebensende  verhindert  werden.  Daher  wird 
+klargestellt, dass die seelsorgerische Betreuung und die Begleitung Sterbender jederzeit zulässig bleibt. Die Vorgaben in Absatz 3 
+kommen in den genannten Fällen nicht zur Anwendung, sodass es insoweit keiner zwingenden vorherigen Anmeldung oder eines 
+zwingenden Tests bedarf. Im Übrigen sind die Hygienevorschriften zu beachten. Von dieser Regelung sind die Heime nach § 2 Abs. 2 
+NuWG,  die  unterstützenden Wohnformen  nach  § 2  Abs. 3  und  4  NuWG sowie  die  ambulant  betreuten Wohngemeinschaften  zum 
+Zwecke der Intensivpflege, die nicht in den Geltungsbereich des Nds. Gesetzes über unterstützende Wohnformen fallen, erfasst. In 
+stationären Hospizen gilt die Regelung entsprechend. 
+
+§ 17 Abs. 6 entspricht weitgehend dem § 14 Abs. 6 der Verordnung, welche mit Ablauf des 24. August 2021 außer Kraft getreten ist.   
+
+Die bisherige Bestimmung des § 14 Abs. 6 hat sich grundsätzlich bewährt. Lediglich die Ausnahmeregelung in § 17 Abs. 6 Satz 2 wird 
+dahingehend erweitert, dass auch Personen mit einem Nachweis über eine Testung nach § 7 zu berücksichtigen sind. 
+
+Nach Absatz 6 ist der Betrieb von Einrichtungen der Tagespflege nach § 2 Abs. 7 NuWG unter Beachtung eines von der Leitung der 
+Einrichtung nach § 4 erstellten Hygienekonzepts zulässig. Die Betreuung von Pflegebedürftigen in Gruppen durch die Angebote zur 
+Unterstützung im Alltag hat einen hohen gesundheitspolitischen Stellenwert. Beide Formen der Betreuung tragen dazu bei, gerade in 
+Zeiten von Corona soziale Kontakte und soziale Teilhabe in einem erforderlichen Mindestmaß zu ermöglichen und so den Erhalt der 
+psychischen Gesundheit der Pflegebedürftigen zu gewährleisten. Darüber hinaus können sie zur Entlastung der pflegenden Angehö-
+rigen beitragen. 
+
+Zu § 18 (Werkstätten für behinderte Menschen, Tagesförderstätten für behinderte Menschen sowie vergleichbare Angebote 
+der Eingliederungshilfe): 
+
+Den Werkstätten für behinderte Menschen (WfbM) vergleichbare Angebote der Eingliederungshilfe sind tagesstrukturierende Ange-
+bote, in denen Leistungen zur Teilhabe am Arbeitsleben erbracht werden und in denen ein Arbeitsentgelt an die leistungsberechtigte 
+Person gezahlt wird. 
+
+Den Tagesförderstätten für behinderte Menschen vergleichbare Angebote der Eingliederungshilfe sind tagesstrukturierende Angebote, 
+in denen Leistungen  zur sozialen Teilhabe erbracht  werden und bei  denen  die leistungsberechtigten Personen kein  Arbeitsentgelt 
+erhalten. 
+
+Die angebotsspezifischen Hygiene- und Schutzkonzepte, die auch die Fahrdienste zwischen dem Angebots- und Wohnort umfassen 
+und sich nach der gültigen SARS-CoV-2-Arbeitschutzverordnung richten, haben sich bewährt und sind Voraussetzung für den Betrieb 
+der Leistungsangebote. Damit wird sichergestellt, dass einerseits die Schutzkonzepte auch die von diesen Leistungsangeboten um-
+fassten Fahrten  vom Wohnort zum Angebotsort und zurück berücksichtigen  und andererseits für Menschen mit  Behinderungen  in 
+Tagesförderstätten für behinderte Menschen oder in einem vergleichbaren Angebot der Eingliederungshilfe, die nicht in den Anwen-
+dungsbereich der SARS-CoV-2-Arbeitsschutzverordnung fallen, diese Regelungen ebenfalls greifen.   
+
+Menschen  mit  Behinderungen,  die  Leistungen  der  sozialen  Teilhabe  in  einer  Tagesförderstätte  für  behinderte  Menschen  oder  ein 
+vergleichbares Angebot der Eingliederungshilfe in Anspruch nehmen, müssen der Betreuung zugestimmt haben. Während die in einer 
+WfbM beschäftigten Menschen  mit Behinderungen mit  der WfbM einen Werkstattvertrag schließen, aus dem sich,  ähnlich wie  bei 
+einem Arbeitsvertrag, gegenseitige Rechte und Pflichten (z. B. Erbringung von Arbeitsleistung, Zahlung eines Arbeitsentgelts) im Sinne 
+eines arbeitnehmerähnlichen Beschäftigungsverhältnisses ergeben, liegt ein solches arbeitnehmerähnliches Rechtsverhältnis bei der 
+Inanspruchnahme des Leistungsangebots einer Tagesförderstätten für behinderte Menschen oder damit vergleichbaren Angeboten 
+der Eingliederungshilfe nicht vor. Eine Wiederaufnahme der Betreuung soll deshalb nicht gegen den ausdrücklichen Willen der leis-
+tungsberechtigten Person erfolgen.     
+
+Dieser Regelung hat die Landesarbeitsgemeinschaft Arbeit | Bildung | Teilhabe und die Landesarbeitsgemeinschaft der Werkstatträte 
+im Vorfeld zugestimmt. 
+
+Zu § 19 (Krankenhäuser, Vorsorge und Rehabilitationseinrichtungen): 
+
+Zu Krankenhäusern, Vorsorge- und Rehabilitationseinrichtungen haben nur die Besucherinnen und Besucher von Patientinnen und 
+Patienten Zutritt, die über einen Genesenen-, Impf- oder Testnachweis verfügen. Es gilt § 7 Abs. 2, d. h., dass die Person, die den 
+Test gemäß Satz 4 durchgeführt oder gemäß Satz 5 beaufsichtigt hat, hat der Besucherin oder dem Besucher auf Verlangen das 
+Ergebnis und den Zeitpunkt der Testung zu bescheinigen. Die seelsorgerische Betreuung der Bewohnerinnen und Bewohner sowie 
+die Begleitung Sterbender ist jederzeit zulässig. 
+
+ 
+
+Zu § 20 (Wahlen): 
+
+Zu Absatz 1: 
+
+Zu Absatz 2: 
+
+Die Regelung beschreibt den Anwendungsbereich für die Wahlhandlung, Ermittlung und Feststellung des Wahlergebnisses bei den 
+anstehenden Wahlen sowie sonstiger Sitzungen der Wahlausschüsse. 
+
+Bei den anstehenden Wahlen bedarf es aufgrund der aktuellen COVID-19-Pandemie der Beachtung der genannten Hygieneregelun-
+gen, um sowohl den Infektionsschutz der Wählerinnen und Wähler als auch der Mitglieder der Wahlvorstände bestmöglich sicherzu-
+stellen und dem Schutz von Leben und körperlicher Unversehrtheit hinreichend Rechnung zu tragen. Da es bei den Wahlen zu einer 
+Vielzahl von Kontakten kommt, ist es erforderlich, entsprechende Infektionsschutzmaßnahmen zu ergreifen. Gerade im Hinblick auf 
+die allgemeinen Kommunalwahlen und die Bundestagswahl ist es zur Wahrung der Einheitlichkeit der Wahl geboten, eine landesweit 
+einheitliche Regelung zu treffen.   
+
+Gemäß den Sätzen 2 bis 4 sollen die Hände vor Betreten des Wahlraumes desinfiziert werden. Die Abstandsempfehlung nach § 1 
+Abs. 2 von 1,5 Metern gilt nicht für Hilfspersonen der wahlberechtigten Person bei ihrer Wahlhandlung und im Falles des Transports 
+von Wahlunterlagen zu einem anderen Wahlbezirk. Bei der Bundestagswahl dürfen im Falle des § 68 Abs. 2 Satz 3 BWO mehrere 
+Personen aus verschiedenen Haushalten in einem Fahrzeug fahren; die Personen müssen einen medizinischen Mund-Nasen-Schutz 
+tragen. 
+
+Im Übrigen gelten die Hygieneregeln nach § 5 Abs. 1 und 2 Sätze 1 bis 3. Es liegt in der Natur der Sache, dass die Ansammlung von 
+Personen während des Wahlgeschäfts mit Warteschlangen mitunter nicht generell vermieden werden kann. Dies ist letztlich entspre-
+chend der vorhandenen Örtlichkeiten umzusetzen. Die von den Gemeinden und Samtgemeinden zu erstellenden Hygienekonzepte 
+für die Wahlräume haben die entsprechend erforderlichen Maßnahmen, wenn sich Warteschlangen nicht vermeiden lassen, vorzuse-
+hen (Zugangsbeschränkungen, Abstandsmarkierungen, verstärkte Lüftung etc.). 
+
+Die Wahlvorstandsmitglieder sind für die ordnungsgemäße Durchführung der Wahl am Wahltag verantwortlich. Für sie gelten daher 
+nicht die allgemeinen Zutrittsbeschränkungen zu dem Wahlgebäude und dem Wahlraum. Auch die Wählerinnen und Wähler müssen 
+ihr Wahlrecht am Wahltag ungehindert wahrnehmen können. Daher gilt auch für diese Personen ganz unabhängig von § 8, dass sie 
+das Wahlgebäude betreten dürfen, auch wenn sie nicht geimpft, genesen oder getestet sind. 
+
+Im Wahlgebäude  besteht  zur  Vermeidung  von  gesundheitlichen  Risiken  für  alle  Anwesenden  die  Verpflichtung  zum  Tragen  eines 
+medizinischen Mund-Nasen-Bedeckung nach § 4 Abs. 1 Satz 1. Die Ausübung des Wahlrechts wird durch die Verpflichtung, einen 
+medizinischen Mund-Nasen-Schutz zu tragen, nicht eingeschränkt. Die Regelung des § 4 Abs. 5 sieht differenzierte Ausnahmen von 
+dieser Verpflichtung vor, insbesondere für Personen, für die aufgrund einer körperlichen, geistigen oder psychischen Beeinträchtigung 
+oder einer Vorerkrankung, zum Beispiel einer schweren Herz- oder Lungenerkrankung, das Tragen einer Mund-Nasen-Bedeckung 
+nicht zumutbar ist und dies durch ein ärztliches Attest oder eine vergleichbare amtliche Bescheinigung glaubhaft gemacht wird. Au-
+ßerdem besteht für die Wählerinnen und Wähler die Möglichkeit, rechtzeitig im Vorfeld auf die Alternative der Briefwahl auszuweichen.   
+
+Die Regelung des Absatz 4 sieht über § 4 Abs. 5 hinaus auch vor, dass die Mund-Nasen-Bedeckung auch dann für eine kurze Zeit 
+abgenommen werden darf, um die Identität der wahlberechtigten Person im Einzelfall klären zu können.   
+
+Die Wahlhandlung und die Ergebnisermittlung sind öffentlich. Auch Personen, die aus gesundheitlichen Gründen keine Mund-Nasen-
+Bedeckung tragen, haben aufgrund der differenzierten Regelungen in Absatz 5 hinreichend Gelegenheit, als Wahlbeobachterin oder 
+als Wahlbeobachter tätig zu sein.   
+
+Sofern eine Wahlbeobachterin oder ein Wahlbeobachter gemäß  § 4 Abs. 5 von  der Verpflichtung zum Tragen  einer Mund-Nasen-
+Bedeckung ausgenommen ist, so ist der Aufenthalt zum Schutz der übrigen anwesenden Personen in dem in Absatz 5 Satz 1 genann-
+ten Umfang zeitlich zu begrenzen. Außerdem ist zum Schutz der übrigen Anwesenden ein Abstand von zwei Metern einzuhalten.   
+
+Die zeitliche Begrenzung für diese Personen gilt jedoch nicht, wenn sie dem Wahlvorstand einen PCR-Test oder einen von einem 
+Leistungserbringer nach § 6 Abs. 1 TestV vorgenommenen oder überwachten  PoC-Antigen-Schnelltest mit jeweils zeitlich gültigen 
+negativem Testergebnis nachweist.   
+
+Fünfter Teil (Schlussbestimmungen) 
+
+Zu § 21 (Weitergehende Regelungen und Anordnungen): 
+
+Absatz 1 regelt die allgemeinen Befugnisse der örtlich zuständigen Behörden, über die in dieser Verordnung getroffenen Regelungen 
+hinaus weitergehende Anordnungen zu treffen, soweit sie im Interesse des Gesundheitsschutzes erforderlich sind. 
+
+Der Hinweis in Satz 1 dient dem Ziel, den Präsenzbetrieb in Kinderbetreuung und Schule möglichst lange aufrechtzuerhalten. Satz 2 
+stellt klar, dass der Schulbesuch für Abschluss- und Abiturprüfungen nicht untersagt werden kann. 
+
+Werden die Warnstufen 2 oder 3 in erheblichem Maße ausgelöst, so kann das Land nach Einschätzung der Gesamtinfektionslage 
+weitergehende Schutzmaßnahmen ergreifen.   
+
+In Berufsbildungseinrichtungen außerhalb der schulischen und betrieblichen Berufsbildung finden berufsbezogene Fort- und Weiter-
+bildungen, rechtssatzmäßig vorgeschriebene Lehrgänge der überbetrieblichen Unterweisung im Rahmen der beruflichen Erstausbil-
+dung und hoheitliche Zwischen- und Abschlussprüfungen sowie Prüfungen der Fort- und Weiterbildung statt. Sofern die Maßnahmen 
+
+Zu Absatz 3: 
+
+Zu Absatz 4: 
+
+Zu Absatz 5: 
+
+Zu Absatz 1: 
+
+Zu Absatz 2: 
+
+Zu Absatz 3: 
+
+ 
+
+Zu Absatz 1: 
+
+Zu Absatz 2: 
+
+einen unmittelbaren Berufsbezug aufweisen oder die Prüfungen den Berufszugang oder das berufliche Fortkommen maßgeblich be-
+einflussen, ist die Teilnahme mit Blick auf Artikel 12 Abs. 1 des Grundgesetzes zu ermöglichen. Dies gilt in Bezug auf die Durchführung 
+der Maßnahme und der Prüfung sowohl für den Zugang der Teilnehmenden und Prüflinge als auch für den Zugang durch Prüferinnen 
+und Prüfer, Aufsichtspersonen und gegebenenfalls notwendiges technisches Personal.     
+
+Zu § 22 (Ordnungswidrigkeiten): 
+
+Die §§ 1 b bis 10 c, 14 bis 17 und 18 a der Verordnung, welche mit Ablauf des 24. August 2021 außer Kraft getreten sind, werden 
+durch die §§ 4 bis 13 und 17 bis 20 ersetzt.   
+
+Weitergehende Anordnungen der örtlich zuständigen Behörden beruhen direkt auf dem Infektionsschutzgesetz. Eine Nennung des 
+§ 21 ist daher im § 22 nicht erforderlich, um die für die weitergehende Regelung nach § 21 eine Bußgeldbewährung zu erreichen. 
+
+Zu § 23 (Inkrafttreten, Außerkrafttreten): 
+
+Neben  dem  Inkrafttreten  der  Verordnung  am  25.  August  2021  wird  der  Zeitpunkt  des  Außerkrafttretens  der  Verordnung  auf  den 
+22. September 2021 festgelegt. 
+
+Mit der Regelung des Absatzes 2 wird der Zeitpunkt des Außerkrafttretens der Verordnung vom 30. Mai 2021 (Nds. GVBl. S. 297), 
+zuletzt geändert durch Verordnung vom 27. Juli 2021 (Nds. GVBl. S. 559) festgelegt. 
+
+
