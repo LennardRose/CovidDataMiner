@@ -1,1 +1,56 @@
-{"city": "potsdam", "site_name": "potsdamer_neuste_nachrichten", "base_url": "https://www.pnn.de/", "path_url": "potsdam/corona-newsblog-fuer-potsdam-und-brandenburg-corona-infektionen-in-brandenburg-wieder-zweistellig/25617916.html", "html_tag": null, "html_class": null, "condition": null, "include_condition": null, "title": {"source": "STANDARD", "tag": null, "class": null}, "date": {"source": null, "tag": null, "class": null}, "author": {"source": null, "tag": null, "class": null, "default": null}, "description": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "type": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "keywords": {"source": "NOEXIST", "tag": null, "class": null, "default": null}}{"city": "potsdam", "site_name": "potsdamer_neuste_nachrichten", "base_url": "https://www.pnn.de/", "path_url": "potsdam/corona-newsblog-fuer-potsdam-und-brandenburg-corona-infektionen-in-brandenburg-wieder-zweistellig/25617916.html", "html_tag": null, "html_class": null, "condition": null, "include_condition": null, "title": {"source": "STANDARD", "tag": null, "class": null}, "date": {"source": null, "tag": null, "class": null}, "author": {"source": null, "tag": null, "class": null, "default": null}, "description": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "type": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "keywords": {"source": "NOEXIST", "tag": null, "class": null, "default": null}}{"city": "potsdam", "site_name": "potsdamer_neuste_nachrichten", "base_url": "https://www.pnn.de/", "path_url": "potsdam/corona-newsblog-fuer-potsdam-und-brandenburg-corona-infektionen-in-brandenburg-wieder-zweistellig/25617916.html", "html_tag": null, "html_class": null, "condition": null, "include_condition": null, "title": {"source": "STANDARD", "tag": null, "class": null}, "date": {"source": null, "tag": null, "class": null}, "author": {"source": null, "tag": null, "class": null, "default": null}, "description": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "type": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "keywords": {"source": "NOEXIST", "tag": null, "class": null, "default": null}}{"city": "potsdam", "site_name": "potsdamer_neuste_nachrichten", "base_url": "https://www.pnn.de/", "path_url": "potsdam/corona-newsblog-fuer-potsdam-und-brandenburg-corona-infektionen-in-brandenburg-wieder-zweistellig/25617916.html", "html_tag": null, "html_class": null, "condition": null, "include_condition": null, "title": {"source": "STANDARD", "tag": null, "class": null}, "date": {"source": null, "tag": null, "class": null}, "author": {"source": null, "tag": null, "class": null, "default": null}, "description": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "type": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "keywords": {"source": "NOEXIST", "tag": null, "class": null, "default": null}}{"city": "potsdam", "site_name": "potsdamer_neuste_nachrichten", "base_url": "https://www.pnn.de/", "path_url": "potsdam/corona-newsblog-fuer-potsdam-und-brandenburg-corona-infektionen-in-brandenburg-wieder-zweistellig/25617916.html", "html_tag": null, "html_class": null, "condition": null, "include_condition": null, "title": {"source": "STANDARD", "tag": null, "class": null}, "date": {"source": null, "tag": null, "class": null}, "author": {"source": null, "tag": null, "class": null, "default": null}, "description": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "type": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "keywords": {"source": "NOEXIST", "tag": null, "class": null, "default": null}}{"city": "potsdam", "site_name": "potsdamer_neuste_nachrichten", "base_url": "https://www.pnn.de/", "path_url": "potsdam/corona-newsblog-fuer-potsdam-und-brandenburg-corona-infektionen-in-brandenburg-wieder-zweistellig/25617916.html", "html_tag": null, "html_class": null, "condition": null, "include_condition": null, "title": {"source": "STANDARD", "tag": null, "class": null}, "date": {"source": null, "tag": null, "class": null}, "author": {"source": null, "tag": null, "class": null, "default": null}, "description": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "type": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "keywords": {"source": "NOEXIST", "tag": null, "class": null, "default": null}}{"city": "potsdam", "site_name": "potsdamer_neuste_nachrichten", "base_url": "https://www.pnn.de/", "path_url": "potsdam/corona-newsblog-fuer-potsdam-und-brandenburg-corona-infektionen-in-brandenburg-wieder-zweistellig/25617916.html", "html_tag": null, "html_class": null, "condition": null, "include_condition": null, "title": {"source": "STANDARD", "tag": null, "class": null}, "date": {"source": null, "tag": null, "class": null}, "author": {"source": null, "tag": null, "class": null, "default": null}, "description": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "type": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "keywords": {"source": "NOEXIST", "tag": null, "class": null, "default": null}}
+{
+    "region": "potsdam",
+    "site_name": "sueddeutsche_zeitung",
+    "base_url": "https://www.pnn.de/",
+    "path_url": "https://www.pnn.de/themen/coronavirus-in-brandenburg/",
+    "html_tag": "a",
+    "html_class": "sz-teaser",
+    "url_conditions" : [
+        {
+        "condition_string": "/potsdam",
+        "include_condition": true},
+        {
+        "condition_string": "newsblog",
+        "include_condition": false}
+        ],
+    "title": {
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "og:title"
+    },
+    "date": {
+        "source": "TAG",
+        "tag": "time",
+        "attribute" : "class",
+        "attribute_value": "ts-time"
+    },
+    "author": {
+        "source": "TAG",
+        "tag": "a",
+        "attribute" : "class",
+        "attribute_value": "ts-author",
+        "default": null
+    },
+    "description": {
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "og:description",
+        "default": null
+    },
+    "type": {
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "og:type",
+        "default": null
+    },
+    "keywords": {
+        "source": "NOEXIST",
+        "tag": null,
+        "attribute" : null,
+        "attribute_value": null,
+        "default": null
+    }
+} 

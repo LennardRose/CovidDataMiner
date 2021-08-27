@@ -1,4 +1,4 @@
-from Repository import Repository
+from repository import Repository
 import argparse
 import sys
 
