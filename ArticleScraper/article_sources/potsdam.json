@@ -1,10 +1,10 @@
 {
     "region": "potsdam",
-    "site_name": "sueddeutsche_zeitung",
+    "site_name": "potsdamer_neuste_nachrichten",
     "base_url": "https://www.pnn.de/",
-    "path_url": "https://www.pnn.de/themen/coronavirus-in-brandenburg/",
-    "html_tag": "a",
-    "html_class": "sz-teaser",
+    "path_url": "themen/coronavirus-in-brandenburg/",
+    "html_tag": "li",
+    "html_class": "hcf-teaser",
     "url_conditions" : [
         {
         "condition_string": "/potsdam",

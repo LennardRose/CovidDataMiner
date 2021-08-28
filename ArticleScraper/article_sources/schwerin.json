@@ -1,6 +1,6 @@
 {
-    "region": "hamburg",
-    "site_name": "hamburger_abendblatt",
+    "region": "schwerin",
+    "site_name": "schweriner_volkszeitung",
     "base_url": "https://www.svz.de/",
     "path_url": "suche/?q=corona",
     "html_tag": "article",

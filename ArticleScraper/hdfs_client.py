@@ -6,8 +6,6 @@ import logging
 
 class HDFSClient(AbstractFileClient):
 
-    def __init__():
-        pass
 
     def save_as_file(self, filename, content):
         """

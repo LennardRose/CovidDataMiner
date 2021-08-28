@@ -15,6 +15,8 @@ def parse_date(date, format=STANDARD_DATE_FORMAT):
     :return: the date in new format
     """
     if type(date) == str:
+        date.replace(",", "")
+        date = re.sub(r"[a-zA-Z]+", "", date)
         date =  dateutil.parser.parse(date)
 
     return date.strftime(format)

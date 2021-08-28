@@ -1,4 +1,6 @@
-
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+import time
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -13,6 +15,19 @@ class ArticleScraper:
     def __init__(self):
         self.repository = Repository()
         ssl._create_default_https_context = ssl._create_unverified_context
+        self.driver = self.get_webdriver()
+
+    def get_webdriver(self):
+        """
+        returns a webdriver for selenium
+        https://www.makeuseof.com/how-to-install-selenium-webdriver-on-any-computer-with-python/
+        """
+        try:
+            driver_options = Options()
+            driver_options.headless = True
+            return webdriver.Chrome(executable_path=r'.\drivers\chromedriver_win32\chromedriver.exe', options=driver_options)
+        except:
+            logging.error("failed to initialize webdriver for selenium, make sure you downloaded a driver and added it to PATH")
 
 
     def get_text_of_page(self, soup):
@@ -23,13 +38,24 @@ class ArticleScraper:
         encoding = soup.original_encoding or 'utf-8' #encoding für sonderzeichen sonst heult er rum
         return str(soup.encode(encoding)).split("\\n") #er checkt einfach nicht dass das hier lineseperators sind
 
-    def get_soup_out_of_page(self, URL):
+    def get_soup_of_static_page(self, URL):
         """
+        extract content of static loaded page
         :param URL: the url to get the soup (Beatifulsoup) of
         :return: the soup, parsed with 'html5lib' parser
         """
         page = requests.get(URL)
         return BeautifulSoup(page.content, 'html5lib')
+
+    def get_soup_of_dynamic_page(self, URL):
+        """
+        extract content of dynamic loaded page
+        :param URL: the url to get the soup (Beatifulsoup) of
+        :return: the soup, parsed with 'html5lib' parser
+        """
+        page = self.driver.get(URL)
+        time.sleep(1)
+        return BeautifulSoup(self.driver.page_source, 'html5lib')
 
 
 
@@ -39,9 +65,19 @@ class ArticleScraper:
         If no href is found, the children will be searched for a href
         """
 
-        soup = self.get_soup_out_of_page(URL)
+        #first try static page
+        soup = self.get_soup_of_static_page(URL)
         article_link_list = soup.body.find_all(html_tag, html_class )
         links = []
+
+        #if static doesnt work try dynamic
+        if article_link_list == [] or article_link_list == None:
+            self.get_soup_of_dynamic_page(URL)
+            article_link_list = soup.body.find_all(html_tag, html_class )
+
+        # if still no result something must be wrong with the html_tag and html_class
+        if article_link_list == [] or article_link_list == None:
+            logging.error("No results found for: " + html_class + " and " + html_tag)
 
         for article_link in article_link_list: 
 
@@ -157,7 +193,7 @@ class ArticleScraper:
         also saves the meta data of the page as configurated in the given article source
         """
         logging.info("Save content of: " + URL)
-        soup = self.get_soup_out_of_page(URL)
+        soup = self.get_soup_of_static_page(URL)
 
         parser = meta_parser( URL, soup, source)
         parser.parse_metadata() #das URL ist von der individuellen seite, nicht aus Base + Path, ausser bei direktem scrapen der seite

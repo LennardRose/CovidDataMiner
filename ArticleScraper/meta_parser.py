@@ -143,21 +143,31 @@ class meta_parser:
         retrieves all ld+json scripts on the page and iterates through all for the needed value
         """
         if self.meta_config[key]["attribute"] == None and self.meta_config[key]["attribute_value"] == None:
-            result = json.loads( self.soup.find_all('script', {'type':'application/ld+json'}).text.strip() )
+            result_set = self.soup.find_all('script', {'type':'application/ld+json'}) 
         else:
-            result = json.loads( self.soup.find_all('script', {'type':'application/ld+json', self.meta_config[key]["attribute"] : self.meta_config[key]["attribute_value"]}).text.strip() )
+            result_set = self.soup.find_all('script', {'type':'application/ld+json', self.meta_config[key]["attribute"] : self.meta_config[key]["attribute_value"]}) 
 
-        if result: # find_all returns a list
+        if result_set:
+            result = []
 
-            for scripts in result: #json+ld script may consist of other scripts
+            for element in result_set:
 
-                if type(scripts) == list: #check ob json liste
+                element = element.text.strip()
+                result.append(json.loads( element ))
 
-                    for script in scripts:
-                        self.get_json_value(script, key)
 
-                else: 
-                    self.get_json_value(scripts, key)
+
+            if result: # find_all returns a list
+
+                for scripts in result: #json+ld script may consist of other scripts
+
+                    if type(scripts) == list: #check ob json liste
+
+                        for script in scripts:
+                            self.get_json_value(script, key)
+
+                    else: 
+                        self.get_json_value(scripts, key)
         
 
 
