@@ -1,5 +1,10 @@
 State;URL;Target;Value
+Sachsen;https://www.coronavirus.sachsen.de/amtliche-bekanntmachungen.html;CSSselector;div.text-col table:first-of-type a:first-of-type
+Sachsen;https://www.coronavirus.sachsen.de/amtliche-bekanntmachungen.html;CSSselector;div.text-col div.table-responsive:first-of-type table:first-of-type a:first-of-type
+Sachsen-Anhalt;https://coronavirus.sachsen-anhalt.de/amtliche-informationen/;CSSselector;#c236673 > div > div > ul > li:nth-child(2) > strong > a
+Hessen;https://www.hessen.de/fuer-buerger/corona-hessen/verordnungen-und-allgemeinverfuegungen;CSSselector;div.he_content_body table:first-of-type li:first-of-type a
 Thüringen;https://www.tmasgff.de/covid-19/verordnung;class_;"button button--small"
+Nordrhein-Westfalen;https://www.land.nrw/de/media/galerie/corona-fakten-1;CSSselector;"div[id*='views_slideshow_cycle_div_single_view_gallery_view-panel_pane_'] img:first-of-type"
 Mecklenburg-Vorpommern;https://www.regierung-mv.de/corona/Verordnungen-und-Dokumente/;CSSselector;#page > div.lineholder.left-center-right > div.element_holder.holder_75.center > div > div.element.dvz-contenttype-documentlist.element_100.element_index_1 > div > div > table > tbody > tr:nth-child(1) > td:nth-child(1) > a
 Rheinland-Pfalz;https://corona.rlp.de/de/aktuelles/corona-regeln-im-ueberblick/;class_;"accordion"
 Saarland;https://www.saarland.de/DE/portale/corona/service/downloads/_documents/corona-verfuegungen/dld_2021-08-25-aenderung-vom-21-08-18.html;class_;downloadLink
@@ -13,11 +18,9 @@ Baden-Württemberg;https://www.baden-wuerttemberg.de/de/service/aktuelle-infos-z
 Bayern;https://www.stmgp.bayern.de/coronavirus/;class_;"vc_single_image-img attachment-full"
 
 
-Nordrhein-Westfalen;https://www.land.nrw/de/media/galerie/corona-fakten-1;CSSselector;"div[id*='views_slideshow_cycle_div_single_view_gallery_view-panel_pane_1_'] > div > div.views-field.views-field-field-asset-image > div > img"
-Hessen;https://www.hessen.de/fuer-buerger/corona-hessen/verordnungen-und-allgemeinverfuegungen;CSSselector;#node-artikel-87342 > div.content.clearfix > div.he_content_body > div:nth-child(4) > table > tbody > tr > td > ul > li:nth-child(2) > a
-Sachsen-Anhalt;https://coronavirus.sachsen-anhalt.de/amtliche-informationen/;CSSselector;"#Lesefassung_Vierte_AEVO_der_14\._SARS-CoV-2-EindV\.pdfDownload > a"
-Sachsen-Anhalt;https://coronavirus.sachsen-anhalt.de/amtliche-informationen/;CSSselector;"#DRB_BTN_e2f70396-7c15-d411-a6be-9dffd9f411a5"
-Sachsen;https://www.coronavirus.sachsen.de/amtliche-bekanntmachungen.html;CSSselector;#main-content > div:nth-child(4) > div.text-col > div:nth-child(2) > table > tbody > tr > td:nth-child(1) > a:nth-child(3)
+
+
+
 
 
 

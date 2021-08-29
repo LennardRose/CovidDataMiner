@@ -57,13 +57,17 @@ tags = {
     "Sport" : ["Sport", "Fitnessstudios"]
 }
 
+def fixURL(url, addon):
+    index = re.search("(?<=[a-zA-Z])/{1}", row.URL).start()
+    if not url.startswith(row.URL[:index]):
+        url = row.URL[:index] + addon
+    return url
 
 def getImgURLfromElem(elem):
     if "Regeln" in elem['alt'] or "Regelung" in elem['alt'] or not elem['alt'] or "Änderung" in elem['alt']:
         imgURL = elem['src']
 
-        if not imgURL.startswith(row.URL[:row.URL.index(".de") + 4]):
-            imgURL = row.URL[:row.URL.index(".de") + 4] + elem['src']
+        imgURL = fixURL(imgURL, elem['src'])
 
         logging.info("Filtering found Img-Element %s", imgURL)
         return imgURL
@@ -73,8 +77,8 @@ def getImgURLfromElem(elem):
 def getPDFURLfromElem(elem):
 
     pdfURL = elem["href"]
-    if not pdfURL.startswith(row.URL[:row.URL.index(".de")+4]):
-        pdfURL = row.URL[:row.URL.index(".de")+4] + elem["href"]
+
+    pdfURL = fixURL(pdfURL, elem["href"])
 
     logging.info("Filtering found PDF %s", pdfURL)
     return pdfURL
@@ -312,6 +316,8 @@ def tag_visible(element):
     return True
 
 def findElements(URL,target,value):
+    from selenium import webdriver
+
     page = requests.get(URL)
     soup = BeautifulSoup(page.content, 'lxml')
 
@@ -335,6 +341,14 @@ def findElements(URL,target,value):
                 target: value
             }
         element = soup.find_all(**kwargs)
+
+    if not element:
+        # use selenium
+        driver = webdriver.Chrome()
+        driver.get(URL)
+        html = driver.page_source
+        soup = BeautifulSoup(html, 'lxml')
+        element = soup.select(value)
 
     return element
 
