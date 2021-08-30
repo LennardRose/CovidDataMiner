@@ -11,7 +11,7 @@ class AbstractScraper(ABC):
         logging.error("Method not implemented")
 
     @abstractmethod
-    def scrape_date(self):
+    def scrape_data(self):
         logging.error("Method not implemented")
 
     @abstractmethod
@@ -35,8 +35,10 @@ class AbstractScraper(ABC):
         return output_list
 
     def validate_scrape_status(self, latest_request_time):
-        current_day = round_time_milli_to_day(current_milli_time())
-        last_index_day = round_time_milli_to_day(latest_request_time)
+        current_day = round_time_milli_to_day(
+            current_milli_time(), milli_flag=True)
+        last_index_day = round_time_milli_to_day(
+            latest_request_time, milli_flag=True)
         if current_day is last_index_day:
             return False
         else:

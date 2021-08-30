@@ -19,7 +19,8 @@ class IncidenceScraper(AbstractScraper):
         """ init function to save an elasticsearch client instance and init empty incidence data
 
         Args:
-            es_client (elasticsearch client): a created elasticsearch client instance
+            es_client (ElasticsearchWrapper): a created elasticsearch client instance
+            hdfs_client (HdfsClient): hdfs client 
         """
         self.incidence_district_data = {}
         self.incidence_states_data = {}
@@ -115,10 +116,10 @@ class IncidenceScraper(AbstractScraper):
     def save_raw_data_to_hdfs(self):
         """Saves raw data to hdfs
         """
-        self.hdfs_client.save_json_to_hdfs(
-            self.incidence_district_data, hdfs_incidence_district_base_path+'/'+get_current_date()+'/'+self.request_time_districts)
-        self.hdfs_client.save_json_to_hdfs(
-            self.incidence_states_data, hdfs_incidence_state_base_path+'/'+get_current_date()+'/'+self.request_time_districts)
+        self.hdfs_client.save_json_to_hdfs(self.incidence_district_data, hdfs_incidence_district_base_path +
+                                           get_current_date()+'/'+str(self.request_time_districts)+'.json')
+        self.hdfs_client.save_json_to_hdfs(self.incidence_states_data, hdfs_incidence_state_base_path +
+                                           get_current_date()+'/'+str(self.request_time_districts)+'.json')
 
     def scrape_data(self):
         """main function that scrapes and saves all data to all targets]

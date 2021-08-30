@@ -10,14 +10,18 @@ from Util import *
 if __name__ == "__main__":
 
     es_client = ElasticSearchClient()
+    hdfs_client = HdfsClient()
 
-    vaccination_scraper = VaccinationScraper(es_client=es_client)
-    testing_scraper = TestingScraper(es_client=es_client)
-    incidence_scraper = IncidenceScraper(es_client=es_client)
+    vaccination_scraper = VaccinationScraper(
+        es_client=es_client, hdfs_client=hdfs_client)
+    testing_scraper = TestingScraper(
+        es_client=es_client, hdfs_client=hdfs_client)
+    incidence_scraper = IncidenceScraper(
+        es_client=es_client, hdfs_client=hdfs_client)
 
     print('vac')
-    # vaccination_scraper.index_vaccination_data()
+    vaccination_scraper.scrape_data()
     print('tst')
-    # testing_scraper.index_testing_data()
+    testing_scraper.scrape_data()
     print('inc')
-    # incidence_scraper.index_incidence_data()
+    incidence_scraper.scrape_data()

@@ -1,23 +1,29 @@
+from AbstractScraper import AbstractScraper
 import requests
 from Config import *
 from Util import *
 from ElasticSearchWrapper import ElasticSearchClient
 import copy
+import logging
 
 
-class VaccinationScraper():
+class VaccinationScraper(AbstractScraper):
     """Class to scrape vaccination data of rki api
     """
 
-    def __init__(self, es_client) -> None:
+    def __init__(self, es_client, hdfs_client) -> None:
         """ init function to save an elasticsearch client instance and init empty vaccination data
 
         Args:
-            es_client (elasticsearch client): a created elasticsearch client instance
+            es_client (ElasticsearchWrapper): a created elasticsearch client instance
+            hdfs_client (HdfsClient): hdfs client 
         """
         self.vaccination_data = {}
         self.es_client = es_client
+        self.hdfs_client = hdfs_client
         self.request_time = None
+        self.request_time_latest = self.es_client.get_latest_document_by_index(
+            elasticsearch_vaccination_index, 'data_request_time')
 
     def get_vaccination_data_raw(self):
         """function that returns raw vaccination data
@@ -71,7 +77,7 @@ class VaccinationScraper():
         """Saves raw data to hdfs
         """
         self.hdfs_client.save_json_to_hdfs(
-            self.vaccination_data, hdfs_vaccination_base_path+'/'+get_current_date()+'/' + self.request_time)
+            self.vaccination_data, hdfs_vaccination_base_path+get_current_date()+'/' + str(self.request_time)+'.json')
 
     def scrape_data(self):
         """main function that scrapes and saves all data to all targets]
