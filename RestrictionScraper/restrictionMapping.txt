@@ -1,0 +1,45 @@
+PUT restrictions
+{
+    "mappings" : {
+      "properties" : {
+        "creationDate" : {
+          "type" : "date",
+          "format": "dd-MM-yyyy"
+        },
+        "validFrom" : {
+          "type" : "date",
+          "format": "dd-MM-yyyy"
+        },
+        "incidenceBased" : {
+          "type" : "boolean"
+        },
+        "incidenceRanges" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "federateState" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "tags" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 512
+            }
+          }
+        },
+      }
+    }
+  }

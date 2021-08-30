@@ -457,6 +457,16 @@ curl -XGET 'datakrakennamenode:5601/status'
 Über ssh beide mittels IP adresse abrufbar
 %Braindump ende%
 
+\chapter{Datenquellen}
+\section{Nachrichtenartikel}
+\section{RKI Daten}
+\section{Corona Maßnahmen}
+Als Datenquelle für die gültigen Regelungen der Regierung bzw. der jeweiligen Landesregierungen wurde auf deren Websites zugegriffen. Wenn es möglich war die aktuellen Maßnahmen direkt als Text auf der Website zu finden, was selten vorkam, wurde dieser ähnlich den Nachrichtenartikeln geladen. Leider haben es die Landesregierungen nicht sehr einfach gemacht. Manchmal gab es Zusammenfassungen als Bilder ansonsten wurden die aktuell gültigen Verordnungen, welche als pdf-File veröffentlicht werden, geladen. Um die Bilder und PDFs danach, sinnvoll verwertet, in Elasticsearch abgelegen zu können wurde auf Tesseract zur Bild-zu-Text Verarbeitung und OCRmyPDF zur PDF-zu-suchbarenPDF zurückgegriffen. Tesseract ist eine freie Software zur Texterkennung die auf einem neuronalen Netz aufbaut und OCRmyPDF ist ein Python-Framework das mittels Tesseract durchsuchbare PDFs generiert.
+
+- zukünftig vll noch nachschauen ob vll lokale newsseiten infos zusammengefasst anbieten ala radiogong.de/wasgiltmomentan
+
+\section{Wetterdaten}
+
 \chapter{Problemstellung}
 
 \chapter{Lösung}
