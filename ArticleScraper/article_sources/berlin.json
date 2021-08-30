@@ -1,44 +1,53 @@
 {
-    "city": "berlin",
-    "site_name": "tagesspiegel",
-    "base_url": "https://m.tagesspiegel.de/",
-    "path_url": "berlin/coronavirus-in-der-hauptstadtregion-neuinfektionen-in-brandenburg-steigen-wieder-zweistellig/25655678.html",
-    "html_tag": null,
-    "html_class": null,
-    "condition": null,
-    "include_condition": null,
+    "region": "berlin",
+    "site_name": "berliner_morgenpost",
+    "base_url": "https://www.morgenpost.de/",
+    "path_url": "/themen/coronavirus/",
+    "html_tag": "article",
+    "html_class": "teaser",
+    "url_conditions" : [
+        {
+        "condition_string": "/berlin",
+        "include_condition": true}
+        ],
     "title": {
-        "source": "STANDARD",
-        "tag": null,
-        "class": null
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "og:title"
     },
     "date": {
-        "source": null,
-        "tag": null,
-        "class": null
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "name",
+        "attribute_value": "DC.date.issued"
     },
     "author": {
-        "source": null,
-        "tag": null,
-        "class": null,
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "name",
+        "attribute_value": "author",
         "default": null
     },
     "description": {
-        "source": "NOEXIST",
-        "tag": null,
-        "class": null,
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "name",
+        "attribute_value": "description",
         "default": null
     },
     "type": {
-        "source": "NOEXIST",
-        "tag": null,
-        "class": null,
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "og:type",
         "default": null
     },
     "keywords": {
-        "source": "NOEXIST",
-        "tag": null,
-        "class": null,
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "name",
+        "attribute_value": "keywords",
         "default": null
     }
-}
+} 

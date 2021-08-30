@@ -1,1 +1,49 @@
-{"city": "hannover", "site_name": "haz", "base_url": "https://www.haz.de/", "path_url": "nachrichten/coronavirus-in-hannover", "html_tag": "a", "html_class": "pdb-teaser3-teaser-breadcrumb-headline-title-link", "condition": null, "include_condition": null, "title": {"source": "STANDARD", "tag": null, "class": null}, "date": {"source": null, "tag": null, "class": null}, "author": {"source": null, "tag": null, "class": null, "default": null}, "description": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "type": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "keywords": {"source": "NOEXIST", "tag": null, "class": null, "default": null}}{"city": "hannover", "site_name": "haz", "base_url": "https://www.haz.de/", "path_url": "nachrichten/coronavirus-in-hannover", "html_tag": "a", "html_class": "pdb-teaser3-teaser-breadcrumb-headline-title-link", "condition": null, "include_condition": null, "title": {"source": "STANDARD", "tag": null, "class": null}, "date": {"source": null, "tag": null, "class": null}, "author": {"source": null, "tag": null, "class": null, "default": null}, "description": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "type": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "keywords": {"source": "NOEXIST", "tag": null, "class": null, "default": null}}{"city": "hannover", "site_name": "haz", "base_url": "https://www.haz.de/", "path_url": "nachrichten/coronavirus-in-hannover", "html_tag": "a", "html_class": "pdb-teaser3-teaser-breadcrumb-headline-title-link", "condition": null, "include_condition": null, "title": {"source": "STANDARD", "tag": null, "class": null}, "date": {"source": null, "tag": null, "class": null}, "author": {"source": null, "tag": null, "class": null, "default": null}, "description": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "type": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "keywords": {"source": "NOEXIST", "tag": null, "class": null, "default": null}}{"city": "hannover", "site_name": "haz", "base_url": "https://www.haz.de/", "path_url": "nachrichten/coronavirus-in-hannover", "html_tag": "a", "html_class": "pdb-teaser3-teaser-breadcrumb-headline-title-link", "condition": null, "include_condition": null, "title": {"source": "STANDARD", "tag": null, "class": null}, "date": {"source": null, "tag": null, "class": null}, "author": {"source": null, "tag": null, "class": null, "default": null}, "description": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "type": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "keywords": {"source": "NOEXIST", "tag": null, "class": null, "default": null}}{"city": "hannover", "site_name": "haz", "base_url": "https://www.haz.de/", "path_url": "nachrichten/coronavirus-in-hannover", "html_tag": "a", "html_class": "pdb-teaser3-teaser-breadcrumb-headline-title-link", "condition": null, "include_condition": null, "title": {"source": "STANDARD", "tag": null, "class": null}, "date": {"source": null, "tag": null, "class": null}, "author": {"source": null, "tag": null, "class": null, "default": null}, "description": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "type": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "keywords": {"source": "NOEXIST", "tag": null, "class": null, "default": null}}{"city": "hannover", "site_name": "haz", "base_url": "https://www.haz.de/", "path_url": "nachrichten/coronavirus-in-hannover", "html_tag": "a", "html_class": "pdb-teaser3-teaser-breadcrumb-headline-title-link", "condition": null, "include_condition": null, "title": {"source": "STANDARD", "tag": null, "class": null}, "date": {"source": null, "tag": null, "class": null}, "author": {"source": null, "tag": null, "class": null, "default": null}, "description": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "type": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "keywords": {"source": "NOEXIST", "tag": null, "class": null, "default": null}}{"city": "hannover", "site_name": "haz", "base_url": "https://www.haz.de/", "path_url": "nachrichten/coronavirus-in-hannover", "html_tag": "a", "html_class": "pdb-teaser3-teaser-breadcrumb-headline-title-link", "condition": null, "include_condition": null, "title": {"source": "STANDARD", "tag": null, "class": null}, "date": {"source": null, "tag": null, "class": null}, "author": {"source": null, "tag": null, "class": null, "default": null}, "description": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "type": {"source": "NOEXIST", "tag": null, "class": null, "default": null}, "keywords": {"source": "NOEXIST", "tag": null, "class": null, "default": null}}
+{
+    "region": "hannover",
+    "site_name": "hannover_allgemeine_zeitung",
+    "base_url": "https://www.haz.de/",
+    "path_url": "nachrichten/coronavirus-in-hannover",
+    "html_tag": "a",
+    "html_class": "pdb-teaser3-teaser-breadcrumb-headline-title-link",
+    "url_conditions" : null,
+    "title": {
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "og:title"
+    },
+    "date": {
+        "source": "JSON_LD",
+        "tag": "datePublished",
+        "attribute" : null,
+        "attribute_value": null
+    },
+    "author": {
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "name",
+        "attribute_value": "author",
+        "default": null
+    },
+    "description": {
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "og:description",
+        "default": null
+    },
+    "type": {
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "og:type",
+        "default": null
+    },
+    "keywords": {
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "name",
+        "attribute_value": "keywords",
+        "default": null
+    }
+} 

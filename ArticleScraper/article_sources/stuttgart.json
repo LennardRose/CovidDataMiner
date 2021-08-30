@@ -1,12 +1,16 @@
 {
-    "city": "stuttgart",
+    "region": "stuttgart",
     "site_name": "stuttgarter_zeitung",
     "base_url": "https://www.stuttgarter-zeitung.de",
     "path_url": "/thema/Coronavirus",
     "html_tag": "a",
     "html_class": "data",
-    "condition": "/inhalt.",
-    "include_condition": true,
+    "url_conditions" : [
+        {
+        "condition_string": "/inhalt.",
+        "include_condition": true
+        }    
+    ],
     "title": {
         "source": "TAG",
         "tag": "meta",

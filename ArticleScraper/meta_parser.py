@@ -14,11 +14,12 @@ class meta_parser:
         self.soup = soup
         self.meta_data = { "title" : None, 
             "description" : None, 
-            "url": URL, #wird direkt übergeben um sie nicht nochmal auslesen zu müssen
+            "url": URL,  #wird direkt übergeben um sie nicht nochmal auslesen zu müssen
+            "source_url" : meta_config["base_url"] + meta_config["path_url"],  #wird gebraucht um später doppelte ergebnisse zu vermeiden und um bei mehreren scrapern pro website verwechslungen zu vermeiden
             "type" : None, 
             "date" : None, 
-            "index_time" : utils.date_now(),
-            "city" : meta_config["city"], 
+            "index_time" : utils.date_now(),  #wichtig mit millisekunden
+            "region" : meta_config["region"], 
             "site_name" : meta_config["site_name"], 
             "author" : None, 
             "keywords" : None,
@@ -63,7 +64,7 @@ class meta_parser:
 
 
     def set_filename(self):
-        self.meta_data["filename"] = self.meta_config["city"] + "_" + self.meta_config["site_name"] + "_" + self.meta_data["title"] + ".txt"
+        self.meta_data["filename"] = self.meta_config["region"] + "_" + self.meta_config["site_name"] + "_" + utils.slugify(self.meta_data["title"]) + ".txt"
 
 
     def set_noexist(self, key):
@@ -106,11 +107,7 @@ class meta_parser:
 
         if tag:
 
-            if key == "title":
-
-                self.meta_data[key] = utils.slugify(self.get_content(tag))
-
-            elif key == "date":
+            if key == "date":
                 self.meta_data[key] = utils.parse_date(self.get_content(tag))
 
             else:
@@ -125,15 +122,15 @@ class meta_parser:
         right result will be returned: <div><span><a>right</a></span></div> 
         wrong result will be returned: <div><span>wrong<a>right</a></span></div>
         """
-        if not tag.is_empty_element:
-            return tag.text
-        if tag.get("content", None) != None and tag.get("content", None) != "":
+        if tag.is_empty_element and tag.get("content", None) != None and tag.get("content", None) != "":
             return tag.get("content", None)
+        elif not tag.is_empty_element:
+            return tag.text
         else:
             for child in tag.descendants:
                 return self.get_content(child) # rekursiv vielleicht bisschen zu unperformant
 
-        logging.error("No content in tag: " + tag if tag else "<not found>" + " found.")
+        logging.error("No content in tag: " + tag if tag else "<tag not found>" + " found.")
 
         
 
@@ -143,22 +140,34 @@ class meta_parser:
         even thoug script is the tag, type the attribute and application/... the attribute value, 
         we will use the tag property of the meta_config as the json-key, the attribute and attribute_value
         porperty to choose wich application/ld+json tag to use if there are multiple
-        takes care of right format
+        retrieves all ld+json scripts on the page and iterates through all for the needed value
         """
         if self.meta_config[key]["attribute"] == None and self.meta_config[key]["attribute_value"] == None:
-            scripts = json.loads( self.soup.find('script', {'type':'application/ld+json'}).text.strip() )
+            result_set = self.soup.find_all('script', {'type':'application/ld+json'}) 
         else:
-            scripts = json.loads( self.soup.find('script', {'type':'application/ld+json', self.meta_config[key]["attribute"] : self.meta_config[key]["attribute_value"]}).text.strip() )
+            result_set = self.soup.find_all('script', {'type':'application/ld+json', self.meta_config[key]["attribute"] : self.meta_config[key]["attribute_value"]}) 
 
-        if scripts:
+        if result_set:
+            result = []
 
-            if type(scripts) == list: #check ob json liste
+            for element in result_set:
 
-                for script in scripts:
-                    self.get_json_value(script, key)
+                element = element.text.strip()
+                result.append(json.loads( element ))
 
-            else: 
-                self.get_json_value(scripts, key)
+
+
+            if result: # find_all returns a list
+
+                for scripts in result: #json+ld script may consist of other scripts
+
+                    if type(scripts) == list: #check ob json liste
+
+                        for script in scripts:
+                            self.get_json_value(script, key)
+
+                    else: 
+                        self.get_json_value(scripts, key)
         
 
 
@@ -168,15 +177,26 @@ class meta_parser:
         """
 
         if self.meta_config[key]["tag"] in script:
-    
-            if key == "title":
-                self.meta_data[key] = utils.slugify(script[self.meta_config[key]["tag"]])
 
-            elif key == "date":
-                self.meta_data[key] = utils.parse_date(script[self.meta_config[key]["tag"]])
+            content = script[self.meta_config[key]["tag"]]
+            result = ""
+
+            if content is list:
+                for element in content:
+                    if "name" in element:
+                        result += str(element["name"])
+
+            elif content is dict:
+                result = content["name"]
+
+            else: 
+                result = content
+
+            if key == "date":
+                self.meta_data[key] = utils.parse_date(result)
 
             else:
-                self.meta_data[key] = script[self.meta_config[key]["tag"]] 
+                self.meta_data[key] = result 
 
 
 
