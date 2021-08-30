@@ -1,0 +1,44 @@
+{
+    "city": "berlin",
+    "site_name": "tagesspiegel",
+    "base_url": "https://m.tagesspiegel.de/",
+    "path_url": "berlin/coronavirus-in-der-hauptstadtregion-neuinfektionen-in-brandenburg-steigen-wieder-zweistellig/25655678.html",
+    "html_tag": null,
+    "html_class": null,
+    "condition": null,
+    "include_condition": null,
+    "title": {
+        "source": "STANDARD",
+        "tag": null,
+        "class": null
+    },
+    "date": {
+        "source": null,
+        "tag": null,
+        "class": null
+    },
+    "author": {
+        "source": null,
+        "tag": null,
+        "class": null,
+        "default": null
+    },
+    "description": {
+        "source": "NOEXIST",
+        "tag": null,
+        "class": null,
+        "default": null
+    },
+    "type": {
+        "source": "NOEXIST",
+        "tag": null,
+        "class": null,
+        "default": null
+    },
+    "keywords": {
+        "source": "NOEXIST",
+        "tag": null,
+        "class": null,
+        "default": null
+    }
+}
