@@ -19,9 +19,6 @@ if __name__ == "__main__":
     incidence_scraper = IncidenceScraper(
         es_client=es_client, hdfs_client=hdfs_client)
 
-    print('vac')
     vaccination_scraper.scrape_data()
-    print('tst')
     testing_scraper.scrape_data()
-    print('inc')
     incidence_scraper.scrape_data()
