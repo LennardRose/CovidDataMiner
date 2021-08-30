@@ -58,7 +58,7 @@ class VaccinationScraper():
         data['identifier'] = elasticsearch_vaccination_index
         return data
 
-    def index_vaccination_data(self):
+    def index_data(self):
         """index the converted vaccination data to elasticsearch 
         meta data and state data into two different indices
         """
@@ -67,7 +67,17 @@ class VaccinationScraper():
         self.es_client.index_single_document(
             index=elasticsearch_meta_index, document=self.get_meta_data_from_raw_data())
 
-    def save_raw_vaccination_data_to_hdfs(self):
-        """ToDo build this
+    def save_raw_data_to_hdfs(self):
+        """Saves raw data to hdfs
         """
-        print('save to hdfs')
+        self.hdfs_client.save_json_to_hdfs(
+            self.vaccination_data, hdfs_vaccination_base_path+'/'+get_current_date()+'/' + self.request_time)
+
+    def scrape_data(self):
+        """main function that scrapes and saves all data to all targets]
+        """
+        if self.validate_scrape_status(self.request_time_latest):
+            self.index_data()
+            self.save_raw_data_to_hdfs()
+        else:
+            logging.info('Testing data was already scraped')

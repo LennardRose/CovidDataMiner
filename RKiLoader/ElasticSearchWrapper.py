@@ -1,5 +1,5 @@
 import logging
-import time
+import copy
 from elasticsearch import Elasticsearch
 from elasticsearch import helpers
 from Config import *
@@ -38,9 +38,9 @@ class ElasticSearchClient:
         self.es_client.index(index=index, body=document,
                              doc_type='_doc')
 
-    def bulk_index_list(self, index_name, document_list, chunk_size=10000):
+    def bulk_index_list(self, index_name, document_list, chunk_size=1000):
         """indexes a list of documents using the bulk index api
-        converts list of objects to a bulk index command 
+        converts list of objects to a bulk index command
         make sure index exists before using this method
 
         Args:
@@ -54,5 +54,24 @@ class ElasticSearchClient:
             items = []
             for elem in document_list:
                 base_map['_source'] = elem
-                items.append(base_map)
+                items.append(copy.copy(base_map))
             helpers.bulk(self.es_client, items, chunk_size=chunk_size)
+
+    def get_latest_document_by_index(self, index_name, date_field_name):
+        """ Executes a query that returns the timestamp of the latest document in an index based
+        on the specified time field
+
+        Args:
+            index_name (string): name of the elasticsearch index
+            date_field_name (string): name of the date field you want to check
+        """
+        search_body = {'size': 1, 'sort': {
+            date_field_name: 'desc'}, 'query': {'match_all': {}}}
+        search_result = self.es_client.search(
+            body=search_body, index=index_name)
+        if not search_result['hits'] or not search_result['hits']['hits'] or not search_result['hits']['hits'][0] or not search_result['hits']['hits'][0]['_source']:
+            logging.error('No date time field found')
+            return None
+        else:
+            document = search_result['hits']['hits'][0]['_source']
+            return document[date_field_name]
