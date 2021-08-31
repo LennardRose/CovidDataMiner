@@ -126,6 +126,8 @@ class IncidenceScraper(AbstractScraper):
         """
         if self.validate_scrape_status(self.request_time_latest):
             self.index_data()
-            self.save_raw_data_to_hdfs()
+            logging.debug('Indexing incidence Data')
+            self.index_data()
+            logging.debug('Saving raw incidence data to hdfs')
         else:
             logging.info('Incidence data was already scraped')

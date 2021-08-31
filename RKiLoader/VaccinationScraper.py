@@ -84,6 +84,8 @@ class VaccinationScraper(AbstractScraper):
         """
         if self.validate_scrape_status(self.request_time_latest):
             self.index_data()
-            self.save_raw_data_to_hdfs()
+            logging.debug('Indexing vaccination Data')
+            self.index_data()
+            logging.debug('Saving raw vaccination data to hdfs')
         else:
             logging.info('Testing data was already scraped')

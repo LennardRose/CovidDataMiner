@@ -1,3 +1,4 @@
+import logging
 from pywebhdfs.webhdfs import PyWebHdfsClient
 import re
 import json
@@ -15,6 +16,20 @@ class HdfsClient():
         """
         self.hdfs_client = PyWebHdfsClient(
             host=hdfs_base_url, port=hdfs_port, user_name='hadoop')
+        self.test_hdfs_connection()
+
+    def test_hdfs_connection(self):
+        """Testing the hdfs connection by trying to list items in the root directory
+
+        Raises:
+            IOError: Raises an Error when connection is offline
+        """
+        logging.info('Testing HDFS connection')
+        try:
+            self.hdfs_client.list_dir('/')
+        except Exception:
+            logging.error('No HDFS connection')
+            raise IOError
 
     def read_json_from_hdfs(self, file_path):
         """reads a json file from the given path and converts it into an dictionary using json python lib

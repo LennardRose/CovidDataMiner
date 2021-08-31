@@ -102,7 +102,9 @@ class TestingScraper(AbstractScraper):
         """main function that scrapes and saves all data to all targets]
         """
         if self.validate_scrape_status(self.request_time_latest):
+            logging.debug('Indexing Testing Data')
             self.index_data()
+            logging.debug('Saving raw testing data to hdfs')
             self.save_raw_data_to_hdfs()
         else:
             logging.info('Testing data was already scraped')
