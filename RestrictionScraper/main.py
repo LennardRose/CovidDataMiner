@@ -4,10 +4,8 @@ import urllib
 import ssl
 import datefinder
 import locale
-import html5lib
 import json
 import os.path
-from pdf2image import convert_from_path
 from datetime import datetime
 from bs4 import BeautifulSoup
 import logging
@@ -16,7 +14,6 @@ import pytesseract
 import pandas as pd
 import pdfminer
 import pdfminer.high_level
-from selenium import webdriver
 from bs4.element import Comment
 #from pywebcopy import save_webpage
 
@@ -25,7 +22,7 @@ try:
 except ImportError:
     import Image
 
-# pytesseract.pytesseract.tesseract_cmd = 'D:/Programme/Tesseract/tesseract'
+pytesseract.pytesseract.tesseract_cmd = 'E:/Programme/Tesseract/tesseract'
 # plan for the scraper:
 # future config will tell what exactly to scrape and what type
 # scrape from every landesregierungs website
@@ -58,7 +55,7 @@ tags = {
 }
 
 def fixURL(url, addon):
-    index = re.search("(?<=[a-zA-Z])/{1}", row.URL).start()
+    index = re.search("(?<=[a-zA-Z])/{1}", row.URL).start() + 1
     if not url.startswith(row.URL[:index]):
         url = row.URL[:index] + addon
     return url
@@ -82,22 +79,6 @@ def getPDFURLfromElem(elem):
 
     logging.info("Filtering found PDF %s", pdfURL)
     return pdfURL
-
-def generateTxtFileFromPDF(pdfFile):
-    pages = convert_from_path(pdfFile, 500)
-    image_counter = 1
-    for page in pages:
-        filename = "page_" + str(image_counter) + ".jpg"
-        page.save(filename, 'JPEG')
-        image_counter = image_counter + 1
-    filelimit = image_counter - 1
-    outfile = "out_text.txt"
-    f = open(outfile, "a")
-    for i in range(1, filelimit + 1):
-        filename = "page_" + str(i) + ".jpg"
-        text = str(((pytesseract.image_to_string(Image.open(filename)))))
-        f.write(text)
-    f.close()
 
 def savePage(URL, directory):
 
@@ -316,8 +297,6 @@ def tag_visible(element):
     return True
 
 def findElements(URL,target,value):
-    from selenium import webdriver
-
     page = requests.get(URL)
     soup = BeautifulSoup(page.content, 'lxml')
 
@@ -341,14 +320,6 @@ def findElements(URL,target,value):
                 target: value
             }
         element = soup.find_all(**kwargs)
-
-    if not element:
-        # use selenium
-        driver = webdriver.Chrome()
-        driver.get(URL)
-        html = driver.page_source
-        soup = BeautifulSoup(html, 'lxml')
-        element = soup.select(value)
 
     return element
 

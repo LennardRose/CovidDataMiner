@@ -1,6 +1,6 @@
 State;URL;Target;Value
+Baden-Württemberg;https://www.baden-wuerttemberg.de/de/service/aktuelle-infos-zu-corona/aktuelle-corona-verordnung-des-landes-baden-wuerttemberg/;CSSselector;#c127369 > div > p:nth-child(2) > a.link-download
 Sachsen;https://www.coronavirus.sachsen.de/amtliche-bekanntmachungen.html;CSSselector;div.text-col table:first-of-type a:first-of-type
-Sachsen;https://www.coronavirus.sachsen.de/amtliche-bekanntmachungen.html;CSSselector;div.text-col div.table-responsive:first-of-type table:first-of-type a:first-of-type
 Sachsen-Anhalt;https://coronavirus.sachsen-anhalt.de/amtliche-informationen/;CSSselector;#c236673 > div > div > ul > li:nth-child(2) > strong > a
 Hessen;https://www.hessen.de/fuer-buerger/corona-hessen/verordnungen-und-allgemeinverfuegungen;CSSselector;div.he_content_body table:first-of-type li:first-of-type a
 Thüringen;https://www.tmasgff.de/covid-19/verordnung;class_;"button button--small"
@@ -14,7 +14,6 @@ Hamburg;https://www.hamburg.de/verordnung/;class_;"article"
 Bremen;https://www.inneres.bremen.de/corona-die-haeufigsten-fragen-und-antworten-23460;class_;"main_article"
 Brandenburg;https://kkm.brandenburg.de/kkm/de/;CSSselector;"#mais2red\.c\.573046\.de > li.active > figure > img"
 Berlin;https://www.berlin.de/corona/massnahmen/verordnung/;class_;"textile"
-Baden-Württemberg;https://www.baden-wuerttemberg.de/de/service/aktuelle-infos-zu-corona/aktuelle-corona-verordnung-des-landes-baden-wuerttemberg/;CSSselector;#c127369 > div > p:nth-child(2) > a.link-download
 Bayern;https://www.stmgp.bayern.de/coronavirus/;class_;"vc_single_image-img attachment-full"
 
 
