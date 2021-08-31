@@ -1,11 +1,34 @@
-# This is a sample Python script.
-import requests
-from Config import *
-import pandas as pd
+from IncidenceScraper import IncidenceScraper
+from TestingScraper import TestingScraper
+from VaccinationScraper import VaccinationScraper
+from IncidenceScraper import IncidenceScraper
+from ElasticSearchWrapper import ElasticSearchClient
+from HdfsClient import HdfsClient
+from Util import *
+import logging
 
 
 if __name__ == "__main__":
-    city_df = pd.read_csv(path_to_city_csv, header=0, sep=';')
-    for index, row in city_df.iterrows():
-        #print(corona_api_base_url + corona_api_districts + row['AGS'][0:5])
-        print(requests.get(corona_api_base_url + corona_api_districts + row['AGS'][0:5]).json())
+
+    logging.basicConfig(filename='RKiLoader.log', level=logging.DEBUG)
+    logging.debug('Creating elasticsearch client')
+    es_client = ElasticSearchClient()
+    logging.debug('Creating HDFS client')
+    hdfs_client = HdfsClient()
+
+    vaccination_scraper = VaccinationScraper(
+        es_client=es_client, hdfs_client=hdfs_client)
+    testing_scraper = TestingScraper(
+        es_client=es_client, hdfs_client=hdfs_client)
+    incidence_scraper = IncidenceScraper(
+        es_client=es_client, hdfs_client=hdfs_client)
+
+    logging.debug('Starting to scrape vaccination data')
+    vaccination_scraper.scrape_data()
+    logging.info('Finished scraping vaccination data')
+    logging.debug('Starting to scrape testing data')
+    testing_scraper.scrape_data()
+    logging.info('Finished scraping testing data')
+    logging.debug('Starting to scrape incidence data')
+    incidence_scraper.scrape_data()
+    logging.info('Finished scraping incidence data')
