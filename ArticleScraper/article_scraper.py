@@ -1,3 +1,4 @@
+import utils
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
@@ -6,14 +7,14 @@ from bs4 import BeautifulSoup
 import re
 import html5lib
 from meta_parser import meta_parser
-from repository import Repository
+import client_factory
 import logging
 import ssl
+import os
 
 class ArticleScraper:
 
     def __init__(self):
-        self.repository = Repository()
         ssl._create_default_https_context = ssl._create_unverified_context
         self.driver = self.get_webdriver()
 
@@ -25,9 +26,10 @@ class ArticleScraper:
         try:
             driver_options = Options()
             driver_options.headless = True
-            return webdriver.Chrome(executable_path=r'.\drivers\chromedriver_win32\chromedriver.exe', options=driver_options)
+            path = os.path.join(utils.config["WEBDRIVER_DIR"], utils.config["WEBDRIVER_FILE"])
+            return webdriver.Chrome(executable_path=path, options=driver_options)
         except:
-            logging.error("failed to initialize webdriver for selenium, make sure you downloaded a driver and added it to PATH")
+            logging.error("failed to initialize webdriver for selenium, make sure you downloaded a driver and wrote the correct path to config")
 
 
     def get_text_of_page(self, soup):
@@ -53,9 +55,12 @@ class ArticleScraper:
         :param URL: the url to get the soup (Beatifulsoup) of
         :return: the soup, parsed with 'html5lib' parser
         """
-        page = self.driver.get(URL)
-        time.sleep(1)
-        return BeautifulSoup(self.driver.page_source, 'html5lib')
+        try:
+            self.driver.get(URL)
+            time.sleep(1) #load page
+            return BeautifulSoup(self.driver.page_source, 'html5lib')
+        except:
+            logging.warning("something went wrong while trying to load dynamic page with selenium")
 
 
 
@@ -72,8 +77,9 @@ class ArticleScraper:
 
         #if static doesnt work try dynamic
         if article_link_list == [] or article_link_list == None:
-            self.get_soup_of_dynamic_page(URL)
+            soup = self.get_soup_of_dynamic_page(URL)
             article_link_list = soup.body.find_all(html_tag, html_class )
+            
 
         # if still no result something must be wrong with the html_tag and html_class
         if article_link_list == [] or article_link_list == None:
@@ -115,7 +121,7 @@ class ArticleScraper:
         also completes every relative URL with the base_url if necessary
         """
         source_URL = source["base_url"] + source["path_url"]
-        most_recent_saved_articles_url = self.repository.get_latest_entry_URL(source_URL) 
+        most_recent_saved_articles_url = client_factory.get_meta_client().get_latest_entry_URL(source_URL, source["region"]) 
 
 
         for URL in self.get_articlelink_list(source_URL, source["html_tag"], source["html_class"]):
@@ -198,10 +204,12 @@ class ArticleScraper:
         parser = meta_parser( URL, soup, source)
         parser.parse_metadata() #das URL ist von der individuellen seite, nicht aus Base + Path, ausser bei direktem scrapen der seite
         meta_data = parser.get_meta_data()
-        self.repository.index_meta_data(meta_data)  
+
+        client_factory.get_meta_client().index_meta_data(meta_data)  
 
         text = self.get_text_of_page(soup)
-        self.repository.save_as_file(meta_data["filename"], text)
+        path = os.path.join("articles", source["region"], source["site_name"], utils.date_today())
+        client_factory.get_file_client().save_as_file(path, meta_data["filename"], text)
 
 
     def scrape(self, source):

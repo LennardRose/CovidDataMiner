@@ -1,7 +1,7 @@
 {
     "region": "leipzig",
     "site_name": "leipziger_volkszeitung",
-    "base_url": "https://www.sueddeutsche.de/",
+    "base_url": "https://www.lvz.de/",
     "path_url": "suche?query=corona&in=all&sort=article&date=-1",
     "html_tag": "a",
     "html_class": "pbd-teaser3-teaser-breadcrumb-headline-title-link",

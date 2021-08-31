@@ -1,12 +1,14 @@
 from argument_parser_wrapper import ArgumentParserWrapper
 from article_scraper import ArticleScraper
 import logging
-from config import STANDARD_LOG_DATE_FORMAT, STANDARD_LOG_FORMAT
+import utils
 
 
 if __name__ == '__main__':
 
-    logging.basicConfig(format=STANDARD_LOG_FORMAT, datefmt = STANDARD_LOG_DATE_FORMAT, level=logging.DEBUG)
+    utils.init_global_config("..\config\config.json")
+
+    logging.basicConfig( format = utils.config["STANDARD_LOG_FORMAT"], datefmt = utils.config["STANDARD_LOG_DATE_FORMAT"], level=logging.INFO)
     logging.info("Start Scraper")
     
     scraper = ArticleScraper()
