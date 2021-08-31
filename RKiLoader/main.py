@@ -3,21 +3,32 @@ from TestingScraper import TestingScraper
 from VaccinationScraper import VaccinationScraper
 from IncidenceScraper import IncidenceScraper
 from ElasticSearchWrapper import ElasticSearchClient
-from HdfsClient import HdfsHelper
+from HdfsClient import HdfsClient
+from Util import *
+import logging
 
 
 if __name__ == "__main__":
 
-    # es_client = ElasticSearchClient()
+    logging.basicConfig(filename='RKiLoader.log', level=logging.DEBUG)
+    logging.debug('Creating elasticsearch client')
+    es_client = ElasticSearchClient()
+    logging.debug('Creating HDFS client')
+    hdfs_client = HdfsClient()
 
-    # vaccination_scraper = VaccinationScraper(es_client=es_client)
-    # testing_scraper = TestingScraper(es_client=es_client)
-    # incidence_scraper = IncidenceScraper(es_client=es_client)
+    vaccination_scraper = VaccinationScraper(
+        es_client=es_client, hdfs_client=hdfs_client)
+    testing_scraper = TestingScraper(
+        es_client=es_client, hdfs_client=hdfs_client)
+    incidence_scraper = IncidenceScraper(
+        es_client=es_client, hdfs_client=hdfs_client)
 
-    # vaccination_scraper.index_vaccination_data()
-    # testing_scraper.index_testing_data()
-
-    # incidence_scraper.index_incidence_data()
-    # hdfs = HdfsHelper()
-
-    # hdfs.save_meta_json_to_hdfs({'test': 98}, 'test2.json')
+    logging.debug('Starting to scrape vaccination data')
+    vaccination_scraper.scrape_data()
+    logging.info('Finished scraping vaccination data')
+    logging.debug('Starting to scrape testing data')
+    testing_scraper.scrape_data()
+    logging.info('Finished scraping testing data')
+    logging.debug('Starting to scrape incidence data')
+    incidence_scraper.scrape_data()
+    logging.info('Finished scraping incidence data')

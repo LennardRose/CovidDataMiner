@@ -25,3 +25,8 @@ elasticsearch_incidence_index = 'rki_incidence'
 # -------------------------------hdfs---------------------------------------------------
 hdfs_base_url = '192.168.0.115'
 hdfs_port = '9870'
+
+hdfs_vaccination_base_path = '/datakraken/rki/vaccination/'
+hdfs_testing_base_path = '/datakraken/rki/testing/'
+hdfs_incidence_state_base_path = '/datakraken/rki/incidence/states/'
+hdfs_incidence_district_base_path = '/datakraken/rki/incidence/districts/'

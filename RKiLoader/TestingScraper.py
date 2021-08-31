@@ -1,23 +1,29 @@
+from AbstractScraper import AbstractScraper
 import requests
 import copy
+import logging
 from Config import *
 from Util import *
 from ElasticSearchWrapper import ElasticSearchClient
 
 
-class TestingScraper():
+class TestingScraper(AbstractScraper):
     """Class to scrape testing data of rki api
     """
 
-    def __init__(self, es_client) -> None:
+    def __init__(self, es_client, hdfs_client) -> None:
         """ init function to save an elasticsearch client instance and init empty testing data
 
         Args:
-            es_client (elasticsearch client): a created elasticsearch client instance
+            es_client (ElasticsearchWrapper): a created elasticsearch client instance
+            hdfs_client (HdfsClient): hdfs client 
         """
         self.testing_data = {}
         self.es_client = es_client
+        self.hdfs_client = hdfs_client
         self.request_time = None
+        self.request_time_latest = self.es_client.get_latest_document_by_index(
+            elasticsearch_testing_index, 'data_request_time')
         self.latest_week = self.get_latest_week_from_es()
 
     def get_testing_data_raw(self):
@@ -67,7 +73,7 @@ class TestingScraper():
         data['identifier'] = elasticsearch_testing_index
         return data
 
-    def index_testing_data(self):
+    def index_data(self):
         """index the converted testing data to elasticsearch
         meta data and week data into two different indices
         """
@@ -86,7 +92,19 @@ class TestingScraper():
             index=elasticsearch_testing_index, body='{"size":0,"aggs":{"max_unique_sort_order":{"top_hits":{"sort":[{"unqiue_sort_order":{"order":"desc"}}],"size":1}}}}')
         return search_result['aggregations']['max_unique_sort_order']['hits']['hits'][0]['_source']['unique_sort_order']
 
-    def save_raw_testing_data_to_hdfs(self):
-        """ToDo build this
+    def save_raw_data_to_hdfs(self):
+        """Saves raw data to hdfs
         """
-        print('save to hdfs')
+        self.hdfs_client.save_json_to_hdfs(
+            self.testing_data, hdfs_testing_base_path+get_current_date()+'/' + str(self.request_time)+'.json')
+
+    def scrape_data(self):
+        """main function that scrapes and saves all data to all targets]
+        """
+        if self.validate_scrape_status(self.request_time_latest):
+            logging.debug('Indexing Testing Data')
+            self.index_data()
+            logging.debug('Saving raw testing data to hdfs')
+            self.save_raw_data_to_hdfs()
+        else:
+            logging.info('Testing data was already scraped')

@@ -1,3 +1,4 @@
+import logging
 from pywebhdfs.webhdfs import PyWebHdfsClient
 import re
 import json
@@ -6,7 +7,7 @@ from Config import *
 from ElasticSearchWrapper import ElasticSearchClient
 
 
-class HdfsHelper():
+class HdfsClient():
     """HDFS Helper class
     """
 
@@ -15,8 +16,22 @@ class HdfsHelper():
         """
         self.hdfs_client = PyWebHdfsClient(
             host=hdfs_base_url, port=hdfs_port, user_name='hadoop')
+        self.test_hdfs_connection()
 
-    def read_meta_json_from_hdfs(self, file_path):
+    def test_hdfs_connection(self):
+        """Testing the hdfs connection by trying to list items in the root directory
+
+        Raises:
+            IOError: Raises an Error when connection is offline
+        """
+        logging.info('Testing HDFS connection')
+        try:
+            self.hdfs_client.list_dir('/')
+        except Exception:
+            logging.error('No HDFS connection')
+            raise IOError
+
+    def read_json_from_hdfs(self, file_path):
         """reads a json file from the given path and converts it into an dictionary using json python lib
 
         Args:
@@ -27,7 +42,7 @@ class HdfsHelper():
         """
         return json.loads(self.hdfs_client.read_file(file_path))
 
-    def get_metajsons_from_directory(self, directory):
+    def get_json_files_from_directory(self, directory):
         """get all meta jsons in a hdfs directory matching the internal regex pattern
         which filters all files that don't end with meta.json
 
@@ -46,7 +61,7 @@ class HdfsHelper():
             filter(lambda x: x.endswith(".json"), file_list))
         return file_list
 
-    def save_meta_json_to_hdfs(self, meta_json, target_path):
+    def save_json_to_hdfs(self, json_doc, target_path):
         """takes a meta json and a target path
         uploads the file with utf-8 encoding to hdfs
         careful it overwrites the file if already present
@@ -56,20 +71,20 @@ class HdfsHelper():
             target_path (dict): hdfs file path of target location
         """
         self.hdfs_client.create_file(
-            target_path, json.dumps(meta_json), overwrite=True)
+            target_path, json.dumps(json_doc), overwrite=True)
 
-    def append_dict_to_meta_json(self, file_path, additional_dictionary, override_existing):
-        """Append a dictionary to a meta_json in hdfs
+    def append_dict_to_json(self, file_path, additional_dictionary, override_existing):
+        """Append a dictionary to a json in hdfs
 
         Args:
-            file_path (string): hdfs path to the meta json
-            additional_dictionary (dict): dictionary you want to add to your current meta json
+            file_path (string): hdfs path to the json
+            additional_dictionary (dict): dictionary you want to add to your current json
             override_existing (boolean): override existing items in
         """
-        meta_json = self.read_meta_json_from_hdfs(file_path)
+        meta_json = self.read_json_from_hdfs(file_path)
         meta_json = self.append_dict_to_dict(
             meta_json, additional_dictionary, override_existing)
-        self.save_meta_json_to_hdfs(meta_json, file_path)
+        self.save_json_to_hdfs(meta_json, file_path)
 
     def append_dict_to_dict(self, dict_base, dict_addition, override_existing):
         """append a dictionary to another dictionary item by item, overrides existing when specified
@@ -87,3 +102,6 @@ class HdfsHelper():
             if item not in dict_base.keys() or override_existing:
                 result_dict[item] = value
         return result_dict
+
+    def save_file_to_hdfs(self, file, file_name, path):
+        return None

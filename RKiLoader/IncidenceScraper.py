@@ -1,33 +1,36 @@
+from requests.api import get
+from AbstractScraper import AbstractScraper
 import requests
-from Config import *
-import pandas as pd
-
-
 import requests
 import pandas as pd
 from Config import *
 from Util import *
 from ElasticSearchWrapper import ElasticSearchClient
+from HdfsClient import HdfsClient
 import copy
-import json
+import logging
 
 
-class IncidenceScraper():
+class IncidenceScraper(AbstractScraper):
     """Class to scrape incidence data of rki api
     """
 
-    def __init__(self, es_client) -> None:
+    def __init__(self, es_client, hdfs_client) -> None:
         """ init function to save an elasticsearch client instance and init empty incidence data
 
         Args:
-            es_client (elasticsearch client): a created elasticsearch client instance
+            es_client (ElasticsearchWrapper): a created elasticsearch client instance
+            hdfs_client (HdfsClient): hdfs client 
         """
         self.incidence_district_data = {}
         self.incidence_states_data = {}
         self.es_client = es_client
+        self.hdfs_client = hdfs_client
         self.request_time_states = None
         self.request_time_districts = None
         self.city_df = pd.read_csv(path_to_city_csv, header=0, sep=';')
+        self.request_time_latest = self.es_client.get_latest_document_by_index(
+            elasticsearch_incidence_index, 'data_request_time')
 
     def get_district_incidence_data_raw(self):
         """function that returns raw incidence data for all districts
@@ -54,22 +57,6 @@ class IncidenceScraper():
                 corona_api_base_url + corona_api_states).json()
             self.request_time_states = current_milli_time()
         return self.incidence_states_data
-
-    def convert_raw_data_to_list(self, data, request_time):
-        """create list of  data consisting of incidence data 
-
-        Returns:
-            list: incidence data as a list
-        """
-        output_list = []
-        data_raw = copy.deepcopy(data)
-        dict_keys = data_raw['data'].keys()
-        for key in dict_keys:
-            item = data_raw['data'][key]
-            item['data_request_time'] = request_time
-            output_list.append(item)
-
-        return output_list
 
     def convert_raw_district_data_to_district_list(self):
         """create list of incidence data consisting of incidence data per district
@@ -113,7 +100,7 @@ class IncidenceScraper():
         data['identifier'] = elasticsearch_incidence_index
         return data
 
-    def index_incidence_data(self):
+    def index_data(self):
         """index the converted incidence data to elasticsearch 
         meta data and district data into two different indices
         """
@@ -126,7 +113,21 @@ class IncidenceScraper():
         self.es_client.index_single_document(
             index=elasticsearch_meta_index, document=self.get_state_meta_data_from_raw_data())
 
-    def save_raw_incidence_data_to_hdfs(self):
-        """ToDo build this
+    def save_raw_data_to_hdfs(self):
+        """Saves raw data to hdfs
         """
-        print('save to hdfs')
+        self.hdfs_client.save_json_to_hdfs(self.incidence_district_data, hdfs_incidence_district_base_path +
+                                           get_current_date()+'/'+str(self.request_time_districts)+'.json')
+        self.hdfs_client.save_json_to_hdfs(self.incidence_states_data, hdfs_incidence_state_base_path +
+                                           get_current_date()+'/'+str(self.request_time_districts)+'.json')
+
+    def scrape_data(self):
+        """main function that scrapes and saves all data to all targets]
+        """
+        if self.validate_scrape_status(self.request_time_latest):
+            self.index_data()
+            logging.debug('Indexing incidence Data')
+            self.index_data()
+            logging.debug('Saving raw incidence data to hdfs')
+        else:
+            logging.info('Incidence data was already scraped')
