@@ -2,6 +2,8 @@ import re
 import locale
 from Config import *
 from datetime import datetime
+import logging
+logger = logging.getLogger(loggerName)
 
 def extractDate(data):
     match = re.search(OTHER_DATE_REGEX, data, re.IGNORECASE)
@@ -31,13 +33,13 @@ def extractDate(data):
             try:
                 return datetime.strptime(beginDateStr, '%d.%m.%Y')
             except:
-                logging.error("date conversion failed")
-    logging.error("No ValidFrom Date found...")
-    #return None
+                logger.error("date conversion failed")
+
+    logger.error("No ValidFrom Date found...")
 
 def fixURL(baseURL, fileURL):
     url = fileURL
-    index = re.search("(?<=[a-zA-Z])/{1}", baseURL).start() + 1
+    index = re.search(FIND_DOMAIN, baseURL).start() + 1
     if not fileURL.startswith(baseURL[:index]):
         url = baseURL[:index] + fileURL
     return url

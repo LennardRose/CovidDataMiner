@@ -8,8 +8,9 @@ import pandas as pd
 from elasticsearch import Elasticsearch
 
 if __name__ == "__main__":
-    logging.basicConfig(filename=logFileName, level=logging.DEBUG)
+    logging.basicConfig(filename=logFileName, level=logging.WARNING)
     logger = logging.getLogger(loggerName)
+    logger.setLevel(logging.DEBUG)
 
     logger.debug("Creating ElasticSearch Client")
     es_client = ElasticSearchClient()
@@ -18,17 +19,14 @@ if __name__ == "__main__":
 
     restrictionScraper = RestrictionScraper(es_client=es_client, hdfs_client=hdfs_client)
 
-    logging.info("Starting RestrictionScraper")
+    logger.info("Starting RestrictionScraper")
 
 
-    logging.debug("Collecting all sources from ElasticSearch")
+    logger.debug("Collecting all sources from ElasticSearch")
     # get all sources:
     sources = es_client.getAllSources()
 
-    i = 1
     for source in sources:
-        print(str(i)+"/16")
         restrictionScraper.scrape(source)
-        i = i+1
 
-    logging.info("Finished scraping RestrictionData")
+    logger.info("Finished scraping RestrictionData")

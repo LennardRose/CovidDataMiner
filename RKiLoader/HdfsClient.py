@@ -104,4 +104,6 @@ class HdfsClient():
         return result_dict
 
     def save_file_to_hdfs(self, file, file_name, path):
-        return None
+        with open('requirements.txt', 'r') as file:
+            self.hdfs_client.create_file(
+                file_data=file, path=file+'/'+file_name)

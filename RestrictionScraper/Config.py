@@ -11,6 +11,8 @@ TAGS = {
 }
 # regex to find Any character that is NOT a letter or number from behind - example: 21.04.2021) <-
 FIND_ANY_NON_LETTER_DIGIT = r"[^a-zA-Z0-9]*$"
+# finding first / in an url for the domain
+FIND_DOMAIN = r"(?<=[a-zA-Z])/{1}"
 # https://regex101.com/r/2BXdcV/1
 DATE_REGEX = r"([1-3]?[0-9][.]([ ](Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)([ ]202[0-9])?|[0-1]?[0-9][.]?(202[0-9])?))\D"
 # https://regex101.com/r/TyQzsm/1

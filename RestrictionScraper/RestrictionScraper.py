@@ -25,7 +25,7 @@ class RestrictionScraper:
         value = source["value"]
         directory = "measures/" + state + "/" + datetime.now().strftime("%d-%m-%Y_%H-%M/")
 
-        logging.info("Starting scraping for %s with URL %s", state, url)
+        logger.info("Starting scraping for %s with URL %s", state, url)
 
         parser = Parser(self.hdfs_client, directory, url, target, value)
         data = parser.parse()
@@ -34,7 +34,7 @@ class RestrictionScraper:
 
             fileName = directory + "metadata.json"
             with open(fileName, 'w') as outfile:
-                logging.info("writing Metadata-JSON to File %s", fileName)
+                logger.info("writing Metadata-JSON to File %s", fileName)
                 json.dump(metadata, outfile)
 
             self.saveMetadata(metadata)
@@ -78,7 +78,7 @@ class RestrictionScraper:
     def saveMetadata(self, metadata):
 
         # send metadata to elastic search
-        logging.info("writing Metadata-JSON to Elasticsearch")
+        logger.info("writing Metadata-JSON to Elasticsearch")
         json_object = json.dumps(metadata)
 
         uid = metadata["federateState"] + metadata['validFrom']
