@@ -77,7 +77,7 @@ class Parser:
             url = element[val]
             url = fixURL(self.baseUrl, url)
             if url:
-                logging.info("Filtering found Element %s", url)
+                logger.info("Filtering found Element %s", url)
                 resultSet.extend([("File", url)])
 
         return resultSet
@@ -104,7 +104,7 @@ class Parser:
         if type == "Text":
             data = '\n' + elem.text.strip()
 
-            logging.info("downloading File %s", self.baseUrl)
+            logger.info("downloading File %s", self.baseUrl)
             response = urllib.request.urlopen(self.baseUrl)
             webContent = response.read()
 
@@ -128,13 +128,13 @@ class Parser:
             fileName = self.directory + url[url.rindex("/") + 1:url.rindex(".")] + dataType
 
             if dataType == ".pdf":
-                logging.info("downloading File %s", url)
+                logger.info("downloading File %s", url)
                 urllib.request.urlretrieve(url, fileName)
 
                 with open(fileName, 'rb') as pdfFile:
                     #bytes = pdfFile.read()
                     #self.hdfs_client.save_as_file(fileName, bytes.decode("utf-8"))
-                    logging.info("extracting text from pdf..")
+                    logger.info("extracting text from pdf..")
                     data = '\n' + pdfminer.high_level.extract_text(pdfFile, codec="utf-8")
 
                 #os.remove(fileName)
@@ -145,17 +145,17 @@ class Parser:
                 #fileNameBG = fileName[:fileName.rindex(".")] + "BG" + dataType
                 fileNameBW = fileName[:fileName.rindex(".")] + "BW" + dataType
 
-                logging.info("downloading File %s", cleanedUrl)
+                logger.info("downloading File %s", cleanedUrl)
                 urllib.request.urlretrieve(cleanedUrl, fileName)
 
-                logging.info("converting %s into B&G", fileName)
+                logger.info("converting %s into B&G", fileName)
                 #imgBG = Image.open(fileName).convert("L")
                 imgBW = Image.open(fileName).convert("1", dither=Image.NONE)
 
                 #imgBG.save(fileNameBG)
                 imgBW.save(fileNameBW)
 
-                logging.info("extracting text from image..")
+                logger.info("extracting text from image..")
                 data = '\n' + pytesseract.image_to_string(imgBW, lang='deu')
 
         return data
