@@ -1,18 +1,19 @@
 from abc import ABC, abstractmethod
 import logging
+from utils import Singleton
 
-class AbstractMetaClient(ABC):
+class MetaClient(ABC, Singleton):
     
     @abstractmethod
     def index_meta_data(self, metadata_json):
         logging.error("Method not implemented")
 
     @abstractmethod
-    def get_latest_entry_URL(self, source_URL):
+    def get_latest_entry_URL(self, source_URL, region):
         logging.error("Method not implemented")
 
 
-class AbstractArticleClient(ABC):
+class ArticleClient(ABC, Singleton):
     
     @abstractmethod
     def get_article_config(self, id):
@@ -23,12 +24,12 @@ class AbstractArticleClient(ABC):
         logging.error("Method not implemented")
 
 
-class AbstractFileClient(ABC):
+class FileClient(ABC, Singleton):
 
     @abstractmethod
-    def save_as_file(self, filename, content):
+    def save_as_file(self, file_path, filename, content):
         logging.error("Method not implemented")
 
     @abstractmethod
-    def open_file(self, filename):
+    def read_file(self, file_path, filename):
         logging.error("Method not implemented")

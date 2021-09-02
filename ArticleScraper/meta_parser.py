@@ -130,7 +130,7 @@ class meta_parser:
             for child in tag.descendants:
                 return self.get_content(child) # rekursiv vielleicht bisschen zu unperformant
 
-        logging.error("No content in tag: " + tag if tag else "<tag not found>" + " found.")
+        logging.error("No content in tag: " + tag.get("name", None) if tag else "<tag not found>" + " found.")
 
         
 
@@ -138,7 +138,7 @@ class meta_parser:
         """
         uses the <script type=application/ld+json> to retrieve meta information
         even thoug script is the tag, type the attribute and application/... the attribute value, 
-        we will use the tag property of the meta_config as the json-key, the attribute and attribute_value
+        we will use the tag property of the article_meta_config as the json-key, the attribute and attribute_value
         porperty to choose wich application/ld+json tag to use if there are multiple
         retrieves all ld+json scripts on the page and iterates through all for the needed value
         """
@@ -161,7 +161,7 @@ class meta_parser:
 
                 for scripts in result: #json+ld script may consist of other scripts
 
-                    if type(scripts) == list: #check ob json liste
+                    if type(scripts) is list: #check ob json liste
 
                         for script in scripts:
                             self.get_json_value(script, key)
@@ -181,12 +181,12 @@ class meta_parser:
             content = script[self.meta_config[key]["tag"]]
             result = ""
 
-            if content is list:
+            if type(content) is list:
                 for element in content:
                     if "name" in element:
                         result += str(element["name"])
 
-            elif content is dict:
+            elif type(content) is dict:
                 result = content["name"]
 
             else: 
