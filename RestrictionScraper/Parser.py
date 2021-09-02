@@ -4,6 +4,7 @@ from Config import *
 from Util import *
 import requests
 import pdfminer.high_level
+import io
 import os
 import urllib
 import pytesseract
@@ -12,21 +13,41 @@ try:
     from PIL import Image
 except ImportError:
     import Image
-
+from Config import *
 import logging
 logger = logging.getLogger(loggerName)
 
 class Parser:
+    """
+    Parses the relevant data from the given url with specified key/value pair
+    """
 
     def __init__(self, hdfs_client, directory, url, target, value):
+        """
+        Constructor which creates an instance with an instance of the hdfs client, the directory to save it to, the url to scrape from and the target/value
+
+        Args:
+            hdfs_client (object): instance of the hdfs client
+            directory (string): the current directory to save data to
+            url (string): the url from where to scrape
+            target (string): e.q. a CSSselector/class etc.
+            value (string): the value for the target
+        """
         self.hdfs_client = hdfs_client
         self.directory = directory
         self.baseUrl = url
         self.target = target
         self.val = value
-        pytesseract.pytesseract.tesseract_cmd = 'E:/Programme/Tesseract/tesseract'
+        pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
 
     def findElements(self):
+        """
+        Parses the website to BeautifulSoup and tries to find elements specified by Target/Value
+
+        Args:
+            elements (list): found elements - can be empty
+        """
+
         page = requests.get(self.baseUrl)
         soup = BeautifulSoup(page.content, 'lxml')
 
@@ -49,8 +70,15 @@ class Parser:
 
         return self.filterElements(elements)
 
-    # https://stackoverflow.com/questions/1936466/beautifulsoup-grab-visible-webpage-text
-    def tag_visible(element):
+    def tag_visible(self, element):
+        """
+        Filtering method - returns True/False if element is relevant text from webpage or not necessary html stuff
+
+        (Grabs the text of the webpage in case a complete site needs to be downloaded: https://stackoverflow.com/questions/1936466/beautifulsoup-grab-visible-webpage-text)
+        Args:
+            result (boolean): True if element is relevant text
+        """
+
         if element.parent.name in ['style', 'script', 'head', 'title', 'meta', '[document]']:
             return False
         if isinstance(element, Comment):
@@ -58,6 +86,14 @@ class Parser:
         return True
 
     def filterElements(self, elements):
+        """
+        Filtering the elements, if its an <img>-element it gets the img-URL and if its <a>-Tag it gets the refering URL (mostly image or pdf files)
+        if the element is a div which indicates we are only interested in the plain text it does nothing
+
+        Args:
+            elements (list): list of the found elements from the page
+            resultSet (list of tuple(fileType, url|element)): condensed list of the elements, reduced to their urls
+        """
 
         resultSet = []
         for (index, element) in enumerate(elements, 0):
@@ -82,8 +118,13 @@ class Parser:
 
         return resultSet
 
-
     def parse(self):
+        """
+        Parses the site, tries to find the specified elements from it and parses their urls/texts to a text string and saves the files to hdfs
+
+        Args:
+            dataStr (string): condensed data from the page as a string for later analyzses
+        """
 
         elements = self.findElements()
         if elements:
@@ -94,11 +135,18 @@ class Parser:
 
             return dataStr
 
-
     def downloadAndConvertFiles(self, type, elem):
+        """
+        Downloads the files from the page and feeds tesseract/pdfminer with the files to convert it into text.
+        if type is "Text" the whole page is downloaded and saved as html-file
+        if type is "img" the images are downloaded, converted into Black&White to have better accuracy from tesseract at extracting the text from them
+        if type is "pdf" the pdf file is downloaded and feed to pdfminer to extract the text from it
 
-        if not os.path.isdir(self.directory):
-            os.makedirs(self.directory)
+        Args:
+            type (string): specifing the kind of element e.q. Text/File ->(img, pdf)
+            elem (string): the actual element, if its Text its a div, else its a url to a file like pdf or image
+            data (string): the data string of the current element
+        """
 
         data = ""
         if type == "Text":
@@ -108,13 +156,14 @@ class Parser:
             response = urllib.request.urlopen(self.baseUrl)
             webContent = response.read()
 
+            #TODO: still here because hdfs integration not done
             open(self.directory+DEFAULT_HTML_FILENAME, 'wb').write(webContent)
 
-#            self.hdfs_client.save_as_file(self.directory+DEFAULT_HTML_FILENAME, webContent)
+            self.hdfs_client.save_as_file(self.directory+DEFAULT_HTML_FILENAME, webContent)
         else:
             url = elem
 
-            # clean url
+            # clean url from parameters and stuff
             if not url.find('?') < 1:
                 cleanedUrl = url[:url.find('?')]
             else:
@@ -125,19 +174,25 @@ class Parser:
                 dataType = dataType[:-1] + ".pdf"
                 url = url + dataType
 
-            fileName = self.directory + url[url.rindex("/") + 1:url.rindex(".")] + dataType
+            fileName = url[url.rindex("/") + 1:url.rindex(".")] + dataType
+            fullFilePath = self.directory + fileName
 
             if dataType == ".pdf":
                 logger.info("downloading File %s", url)
-                urllib.request.urlretrieve(url, fileName)
+                #urllib.request.urlretrieve(url, fullFilePath) -> obsolete because response gives us the files inmemory?!
 
-                with open(fileName, 'rb') as pdfFile:
-                    #bytes = pdfFile.read()
-                    #self.hdfs_client.save_as_file(fileName, bytes.decode("utf-8"))
-                    logger.info("extracting text from pdf..")
-                    data = '\n' + pdfminer.high_level.extract_text(pdfFile, codec="utf-8")
+                fileBytes = requests.get(url).content
 
-                #os.remove(fileName)
+                #with open('test.pdf', 'wb') as fd:
+                 #  fd.write(fileBytes)
+
+                logger.info("extracting text from pdf..")
+                data = '\n' + pdfminer.high_level.extract_text(io.BytesIO(fileBytes), codec="utf-8")
+
+
+
+                # TODO: because hdfs integration not done
+                self.hdfs_client.save_as_file(self.directory, fileName, fileBytes)
 
             else:
 
@@ -146,14 +201,26 @@ class Parser:
                 fileNameBW = fileName[:fileName.rindex(".")] + "BW" + dataType
 
                 logger.info("downloading File %s", cleanedUrl)
-                urllib.request.urlretrieve(cleanedUrl, fileName)
+                #urllib.request.urlretrieve(cleanedUrl, fullFilePath) -> obsolete because response gives us the files inmemory?!
+                imgBytes = requests.get(cleanedUrl).content
+                image = Image.open(io.BytesIO(imgBytes))
+
+                image.save("test"+dataType)
 
                 logger.info("converting %s into B&G", fileName)
-                #imgBG = Image.open(fileName).convert("L")
-                imgBW = Image.open(fileName).convert("1", dither=Image.NONE)
+                imgBW = image.convert("1", dither=Image.NONE)
+                imgBW.save("testBW"+dataType)
 
-                #imgBG.save(fileNameBG)
-                imgBW.save(fileNameBW)
+                # converting the generated B&W image to bytes to save it
+                buf = io.BytesIO()
+                if dataType == ".png":
+                    imgBW.save(buf, format="png")
+                else:
+                    imgBW.save(buf, format="jpeg")
+                imgBWbytes = buf.getvalue()
+
+                self.hdfs_client.save_as_file(self.directory, fileNameBW, imgBWbytes)
+                self.hdfs_client.save_as_file(self.directory, fileName, imgBytes)
 
                 logger.info("extracting text from image..")
                 data = '\n' + pytesseract.image_to_string(imgBW, lang='deu')

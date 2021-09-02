@@ -1,7 +1,7 @@
 from elasticsearch import Elasticsearch
-
-from Config import *
 import logging
+from Config import *
+
 logger = logging.getLogger(loggerName)
 
 class ElasticSearchClient:
@@ -11,6 +11,9 @@ class ElasticSearchClient:
     """
 
     def __init__(self):
+        """
+        constructor which creates an instance of ElasticSearchClient with the url from the config
+        """
         logger.info("Initializing ElasticSearch Client with URL: %s:%s", es_url, es_port)
         self.es_client = Elasticsearch([es_url + ':' + es_port])
 
@@ -18,9 +21,8 @@ class ElasticSearchClient:
 
     def initIndex(self):
         """
-        initializes required indices if not existing
+        initializes required indices if not already existing
         """
-
         if not self.es_client.indices.exists(index=indexName):
             logger.info("Index %s not found - initializing index", indexName)
             self.es_client.indices.create(index=indexName, body=indexMapping, ignore=400)
@@ -32,7 +34,9 @@ class ElasticSearchClient:
     def getAllSources(self):
         """
         search elasticsearch for all federalState configs
-        :return: result field - list format - with all _source elements of the index - can be empty
+
+        Args:
+            result (list): all source elements - can be empty
         """
         query = {"size": 100, "query": {"match_all":{}}}
         docs = self.es_client.search(index=metaIndexName, body=query)
@@ -42,8 +46,20 @@ class ElasticSearchClient:
         return result
 
     def checkExistance(self, id):
+        """
+        checks if an document with @id exists
 
+        Args:
+            result (boolean): True/False if document with @id is existing
+        """
         return self.es_client.exists(index=indexName, id=id)
 
     def indexDoc(self, id, doc):
+        """
+        does index a single doc of metadata for restriction/measures
+
+        Args:
+            id (string): id of the document
+            doc (object/dict): document to insert
+        """
         self.es_client.index(index=indexName, id=id, body=doc)

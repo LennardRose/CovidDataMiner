@@ -1,3 +1,11 @@
+# -------------------------------hdfs---------------------------------------------------
+HDFS_BASE_URL = '127.0.0.1'
+HDFS_PORT = '50070'
+HDFS_USER = 'hadoop'
+
+HDFS_MEASURES_BASE_PATH = '/datakraken/measures/'
+# -------------------------------TESSERACT------------------------------------------
+TESSERACT_PATH = "E:/Programme/Tesseract/tesseract"
 # -------------------------------misc------------------------------------------
 DEFAULT_HTML_FILENAME = "page.html"
 TAGS = {
@@ -16,7 +24,7 @@ FIND_DOMAIN = r"(?<=[a-zA-Z])/{1}"
 # https://regex101.com/r/2BXdcV/1
 DATE_REGEX = r"([1-3]?[0-9][.]([ ](Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)([ ]202[0-9])?|[0-1]?[0-9][.]?(202[0-9])?))\D"
 # https://regex101.com/r/TyQzsm/1
-OTHER_DATE_REGEX = r"(ab |vom |, |Stand(:)? |am ){1}[1-3]?[0-9][.]([ ](Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)([ ]202[0-9])?|(0|1)?[0-9][.]?(202[0-9])?)(\n| )"
+OTHER_DATE_REGEX = r"(ab |vom |, |Stand(:)? |am |seit(:)? ){1}[1-3]?[0-9][.]([ ](Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)([ ]202[0-9])?|(0|1)?[0-9][.]?(202[0-9])?)(\n| )"
 # https://regex101.com/r/4J8BJ9/1
 INCIDENCE_REGEX = r"(?<=Inzidenzstufe \d \n[(]).*(?=\))"
 # https://regex101.com/r/FojuZ9/1
