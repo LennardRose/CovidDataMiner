@@ -4,7 +4,7 @@
     "base_url": "https://www.kn-online.de/",
     "path_url": "suche?query=corona&in=body&sort=article&date=-1",
     "html_tag": "a",
-    "html_class": "pbd-teaser3-teaser-breadcrumb-headline-title-link",
+    "html_class": "pdb-teaser3-teaser-breadcrumb-headline-title-link",
     "url_conditions" : [
         {
         "condition_string": "/Kiel",

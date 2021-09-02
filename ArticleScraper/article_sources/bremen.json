@@ -4,7 +4,7 @@
     "base_url": "https://www.butenunbinnen.de/",
     "path_url": "/nachrichten/schwerpunkt-corona-virus-106.html",
     "html_tag": "a",
-    "html_class": "teaser-link-content",
+    "html_class": "-teaser-link-content",
     "url_conditions" : null,
     "title": {
         "source": "TAG",

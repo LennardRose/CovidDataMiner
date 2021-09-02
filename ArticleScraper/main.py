@@ -1,13 +1,17 @@
+import os
 from argument_parser_wrapper import ArgumentParserWrapper
 from article_scraper import ArticleScraper
 import logging
-from config import STANDARD_LOG_DATE_FORMAT, STANDARD_LOG_FORMAT
+import utils
 
 
 if __name__ == '__main__':
+    config_path = os.path.join("..", "config", "config.json")
+    utils.init_global_config(config_path)
 
-    logging.basicConfig(format=STANDARD_LOG_FORMAT, datefmt = STANDARD_LOG_DATE_FORMAT, level=logging.DEBUG)
-    logging.info("Start Scraper")
+    logging.basicConfig(filename='ArticleScraper.log', format = utils.config["STANDARD_LOG_FORMAT"], datefmt = utils.config["STANDARD_LOG_DATE_FORMAT"], level=logging.INFO)
+
+    logging.info("Start Articlescraper")
     
     scraper = ArticleScraper()
     parser = ArgumentParserWrapper()
@@ -15,7 +19,7 @@ if __name__ == '__main__':
     for source in parser.parse_data_from_arguments():
             scraper.scrape(source)
 
-    logging.info("Close Scraper")
+    logging.info("Close Articlescraper")
 
 
 
