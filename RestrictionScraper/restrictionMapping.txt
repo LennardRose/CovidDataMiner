@@ -39,7 +39,27 @@ PUT restrictions
               "ignore_above" : 512
             }
           }
-        },
+        }
+      }
+    }
+ }
+
+ PUT metarestrictions
+{
+  "mappings" : {
+    "properties" : {
+      "state" : {
+        "type" : "string"
+      },
+      "url" : {
+        "type" : "string"
+      },
+      "target" : {
+        "type" : "string"
+      },
+      "value" : {
+        "type" : "string"
       }
     }
   }
+}
