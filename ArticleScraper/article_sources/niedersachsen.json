@@ -1,15 +1,15 @@
 {
-    "region": "kiel",
-    "site_name": "kieler_nachrichten",
-    "base_url": "https://www.kn-online.de/",
-    "path_url": "suche?query=corona&in=body&sort=article&date=-1",
-    "html_tag": "a",
-    "html_class": "pdb-teaser3-teaser-breadcrumb-headline-title-link",
+    "region": "niedersachsen",
+    "site_name": "kreiszeitung",
+    "base_url": "https://www.kreiszeitung.de/",
+    "path_url": "suche/?tt=1&tx=&sb=&td=&fd=&qr=corona",
+    "html_tag": "div",
+    "html_class": "id-LinkOverlay",
     "url_conditions" : [
         {
-        "condition_string": "/Kiel",
+        "condition_string": "/niedersachsen",
         "include_condition": true}
-        ],
+        	],
     "title": {
         "source": "TAG",
         "tag": "meta",
@@ -17,16 +17,16 @@
         "attribute_value": "og:title"
     },
     "date": {
-        "source": "JSON_LD",
-        "tag": "datePublished",
-        "attribute" : null,
-        "attribute_value": null
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "article:published_time"
     },
     "author": {
-        "source": "JSON_LD",
-        "tag": "author",
-        "attribute" : null,
-        "attribute_value": null,
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "lp.article:author",
         "default": null
     },
     "description": {
@@ -44,10 +44,10 @@
         "default": null
     },
     "keywords": {
-        "source": "TAG",
-        "tag": "meta",
-        "attribute" : "name",
-        "attribute_value": "keywords",
+        "source": "NOEXIST",
+        "tag": null,
+        "attribute" : null,
+        "attribute_value": null,
         "default": null
     }
 } 

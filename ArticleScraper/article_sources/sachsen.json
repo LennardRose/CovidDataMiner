@@ -1,15 +1,15 @@
 {
-    "region": "leipzig",
-    "site_name": "leipziger_volkszeitung",
-    "base_url": "https://www.lvz.de/",
-    "path_url": "suche?query=corona&in=all&sort=article&date=-1",
-    "html_tag": "a",
-    "html_class": "pdb-teaser3-teaser-breadcrumb-headline-title-link",
+    "region": "sachsen",
+    "site_name": "saechsische_zeitung",
+    "base_url": "https://www.saechsische.de/",
+    "path_url": "search?q=corona",
+    "html_tag": "h3",
+    "html_class": "article-vbox__headline",
     "url_conditions" : [
         {
-        "condition_string": "/Leipzig",
+        "condition_string": "sachsen",
         "include_condition": true}
-        ],
+        	],
     "title": {
         "source": "TAG",
         "tag": "meta",
@@ -23,17 +23,17 @@
         "attribute_value": null
     },
     "author": {
-        "source": "JSON_LD",
-        "tag": "author",
-        "attribute" : null,
-        "attribute_value": null,
+        "source": "TAG",
+        "tag": "div",
+        "attribute" : "class",
+        "attribute_value": "article-author",
         "default": null
     },
     "description": {
         "source": "TAG",
         "tag": "meta",
-        "attribute" : "name",
-        "attribute_value": "description",
+        "attribute" : "property",
+        "attribute_value": "og:description",
         "default": null
     },
     "type": {
@@ -44,10 +44,10 @@
         "default": null
     },
     "keywords": {
-        "source": "TAG",
-        "tag": "meta",
-        "attribute" : "name",
-        "attribute_value": "keywords",
+        "source": "NOEXIST",
+        "tag": null,
+        "attribute" : null,
+        "attribute_value": null,
         "default": null
     }
 } 

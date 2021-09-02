@@ -138,7 +138,7 @@ class meta_parser:
         """
         uses the <script type=application/ld+json> to retrieve meta information
         even thoug script is the tag, type the attribute and application/... the attribute value, 
-        we will use the tag property of the meta_config as the json-key, the attribute and attribute_value
+        we will use the tag property of the article_meta_config as the json-key, the attribute and attribute_value
         porperty to choose wich application/ld+json tag to use if there are multiple
         retrieves all ld+json scripts on the page and iterates through all for the needed value
         """

@@ -204,12 +204,12 @@ class ArticleScraper:
         parser = meta_parser( URL, soup, source)
         parser.parse_metadata() #das URL ist von der individuellen seite, nicht aus Base + Path, ausser bei direktem scrapen der seite
         meta_data = parser.get_meta_data()
+        meta_data["filepath"] = os.path.join("articles", source["region"], source["site_name"], utils.date_today())
 
         client_factory.get_meta_client().index_meta_data(meta_data)  
 
         text = self.get_text_of_page(soup)
-        path = os.path.join("articles", source["region"], source["site_name"], utils.date_today())
-        client_factory.get_file_client().save_as_file(path, meta_data["filename"], text)
+        client_factory.get_file_client().save_as_file(meta_data["filepath"], meta_data["filename"], text)
 
 
     def scrape(self, source):

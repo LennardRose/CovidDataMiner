@@ -1,15 +1,15 @@
 {
-    "region": "leipzig",
-    "site_name": "leipziger_volkszeitung",
-    "base_url": "https://www.lvz.de/",
-    "path_url": "suche?query=corona&in=all&sort=article&date=-1",
+    "region": "worldwide",
+    "site_name": "welt",
+    "base_url": "https://www.welt.de/",
+    "path_url": "themen/coronavirus-epidemie/",
     "html_tag": "a",
-    "html_class": "pdb-teaser3-teaser-breadcrumb-headline-title-link",
+    "html_class": "o-teaser__link",
     "url_conditions" : [
         {
-        "condition_string": "/Leipzig",
-        "include_condition": true}
-        ],
+        "condition_string": "/live",
+        "include_condition": false}
+        	],
     "title": {
         "source": "TAG",
         "tag": "meta",
@@ -17,16 +17,16 @@
         "attribute_value": "og:title"
     },
     "date": {
-        "source": "JSON_LD",
-        "tag": "datePublished",
-        "attribute" : null,
-        "attribute_value": null
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "name",
+        "attribute_value": "date"
     },
     "author": {
         "source": "JSON_LD",
         "tag": "author",
-        "attribute" : null,
-        "attribute_value": null,
+        "attribute" : "data-qa",
+        "attribute_value": "StructuredData",
         "default": null
     },
     "description": {
