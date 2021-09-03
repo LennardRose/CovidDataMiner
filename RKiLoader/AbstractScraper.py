@@ -37,8 +37,11 @@ class AbstractScraper(ABC):
     def validate_scrape_status(self, latest_request_time):
         current_day = round_time_milli_to_day(
             current_milli_time(), milli_flag=True)
-        last_index_day = round_time_milli_to_day(
-            latest_request_time, milli_flag=True)
+        if latest_request_time != 0:
+            last_index_day = round_time_milli_to_day(
+                latest_request_time, milli_flag=True)
+        else:
+            last_index_day = 0
         if current_day == last_index_day:
             return False
         else:
