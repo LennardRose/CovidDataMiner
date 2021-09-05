@@ -8,7 +8,7 @@ from HDFSclient import *
 from RestrictionScraper import RestrictionScraper
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.WARNING)#, filename=logFileName)
+    logging.basicConfig(level=logging.WARNING, filename=logFileName)
     logger = logging.getLogger(loggerName)
     logger.setLevel(logging.DEBUG)
 
@@ -26,7 +26,6 @@ if __name__ == "__main__":
     sources = es_client.getAllSources()
 
     for source in sources:
-        if source["state"] == "Bayern" :#or source["state"] == "Niedersachsen":
-            restrictionScraper.scrape(source)
+        restrictionScraper.scrape(source)
 
     logger.info("Finished scraping RestrictionData")
