@@ -1,3 +1,10 @@
+#####################################################################
+#                                                                   #
+#                     Lennard Rose 5118054                          #
+#       University of Applied Sciences Wuerzburg Schweinfurt        #
+#                           SS2021                                  #
+#                                                                   #
+#####################################################################
 from datetime import datetime, date
 import dateutil
 import unicodedata
@@ -5,24 +12,16 @@ import re
 import logging
 import json
 
+
 #dont change this config without checking if it is a elasticsearch readable date-format (if you use elasticsearch) 
 # https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-date-format.html#strict-date-time
 config = {}
 
-class Singleton(object):
-    """
-    
-    """
-    _instance = None
-    def __new__(cls, *args, **kwargs):
-        if not cls._instance:
-            cls._instance = super(Singleton, cls).__new__(cls, *args, **kwargs)
-        return cls._instance
-
-
 def init_global_config(config_path):
     """
     reads the config
+    initializes global variable to use everywhere
+    just make sure to import utils and not from utils import config, as this would import the config value as initialized to the moment of import
     """
     try:
         with open(config_path, "r") as file:
@@ -34,9 +33,8 @@ def init_global_config(config_path):
 
 def parse_date(date):
     """
-    parses a date to another format
+    parses a date to the STANDARD_DATETIME_FORMAT from config 
     :param date: the date to parse, can be str or date
-    :param format: the format to parse the date to, uses STANDARD_DATETIME_FORMAT from config as default
     :return: the date in new format
     """
     if type(date) == str:

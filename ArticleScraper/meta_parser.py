@@ -1,77 +1,93 @@
+#####################################################################
+#                                                                   #
+#                     Lennard Rose 5118054                          #
+#       University of Applied Sciences Wuerzburg Schweinfurt        #
+#                           SS2021                                  #
+#                                                                   #
+#####################################################################
 import json
+import os
 import utils
 import logging
 
 class meta_parser:
     """
-    parses meta data from given soup based on the specifications in the meta_config
+    parses meta data from given soup based on the specifications in the article_config
 
     """
 
-    def __init__(self, URL, soup, meta_config):
+    def __init__(self, URL, soup, article_config):
+        """
+        initializes values as class values to be able to accesss them from anywhere, readable
+        """
 
-        self.meta_config = meta_config
+        self.article_config = article_config
         self.soup = soup
-        self.meta_data = { "title" : None, 
+        self.article_meta_data = { "title" : None, 
             "description" : None, 
             "url": URL,  #wird direkt übergeben um sie nicht nochmal auslesen zu müssen
-            "source_url" : meta_config["base_url"] + meta_config["path_url"],  #wird gebraucht um später doppelte ergebnisse zu vermeiden und um bei mehreren scrapern pro website verwechslungen zu vermeiden
+            "source_url" : article_config["base_url"] + article_config["path_url"],  #wird gebraucht um später doppelte ergebnisse zu vermeiden und um bei mehreren scrapern pro website verwechslungen zu vermeiden
             "type" : None, 
             "date" : None, 
             "index_time" : utils.date_now(),  #wichtig mit millisekunden
-            "region" : meta_config["region"], 
-            "site_name" : meta_config["site_name"], 
+            "region" : article_config["region"], 
+            "site_name" : article_config["site_name"], 
             "author" : None, 
             "keywords" : None,
-            "filename" : "placeholder_to_prevent_iteration"}
+            "filename" : "placeholder_to_prevent_iteration",
+            "filepath" : "placeholder_to_prevent_iteration"}
 
 
 
-    def get_meta_data(self):
+    def get_article_meta_data(self):
         """
-        returns the meta_data
+        returns the article_meta_data
         """
-        return self.meta_data
+        return self.article_meta_data
 
 
 
     def parse_metadata(self):
         """
-        chooses a parsing strategy for every meta attribute based on the given source set in the meta_config to set the value
+        chooses a parsing strategy for every meta attribute based on the given source set in the article_config to set the value
         sets the filename
         """
-        for key in self.meta_data.keys():
+        for key in self.article_meta_data.keys():
 
-            if self.meta_data[key] == None:
+            if self.article_meta_data[key] == None:
 
-                if self.meta_config[key]["source"] == "NOEXIST":
+                if self.article_config[key]["source"] == "NOEXIST":
                     self.set_noexist(key)
 
-                elif self.meta_config[key]["source"] == "DEFAULT":
+                elif self.article_config[key]["source"] == "DEFAULT":
                     self.set_default(key)
 
-                elif self.meta_config[key]["source"] == "TAG":
+                elif self.article_config[key]["source"] == "TAG":
                     self.parse_from_tag(key)
 
-                elif self.meta_config[key]["source"] == "JSON_LD":
+                elif self.article_config[key]["source"] == "JSON_LD":
                     self.parse_from_json(key)
 
                 else:
-                    logging.error("No meta-config found for: " + (str(self.meta_data[key]) if self.meta_data[key] else " <not found>") + 
-                    ", config was: " + (str(self.meta_config[key]) if self.meta_config[key] else " <not found>"))
+                    logging.error("No meta-config found for: " + (str(self.article_meta_data[key]) if self.article_meta_data[key] else " <not found>") + 
+                    ", config was: " + (str(self.article_config[key]) if self.article_config[key] else " <not found>"))
 
-        self.set_filename()
+        self.set_files_name_and_path()
 
 
-    def set_filename(self):
-        self.meta_data["filename"] = self.meta_config["region"] + "_" + self.meta_config["site_name"] + "_" + utils.slugify(self.meta_data["title"]) + ".txt"
-
+    def set_files_name_and_path(self):
+        """
+        sets the filename by appending the region, sites name, the title and .txt
+        sets the files path by appending "datakraken", "articles", the region, sites name and the current date in the os manner
+        """
+        self.article_meta_data["filename"] = self.article_config["region"] + "_" + self.article_config["site_name"] + "_" + utils.slugify(self.article_meta_data["title"]) + ".txt"
+        self.article_meta_data["filepath"] =os.path.join("datakraken", "articles", self.article_config["region"], self.article_config["site_name"], utils.date_today())
 
     def set_noexist(self, key):
         if  key == "title" or key == "date":
             logging.error("Forbidden attribute value NOEXIST for "+ key +" meta data.")
         
-        self.meta_data[key] = "-" #überlegen welches freizeichen 
+        self.article_meta_data[key] = "-" #überlegen welches freizeichen 
 
 
 
@@ -82,19 +98,18 @@ class meta_parser:
         default date is the current date
         every other key is set from meta_configs default value
         """
+        if self.article_config[key]["default"] == None or self.article_config[key]["default"] == "":
+            logging.warning("No default-value set for %s", key)
+            self.article_meta_data[key]["-"]
 
         if key == "title":
             logging.error("Forbidden attribute value DEFAULT for title meta data.")
 
         elif key == "date":
-            self.meta_data[key] = utils.date_now()
+            self.article_meta_data[key] = utils.date_now()
 
         else:
-            self.meta_data[key] = self.meta_config[key]["default"]
-
-        if self.meta_data[key] == None or self.meta_data[key] == "":
-            logging.warning("No default-value set for " + key)
-
+            self.article_meta_data[key] = self.article_config[key]["default"]
 
 
     def parse_from_tag(self, key):
@@ -103,15 +118,15 @@ class meta_parser:
         takes care of right format
         """
         
-        tag = self.soup.find(self.meta_config[key]["tag"], { self.meta_config[key]["attribute"] : self.meta_config[key]["attribute_value"]})
+        tag = self.soup.find(self.article_config[key]["tag"], { self.article_config[key]["attribute"] : self.article_config[key]["attribute_value"]})
 
         if tag:
 
             if key == "date":
-                self.meta_data[key] = utils.parse_date(self.get_content(tag))
+                self.article_meta_data[key] = utils.parse_date(self.get_content(tag))
 
             else:
-                self.meta_data[key] = self.get_content(tag)
+                self.article_meta_data[key] = self.get_content(tag)
 
 
 
@@ -128,7 +143,7 @@ class meta_parser:
             return tag.text
         else:
             for child in tag.descendants:
-                return self.get_content(child) # rekursiv vielleicht bisschen zu unperformant
+                return self.get_content(child) # rekursiv 
 
         logging.error("No content in tag: " + tag.get("name", None) if tag else "<tag not found>" + " found.")
 
@@ -142,49 +157,48 @@ class meta_parser:
         porperty to choose wich application/ld+json tag to use if there are multiple
         retrieves all ld+json scripts on the page and iterates through all for the needed value
         """
-        if self.meta_config[key]["attribute"] == None and self.meta_config[key]["attribute_value"] == None:
+        if self.article_config[key]["attribute"] == None and self.article_config[key]["attribute_value"] == None:
             result_set = self.soup.find_all('script', {'type':'application/ld+json'}) 
         else:
-            result_set = self.soup.find_all('script', {'type':'application/ld+json', self.meta_config[key]["attribute"] : self.meta_config[key]["attribute_value"]}) 
+            result_set = self.soup.find_all('script', {'type':'application/ld+json', self.article_config[key]["attribute"] : self.article_config[key]["attribute_value"]}) 
 
-        if result_set:
-            result = []
+        if result_set: #result_json from soup.findall is a list
+            result_jsons = []
 
             for element in result_set:
 
                 element = element.text.strip()
-                result.append(json.loads( element ))
+                result_jsons.append(json.loads( element ))
 
+            if result_jsons: # find_all returns a list
 
+                for result_json in result_jsons: #json+ld script may consist of other scripts
 
-            if result: # find_all returns a list
+                    if type(result_json) is list: #check ob json liste
 
-                for scripts in result: #json+ld script may consist of other scripts
-
-                    if type(scripts) is list: #check ob json liste
-
-                        for script in scripts:
-                            self.get_json_value(script, key)
+                        for element in result_json:
+                            self.get_json_value(element, key)
 
                     else: 
-                        self.get_json_value(scripts, key)
+                        self.get_json_value(result_json, key)
         
 
 
-    def get_json_value(self, script, key):
+    def get_json_value(self, json, key):
         """
         set the meta_data of the given key if the json-key is in the given script
+        if the value for the key is a list, appends all the "name" values in the list to resultstring
         """
 
-        if self.meta_config[key]["tag"] in script:
+        if self.article_config[key]["tag"] in json:
 
-            content = script[self.meta_config[key]["tag"]]
+            content = json[self.article_config[key]["tag"]]
             result = ""
 
             if type(content) is list:
                 for element in content:
                     if "name" in element:
-                        result += str(element["name"])
+                        result += (str(element["name"]) + " ")
 
             elif type(content) is dict:
                 result = content["name"]
@@ -193,10 +207,10 @@ class meta_parser:
                 result = content
 
             if key == "date":
-                self.meta_data[key] = utils.parse_date(result)
+                self.article_meta_data[key] = utils.parse_date(result)
 
             else:
-                self.meta_data[key] = result 
+                self.article_meta_data[key] = result 
 
 
 

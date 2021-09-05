@@ -1,9 +1,17 @@
 # import glob and os
+#####################################################################
+#                                                                   #
+#                     Lennard Rose 5118054                          #
+#       University of Applied Sciences Wuerzburg Schweinfurt        #
+#                           SS2021                                  #
+#                                                                   #
+#####################################################################
 import os, glob
 from elasticsearch import Elasticsearch
 import json
 
-client = Elasticsearch("http://192.168.0.115:9200")
+client = Elasticsearch("localhost:9200")
+
 
 # posix uses "/", and Windows uses ""
 if os.name == 'posix':
