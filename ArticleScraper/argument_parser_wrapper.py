@@ -1,9 +1,20 @@
+#####################################################################
+#                                                                   #
+#                     Lennard Rose 5118054                          #
+#       University of Applied Sciences Wuerzburg Schweinfurt        #
+#                           SS2021                                  #
+#                                                                   #
+#####################################################################
 import client_factory
 import argparse
 import sys
 
 
 class ArgumentParserWrapper: # clap the sillables like a 3 year old
+    """
+    wraps the argumentparser of argparse
+    retrieves data to scrape based on args
+    """
 
     def __init__(self):
         self.parser = argparse.ArgumentParser(description='scrapes sources by the configs given')
@@ -12,7 +23,6 @@ class ArgumentParserWrapper: # clap the sillables like a 3 year old
         """
         parses the arguments
         """
-
 
         self.parser.add_argument("-e", "--elasticsearch", action="append", dest="elastic_ids", default=[],
                             help="config stored in elasticsearch, add id of the config")
@@ -26,8 +36,9 @@ class ArgumentParserWrapper: # clap the sillables like a 3 year old
 
     def parse_data_from_arguments(self):
         """
-        retrieves the source configurations mentioned in the arguments
-        :return: all found data
+        retrieves the article_configs mentioned in the arguments
+        if no arguments are given, retrieves all article_configs 
+        :return: list with all matching article_configs
         """
 
         args = self.parse_arguments()

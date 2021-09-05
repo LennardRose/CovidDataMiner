@@ -1,7 +1,7 @@
 {
     "region": "wiesbaden",
     "site_name": "wiesbadener_kurier",
-    "base_url": "https://www.wiesbadener-kurier.de/dossiers/coronavirus",
+    "base_url": "https://www.wiesbadener-kurier.de/",
     "path_url": "dossiers/coronavirus",
     "html_tag": "a",
     "html_class": "vrm-article__titleLink",
