@@ -1,3 +1,10 @@
+#####################################################################
+#                                                                   #
+#                     Lennard Rose 5118054                          #
+#       University of Applied Sciences Wuerzburg Schweinfurt        #
+#                           SS2021                                  #
+#                                                                   #
+#####################################################################
 import utils
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -21,85 +28,254 @@ class ArticleScraper:
     def get_webdriver(self):
         """
         returns a webdriver for selenium
+        expects you to have the file in a directory named after your os (linux / windows / if you use mac, go buy linux)
         https://www.makeuseof.com/how-to-install-selenium-webdriver-on-any-computer-with-python/
         """
         try:
             driver_options = Options()
             driver_options.headless = True
-            path = os.path.join(utils.config["WEBDRIVER_DIR"], utils.config["WEBDRIVER_FILE"])
-            return webdriver.Chrome(executable_path=path, options=driver_options)
-        except:
-            logging.error("failed to initialize webdriver for selenium, make sure you downloaded a driver and wrote the correct path to config")
+
+            if os.name == 'posix':
+                path = os.path.join(utils.config["WEBDRIVER_DIR"], "linux", utils.config["WEBDRIVER_FILE"])
+                return webdriver.Chrome(path, options=driver_options)
+            else:
+                path = os.path.join(utils.config["WEBDRIVER_DIR"], "windows", utils.config["WEBDRIVER_FILE"])
+                return webdriver.Chrome(executable_path=path, options=driver_options)
+
+        except Exception as e:
+            logging.error("failed to initialize webdriver for selenium, make sure you downloaded a driver and wrote the correct path to config, current path: " + path)
+            logging.error(e)
+    
+
+    def scrape(self, article_config):
+        """
+        makes sure necessary properties are set in the article_config
+        saves all of the pages valid article_links content
+        """
+        if article_config["base_url"] == None:
+            logging.error("Missing url information to scrape from article_config")
+
+        else:
+
+            logging.info("Start scraping from articles source URL: %s", article_config["base_url"] + article_config["path_url"])
+
+            if article_config["html_tag"] == None and article_config["html_class"] == None:
+                logging.error("Missing html information to scrape from article_config: %s", article_config["base_url"] + article_config["path_url"])
+
+            else:
+                for article_link in self.get_valid_article_links(article_config):
+                    self.save_page(article_config, article_link)
 
 
-    def get_text_of_page(self, soup):
+    def save_page(self, article_config, URL):
+        """
+        retrieves content of the article page
+        parses meta information
+        saves all data
+        """
+        try:
+            logging.info("Save content of: " + URL)
+
+            soup = self.get_soup(URL)
+            content = self.get_text_content(soup)
+
+            article_meta_data = self.get_meta_data( URL, soup, article_config)
+
+            self.save(article_meta_data, content)
+
+        except Exception as e:
+            logging.error("Something went wrong while trying to save: " + URL)
+            logging.error(e)
+
+
+    def get_meta_data(self, URL, soup, article_config):
+            """
+            initializes meta_parser with necessary information, parses metadata and returns it
+            :param URL: the url to get the metadata of
+            :param soup: the soup of the url
+            :param article_config: the config of the source the url was retrieved from
+            :return: the meta_data of the urls article
+            """
+            parser = meta_parser( URL, soup, article_config)
+            parser.parse_metadata() #das URL ist von der individuellen seite, nicht aus Base + Path
+            return parser.get_article_meta_data()
+
+
+    def save(self, article_meta_data, content):
+        """
+        saves the html source of the given URL 
+        also saves the meta data of the page
+        only saved the content if meta_data was successfully indexed, if content saving raises an exception, deletes created meta_data
+        :param article_meta_data: the meta data to save
+        :param content: the page content to save
+        """
+        id = None
+        try:
+            id = client_factory.get_meta_client().index_meta_data(article_meta_data)  
+            logging.info("Success -- Saved Metadata")
+
+        except Exception as e:
+            logging.error("failed to save Metadata with meta_client") 
+            logging.error(e)
+
+        if id:
+            try:
+                client_factory.get_file_client().save_as_file(article_meta_data["filepath"], article_meta_data["filename"], content)
+                logging.info("Success -- Saved content")
+
+            except Exception as e:
+                logging.error("failed to save Content with file_client")
+                logging.error(e)
+                client_factory.get_meta_client().delete_meta_data(id) 
+
+    
+
+    def get_text_content(self, soup):
         """
         parse soup to string 
         takes care of proper encoding
         """
-        encoding = soup.original_encoding or 'utf-8' #encoding für sonderzeichen sonst heult er rum
-        return str(soup.encode(encoding)).split("\\n") #er checkt einfach nicht dass das hier lineseperators sind
+        encoding = soup.original_encoding or 'utf-8' #encoding für sonderzeichen 
+        content = soup.encode(encoding) 
+
+        content = soup.prettify()
+        
+        if type(content) != str: #für den fall das eine liste oä zurückgegeben wird
+            content = "".join(content)
+
+        return content
+
+    def get_valid_article_links(self, article_config):
+        """
+        creates a list with the links to all articles from the given article_config
+        also completes every relative URL with the base_url if necessary
+        checks every link if it matches the given conditions in the article_config
+        checks if there is not already an entry in the article_meta_data index
+        :param article_config: the article_config of the sources page to get die article links of
+        :return: a list with all valid links of the page
+        """
+
+        article_links = []
+
+        source_URL = article_config["base_url"] + article_config["path_url"]
+        most_recent_saved_articles_url = client_factory.get_meta_client().get_latest_entry_URL(source_URL, article_config["region"]) 
+
+
+        for link in self.get_link_list(source_URL, article_config["html_tag"], article_config["html_class"]):
+            
+            if self.is_valid(link, article_config["url_conditions"]):
+
+                if self.is_relative_URL(link):
+                    link = article_config["base_url"] + link
+
+                if not self.was_already_saved(most_recent_saved_articles_url, link):
+                    article_links.append(link)
+
+        article_links.reverse() # important to have the newest article at the last index of the list, so it has the newest indexing time, making it easier (if not possible) to search for without having to write an overcomplicated algorithm
+
+        return article_links
+
+
+    def get_link_list(self, URL, html_tag, html_class):
+        """
+        collects all links from the specified URL that fits the html_tag html_class combination
+        If no href is found, the children will be searched for a href
+        """
+        
+        link_list = []
+        
+        for link in self.get_tag_list(URL,html_tag, html_class): 
+
+            if link.has_attr('href'):
+                link_list.append(link['href'])
+
+            else:    
+                link = self.search_direct_children_for_href(link)
+
+                if link != None:
+                    link_list.append(link)
+
+        
+        return link_list
+
+    def get_tag_list(self, URL, html_tag, html_class):
+        """
+        collects all tags that match html_tag and html_class
+        does this by trying to get the tags 
+        """
+
+        tag_list = []
+
+        #first try static page
+        soup = self.get_soup_of_static_page(URL)
+
+        if soup:
+            tag_list = soup.body.find_all(html_tag, html_class )
+
+        #if static doesnt work try dynamic
+        if tag_list == []:
+            soup = self.get_soup_of_dynamic_page(URL)
+            if soup:
+                tag_list = soup.body.find_all(html_tag, html_class )
+            
+
+        # if still no result something must be wrong with the html_tag and html_class
+        if tag_list == []:
+            logging.error("No results found for: " + html_class + " and " + html_tag)
+
+        return tag_list
+
+    
+    def get_soup(self, URL):
+        """
+        return soup by trying first to get it as a static page, after failure tries as a dynamic page
+        :params URL: the url
+        """
+        soup = self.get_soup_of_static_page(URL)
+        
+        if soup == None:
+            soup = self.get_soup_of_dynamic_page(URL)
+
+        return soup
+
 
     def get_soup_of_static_page(self, URL):
         """
         extract content of static loaded page
+        does some retries
         :param URL: the url to get the soup (Beatifulsoup) of
         :return: the soup, parsed with 'html5lib' parser
         """
-        page = requests.get(URL)
+        page = None
+        retry_count = 0
+        while page == None and retry_count < int(utils.config["MAX_TRY"]):
+            try:
+                retry_count += 1
+                page = requests.get(URL, timeout=5)
+            except Exception as e:
+                logging.warning("request unable to get: %s - retries left: %d", URL, int(utils.config["MAX_TRY"]) - retry_count)
+                logging.warning(e)
         return BeautifulSoup(page.content, 'html5lib')
+
 
     def get_soup_of_dynamic_page(self, URL):
         """
         extract content of dynamic loaded page
+        does some retries
         :param URL: the url to get the soup (Beatifulsoup) of
         :return: the soup, parsed with 'html5lib' parser
         """
-        try:
-            self.driver.get(URL)
-            time.sleep(1) #load page
-            return BeautifulSoup(self.driver.page_source, 'html5lib')
-        except:
-            logging.warning("something went wrong while trying to load dynamic page with selenium")
-
-
-
-    def get_articlelink_list(self, URL, html_tag, html_class):
-        """
-        collects all tags from the specified URL-combination that fits the html_tag html_class combination
-        If no href is found, the children will be searched for a href
-        """
-
-        #first try static page
-        soup = self.get_soup_of_static_page(URL)
-        article_link_list = soup.body.find_all(html_tag, html_class )
-        links = []
-
-        #if static doesnt work try dynamic
-        if article_link_list == [] or article_link_list == None:
-            soup = self.get_soup_of_dynamic_page(URL)
-            article_link_list = soup.body.find_all(html_tag, html_class )
-            
-
-        # if still no result something must be wrong with the html_tag and html_class
-        if article_link_list == [] or article_link_list == None:
-            logging.error("No results found for: " + html_class + " and " + html_tag)
-
-        for article_link in article_link_list: 
-
-            if article_link.has_attr('href'):
-                links.append(article_link['href'])
-
-            else:    
-                link = self.search_direct_children_for_href(article_link)
-
-                if link != None:
-                    links.append(link)
-
-        links.reverse() # important to have the newest article at the last index of the list, so it has the newest indexing time, making it easier (if not possible) to search for without having to write an overcomplicated algorithm
-
-        return links
-
+        page = None
+        retry_count = 0
+        while page == None and retry_count < int(utils.config["MAX_TRY"]):
+            try:
+                retry_count += 1
+                self.driver.get(URL)
+                time.sleep(1) #load page
+            except Exception as e:
+                logging.warning("selenium unable to get: %s - retries left: %d", URL, int(utils.config["MAX_TRY"]) - retry_count)
+                logging.warning(e)
+        return BeautifulSoup(self.driver.page_source, 'html5lib')
 
 
     def search_direct_children_for_href(self, tag):
@@ -113,38 +289,15 @@ class ArticleScraper:
             return None
 
 
-
-    def scrape_all_pages(self, source):
+    def was_already_saved(self, most_recent_saved_articles_URLs, current_URL):
         """
-        creates a list with the links to all articles from the given source configuration
-        saves the content of every valid link in the list
-        also completes every relative URL with the base_url if necessary
-        """
-        source_URL = source["base_url"] + source["path_url"]
-        most_recent_saved_articles_url = client_factory.get_meta_client().get_latest_entry_URL(source_URL, source["region"]) 
-
-
-        for URL in self.get_articlelink_list(source_URL, source["html_tag"], source["html_class"]):
-            
-            if self.is_valid(URL, source["url_conditions"]):
-
-                if self.is_relative_URL(URL):
-                    URL = source["base_url"] + URL
-
-                if not self.was_already_saved(most_recent_saved_articles_url, URL):
-                    self.save_content_of_page(source, URL)
-
-
-    def was_already_saved(self, most_recent_saved_articles_url, URL):# a lot of text for a function that does nothing else than comparing two strings, but easy to break things here
-        """
-        the first link in the article_list is always the most recent
-        by iterating these and break if the url is matching the url of the latest meta_data document we are preventing the system of scraping already present data
-        :param most_recent_saved_articles_url: the URL of the most recent saved article (in an earlier call)
+        the first link in the list returned by the page is not always the most recent
+        :param most_recent_saved_articles_url: the URLs of the most recent saved articles (in an earlier call)
         :param URL: the url of the current link
-        :return: true if the URL matches the url of the most recent url
+        :return: true if the URL matches one url in the most recent urls
         """
-        if most_recent_saved_articles_url:
-            return URL in most_recent_saved_articles_url
+        if most_recent_saved_articles_URLs:
+            return current_URL in most_recent_saved_articles_URLs
         else:
             return False
 
@@ -160,13 +313,12 @@ class ArticleScraper:
         return not bool(re.search("^http", URL))
 
 
-    def is_valid(self,URL, conditions):
+    def is_valid(self, URL, conditions):
         """
-        checks if the given URL matches the given condition, returns wether the url should be included in the list based on the include_condition value
+        checks if the given URL matches the given conditions, returns wether the url should be included in the list based on the include_condition value
         necessary because a lot of websites got fake articles with ads or have their interesting articles under a similar url path, 
-        one condition which can be set to in/exclude was powerful enough, maybe changed in the future with a funciton that wraps this function
         :param URL: the url to check
-        :param condition: the string to match in the url
+        :param conditions: list with the strings to match in the url
         :param include_condition: true if matches of the url should be included, false if matches should be excluded
         :return: true if url includes condition NXOR include_condition set true, else false 
         """
@@ -193,38 +345,5 @@ class ArticleScraper:
         return valid
 
 
-    def save_content_of_page(self,source, URL):
-        """
-        saves the html source of the given URL 
-        also saves the meta data of the page as configurated in the given article source
-        """
-        logging.info("Save content of: " + URL)
-        soup = self.get_soup_of_static_page(URL)
-
-        parser = meta_parser( URL, soup, source)
-        parser.parse_metadata() #das URL ist von der individuellen seite, nicht aus Base + Path, ausser bei direktem scrapen der seite
-        meta_data = parser.get_meta_data()
-        meta_data["filepath"] = os.path.join("articles", source["region"], source["site_name"], utils.date_today())
-
-        client_factory.get_meta_client().index_meta_data(meta_data)  
-
-        text = self.get_text_of_page(soup)
-        client_factory.get_file_client().save_as_file(meta_data["filepath"], meta_data["filename"], text)
-
-
-    def scrape(self, source):
-        """
-        scrapes the page in the given source, based on if it is a article on a single page to scrape or if it is 
-        a page with links to the articles 
-        """
-
-        logging.info("Start scraping from source URL: " + source["base_url"] + source["path_url"])
-
-        # if all articles are on the page
-        if source["html_tag"] == None and source["html_class"] == None:
-            self.save_content_of_page(source, source["base_url"] + source["path_url"])
-
-        # if the page has links to all the articles
-        else:
-            self.scrape_all_pages(source)
+                
             

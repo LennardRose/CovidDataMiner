@@ -1,4 +1,10 @@
-
+#####################################################################
+#                                                                   #
+#                     Lennard Rose 5118054                          #
+#       University of Applied Sciences Wuerzburg Schweinfurt        #
+#                           SS2021                                  #
+#                                                                   #
+#####################################################################
 import os
 import utils
 from pywebhdfs.webhdfs import PyWebHdfsClient
@@ -8,7 +14,8 @@ import logging
 
 
 class HDFSClient(FileClient):
-    """HDFS Helper class
+    """
+    HDFS Helper class
     """
 
     def __init__(self):
@@ -16,32 +23,41 @@ class HDFSClient(FileClient):
         init function that creates an insecure hdfs client
         """
         logging.info("Init HDFS client with url: %s : %s", utils.config["HDFS_URL"] , utils.config["HDFS_PORT"])
-        self.hdfs_client = PyWebHdfsClient(host=utils.config["HDFS_URL"], port=utils.config["HDFS_PORT"], user_name=utils.config["HDFS_USER"])
+        self.hdfs_client = PyWebHdfsClient(host=utils.config["HDFS_URL"], port=utils.config["HDFS_PORT"], user_name=utils.config["HDFS_USER"], timeout=1)
 
     def read_file(self, file_path, filename):
-        """reads a json file from the given path and converts it into an dictionary using json python lib
-        Args:
-            file_path (string): the hdfs path to the json file you want to read
-        Returns:
-            json: the json document as a dict/ json object
+        """
+        reads a file from the given file_path filename combination and returns it as json
+        :param file_path: the path the file, no filename here
+        :param filename: the name of the file to read
+        :return: json presentation of the files content
         """
         target_file = os.path.join(file_path, filename)
         return json.loads(self.hdfs_client.read_file(target_file))
 
     def save_as_file(self, file_path, filename, content):
-        """takes a meta json and a target path
-        uploads the file with utf-8 encoding to hdfs
-        careful it overwrites the file if already present
-        Args:
-            meta_json (dict): meta json as a dictionary / json object
-            target_path (dict): hdfs file path of target location
         """
-        
+        combines the file_path and filename to the location to save the content
+        raises error if save was not successfull
+        careful it overwrites the file if already present
+        :param file_path: the path the file will be saved to, no filename here
+        :param filename: the name of the file that will be saved
+        :param content: the content that will be saved in the file
+        :return: nothing
+        """
+    
         target_file_path = os.path.join(file_path, filename)
-        self.hdfs_client.create_file( target_file_path, content, overwrite=True)
+        success = self.hdfs_client.create_file(target_file_path, content, overwrite=True)
+
+        if not success:
+            raise Exception("failed to save content as file to hdfs")
+
 
 
 class MOCKHDFSClient(FileClient):
+    """
+    mock of hdfs, saves to local file system
+    """
 
     def save_as_file(self, file_path, filename, content):
         """
@@ -51,7 +67,7 @@ class MOCKHDFSClient(FileClient):
         os.makedirs(file_path, exist_ok=True)
         target = os.path.join(file_path, filename)
 
-        with open(target, "w") as file:
+        with open(target, "w", encoding="utf-8") as file:
                 file.writelines(content)
 
 

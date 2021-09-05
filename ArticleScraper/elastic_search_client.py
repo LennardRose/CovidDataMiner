@@ -1,4 +1,10 @@
-
+#####################################################################
+#                                                                   #
+#                     Lennard Rose 5118054                          #
+#       University of Applied Sciences Wuerzburg Schweinfurt        #
+#                           SS2021                                  #
+#                                                                   #
+#####################################################################
 from abstract_client import ArticleClient, MetaClient
 import logging
 from elasticsearch import Elasticsearch
@@ -34,6 +40,13 @@ class ElasticSearchClient(MetaClient, ArticleClient):
         if not self.es_client.indices.exists(index="article_meta_data"):
             logging.info("Index article_meta_data not found, initialize index.")
             self.es_client.indices.create(index="article_meta_data", body=self.get_article_meta_data_mapping())
+
+
+    def delete_meta_data(self, id):
+        """
+        deletes meta_data doc in article_meta_data index
+        """
+        self.es_client.delete(index="article_meta_data", id=id)
             
 
     def get_article_config(self, id):
@@ -70,28 +83,23 @@ class ElasticSearchClient(MetaClient, ArticleClient):
     def index_meta_data(self, metadata_json):
         """
         index meta data to elasticsearch
-        :return: None
+        :return: the id of the new indexed meta data
         """
 
-        self.es_client.index(index="article_meta_data", body=metadata_json,
+        result = self.es_client.index(index="article_meta_data", body=metadata_json,
                              doc_type="_doc")
+
+        if result["result"] == "created" and result["_id"]:
+            return result["_id"]
+
+        else:
+            raise Exception("meta_data not created")
+            
 
                              
     def get_latest_entry_URL(self, source_URL, region):
         """
-        searches for the latest entries url of the given website
-        letzte 100:
-        0.010 0.09 0.012
-        0.005 0.04
-        0.016 0.028
-
-        einzeln
-        0.000
-        0.003
-        0.002
-        0.005
-        0.002
-        0.002
+        searches for the latest entries url of the given website, number of returned entries defined in config
         latest means  index time 
         :param source_URL: the URL of the site we are looking for the latest entry
         :returns: the url of the latest entries in the article_meta_data index with the matching source_URL
@@ -175,6 +183,9 @@ class ElasticSearchClient(MetaClient, ArticleClient):
                 "type": "text"
             },
             "filename": {
+                "type": "text"
+            },
+            "filepath": {
                 "type": "text"
             }
         }

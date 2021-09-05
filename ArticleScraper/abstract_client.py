@@ -1,8 +1,15 @@
+#####################################################################
+#                                                                   #
+#                     Lennard Rose 5118054                          #
+#       University of Applied Sciences Wuerzburg Schweinfurt        #
+#                           SS2021                                  #
+#                                                                   #
+#####################################################################
 from abc import ABC, abstractmethod
 import logging
 from utils import Singleton
 
-class MetaClient(ABC, Singleton):
+class MetaClient(ABC):
     
     @abstractmethod
     def index_meta_data(self, metadata_json):
@@ -12,8 +19,12 @@ class MetaClient(ABC, Singleton):
     def get_latest_entry_URL(self, source_URL, region):
         logging.error("Method not implemented")
 
+    @abstractmethod
+    def delete_meta_data(self, id):
+        logging.error("Method not implemented")
 
-class ArticleClient(ABC, Singleton):
+
+class ArticleClient(ABC):
     
     @abstractmethod
     def get_article_config(self, id):
@@ -24,7 +35,7 @@ class ArticleClient(ABC, Singleton):
         logging.error("Method not implemented")
 
 
-class FileClient(ABC, Singleton):
+class FileClient(ABC):
 
     @abstractmethod
     def save_as_file(self, file_path, filename, content):
