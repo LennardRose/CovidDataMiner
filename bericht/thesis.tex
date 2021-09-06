@@ -190,7 +190,6 @@ TODO
 
 TODO
 
-\newpage
 \chapter*{Danksagung}
 
 
@@ -208,7 +207,8 @@ TODO
 \mainmatter
 
 \chapter{Einführung und Motivation}\label{ch:intro}
-Wir in unserem Team, bestehend aus Jochen Schmidt, Lennard Rose und Moritz Zeitler hatten nach unserem Gemeinsamen Programmierprojekt beschlossen, wieder zusammen zu arbeiten und diesmal in eine ganz andere Richtung zu gehen. Hierzu muss man wissen, dass unser Programmierprojekt damals aus einem Multiplayer-Computerspiel bestand, welches wir ausschließlich mit C++ sowie SDL programmierten. Da wir nichts vorgefertigtes an Code oder Lösungen benutzten und alles \"von der Pike auf\" entwickelten, lag der Fokus vor allem auf Algorithmen, Datenstrukturen und Patterns. Auch wenn uns diese Art des Entwickelns allen sehr Spaß gemacht hat und unser Projekt sehr Erfolgreich war, wollten wir mit dieser Projektarbeit nochmal in eine ganz andere Richtung gehen um uns als Entwickler weiter zu entwickeln und unserem Toolset ein paar neue XY hinzuzufügen. Mit dem Thema Datamining war für uns auch sehr schnell ein Thema gefunden, Coronadaten boten sich aus aktuellem Anlass an und da Moritz noch ein paar alte Rechner im Keller stehen hatte, beschlossen wir nicht nur eine Lösung, sondern ein betriebsbereites System zu entwickeln. \newline
+Wir in unserem Team, bestehend aus Jochen Schmidt, Lennard Rose und Moritz Zeitler hatten nach unserem Gemeinsamen Programmierprojekt beschlossen, wieder zusammen zu arbeiten und diesmal in eine ganz andere Richtung zu gehen. Hierzu muss man wissen, dass unser Programmierprojekt damals aus einem Multiplayer-Computerspiel bestand, welches wir ausschließlich mit C++ sowie SDL programmierten. Da wir nichts vorgefertigtes an Code oder Lösungen benutzten und alles "von der Pike auf"  entwickelten, lag der Fokus vor allem auf Algorithmen, Datenstrukturen und Patterns. Auch wenn uns diese Art des Entwickelns allen sehr Spaß gemacht hat und unser Projekt sehr Erfolgreich war, wollten wir mit dieser Projektarbeit nochmal in eine ganz andere Richtung gehen um uns als Entwickler weiter zu entwickeln und unserem Repertoire ein paar neue Tools hinzuzufügen. Mit dem Thema Datamining war für uns auch sehr schnell ein Thema gefunden, Coronadaten boten sich aus aktuellem Anlass an und da Moritz noch ein paar alte Rechner im Keller stehen hatte, beschlossen wir nicht nur eine Lösung, sondern ein betriebsbereites System zu entwickeln. \newline
+Der Fokus dieser Projektarbeit soll also ganz klar auf Schnittstellen, Interaktionen und Recherche über Lösungsmöglichkeiten liegen. 
 
 
 \chapter{Cluster}
@@ -223,7 +223,7 @@ Die tats\"achliche grundlegende Idee hinter der Funktion von YARN ist das Aufspa
 
 \chapter{Entwicklungsprozess}
 Beim Entwicklungsprozess wurde sich f\"ur eine Scrum artige L\"osung entschieden. So werden klassische Artefakte und Tools wie etwa das Daily oder der Backlog entsprechend angepasst angewandt. Anpassung meist im Sinne der zeitlichen Komponente. Da das Projekt parallel w\"ahrend des Semesters abl\"auft wurde hier das 'Daily', von einem t\"aglichen auf einen w\"ochentlichen Rhythmus umgestellt. Das Backlog wird durch das Team selbst bef\"ullt da es keinen 'Product Owner' gibt. Genauso wurden die Sprints abgewandelt, durch die zeitliche Entzerrung wird hier direkt auf eine dynamische Sprintl\"ange gesetzt die jeweils zum Sprint-Anfang abgestimmt worden ist. \newline
-G\"anzlich verzichtet wurde auf die Sprint Retrospektive, zwar hat sich im Laufe des Projekts der Prozess dynamisch angepasst, allerdings wurde hier nicht explizit ein Artefakt bzw. Termin durchgef\"uhrt. \"Anderungen am Prozess wurden kurzfristig und in direkter Absprache mit allen Teammitgliedern beschlossen.
+G\"anzlich verzichtet wurde auf die Sprint Retrospektive, zwar hat sich im Laufe des Projekts der Prozess dynamisch angepasst, allerdings wurde hier nicht explizit ein Artefakt bzw. Termin durchgef\"uhrt. \"Anderungen am Prozess wurden kurzfristig und in direkter Absprache mit allen Teammitgliedern beschlossen. Vereinfachend hinzu kam, dass sich die Projektaufgaben durch die vielen, verschiedenartigen Scraper, welche nicht weiter miteinander interagieren, gut aufteilen ließen. So konnte jeder sein Tempo selbst bestimmen und es waren wenig zusätzliche Maßnahmen nötig um die Arbeit an gemeinsam genutzten Modulen zu koordinieren.
 
 
 \chapter{Datenablagekonzept}
@@ -237,8 +237,8 @@ F\"ur die Datenablage wurde zun\"achst ein entsprechendes Konzept entwickelt. Di
 Jede einzelne Datenquelle wird nun genauer beleuchtet und ein entsprechendes Datenablagekonzept erarbeitet. Da die Konzepte sich aber sehr \"ahneln wird der Hauptteil der Erkl\"arung bei der gr\"ossten Komponente den Corona-Artikeln zu finden sein. Grunds\"atzlich werden alle Daten sowohl in Elasticsearch als auch im HDFS abgelegt. Wobei das HDFS haupts\"achlich f\"ur Data Governance Zwecke genutzt wird. Bedeutet das hier die Rohdaten unver\"andert gespeichert werden sollen um sp\"ater immer noch Zugriff auf die Original Daten zu haben, was eine Art 'sanity-check' der Daten erm\"oglicht.
 \section{Corona Nachrichten/Artikel}
 Die Corona Nachrichten bzw. Artikel werden in zwei unterschiedlichen Technologien abgelegt. Zun\"achst betrachten wir die Rohdaten. Wie bereits erkl\"art wird jeder Artikel in Rohformat gespeichert. Diese Daten sind aber f\"ur die Auswertung und zur \"Ubersicht der Datensammlung erst mal unwichtig. Dies bedeutet das diese Daten nicht in einer Datenbank indiziert, sondern nur im HDFS abgelegt werden. Die Geschwindigkeit des HDFS f\"ur den Datenzugriff ist ausreichend um die Daten bei einer genauen Auswertung ad-hoc zu lesen. Streng genommen k\"onnte man sogar argumentieren dass das HDFS nichts anderes als ein 'key-value store' ist. So wird im Hintergrund eine Datei die unter einem gewissen Pfad abgelegt worden ist f\"ur den User als klassischer Dateipfad angezeigt (Ordner durch 'forward-slashes' getrennt und am Ende des Pfades ein Dateiname), intern aber der Pfad einen key darstellt. Dies ist n\"otig um die Verteilung und Ausfallsicherheit der Daten \"uber mehrere Knoten gew\"ahrleisten zu k\"onnen. Allerdings ist dies f\"ur den User faktisch nicht bemerkbar, da dieser immer mit den entsprechenden Pfaden arbeitet.
-Um nun den Kreis zu schliessen werden nicht nur Meta-Daten der Artikel gespeichert sondern auch der komplette Artikel im Rohformat um Datenverlust vorzubeugen und die Konsistenz der Daten sp\"ater noch pr\"ufen zu k\"onnen. Die Rohdaten werden dann abgelegt unter dem Pfad: '/datakraken/articles/\$bundesland\$/\$Zeitung\$/\$Datum\$/\$ArtikelId\$\_\$TimeStamp\$'. Dieser Pfad wird dann zu den Meta-Daten hinzugef\"ugt.
-Nun zu den Meta-Daten, diese kommen werden vom entsprechenden Scraper erzeugt. Dies Daten werden dann im Elasticsearch Cluster abgelegt unter entsprechendem Index Namen. Dies hilft dabei eine \"Ubersicht zu den Daten zu erhalte, einen Status zu bekommen in welchem Mass die Daten in das System kommen und erm\"oglicht eine rudiment\"are Analyse. Die Daten an sich sind definiert durch die entsprechende Config
+Um nun den Kreis zu schliessen werden nicht nur Meta-Daten der Artikel gespeichert sondern auch der komplette Artikel im Rohformat um Datenverlust vorzubeugen und die Konsistenz der Daten sp\"ater noch pr\"ufen zu k\"onnen. Die Rohdaten werden dann abgelegt unter dem Pfad: '/datakraken/articles/region/quelle/zeitung/Datum/'. Dieser Pfad wird dann zu den Meta-Daten hinzugef\"ugt. Der Titel der Dateien im Textformat selbst setzt sich aus region + quellenname + artikeltitel zusammen. \newline
+ Meta-Daten werden vom entsprechenden Scraper parallel zu den Rohdaten erzeugt. Dies Daten werden dann, unter entsprechendem Index Namen im Elasticsearch Cluster abgelegt. Dies hilft dabei eine \"Ubersicht über die Daten und deren Inhalt zu erhalten, einen Status zu bekommen in welchem Ma?e die Daten in das System kommen und erm\"oglicht eine rudiment\"are Analyse. Die Daten setzen sich zusammen aus den Atributen der Quelle: Name, Region und URL, des entsprechenden Artikels: URL, Titel, Datum der Veröffentlichung, Autor, Typ, Beschreibung und Stichworten, sowie Daten zur Erzeugung: Indizierungs bzw. Erstellungszeitpunkt, Dateiname und Pfad. 
 \section{Corona RKI Daten}
 Die wichtigsten Basis Informationen \"uber den Status der Corona-Pandemie in Deutschland sind h\"ochst wahrscheinlich Inzidenz-Wert und Impfquote. Diese Informationen werden in diesem Projekt \"uber das Robert-Koch-Institut bezogen. \"Uber eine \"offentliche API kann nicht nur Inzidenzwert pro Bundesland, sondern auch per Bezirk bezogen werden. Ausserdem sind alle Informationen zum derzeitigen Impfstand in Deutschland, sowie Informationen zu PCR- und Schnelltests in Deutschland verf\"ugbar. Alle Informationen die hier von der API zur Verf\"ugung gestellt werden, werden auch gespeichert. Hier folgt der Scraper dem Allgemeinen Konzept, die Original Daten werden im HDFS abgelegt und dann mit minimaler Ver\"anderung im Elasticsearch indiziert.
 \section{Corona Maßnahmen}
@@ -262,9 +262,13 @@ network:
       dhcp4: no
       dhcp6: no
       addresses: [192.168.0.115/24]
-      gateway4: 192.168.0.255
+      gateway4: 192.168.0.1
+      nameserver:
+       addresses: [8.8.8.8,8.8.4.4]
+  renderer:
+   NetworkManager
   version: 2
-#mit sudo netplan apply anwenden!
+#mit sudo netplan try/-apply anwenden!
 \end{lstlisting}
 Diese mapten wir auf die Knotennamen in der "hosts"- Datei, um sie bei der weiteren Konfiguration immer mit ihrem Namen angeben zu können.
 \begin{lstlisting}[caption=etc/hosts,label=hosts,language=bash]
@@ -468,7 +472,127 @@ Als Datenquelle für die gültigen Regelungen der Regierung bzw. der jeweiligen 
 
 \section{Wetterdaten}
 
-\chapter{Problemstellung}
+\chapter{Funktion und Implementierung}
+\section{Artikel}
+\subsection{Konfigurierbarkeit}
+Um mit dem Scraper später von beliebigen Quellen scrapen zu können wurde das gesamte System so Konfigurierbar wie möglich gemacht. Hierfür waren 2 Arten von Konfigurationsdateien notwendig, eine für das gesamte System und eine für jede Quelle von der mit dem Programm gescraped werden soll. Alle Konfigurationen wurden im JSON-Format abgespeichert, im folgenden das Format der JSON-Dateien, auf deren Anteile wir später weiter eingehen.
+\subsubsection{Allgemeine Konfiguration}
+Die allgemeine Konfiguration config.json wurde hierbei bei Start in eine globale Variable eingelesen auf die von ueberall aus zugegriffen werden konnte. Werte aus dieser Datei können sich grob in Daten zur initialisierung der Clients und des Loggers, sowie Zeitformate und Einstellungen für den Scraper einteilen. 
+\begin{lstlisting}[caption=config.json,label=config,language=json]
+{
+"ELASTICSEARCH_URL" : "192.168.0.115",
+"ELASTICSEARCH_PORT" : "9200",
+"HDFS_URL" : "192.168.0.115",
+"HDFS_PORT" : "9870",
+"HDFS_USER" : "hadoop",
+"RECENT_ARTICLE_COUNT" : "100", 
+"MAX_TRY" : "3",
+"STANDARD_DATETIME_FORMAT" : "%Y-%m-%dT%H:%M:%S.%fZ",
+"STANDARD_DATE_FORMAT" :"%Y-%m-%d",
+"STANDARD_LOG_FORMAT" : "[%(levelname)s][%(asctime)s]: %(message)s",
+"STANDARD_LOG_DATE_FORMAT" : "%Y-%m-%d %H:%M:%S",
+"STANDARD_LOG_FILENAME" : "articlescraper.log",
+"WEBDRIVER_DIR" : "drivers",
+"WEBDRIVER_FILE" : "chromedriver",
+"CLIENTS" : {   
+    "META_CLIENT" : "elastic",
+    "ARTICLE_CLIENT" : "elastic",
+    "FILE_CLIENT" : "hdfs"
+}
+}
+\end{lstlisting}
+\subsubsection{Artikel Konfiguration}
+Die Artikelkonfiguration ( im weiteren nur article\_config) kann entweder aus dem gleichnamigen Datenbank-Index( Hier von  Elasticsearch ) geladen oder aus einer JSON-Datei gelesen werden. Hierfür wird argparse benutzt, mit welchem sich Commandlineargumente einstellen und parsen lassen. Für den ArticleScraper sind die vorhandenen Optionen:
+\begin{itemize}
+\item --articleclient <id>: Die unter dem Index "article\_config" hinterlegte Konfiguration mit entsprechender Id wird gescraped
+\item --file <filename>: Die unter dem <filename> gefundene Datei wird gescraped
+\item keine Argumente: Alle unter dem Index "article\_config" hinterlegten Konfigurationen werden gescraped
+\end{itemize}
+
+Die entsprechenden Konfigurationen werden dann als Liste dem Scraper zurückgegeben und weiter verarbeitet.
+\begin{lstlisting}[caption=article\_config am Beispiel Niedersachsen,label=articleconfig,language=json]
+{
+    "region": "niedersachsen",
+    "site_name": "kreiszeitung",
+    "base_url": "https://www.kreiszeitung.de/",
+    "path_url": "suche/?tt=1&tx=&sb=&td=&fd=&qr=corona",
+    "html_tag": "div",
+    "html_class": "id-LinkOverlay",
+    "url_conditions" : [
+        {
+        "condition_string": "/niedersachsen",
+        "include_condition": true}
+        	],
+    "title": {
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "og:title"
+    },
+    "date": {
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "article:published_time"
+    },
+    "author": {
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "lp.article:author",
+        "default": null
+    },
+    "description": {
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "og:description",
+        "default": null
+    },
+    "type": {
+        "source": "TAG",
+        "tag": "meta",
+        "attribute" : "property",
+        "attribute_value": "og:type",
+        "default": null
+    },
+    "keywords": {
+        "source": "NOEXIST",
+        "tag": null,
+        "attribute" : null,
+        "attribute_value": null,
+        "default": null
+    }
+} 
+\end{lstlisting}
+
+\subsection{Erhalten von Artikellinks}
+\begin{figure}[h]
+\caption{Übersicht der Suchergebnisse Kreiszeitung}
+\label{articlelist}
+\centering
+\includegraphics[scale=0.4]{articles_list.png}
+\end{figure} 
+\begin{lstlisting}[caption=article\_config für Übersichtsseite,label=articleconfigoverview,language=json]
+    "region": "niedersachsen",
+    "site_name": "kreiszeitung",
+    "base_url": "https://www.kreiszeitung.de/",
+    "path_url": "suche/?tt=1&tx=&sb=&td=&fd=&qr=corona",
+    "html_tag": "div",
+    "html_class": "id-LinkOverlay",
+    "url_conditions" : [
+        {
+        "condition_string": "/niedersachsen",
+        "include_condition": true}
+        	],
+\end{lstlisting}
+Um nicht jedes mal für jeden einzelnen Artikel eine eigene Konfiguration erstellen bzw. einen Scrapevorgang starten zu müssen wird sich zu nutze gemacht, dass Artikelverlinkungen auf Artikelübersichtsseiten, wie in Figure \ref {articlelist} zu sehen, in gleichartige HTML-Tags geschrieben werden. Es muss in der article\_config also nur der Link zu dieser Übersichtsseite (bestehend aus base\_url und path\_url), sowie das HTML-Tag und die HTML-Klasse angegeben werden. Im Fall des Beispiels in listing \ref{articleconfigoverview} wurden die Artikel der Kreiszeitung bereits über eine suche, wie unter path\_url zu sehen weiter auf unser Themengebiet eingeschränkt. Um nun zu verhindern, dass unerwünschte Artikel wie z.B. Werbung, Newsticker und Ähnliches gespeichert werden, lassen sich über 'url\_conditions' bei 'url\_string' Zeichenketten angeben, welche in der URL des Artikels (nicht) vorkommen sollen, steuerbar über setzen von 'include\_condition' auf true/false. Dabei lässt sich durch die Elemente der Liste eine 'AND'-Beziehung darstellen, über trennen von Zeichenketten mittels '|' innerhalb eines 'condition\_string' eine 'OR'-Beziehung. In diesem Beispiel werden Artikellinks nach dem kriterium gefiltert, ob sie '/niedersachsen' enthalten, den Pfad der Website, unter welchem alle Niedersachsen betreffenden Artikel zu finden sind.
+
+\subsection{Persistierung}
+
+
+
+
 
 \chapter{Lösung}
 

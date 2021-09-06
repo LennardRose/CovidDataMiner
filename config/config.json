@@ -1,6 +1,6 @@
 
 {
-"ELASTICSEARCH_URL" : "localhost",
+"ELASTICSEARCH_URL" : "192.168.0.115",
 "ELASTICSEARCH_PORT" : "9200",
 "HDFS_URL" : "192.168.0.115",
 "HDFS_PORT" : "9870",
@@ -13,10 +13,10 @@
 "STANDARD_LOG_DATE_FORMAT" : "%Y-%m-%d %H:%M:%S",
 "STANDARD_LOG_FILENAME" : "articlescraper.log",
 "WEBDRIVER_DIR" : "drivers",
-"WEBDRIVER_FILE" : "chromedriver.exe",
+"WEBDRIVER_FILE" : "chromedriver",
 "CLIENTS" : {   
     "META_CLIENT" : "elastic",
     "ARTICLE_CLIENT" : "elastic",
-    "FILE_CLIENT" : "mock_hdfs"
+    "FILE_CLIENT" : "hdfs"
 }
 }
