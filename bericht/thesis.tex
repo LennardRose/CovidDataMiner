@@ -242,7 +242,7 @@ Nun zu den Meta-Daten, diese kommen werden vom entsprechenden Scraper erzeugt. D
 \section{Corona RKI Daten}
 Die wichtigsten Basis Informationen \"uber den Status der Corona-Pandemie in Deutschland sind h\"ochst wahrscheinlich Inzidenz-Wert und Impfquote. Diese Informationen werden in diesem Projekt \"uber das Robert-Koch-Institut bezogen. \"Uber eine \"offentliche API kann nicht nur Inzidenzwert pro Bundesland, sondern auch per Bezirk bezogen werden. Ausserdem sind alle Informationen zum derzeitigen Impfstand in Deutschland, sowie Informationen zu PCR- und Schnelltests in Deutschland verf\"ugbar. Alle Informationen die hier von der API zur Verf\"ugung gestellt werden, werden auch gespeichert. Hier folgt der Scraper dem Allgemeinen Konzept, die Original Daten werden im HDFS abgelegt und dann mit minimaler Ver\"anderung im Elasticsearch indiziert.
 \section{Corona Maßnahmen}
-Das soeben erw\"ahnte Konzept der Nachrichten wird genauso f\"ur die Massnahmen verwendet. Rohdaten werden im HDFS abgelegt, w\"ahrend die beschreibenden Daten im Elasticsearch indiziert werden. Diese Massnahmen werden mit folgendem Pattern abgelegt: '/datakraken/measures/\$bundesland\$/\$Zeitung\$/\$Datum\$/\$ArtikelId\$\_\$TimeStamp\$'.
+Das soeben erw\"ahnte Konzept der Nachrichten wird genauso f\"ur die Massnahmen verwendet. Rohdaten werden im HDFS abgelegt, w\"ahrend die beschreibenden Daten im Elasticsearch indiziert werden. Diese Massnahmen werden mit folgendem Pattern abgelegt: '/datakraken/measures/\$bundesland\$/\$Datum\$+\$TimeStamp\$/'.
 \section{Corona Basis Daten}
 \section{Wetterdaten}
 Auch die Wetterdaten werden im gleichen Stil abgelegt. Heisst die einzelnen Wetterlogs werden als Dokumente im Elasticsearch abgelegt und auch hier\"uber abgefragt. Allerdings werden die Wetterdaten auch noch entsprechend des allgmeinen Konzepts im HDFS abgelegt. Die Ablage Struktur im HDFS ist in folgendem Pattern:  '/datakraken/weather/\$Stadt\$/\$Datum\$/\$TimeStamp\$'.
@@ -462,15 +462,16 @@ curl -XGET 'datakrakennamenode:5601/status'
 \section{Nachrichtenartikel}
 \section{RKI Daten}
 \section{Corona Maßnahmen}
-Als Datenquelle für die gültigen Regelungen der Regierung bzw. der jeweiligen Landesregierungen wurde auf deren Websites zugegriffen. Wenn es möglich war die aktuellen Maßnahmen direkt als Text auf der Website zu finden, was selten vorkam, wurde dieser ähnlich den Nachrichtenartikeln geladen. Leider haben es die Landesregierungen nicht sehr einfach gemacht. Manchmal gab es Zusammenfassungen als Bilder ansonsten wurden die aktuell gültigen Verordnungen, welche als pdf-File veröffentlicht werden, geladen. Um die Bilder und PDFs danach, sinnvoll verwertet, in Elasticsearch abgelegen zu können wurde auf Tesseract zur Bild-zu-Text Verarbeitung und OCRmyPDF zur PDF-zu-suchbarenPDF zurückgegriffen. Tesseract ist eine freie Software zur Texterkennung die auf einem neuronalen Netz aufbaut und OCRmyPDF ist ein Python-Framework das mittels Tesseract durchsuchbare PDFs generiert.
-
-- zukünftig vll noch nachschauen ob vll lokale newsseiten infos zusammengefasst anbieten ala radiogong.de/wasgiltmomentan
+Für die Daten der gültigen Maßnahmen und Verordnungen wird direkt auf die offiziellen Websites der Bundesregierung bzw. der jeweiligen Landesregierung zugegriffen. Wir haben uns bewusst dagegen entschieden mögliche Dritt-Anbieter wie Nachrichtenportale zu integrieren um die Informationen ungefiltert zu erhalten, was auch Nachteile nach sich zog da die jeweiligen Regierungsportale es teilweise deutlich schwerer gemacht haben. Im laufe der Analyse der Websites stellte sich heraus das es drei Fälle zu Beleuchten gab, zum einen wurde oft auf den Websites eher kläglich über Corona informiert und nur auf das aktuell gültige Rechtsdokument wie eine Corona-Verordnung verwiesen welches meistens als PDF-Datei publik gemacht wurde. Seltener wurde die gültige Verordnung oder zusammengefasste Informationen als reiner Text in den HTML-Code integriert. Und letzteres wurden zusammengefasste Informationen als Überblick in einer Bildergalerie präsentiert. Grundsätzlich sind die Internetauftritte der Regierungen äußerst Behindertengerecht aber diesbezüglich wurde das wohl vernachlässigt.
 
 \section{Wetterdaten}
 
 \chapter{Problemstellung}
+\section{Corona Maßnahmen}
 
 \chapter{Lösung}
+\section{Corona Maßnahmen}
+
 
 \chapter{Evaluierung}
 
