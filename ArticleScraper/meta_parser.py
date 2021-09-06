@@ -57,25 +57,25 @@ class meta_parser:
             if self.article_meta_data[key] == None:
 
                 if self.article_config[key]["source"] == "NOEXIST":
-                    self.set_noexist(key)
+                    self._set_noexist(key)
 
                 elif self.article_config[key]["source"] == "DEFAULT":
-                    self.set_default(key)
+                    self._set_default(key)
 
                 elif self.article_config[key]["source"] == "TAG":
-                    self.parse_from_tag(key)
+                    self._parse_from_tag(key)
 
                 elif self.article_config[key]["source"] == "JSON_LD":
-                    self.parse_from_json(key)
+                    self._parse_from_json(key)
 
                 else:
                     logging.error("No meta-config found for: " + (str(self.article_meta_data[key]) if self.article_meta_data[key] else " <not found>") + 
                     ", config was: " + (str(self.article_config[key]) if self.article_config[key] else " <not found>"))
 
-        self.set_files_name_and_path()
+        self._set_files_name_and_path()
 
 
-    def set_files_name_and_path(self):
+    def _set_files_name_and_path(self):
         """
         sets the filename by appending the region, sites name, the title and .txt
         sets the files path by appending "datakraken", "articles", the region, sites name and the current date in the os manner
@@ -83,7 +83,7 @@ class meta_parser:
         self.article_meta_data["filename"] = self.article_config["region"] + "_" + self.article_config["site_name"] + "_" + utils.slugify(self.article_meta_data["title"]) + ".txt"
         self.article_meta_data["filepath"] =os.path.join("datakraken", "articles", self.article_config["region"], self.article_config["site_name"], utils.date_today())
 
-    def set_noexist(self, key):
+    def _set_noexist(self, key):
         if  key == "title" or key == "date":
             logging.error("Forbidden attribute value NOEXIST for "+ key +" meta data.")
         
@@ -91,7 +91,7 @@ class meta_parser:
 
 
 
-    def set_default(self, key):
+    def _set_default(self, key):
         """
         set the keys default value
         error if the key is title, title must be unique for filename
@@ -112,7 +112,7 @@ class meta_parser:
             self.article_meta_data[key] = self.article_config[key]["default"]
 
 
-    def parse_from_tag(self, key):
+    def _parse_from_tag(self, key):
         """
         parses meta value from any given tag/attribute/attribute_value combination
         takes care of right format
@@ -123,14 +123,14 @@ class meta_parser:
         if tag:
 
             if key == "date":
-                self.article_meta_data[key] = utils.parse_date(self.get_content(tag))
+                self.article_meta_data[key] = utils.parse_date(self._get_content(tag))
 
             else:
-                self.article_meta_data[key] = self.get_content(tag)
+                self.article_meta_data[key] = self._get_content(tag)
 
 
 
-    def get_content(self, tag):
+    def _get_content(self, tag):
         """
         get content of given tag, if tag has some nested tags inside of which one is holding the content, it returns the first content
         example:
@@ -143,13 +143,13 @@ class meta_parser:
             return tag.text
         else:
             for child in tag.descendants:
-                return self.get_content(child) # rekursiv 
+                return self._get_content(child) # rekursiv 
 
         logging.error("No content in tag: " + tag.get("name", None) if tag else "<tag not found>" + " found.")
 
         
 
-    def parse_from_json(self, key):
+    def _parse_from_json(self, key):
         """
         uses the <script type=application/ld+json> to retrieve meta information
         even thoug script is the tag, type the attribute and application/... the attribute value, 
@@ -177,14 +177,14 @@ class meta_parser:
                     if type(result_json) is list: #check ob json liste
 
                         for element in result_json:
-                            self.get_json_value(element, key)
+                            self._get_json_value(element, key)
 
                     else: 
-                        self.get_json_value(result_json, key)
+                        self._get_json_value(result_json, key)
         
 
 
-    def get_json_value(self, json, key):
+    def _get_json_value(self, json, key):
         """
         set the meta_data of the given key if the json-key is in the given script
         if the value for the key is a list, appends all the "name" values in the list to resultstring

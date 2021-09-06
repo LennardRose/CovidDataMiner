@@ -19,7 +19,7 @@ class ArgumentParserWrapper: # clap the sillables like a 3 year old
     def __init__(self):
         self.parser = argparse.ArgumentParser(description='scrapes sources by the configs given')
 
-    def parse_arguments(self):
+    def _parse_arguments(self):
         """
         parses the arguments
         """
@@ -41,7 +41,7 @@ class ArgumentParserWrapper: # clap the sillables like a 3 year old
         :return: list with all matching article_configs
         """
 
-        args = self.parse_arguments()
+        args = self._parse_arguments()
         data = []
 
         if len(sys.argv) < 2: #programmname ist auch ein argument, deshalb 2 ---> scrape alle in elasticsearch wenn nichts weiter angegeben
