@@ -588,7 +588,10 @@ Die entsprechenden Konfigurationen werden dann als Liste dem Scraper zurückgege
 \end{lstlisting}
 Um nicht jedes mal für jeden einzelnen Artikel eine eigene Konfiguration erstellen bzw. einen Scrapevorgang starten zu müssen wird sich zu nutze gemacht, dass Artikelverlinkungen auf Artikelübersichtsseiten, wie in Figure \ref {articlelist} zu sehen, in gleichartige HTML-Tags geschrieben werden. Es muss in der article\_config also nur der Link zu dieser Übersichtsseite (bestehend aus base\_url und path\_url), sowie das HTML-Tag und die HTML-Klasse angegeben werden. Im Fall des Beispiels in listing \ref{articleconfigoverview} wurden die Artikel der Kreiszeitung bereits über eine suche, wie unter path\_url zu sehen weiter auf unser Themengebiet eingeschränkt. Um nun zu verhindern, dass unerwünschte Artikel wie z.B. Werbung, Newsticker und Ähnliches gespeichert werden, lassen sich über 'url\_conditions' bei 'url\_string' Zeichenketten angeben, welche in der URL des Artikels (nicht) vorkommen sollen, steuerbar über setzen von 'include\_condition' auf true/false. Dabei lässt sich durch die Elemente der Liste eine 'AND'-Beziehung darstellen, über trennen von Zeichenketten mittels '|' innerhalb eines 'condition\_string' eine 'OR'-Beziehung. In diesem Beispiel werden Artikellinks nach dem kriterium gefiltert, ob sie '/niedersachsen' enthalten, den Pfad der Website, unter welchem alle Niedersachsen betreffenden Artikel zu finden sind.
 
+\subsection{Sammeln von Metadaten}
+
 \subsection{Persistierung}
+Zur Persistierung der Daten können verschiedene Technologien verwendet werden. 
 
 
 
