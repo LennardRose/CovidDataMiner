@@ -466,14 +466,73 @@ curl -XGET 'datakrakennamenode:5601/status'
 \section{Nachrichtenartikel}
 \section{RKI Daten}
 \section{Corona Maßnahmen}
-Für die Daten der gültigen Maßnahmen und Verordnungen wird direkt auf die offiziellen Websites der Bundesregierung bzw. der jeweiligen Landesregierung zugegriffen. Wir haben uns bewusst dagegen entschieden mögliche Dritt-Anbieter wie Nachrichtenportale zu integrieren um die Informationen ungefiltert zu erhalten, was auch Nachteile nach sich zog da die jeweiligen Regierungsportale es teilweise deutlich schwerer gemacht haben. Im laufe der Analyse der Websites stellte sich heraus das es drei Fälle zu Beleuchten gab, zum einen wurde oft auf den Websites eher kläglich über Corona informiert und nur auf das aktuell gültige Rechtsdokument wie eine Corona-Verordnung verwiesen welches meistens als PDF-Datei publik gemacht wurde. Seltener wurde die gültige Verordnung oder zusammengefasste Informationen als reiner Text in den HTML-Code integriert. Und letzteres wurden zusammengefasste Informationen als Überblick in einer Bildergalerie präsentiert. Grundsätzlich sind die Internetauftritte der Regierungen äußerst Behindertengerecht aber diesbezüglich wurde das wohl vernachlässigt.
+Für die Daten der gültigen Maßnahmen und Verordnungen wird direkt auf die offiziellen Websites der Bundesregierung bzw. der jeweiligen Landesregierung zugegriffen. Wir haben uns bewusst dagegen entschieden mögliche Dritt-Anbieter wie Nachrichtenportale zu integrieren um die Informationen ungefiltert zu erhalten, was auch Nachteile nach sich zog da die jeweiligen Regierungsportale es teilweise deutlich schwerer gemacht haben. Daraus resultieren 16 Websiten die als Datenquellen hergenommen werden, hier eine Übersicht:
+
+\begin{itemize}
+\itemsep-1em
+\item \url{https://www.stmgp.bayern.de/coronavirus/}
+\item \url{https://www.niedersachsen.de/Coronavirus/vorschriften-der-landesregierung-185856.html}
+\item \url{https://www.hamburg.de/verordnung/}
+\item \url{https://www.inneres.bremen.de/corona-die-haeufigsten-fragen-und-antworten-23460}
+\item \url{https://kkm.brandenburg.de/kkm/de/}
+\item \url{https://www.berlin.de/corona/massnahmen/verordnung/}
+\item \url{https://corona.rlp.de/de/aktuelles/corona-regeln-im-ueberblick/}
+\item \url{https://www.saarland.de/DE/portale/corona/service/downloads/_documents/corona-verfuegungen/dld_2021-08-25-aenderung-vom-21-08-18.html}
+\item \url{https://www.schleswig-holstein.de/DE/Schwerpunkte/Coronavirus/Erlasse/2021/210820_LF_corona-bekaempfungsvo.html}
+\item \url{https://www.baden-wuerttemberg.de/de/service/aktuelle-infos-zu-corona/aktuelle-corona-verordnung-des-landes-baden-wuerttemberg/}
+\item \url{https://www.coronavirus.sachsen.de/amtliche-bekanntmachungen.html}
+\item \url{https://coronavirus.sachsen-anhalt.de/amtliche-informationen/}
+\item \url{https://www.hessen.de/fuer-buerger/corona-hessen/verordnungen-und-allgemeinverfuegungen}
+\item \url{https://www.tmasgff.de/covid-19/verordnung}
+\item \url{https://www.land.nrw/de/media/galerie/corona-fakten-1}
+\item \url{https://www.regierung-mv.de/corona/Verordnungen-und-Dokumente/}
+\end{itemize}
+
+Im laufe der Analyse der Websites stellte sich heraus das es drei Fälle zu Beleuchten gab. Zum einen wurde oft auf den Websites mehr schlecht als recht über die aktuellen Corona-Maßnahmen informiert und nur auf das aktuell gültige Rechtsdokument wie eine Corona-Verordnung verwiesen welches meistens als PDF-Datei publik gemacht wurde:
+\begin{figure}[h!]
+\caption{Hessische Landesseite (Verordnung als PDF verlinkt)}
+\label{websiteHessen}
+\centering
+\includegraphics[scale=0.9]{images/hessenOverview.png}
+\end{figure} 
+
+Seltener wurde die gültige Verordnung oder zusammengefasste Informationen als reiner Text in den HTML-Code integriert:
+
+\begin{figure}[h!]
+\caption{Berliner Landesseite (Verordnung im HTML Code)}
+\label{websiteBerlin}
+\centering
+\includegraphics[scale=0.8]{images/berlinOverview.png}
+\end{figure} 
+
+Und letzteres wurden zusammengefasste Informationen als Überblick in einer Bildergalerie präsentiert:
+
+\begin{figure}[h!]
+\caption{Nordrhein-Westfalens Landesseite (Informationen als Bilder Galerie)}
+\label{websiteNRW}
+\centering
+\includegraphics[scale=0.8]{images/nrwOverview.png}
+\end{figure} 
 
 \section{Wetterdaten}
 
 \chapter{Problemstellung}
 \section{Corona Maßnahmen}
+Bei den bereits genannten Datenquellen ergab sich die Problematik dass die Informationen in unterschiedlichen Formaten vorhanden sind. Die Informationen waren in Bildern als JPEG- und PNG-Dateien sowie PDF-Dateien enthalten und als reiner Text in den HTML-Code eingebettet. Um an die Rohdaten zu kommen wäre es an dieser Stelle ein leichtes diese Dateien nun einfach herunterzuladen und im HDFS abzulegen, da wir aber auch Metadaten für spätere Analysen speichern möchten hatten wir das Problem das wir aus den Bildern und PDF Dateien die Informationen extrahieren mussten. Um die Bilder zu Text zu wandeln entschieden wir uns für die Open Source OCR Engine Tesseract und um den Text aus den PDFs während der Laufzeit zu erhalten wurde auf das Python-Package pdfminer.six gesetzt.
+
+\subsection{Tesseract}
+Tesseract wurde ursprünglich bei Hewlett-Packard entwickelt und 2005 als Open Source veröffentlicht wo es seit 2006 von Google betreut wird.
+Seit Version 4 wurde die Engine auf ein künstliches Neuronales Netz aufgebaut. Grundsätzlich wird die Software von der Kommandozeile aus gesteuert um es aus unserem Python-Skript ansprechbar zu machen wird dazu noch das pytesseract-Package für Python benötigt.
 
 \chapter{Funktion und Implementierung}
+
+Für unsere vier primären Datenquellen RKI Daten, Maßnahmen der Regierung, Nachrichtenartikel und Wetterdaten haben wir uns Entschieden jeweils ein eigenes Programm ("Scraper") mit Python zu implementieren die hier nun einzeln erläutert werden.
+
+\section{Maßnahmen}
+Bei der Entwicklung wurde auf hohe Konfigurierbarkeit geachtet da schon während des Prozesses festgestellt wurde das jederzeit Änderungen an den ausgewählten Websiten passieren können und deshalb das Programm sehr flexibel sein muss.
+
+\subsection{Datenquellen Konfiguration}
+
 \section{Artikel}
 \subsection{Konfigurierbarkeit}
 Um mit dem Scraper später von beliebigen Quellen scrapen zu können wurde das gesamte System so Konfigurierbar wie möglich gemacht. Hierfür waren 2 Arten von Konfigurationsdateien notwendig, eine für das gesamte System und eine für jede Quelle von der mit dem Programm gescraped werden soll. Alle Konfigurationen wurden im JSON-Format abgespeichert, im folgenden das Format der JSON-Dateien, auf deren Anteile wir später weiter eingehen.
