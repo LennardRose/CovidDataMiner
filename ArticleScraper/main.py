@@ -17,7 +17,7 @@ if __name__ == '__main__':
     config_path = os.path.join("..", "config", "config.json") 
     
     utils.init_global_config(config_path)
-    logging.basicConfig(  format = utils.config["STANDARD_LOG_FORMAT"], datefmt = utils.config["STANDARD_LOG_DATE_FORMAT"], level=logging.INFO)
+    logging.basicConfig(filename=utils.config["STANDARD_LOG_FILENAME"], format = utils.config["STANDARD_LOG_FORMAT"], datefmt = utils.config["STANDARD_LOG_DATE_FORMAT"], level=logging.INFO)
 
     logging.info("Start Articlescraper")
     

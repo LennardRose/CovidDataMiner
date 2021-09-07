@@ -24,8 +24,8 @@ class ArgumentParserWrapper: # clap the sillables like a 3 year old
         parses the arguments
         """
 
-        self.parser.add_argument("-e", "--elasticsearch", action="append", dest="elastic_ids", default=[],
-                            help="config stored in elasticsearch, add id of the config")
+        self.parser.add_argument("-c", "--articleclient", action="append", dest="articleclient_ids", default=[],
+                            help="config stored in articleclient, add id of the config")
 
         self.parser.add_argument("-f", "--file", action="append", dest="filenames", default=[],
                             help="config stored in file, add filename")
@@ -44,7 +44,7 @@ class ArgumentParserWrapper: # clap the sillables like a 3 year old
         args = self.parse_arguments()
         data = []
 
-        if len(sys.argv) < 2: #programmname ist auch ein argument, deshalb 2 ---> scrape alle in elasticsearch wenn nichts weiter angegeben
+        if len(sys.argv) < 2: #programmname ist auch ein argument, deshalb 2 ---> scrape alle in articleclient wenn nichts weiter angegeben
             data = client_factory.get_article_client().get_all_article_configs()
 
         for filename in args.filenames:
