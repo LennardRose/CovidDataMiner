@@ -210,7 +210,7 @@ TODO
 
 \chapter{Einführung und Motivation}\label{ch:intro}
 Wir in unserem Team, bestehend aus Jochen Schmidt, Lennard Rose und Moritz Zeitler hatten nach unserem Gemeinsamen Programmierprojekt beschlossen, wieder zusammen zu arbeiten und diesmal in eine ganz andere Richtung zu gehen. Hierzu muss man wissen, dass unser Programmierprojekt damals aus einem Multiplayer-Computerspiel bestand, welches wir ausschließlich mit C++ sowie SDL programmierten. Da wir nichts vorgefertigtes an Code oder Lösungen benutzten und alles "von der Pike auf"  entwickelten, lag der Fokus vor allem auf Algorithmen, Datenstrukturen und Patterns. Auch wenn uns diese Art des Entwickelns allen sehr Spaß gemacht hat und unser Projekt sehr Erfolgreich war, wollten wir mit dieser Projektarbeit nochmal in eine ganz andere Richtung gehen um uns als Entwickler weiter zu entwickeln und unserem Repertoire ein paar neue Tools hinzuzufügen. Mit dem Thema Datamining war für uns auch sehr schnell ein Thema gefunden, Coronadaten boten sich aus aktuellem Anlass an und da Moritz noch ein paar alte Rechner im Keller stehen hatte, beschlossen wir nicht nur eine Lösung, sondern ein betriebsbereites System zu entwickeln. \newline
-Der Fokus dieser Projektarbeit soll also ganz klar auf Schnittstellen, Interaktionen und Recherche über Lösungsmöglichkeiten liegen. 
+Der Fokus dieser Projektarbeit soll also ganz klar auf Schnittstellen, Interaktionen und Recherche über Lösungsmöglichkeiten liegen.
 
 
 \chapter{Cluster}
@@ -258,7 +258,7 @@ Jede einzelne Datenquelle wird nun genauer beleuchtet und ein entsprechendes Dat
 \section{Corona Nachrichten/Artikel}
 Die Corona Nachrichten bzw. Artikel werden in zwei unterschiedlichen Technologien abgelegt. Zun\"achst betrachten wir die Rohdaten. Wie bereits erkl\"art wird jeder Artikel in Rohformat gespeichert. Diese Daten sind aber f\"ur die Auswertung und zur \"Ubersicht der Datensammlung erst mal unwichtig. Dies bedeutet das diese Daten nicht in einer Datenbank indiziert, sondern nur im HDFS abgelegt werden. Die Geschwindigkeit des HDFS f\"ur den Datenzugriff ist ausreichend um die Daten bei einer genauen Auswertung ad-hoc zu lesen. Streng genommen k\"onnte man sogar argumentieren dass das HDFS nichts anderes als ein 'key-value store' ist. So wird im Hintergrund eine Datei die unter einem gewissen Pfad abgelegt worden ist f\"ur den User als klassischer Dateipfad angezeigt (Ordner durch 'forward-slashes' getrennt und am Ende des Pfades ein Dateiname), intern aber der Pfad einen key darstellt. Dies ist n\"otig um die Verteilung und Ausfallsicherheit der Daten \"uber mehrere Knoten gew\"ahrleisten zu k\"onnen. Allerdings ist dies f\"ur den User faktisch nicht bemerkbar, da dieser immer mit den entsprechenden Pfaden arbeitet.
 Um nun den Kreis zu schliessen werden nicht nur Meta-Daten der Artikel gespeichert sondern auch der komplette Artikel im Rohformat um Datenverlust vorzubeugen und die Konsistenz der Daten sp\"ater noch pr\"ufen zu k\"onnen. Die Rohdaten werden dann abgelegt unter dem Pfad: '/datakraken/articles/region/quelle/zeitung/Datum/'. Dieser Pfad wird dann zu den Meta-Daten hinzugef\"ugt. Der Titel der Dateien im Textformat selbst setzt sich aus region + quellenname + artikeltitel zusammen. \newline
- Meta-Daten werden vom entsprechenden Scraper parallel zu den Rohdaten erzeugt. Dies Daten werden dann, unter entsprechendem Index Namen im Elasticsearch Cluster abgelegt. Dies hilft dabei eine \"Ubersicht über die Daten und deren Inhalt zu erhalten, einen Status zu bekommen in welchem Ma?e die Daten in das System kommen und erm\"oglicht eine rudiment\"are Analyse. Die Daten setzen sich zusammen aus den Atributen der Quelle: Name, Region und URL, des entsprechenden Artikels: URL, Titel, Datum der Veröffentlichung, Autor, Typ, Beschreibung und Stichworten, sowie Daten zur Erzeugung: Indizierungs bzw. Erstellungszeitpunkt, Dateiname und Pfad. 
+ Meta-Daten werden vom entsprechenden Scraper parallel zu den Rohdaten erzeugt. Dies Daten werden dann, unter entsprechendem Index Namen im Elasticsearch Cluster abgelegt. Dies hilft dabei eine \"Ubersicht über die Daten und deren Inhalt zu erhalten, einen Status zu bekommen in welchem Ma?e die Daten in das System kommen und erm\"oglicht eine rudiment\"are Analyse. Die Daten setzen sich zusammen aus den Atributen der Quelle: Name, Region und URL, des entsprechenden Artikels: URL, Titel, Datum der Veröffentlichung, Autor, Typ, Beschreibung und Stichworten, sowie Daten zur Erzeugung: Indizierungs bzw. Erstellungszeitpunkt, Dateiname und Pfad.
 \section{Corona RKI Daten}
 Die wichtigsten Basis Informationen \"uber den Status der Corona-Pandemie in Deutschland sind h\"ochst wahrscheinlich Inzidenz-Wert und Impfquote. Diese Informationen werden in diesem Projekt \"uber das Robert-Koch-Institut bezogen. \"Uber eine \"offentliche API kann nicht nur Inzidenzwert pro Bundesland, sondern auch per Bezirk bezogen werden. Ausserdem sind alle Informationen zum derzeitigen Impfstand in Deutschland, sowie Informationen zu PCR- und Schnelltests in Deutschland verf\"ugbar. Alle Informationen die hier von der API zur Verf\"ugung gestellt werden, werden auch gespeichert. Hier folgt der Scraper dem Allgemeinen Konzept, die Original Daten werden im HDFS abgelegt und dann mit minimaler Ver\"anderung im Elasticsearch indiziert.
 \section{Corona Maßnahmen}
@@ -305,7 +305,7 @@ JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 \section{Hadoop}
 \subsection{Allgemeines}
-Hadoop ist eine Opensource Lösung von Apache die parallele Verarbeitung und verteilte Datenhaltung auf einem Cluster möglich macht. Mit Hadoop ist auch immer das Hadoop Distributet File System (HDFS) sowie Hadoop YARN, ein Framework zur Ablaufplanung von verteilten Anwendungen. \newline
+Hadoop ist eine Opensource Lösung von Apache die parallele Verarbeitung und verteilte Datenhaltung auf einem Cluster möglich macht. Mit Hadoop ist auch immer das Hadoop Distributet File System (HDFS) sowie YARN, ein Framework zur Ablaufplanung von verteilten Anwendungen gemeint. \newline
 Der Cluster besteht aus einem Master und sogenannten Workernodes. Der Master behält dabei den Überblich über das verteilte Dateisystem. Dies tut er indem auf ihm 2 Daemons laufen, der Namenode und der Resourcemanager. Der Namenode managt das verteilte Dateisystem und weiß wo die gespeicherten Daten sind. Der Resourcemanager verwaltet YARN-Jobs und kümmert sich um die Planung und Ausführung von Prozessen auf den Workernodes. \newline
 Workernodes hingegen sind zum speichern der Daten und dem Ausführen der Jobs da. Auch sie hosten zwei Daemons, den Datanode, zum verwalten der Daten auf dem Node, sowie dem Nodemanager, der die Ausführung der Tasks auf dem Node verwaltet.
 \subsection{Setup}
@@ -485,19 +485,26 @@ curl -XGET 'datakrakennamenode:5601/status'
 \chapter{Datenquellen}
 \section{Nachrichtenartikel}
 \section{RKI Daten}
+Um einen \"Uberblick zu schaffen \"uber die derzeitige Corona-Situation ist es wichtig entsprechende Infektionszahlen dauerhaft abzuspeichern. Die hierf\"ur aktuell sicherste Quelle ist das Robert-Koch-Institut (RKI). Das RKI stellt außer den Infektionszahlen noch zus\"atzliche Informationen zur Verf\"ugung, wie zum Beispiel den aktuellen Impfstatus oder die Situation der durchgef\"uhrten Tests.\newline
+All diese Dinge werden prim\"ar nur in Tabellenform bereitgestellt, jedoch gibt es hier bereits einige Projekte die diese Tabellen automatisch einlesen und dann \"uber einen Webserver abfragbar machen. So wurde in diesem Projekt die \textit{https://api.corona-zahlen.org/docs/} als API genutzt die alle interessanten Daten zur Verf\"ugung stellt. \newline
+Alle Daten werden hier vor der Indizierung vor-verarbeitet und dann nach dem Ablagekonzept abgelegt.
+Des weiteren wird bei den Inzidenzwerten auch noch zwischen Landkreis und Bundesl\"andern unterschieden und beide abgespeichert bzw. indiziert.
 \section{Corona Maßnahmen}
 Als Datenquelle für die gültigen Regelungen der Regierung bzw. der jeweiligen Landesregierungen wurde auf deren Websites zugegriffen. Wenn es möglich war die aktuellen Maßnahmen direkt als Text auf der Website zu finden, was selten vorkam, wurde dieser ähnlich den Nachrichtenartikeln geladen. Leider haben es die Landesregierungen nicht sehr einfach gemacht. Manchmal gab es Zusammenfassungen als Bilder ansonsten wurden die aktuell gültigen Verordnungen, welche als pdf-File veröffentlicht werden, geladen. Um die Bilder und PDFs danach, sinnvoll verwertet, in Elasticsearch abgelegen zu können wurde auf Tesseract zur Bild-zu-Text Verarbeitung und OCRmyPDF zur PDF-zu-suchbarenPDF zurückgegriffen. Tesseract ist eine freie Software zur Texterkennung die auf einem neuronalen Netz aufbaut und OCRmyPDF ist ein Python-Framework das mittels Tesseract durchsuchbare PDFs generiert.
 
 - zukünftig vll noch nachschauen ob vll lokale newsseiten infos zusammengefasst anbieten ala radiogong.de/wasgiltmomentan
 
 \section{Wetterdaten}
+Die Wetterdaten sind grunds\"atzlich die einfachste Datenquelle. Hier gibt es mehrere verschiedene APIs die Wetterdaten zur Verfügung stellen, die Schwierigkeit ist nur eine API zu finden die diese Informationen ohne Kosten freigeben.
+Ausgew\"ahlt wurde hier endg\"ultig \textit{https://openweathermap.org/api}. Hier k\"onnen aktuelle Wetterdaten umsonst heruntergeladen werden. Eingeschr\"ankt wird hier bei historischen Daten, was allerdings f\"ur das Konzept irrelevant ist da die Daten immer tagesaktuell abgespeichert werden sollen. \newline
+Die API wird dann pro Stadt abgefragt und nach dem Ablagekonzept abgelegt bzw. indiziert. Zu beachten ist allerdings noch das nur eine beschr\"ankte Anzahl an Anfragen pro Minute durchgef\"uhrt werden k\"onnen. Dies wurde Software technisch Umgang oder besser gesagt ber\"ucksichtigt.
 
 \chapter{Funktion und Implementierung}
 \section{Artikel}
 \subsection{Konfigurierbarkeit}
 Um mit dem Scraper später von beliebigen Quellen scrapen zu können wurde das gesamte System so Konfigurierbar wie möglich gemacht. Hierfür waren 2 Arten von Konfigurationsdateien notwendig, eine für das gesamte System und eine für jede Quelle von der mit dem Programm gescraped werden soll. Alle Konfigurationen wurden im JSON-Format abgespeichert, im folgenden das Format der JSON-Dateien, auf deren Anteile wir später weiter eingehen.
 \subsubsection{Allgemeine Konfiguration}
-Die allgemeine Konfiguration config.json wurde hierbei bei Start in eine globale Variable eingelesen auf die von ueberall aus zugegriffen werden konnte. Werte aus dieser Datei können sich grob in Daten zur initialisierung der Clients und des Loggers, sowie Zeitformate und Einstellungen für den Scraper einteilen. 
+Die allgemeine Konfiguration config.json wurde hierbei bei Start in eine globale Variable eingelesen auf die von ueberall aus zugegriffen werden konnte. Werte aus dieser Datei können sich grob in Daten zur initialisierung der Clients und des Loggers, sowie Zeitformate und Einstellungen für den Scraper einteilen.
 \begin{lstlisting}[caption=config.json,label=config,language=json]
 {
 "ELASTICSEARCH_URL" : "192.168.0.115",
@@ -505,7 +512,7 @@ Die allgemeine Konfiguration config.json wurde hierbei bei Start in eine globale
 "HDFS_URL" : "192.168.0.115",
 "HDFS_PORT" : "9870",
 "HDFS_USER" : "hadoop",
-"RECENT_ARTICLE_COUNT" : "100", 
+"RECENT_ARTICLE_COUNT" : "100",
 "MAX_TRY" : "3",
 "STANDARD_DATETIME_FORMAT" : "%Y-%m-%dT%H:%M:%S.%fZ",
 "STANDARD_DATE_FORMAT" :"%Y-%m-%d",
@@ -514,7 +521,7 @@ Die allgemeine Konfiguration config.json wurde hierbei bei Start in eine globale
 "STANDARD_LOG_FILENAME" : "articlescraper.log",
 "WEBDRIVER_DIR" : "drivers",
 "WEBDRIVER_FILE" : "chromedriver",
-"CLIENTS" : {   
+"CLIENTS" : {
     "META_CLIENT" : "elastic",
     "ARTICLE_CLIENT" : "elastic",
     "FILE_CLIENT" : "hdfs"
@@ -583,7 +590,7 @@ Die entsprechenden Konfigurationen werden dann als Liste dem Scraper zurückgege
         "attribute_value": null,
         "default": null
     }
-} 
+}
 \end{lstlisting}
 
 \subsection{Erhalten von Artikellinks}
@@ -592,7 +599,7 @@ Die entsprechenden Konfigurationen werden dann als Liste dem Scraper zurückgege
 \label{articlelist}
 \centering
 \includegraphics[scale=0.4]{articles_list.png}
-\end{figure} 
+\end{figure}
 \begin{lstlisting}[caption=article\_config für Übersichtsseite,label=articleconfigoverview,language=json]
     "region": "niedersachsen",
     "site_name": "kreiszeitung",
@@ -609,6 +616,56 @@ Die entsprechenden Konfigurationen werden dann als Liste dem Scraper zurückgege
 Um nicht jedes mal für jeden einzelnen Artikel eine eigene Konfiguration erstellen bzw. einen Scrapevorgang starten zu müssen wird sich zu nutze gemacht, dass Artikelverlinkungen auf Artikelübersichtsseiten, wie in Figure \ref {articlelist} zu sehen, in gleichartige HTML-Tags geschrieben werden. Es muss in der article\_config also nur der Link zu dieser Übersichtsseite (bestehend aus base\_url und path\_url), sowie das HTML-Tag und die HTML-Klasse angegeben werden. Im Fall des Beispiels in listing \ref{articleconfigoverview} wurden die Artikel der Kreiszeitung bereits über eine suche, wie unter path\_url zu sehen weiter auf unser Themengebiet eingeschränkt. Um nun zu verhindern, dass unerwünschte Artikel wie z.B. Werbung, Newsticker und Ähnliches gespeichert werden, lassen sich über 'url\_conditions' bei 'url\_string' Zeichenketten angeben, welche in der URL des Artikels (nicht) vorkommen sollen, steuerbar über setzen von 'include\_condition' auf true/false. Dabei lässt sich durch die Elemente der Liste eine 'AND'-Beziehung darstellen, über trennen von Zeichenketten mittels '|' innerhalb eines 'condition\_string' eine 'OR'-Beziehung. In diesem Beispiel werden Artikellinks nach dem kriterium gefiltert, ob sie '/niedersachsen' enthalten, den Pfad der Website, unter welchem alle Niedersachsen betreffenden Artikel zu finden sind.
 
 \subsection{Persistierung}
+
+\section{RKI-Daten}
+Technisch gesehen ist die Implementierung des RKI-Scraper nichts besonderes. Im Endeffekt wurden die Schnittstellen der RKI-API abgefragt, die Daten verarbeitet, indiziert und abgelegt. Hierzu wurden einige zus\"atzliche Hilfsfunktionen erstellt die diese Arbeiten erleichtern. \newline
+Der Scraper besteht aus drei großen Komponenten. Eine HDFS-Komponente, eine Elasticsearch-Komponente und eine Scraping Komponente. Jede einzelne dieser Komponenten haben eine ganz bestimmte Aufgabe vergleichbar mit Nano-Services. Diese sollen im folgenden kurz erl\"auter werden.
+\subsection{Scraper}
+Durch die Gegebenheit das im Endeffekt vier verschiedene, aber trotzdem \"ahnliche, Endpunkte nacheinander abgefragt wurde ein zentraler abstrakter Scraper gebaut. Hier sind die zentralen Funktionen hinterlegt die f\"ur alle Endpunkte identisch sind wie auch die abstrakten Methoden die jeder Scraper zur Verf\"ugung stellen muss. \newline
+Die Funktionsweise basiert immer auf dem gleichen Gedankengang, die Roh-Daten werden \"uber den entsprechenden Endpunkt heruntergeladen und zwischengespeichert. Diese Rohdaten sind im JSON-Format und werden so auch abgelegt.
+\begin{lstlisting}[caption=Inzidenz Rohdaten der Corona-API ,label=incidencedataraw,language=json]
+"SH":{
+	"id":1,
+	"name":"Schleswig-Holstein",
+	"population":2910875,
+	"cases":72677,
+	"deaths":1662,
+	"casesPerWeek":1478,
+	"deathsPerWeek":1,
+	"recovered":68390,
+	"abbreviation":"SH",
+	"weekIncidence":50.77511057671663,
+	"casesPer100k":2496.74067076051,
+	"delta":{
+		"cases":171,
+		"deaths":5,
+		"recovered":274
+	}
+},
+"HH":{
+	"id":2,
+	"name":"Hamburg",
+	"population":1852478,
+	"cases":86997,
+	"deaths":1654,
+	"casesPerWeek":1478,
+	"deathsPerWeek":0,
+	"recovered":81385,
+	"abbreviation":"HH",
+	"weekIncidence":79.78502308799348,
+	"casesPer100k":4696.250103914865,
+	"delta":{
+		"cases":195,
+		"deaths":0,
+		"recovered":132
+	}
+}
+\end{lstlisting}
+Zus\"atzlich wird dann noch der Zeitstempel angeh\"angt wann diese Daten heruntergeladen werden.
+
+\subsection{HDFS Helper}
+\subsection{Elasticsearch Helper}
+\section{Wetter}
 
 
 
