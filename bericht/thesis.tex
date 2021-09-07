@@ -1,10 +1,11 @@
-\documentclass[12pt,twoside,a4paper,parskip]{scrbook}
+\documentclass[12pt,oneside,a4paper,parskip]{scrbook}
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
 \usepackage[ngerman]{babel}
 \usepackage{floatflt}
 \usepackage{subfigure}
 \usepackage[pdftex]{graphicx}
+\graphicspath{ {./pictures/} }
 \usepackage[hidelinks]{hyperref}
 \usepackage{color}
 \usepackage{amssymb}
@@ -28,7 +29,8 @@
 \usepackage{setspace}
 \usepackage{booktabs}
 \usepackage[style=numeric,backend=biber]{biblatex}
-\bibliography{literatur}
+\bibliography{./thesis.bib}
+
 
 
 %%%%%%%%%%%%%%%%%%%
@@ -214,12 +216,30 @@ Der Fokus dieser Projektarbeit soll also ganz klar auf Schnittstellen, Interakti
 \chapter{Cluster}
 Grunds\"atzlich wird das komplette Projekt auf Basis eines Hadoop Cluster erstellt. Hadoop ist ein Framework f\"ur die skalierbare und verteilt arbeitende Software. Gerne wird auch der Begriff  Hadoop \"Okosystem verwendet da es einen kompletten Zoo von Technologien (z.B. Zookeeper, HBase, Flink, Storm, Pig, Solr) gibt die im Hadoop Umfeld verwendet werden kann. Hadoop erm\"oglicht eine horizontale Skalierung, dies bedeutet das dem System dynamisch zus\"atzliche Knoten, angeh\"angt werden k\"onnen die dann die Rechenleistung, bzw die Speicherkapazit\"at des Clusters erh\"ohen. In der Basis besteht Hadoop aus YARN und dem HDFS die zusammen mit dem MapReduce Konzept eine Datenverarbeitung erm\"oglichen. Zus\"atzlich zu diesen Standardkomponenten wurden noch Apache Oozie sowie Apache Zeppelin installiert. Diese einzelnen Konzepte sowie zus\"atzliche Basisinformationen zum Cluster werden im folgenden noch genauer erkl\"art.
 \section{YARN}
-YARN steht f\"ur 'Yet another resource negotiater'. Die Aufgabe des YARN darin die verf\"ugbaren Ressourcen auf alle anfallenden Aufgaben zu verteilen. Dies bedeutet YARN ist 'Resourcemanager' als auch 'Job-Scheduler'. Bevor YARN zu seinem Namen kam wurde der Dienst zun\"achst 'MapReduce2' gennant. Jedoch entwickelte sich YARN dann schnell dahingehend das auch noch andere Aufgaben neben MapReduce, wie zum Beispiel interaktive Abfragen oder Echtzeit-Analysen von Streaming-Daten, ausgef\"uhrt werden k\"onnen, was dazuf\"uhrte die Verbindung zu MapReduce im Namen aufzul\"osen. \newline
-Die tats\"achliche grundlegende Idee hinter der Funktion von YARN ist das Aufspalten von 'ResourceManager' und 'ApplicationMaster'. Der ResourceManager hat lediglich die Aufgabe
+YARN steht f\"ur 'Yet another resource negotiater'. Die Aufgabe des YARN darin die verf\"ugbaren Ressourcen auf alle anfallenden Aufgaben zu verteilen. Dies bedeutet YARN ist 'Resourcemanager' als auch 'Job-Scheduler'.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{yarnClusterOverview.png}
+	\captionsetup{justification=centering}
+	\caption{\"Ubersichtsseite von YARN}
+	\label{pic:yarnClusterOverview}
+\end{figure}
+Bevor YARN zu seinem Namen kam wurde der Dienst zun\"achst 'MapReduce2' genannt. Jedoch entwickelte sich YARN dann schnell dahingehend das auch noch andere Aufgaben neben MapReduce, wie zum Beispiel interaktive Abfragen oder Echtzeit-Analysen von Streaming-Daten, ausgef\"uhrt werden k\"onnen, was dazuf\"uhrte die Verbindung zu MapReduce im Namen aufzul\"osen. \newline
+Die tats\"achliche grundlegende Idee hinter der Funktion von YARN ist das Aufspalten von 'ResourceManager' und 'ApplicationMaster'. Der ResourceManager ist die zentrale Komponente mit dem der User in Kommunikation steht oder besser gesagt mit dem eine Anfrage an Rechenkapazit\"at kommuniziert. F\"ur eine solche Anfrage erstellt der 'ResourceManager' einen enstprechenden 'ApplicationMaster', dieser k\"ummert sich dann von Anfang bis Ende um diesen einen Auftrag. Status, Neustart oder Fehlerbehandlung werden komplett von ihm \"ubernommen der 'ResourceManager' hat damit nichts mehr zu tun. Der 'ApplicationMaster' \"ubergibt seine Aufgabe an einen Nodemanager der dann die tatsa\"achliche Ausf\"uhrung startet, bzw eine Container entgegen nimmt und diesen ausf\"uhrt. Die \"Uberwachung dieses Containers ist allerdings wiederum, wie bereits erw\"ahnt, Aufgabe des 'ApplicationMaster'. Nach Abschluss der Ausf\"uhrung meldet sich der 'ApplicationMaster' wieder beim 'ResourceManager' ab und gibt seine Ressourcen wieder frei.\cite{Shenoy.2014}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.9]{yarnOverview.png}
+	\captionsetup{justification=centering}
+	\caption{Visualisierung der Aus\"uhrung eines YARN-Containers}
+	\label{pic:yarnOverview}
+\end{figure}
+Dies ist an dieser Stelle wahrscheinlich durchaus unverst\"andlich, was allerdings f\"ur den nachfolgenden Bericht nicht all zu relevant ist.
+\newline An dieser Stelle ist es wichtig zu erw\"ahnen das die Auftr\"age die von YARN ausgef\"uhrt werden immer in Containern ausgef\"uhrt werden, vergleichbar mit Docker oder Kubernetes. Dies bedeutet das alle Abh\"angigkeiten mit in den Container geliefert werden m\"ussen. Außerdem ist zu beachten das es teilweise zu Problemen mit Netzwerk bzw. Internetzugriff kommen kann.
 \section{HDFS}
-\section{MapReduce}
-\section{Oozie}
-\section{Zeppelin und Cron}
+Das 'Hadoop Distributed File System' ist die Technologie, die im Hadoop Umfeld die verteilte Datenablage erm\"oglicht. HDFS hat viele Gemeinsamkeiten zu andern bekannten verteilten Dateisystemen wie zum Beispiel Amazon S3. Der Hauptunterschied zu den meisten Technologien ist Widerstandsf\"ahigkeit gegen\"uber Fehlern. Der Grundsatz von Hadoop war immer das ein Cluster aus Standard bzw. Kosteng\"unstiger Hardware aufgebaut werden kann, was allerdings zu einer h\"ohren Fehleranf\"alligkeit f\"uhren kann. Das HDFS wurde in diesem Zusammenhang nach dem Grundsatz entwickelt das es immer ein Teil der Hardware nicht funktioniert.\cite{hdfsFailure} \newline
+Mit unter der wichtigste Grundsatz ist aber wahrscheinlich dass, wenn m\"oglich, nicht die Daten zum Prozess bewegt werden sondern der Code bzw. der Algorithmus zu den Daten gebracht wird.\cite{movingComputation} Je gr\"osser der Datensatz desto gr\"osser die Kosten diese Daten zu verschieben. Und da sich im Normalfall ein 'BigData' System haupts\"achlich um grosse Datenmengen k\"ummert wird dieser Prozess genau umgedreht, der Algorithmus kommt zu den Daten. Die n\"otigen Voraussetzungen und Schnittstellen stellt das HDFS zur Verf\"ugung um Applikationen es zu erm\"oglichen diese Idee umzusetzen.
+\section{Oozie und Cron}
+\section{Zeppelin}
 
 \chapter{Entwicklungsprozess}
 Beim Entwicklungsprozess wurde sich f\"ur eine Scrum artige L\"osung entschieden. So werden klassische Artefakte und Tools wie etwa das Daily oder der Backlog entsprechend angepasst angewandt. Anpassung meist im Sinne der zeitlichen Komponente. Da das Projekt parallel w\"ahrend des Semesters abl\"auft wurde hier das 'Daily', von einem t\"aglichen auf einen w\"ochentlichen Rhythmus umgestellt. Das Backlog wird durch das Team selbst bef\"ullt da es keinen 'Product Owner' gibt. Genauso wurden die Sprints abgewandelt, durch die zeitliche Entzerrung wird hier direkt auf eine dynamische Sprintl\"ange gesetzt die jeweils zum Sprint-Anfang abgestimmt worden ist. \newline
@@ -629,26 +649,5 @@ Um nicht jedes mal für jeden einzelnen Artikel eine eigene Konfiguration erstel
 %% declaration on oath
 %%%%%%%%%%%%%%%%%%%
 
-\addchap{Eidesstattliche Erklärung}
-
-Hiermit versichere ich, dass ich die vorgelegte Bachelorarbeit selbstständig verfasst und noch nicht anderweitig zu Prüfungszwecken vorgelegt habe. Alle benutzten Quellen und Hilfsmittel sind angegeben, wörtliche und sinngemäße Zitate wurden als solche gekennzeichnet.
-
-\vspace{20pt}
-\begin{flushright}
-$\overline{~~~~~~~~~~~~~~~~~\mbox{\ShowBaAuthor, am \today}~~~~~~~~~~~~~~~~~}$
-\end{flushright}
-
-\addchap{Zustimmung zur Plagiatsüberprüfung}
-
-Hiermit willige ich ein, dass zum Zwecke der Überprüfung auf Plagiate meine vorgelegte Arbeit in digitaler Form an PlagScan (www.plagscan.com) übermittelt und diese vorübergehend (max. 5~Jahre) in der von PlagScan geführten Datenbank gespeichert wird sowie persönliche Daten, die Teil dieser Arbeit sind, dort hinterlegt werden.
-
-\begin{small}
-Die Einwilligung ist freiwillig. Ohne diese Einwilligung kann unter Entfernung aller persönlichen Angaben und Wahrung der urheberrechtlichen Vorgaben die Plagiatsüberprüfung nicht verhindert werden. Die Einwilligung zur Speicherung und Verwendung der persönlichen Daten kann jederzeit durch Erklärung gegenüber der Fakultät widerrufen werden.
-\end{small}
-
-\vspace{20pt}
-\begin{flushright}
-$\overline{~~~~~~~~~~~~~~~~~\mbox{\ShowBaAuthor, am \today}~~~~~~~~~~~~~~~~~}$
-\end{flushright}
 
 \end{document}
