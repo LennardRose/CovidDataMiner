@@ -1,7 +1,6 @@
 import logging
 import json
 import pandas as pd
-from elasticsearch import Elasticsearch
 from Config import *
 from ElasticSearchClient import ElasticSearchClient
 from HDFSclient import *
@@ -17,12 +16,11 @@ if __name__ == "__main__":
     logger.debug("Creating HDFS Client")
     hdfs_client = MOCKHDFSClient()
 
+    logger.debug("Starting RestrictionScraper")
     restrictionScraper = RestrictionScraper(es_client=es_client, hdfs_client=hdfs_client)
 
-    logger.info("Starting RestrictionScraper")
-
-    logger.debug("Collecting all sources from ElasticSearch")
     # get all sources:
+    logger.debug("Collecting all sources from ElasticSearch")
     sources = es_client.getAllSources()
 
     for source in sources:

@@ -88,16 +88,16 @@ metaIndexMapping = \
   "mappings" : {
     "properties" : {
       "state" : {
-        "type" : "string"
+        "type" : "text"
       },
       "url" : {
-        "type" : "string"
+        "type" : "text"
       },
       "target" : {
-        "type" : "string"
+        "type" : "text"
       },
       "value" : {
-        "type" : "string"
+        "type" : "text"
       }
     }
   }
