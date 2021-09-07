@@ -179,19 +179,12 @@ class Parser:
 
             if dataType == ".pdf":
                 logger.info("downloading File %s", url)
-                #urllib.request.urlretrieve(url, fullFilePath) -> obsolete because response gives us the files inmemory?!
 
                 fileBytes = requests.get(url).content
-
-                #with open('test.pdf', 'wb') as fd:
-                 #  fd.write(fileBytes)
 
                 logger.info("extracting text from pdf..")
                 data = '\n' + pdfminer.high_level.extract_text(io.BytesIO(fileBytes), codec="utf-8")
 
-
-
-                # TODO: because hdfs integration not done
                 self.hdfs_client.save_as_file(self.directory, fileName, fileBytes)
 
             else:
@@ -201,15 +194,11 @@ class Parser:
                 fileNameBW = fileName[:fileName.rindex(".")] + "BW" + dataType
 
                 logger.info("downloading File %s", cleanedUrl)
-                #urllib.request.urlretrieve(cleanedUrl, fullFilePath) -> obsolete because response gives us the files inmemory?!
                 imgBytes = requests.get(cleanedUrl).content
                 image = Image.open(io.BytesIO(imgBytes))
 
-                image.save("test"+dataType)
-
                 logger.info("converting %s into B&G", fileName)
                 imgBW = image.convert("1", dither=Image.NONE)
-                imgBW.save("testBW"+dataType)
 
                 # converting the generated B&W image to bytes to save it
                 buf = io.BytesIO()

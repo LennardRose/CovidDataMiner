@@ -1,14 +1,13 @@
 import logging
 import json
 import pandas as pd
-from elasticsearch import Elasticsearch
 from Config import *
 from ElasticSearchClient import ElasticSearchClient
 from HDFSclient import *
 from RestrictionScraper import RestrictionScraper
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.WARNING)#, filename=logFileName)
+    logging.basicConfig(level=logging.WARNING, filename=logFileName)
     logger = logging.getLogger(loggerName)
     logger.setLevel(logging.DEBUG)
 
@@ -17,16 +16,14 @@ if __name__ == "__main__":
     logger.debug("Creating HDFS Client")
     hdfs_client = MOCKHDFSClient()
 
+    logger.debug("Starting RestrictionScraper")
     restrictionScraper = RestrictionScraper(es_client=es_client, hdfs_client=hdfs_client)
 
-    logger.info("Starting RestrictionScraper")
-
-    logger.debug("Collecting all sources from ElasticSearch")
     # get all sources:
+    logger.debug("Collecting all sources from ElasticSearch")
     sources = es_client.getAllSources()
 
     for source in sources:
-        if source["state"] == "Bayern" :#or source["state"] == "Niedersachsen":
-            restrictionScraper.scrape(source)
+        restrictionScraper.scrape(source)
 
     logger.info("Finished scraping RestrictionData")
