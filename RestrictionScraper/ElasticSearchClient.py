@@ -63,3 +63,12 @@ class ElasticSearchClient:
             doc (object/dict): document to insert
         """
         self.es_client.index(index=indexName, id=id, body=doc)
+
+    def indexConfig(self, id, doc):
+        """
+        does index a single doc of scraping config of a state
+
+        Args:
+            doc (object/dict): document to insert
+        """
+        self.es_client.index(index=metaIndexName, id=id, body=doc)
