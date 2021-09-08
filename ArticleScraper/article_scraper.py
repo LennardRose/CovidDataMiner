@@ -77,7 +77,7 @@ class ArticleScraper:
             logging.info("Save content of: " + URL)
 
             soup = self._get_soup(URL)
-            content = self.get_text_content(soup)
+            content = self._get_text_content(soup)
 
             article_meta_data = self._get_meta_data( URL, soup, article_config)
 

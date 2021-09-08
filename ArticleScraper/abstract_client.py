@@ -7,7 +7,6 @@
 #####################################################################
 from abc import ABC, abstractmethod
 import logging
-from utils import Singleton
 
 class MetaClient(ABC):
     
