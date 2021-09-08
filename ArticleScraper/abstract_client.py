@@ -7,7 +7,6 @@
 #####################################################################
 from abc import ABC, abstractmethod
 import logging
-from utils import Singleton
 
 class MetaClient(ABC):
     
@@ -31,7 +30,7 @@ class ArticleClient(ABC):
         logging.error("Method not implemented")
 
     @abstractmethod
-    def get_all_article_configs(self, ):
+    def get_all_article_configs(self):
         logging.error("Method not implemented")
 
 

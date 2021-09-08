@@ -27,9 +27,9 @@ class ElasticSearchClient(MetaClient, ArticleClient):
         logging.info("Init Elasticsearch client with url: %s : %s", utils.config["ELASTICSEARCH_URL"] , utils.config["ELASTICSEARCH_PORT"])
         self.es_client = Elasticsearch([utils.config["ELASTICSEARCH_URL"] + ":" + utils.config["ELASTICSEARCH_PORT"]])
 
-        self.initialize_indizes_if_not_there()
+        self._initialize_indizes_if_not_there()
 
-    def initialize_indizes_if_not_there(self):
+    def _initialize_indizes_if_not_there(self):
         """
         initializes needed indizes if not already there
         """
@@ -39,7 +39,7 @@ class ElasticSearchClient(MetaClient, ArticleClient):
 
         if not self.es_client.indices.exists(index="article_meta_data"):
             logging.info("Index article_meta_data not found, initialize index.")
-            self.es_client.indices.create(index="article_meta_data", body=self.get_article_meta_data_mapping())
+            self.es_client.indices.create(index="article_meta_data", body=self._get_article_meta_data_mapping())
 
 
     def delete_meta_data(self, id):
@@ -143,7 +143,7 @@ class ElasticSearchClient(MetaClient, ArticleClient):
             return False
 
 
-    def get_article_meta_data_mapping(self):
+    def _get_article_meta_data_mapping(self):
         """
         :return: the article_meta_data index mapping 
         """
