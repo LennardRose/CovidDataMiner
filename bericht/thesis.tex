@@ -212,7 +212,11 @@ TODO
 Wir in unserem Team, bestehend aus Jochen Schmidt, Lennard Rose und Moritz Zeitler hatten nach unserem Gemeinsamen Programmierprojekt beschlossen, wieder zusammen zu arbeiten und diesmal in eine ganz andere Richtung zu gehen. Hierzu muss man wissen, dass unser Programmierprojekt damals aus einem Multiplayer-Computerspiel bestand, welches wir ausschließlich mit C++ sowie SDL programmierten. Da wir nichts vorgefertigtes an Code oder Lösungen benutzten und alles "von der Pike auf"  entwickelten, lag der Fokus vor allem auf Algorithmen, Datenstrukturen und Patterns. Auch wenn uns diese Art des Entwickelns allen sehr Spaß gemacht hat und unser Projekt sehr Erfolgreich war, wollten wir mit dieser Projektarbeit nochmal in eine ganz andere Richtung gehen um uns als Entwickler weiter zu entwickeln und unserem Repertoire ein paar neue Tools hinzuzufügen. Mit dem Thema Datamining war für uns auch sehr schnell ein Thema gefunden, Coronadaten boten sich aus aktuellem Anlass an und da Moritz noch ein paar alte Rechner im Keller stehen hatte, beschlossen wir nicht nur eine Lösung, sondern ein betriebsbereites System zu entwickeln. \newline
 Der Fokus dieser Projektarbeit soll also ganz klar auf Schnittstellen, Interaktionen und Recherche über Lösungsmöglichkeiten liegen.
 
-\chapter{More Projektmanagement}
+\chapter{Entwicklungsprozess}
+Beim Entwicklungsprozess wurde sich f\"ur eine Scrum artige L\"osung entschieden. So werden klassische Artefakte und Tools wie etwa das Daily oder der Backlog entsprechend angepasst angewandt. Anpassung meist im Sinne der zeitlichen Komponente. Da das Projekt parallel w\"ahrend des Semesters abl\"auft wurde hier das 'Daily', von einem t\"aglichen auf einen w\"ochentlichen Rhythmus umgestellt. Das Backlog wird durch das Team selbst bef\"ullt da es keinen 'Product Owner' gibt. Genauso wurden die Sprints abgewandelt, durch die zeitliche Entzerrung wird hier direkt auf eine dynamische Sprintl\"ange gesetzt die jeweils zum Sprint-Anfang abgestimmt worden ist. \newline
+G\"anzlich verzichtet wurde auf die Sprint Retrospektive, zwar hat sich im Laufe des Projekts der Prozess dynamisch angepasst, allerdings wurde hier nicht explizit ein Artefakt bzw. Termin durchgef\"uhrt. \"Anderungen am Prozess wurden kurzfristig und in direkter Absprache mit allen Teammitgliedern beschlossen. Vereinfachend hinzu kam, dass sich die Projektaufgaben durch die vielen, verschiedenartigen Scraper, welche nicht weiter miteinander interagieren, gut aufteilen ließen. So konnte jeder sein Tempo selbst bestimmen und es waren wenig zusätzliche Maßnahmen nötig um die Arbeit an gemeinsam genutzten Modulen zu koordinieren.
+
+\chapter{Projektmanagement}
 \section{Risikoanalyse}
 Für unser Projekt haben wir nach der generellen Planung des Aufbaus und Systems eine Risikoanalyse vorgenommen. Da wir auf viele verschiedene heterogene Elemente angewiesen sind war es uns wichtig uns vorher eine Übersicht möglicher Risiken zu erstellen. Für unsere Bewertung haben wir uns auf die Kategorien {gering, mittel und hoch} festgelegt für die Wahrscheinlichkeit des Eintritts und die Größe des Schadens bei Eintritt.
 \subsection{Risikoidentifikation}
@@ -247,7 +251,7 @@ Transportschäden - Häufigkeit: mittel; Schaden: mittel
 \end{figure}
 
 
-\chapter{Cluster}
+\chapter{Cluster Technologien}
 Grunds\"atzlich wird das komplette Projekt auf Basis eines Hadoop Cluster erstellt. Hadoop ist ein Framework f\"ur die skalierbare und verteilt arbeitende Software. Gerne wird auch der Begriff  Hadoop \"Okosystem verwendet da es einen kompletten Zoo von Technologien (z.B. Zookeeper, HBase, Flink, Storm, Pig, Solr) gibt die im Hadoop Umfeld verwendet werden kann. Hadoop erm\"oglicht eine horizontale Skalierung, dies bedeutet das dem System dynamisch zus\"atzliche Knoten, angeh\"angt werden k\"onnen die dann die Rechenleistung, bzw die Speicherkapazit\"at des Clusters erh\"ohen. In der Basis besteht Hadoop aus YARN und dem HDFS die zusammen mit dem MapReduce Konzept eine Datenverarbeitung erm\"oglichen. Zus\"atzlich zu diesen Standardkomponenten wurden noch Apache Oozie sowie Apache Zeppelin installiert. Diese einzelnen Konzepte sowie zus\"atzliche Basisinformationen zum Cluster werden im folgenden noch genauer erkl\"art.
 \section{YARN}
 YARN steht f\"ur 'Yet another resource negotiater'. Die Aufgabe des YARN darin die verf\"ugbaren Ressourcen auf alle anfallenden Aufgaben zu verteilen. Dies bedeutet YARN ist 'Resourcemanager' als auch 'Job-Scheduler'.
@@ -273,13 +277,19 @@ Dies ist an dieser Stelle wahrscheinlich durchaus unverst\"andlich, was allerdin
 Das 'Hadoop Distributed File System' ist die Technologie, die im Hadoop Umfeld die verteilte Datenablage erm\"oglicht. HDFS hat viele Gemeinsamkeiten zu andern bekannten verteilten Dateisystemen wie zum Beispiel Amazon S3. Der Hauptunterschied zu den meisten Technologien ist Widerstandsf\"ahigkeit gegen\"uber Fehlern. Der Grundsatz von Hadoop war immer das ein Cluster aus Standard bzw. Kosteng\"unstiger Hardware aufgebaut werden kann, was allerdings zu einer h\"ohren Fehleranf\"alligkeit f\"uhren kann. Das HDFS wurde in diesem Zusammenhang nach dem Grundsatz entwickelt das es immer ein Teil der Hardware nicht funktioniert.\cite{hdfsFailure} \newline
 Mit unter der wichtigste Grundsatz ist aber wahrscheinlich dass, wenn m\"oglich, nicht die Daten zum Prozess bewegt werden sondern der Code bzw. der Algorithmus zu den Daten gebracht wird.\cite{movingComputation} Je gr\"osser der Datensatz desto gr\"osser die Kosten diese Daten zu verschieben. Und da sich im Normalfall ein 'BigData' System haupts\"achlich um grosse Datenmengen k\"ummert wird dieser Prozess genau umgedreht, der Algorithmus kommt zu den Daten. Die n\"otigen Voraussetzungen und Schnittstellen stellt das HDFS zur Verf\"ugung um Applikationen es zu erm\"oglichen diese Idee umzusetzen.
 \section{Oozie und Cron}
+Als Grundprinzip sollen alle Daten kontinuierlich und automatisch im Cluster gespeichert werden. Hierzu m\"ussen die entsprechenden Datensammler regelm\"assig gestartet werden oder dauerhaft als Daemon laufen. In diesem Projekt wurde davon abgesehen dauerhaft laufende Datensammler zu verwenden da diese grunds\"atzlich erst mal Rechenkapazit\"at bindet. Dies widerspricht dem Prinzip das Hadoop individuell Rechenkapazit\"at zur Verf\"ugung stellt.\newline
+Als Alternative gibt es im Hadoop-Technologie-Zoo bereits eine L\"osung die es erm\"oglicht zeitlich, oder sogar Daten getriggert, automatisch Aufgaben startet - Apache Oozie. Eigentlich Hauptaufgabe von Oozie sind die sogenannten 'Workflows', was nichts anderes ist als ein vordefinierter Arbeitsablauf. Um zeitlich gesteuerte Aufgaben zu starten gibt es die sogenannten 'Coordinator Jobs', sie sind vergleichbar mit den normalen Workflows und sind einzelne, konfigurierbare Arbeitsschritte. Wichtig ist an dieser Stelle zu wissen das unabh\"angig von der Aufgabe, egal ob Python Script, MapReduce oder Email-Action, immer ein Art Container (vergleichbar mit Docker) erstellt wird der dann von YARN ausgef\"uhrt wird. \newline
+Die logische Konsequenz daraus ist, dass dem auszuf\"uhrenden Paket bzw. Container alle n\"otigen Abh\"angigkeiten mitzugeben sind. Dies bedeutet zum Beispiel das alle Python Libraries mit in das auszuf\"uhrende Paket mit eingebunden sein m\"ussen. F\"ur fast alle Datensammler stellt dies kein Problem dar, lediglich der Scraper, der sich um die Corona-Massnahmen k\"ummert, stellt eine großes Problem dar. Mit Tesseract nutzt der Scraper ein Commandline-Tool das nicht mit ein ausf\"uhrbares Paket gepackt werden kann. \newline
+Deswegen musste als Alternative Cron verwendet werden, was ebenso zeitlich gesteuert Scripte ausf\"uhren kann. Genauer wird an dieser Stelle nicht auf Cron eingegangen, da es sich hier um eine mehr als nur bekannte Standardkomponente des Unix-Kernel handelt. Problematisch ist hier leider das die Scripte nicht \"uber YARN sondern \"uber einen Knoten selbst ausgef\"uhrt werden. Von Vorteil ist hier aber das sowohl der Installationsaufwand quasi nicht vorhanden ist und auch das Paketieren der Software bedeutend einfacher darstellt als bei Oozie.
 \section{Zeppelin}
-
-\chapter{Entwicklungsprozess}
-Beim Entwicklungsprozess wurde sich f\"ur eine Scrum artige L\"osung entschieden. So werden klassische Artefakte und Tools wie etwa das Daily oder der Backlog entsprechend angepasst angewandt. Anpassung meist im Sinne der zeitlichen Komponente. Da das Projekt parallel w\"ahrend des Semesters abl\"auft wurde hier das 'Daily', von einem t\"aglichen auf einen w\"ochentlichen Rhythmus umgestellt. Das Backlog wird durch das Team selbst bef\"ullt da es keinen 'Product Owner' gibt. Genauso wurden die Sprints abgewandelt, durch die zeitliche Entzerrung wird hier direkt auf eine dynamische Sprintl\"ange gesetzt die jeweils zum Sprint-Anfang abgestimmt worden ist. \newline
-G\"anzlich verzichtet wurde auf die Sprint Retrospektive, zwar hat sich im Laufe des Projekts der Prozess dynamisch angepasst, allerdings wurde hier nicht explizit ein Artefakt bzw. Termin durchgef\"uhrt. \"Anderungen am Prozess wurden kurzfristig und in direkter Absprache mit allen Teammitgliedern beschlossen. Vereinfachend hinzu kam, dass sich die Projektaufgaben durch die vielen, verschiedenartigen Scraper, welche nicht weiter miteinander interagieren, gut aufteilen ließen. So konnte jeder sein Tempo selbst bestimmen und es waren wenig zusätzliche Maßnahmen nötig um die Arbeit an gemeinsam genutzten Modulen zu koordinieren.
-
-
+Um die gesammelten Daten auch effektiv verarbeiten zu k\"onnen, muss ein geeigneter Prozess aufgezeigt werden. Das Grundkonzept von Hadoop ist immer noch MapReduce. Dies funktioniert im Entwicklungsprozess immer dar\"uber das eine Job programmiert wird und dann auf dem Cluster getestet wird. F\"ur Testzwecke ist das ein großer Aufwand. Heutzutage geht daher  der Trend hin zu RapidPrototyping-Umgebungen. So gibt es auch im Hadoop Umfeld eine entsprechende Option, Apache Zeppelin. Zeppelin ist stark vergleichbar mit JupyterHub und ist somit eine RapidProtoyping-Umgebung mit User Management. Innerhalb der sogenannten Notebooks kann fast jede erdenkliche Programmiersprache als Interpreter verwendet werden (z.B. Python, Java, R, Elasticsearch, hive, spark). Der grosse Vorteil von Zeppelin gegen\"uber Jupyter ist, dass der Kernel (Programmiersprachen spezifischer Prozess der Code ausf\"uhrt) auf YARN ausgef\"uhrt werden kann und somit auf alle Ressourcen des Cluster zugreifen kann.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{zeppelinOverview.png}
+	\captionsetup{justification=centering}
+	\caption{\"Ubersicht Zeppelin Oberfl\"ache}
+	\label{pic:zeppelinOverview}
+\end{figure}
 \chapter{Datenablagekonzept}
 F\"ur die Datenablage wurde zun\"achst ein entsprechendes Konzept entwickelt. Dieses Konzept basiert auf den Daten die abgelegt werden sollen. Hierzu wird zun\"achst ein \"Uberblick \"uber die zu ablegenden Daten gegeben:
 \begin{itemize}
@@ -297,7 +307,6 @@ Um nun den Kreis zu schliessen werden nicht nur Meta-Daten der Artikel gespeiche
 Die wichtigsten Basis Informationen \"uber den Status der Corona-Pandemie in Deutschland sind h\"ochst wahrscheinlich Inzidenz-Wert und Impfquote. Diese Informationen werden in diesem Projekt \"uber das Robert-Koch-Institut bezogen. \"Uber eine \"offentliche API kann nicht nur Inzidenzwert pro Bundesland, sondern auch per Bezirk bezogen werden. Ausserdem sind alle Informationen zum derzeitigen Impfstand in Deutschland, sowie Informationen zu PCR- und Schnelltests in Deutschland verf\"ugbar. Alle Informationen die hier von der API zur Verf\"ugung gestellt werden, werden auch gespeichert. Hier folgt der Scraper dem Allgemeinen Konzept, die Original Daten werden im HDFS abgelegt und dann mit minimaler Ver\"anderung im Elasticsearch indiziert.
 \section{Corona Maßnahmen}
 Das soeben erw\"ahnte Konzept der Nachrichten wird genauso f\"ur die Massnahmen verwendet. Rohdaten werden im HDFS abgelegt, w\"ahrend die beschreibenden Daten im Elasticsearch indiziert werden. Diese Massnahmen werden mit folgendem Pattern abgelegt: '/datakraken/measures/\$bundesland\$/\$Datum\$+\$TimeStamp\$/'.
-\section{Corona Basis Daten}
 \section{Wetterdaten}
 Auch die Wetterdaten werden im gleichen Stil abgelegt. Heisst die einzelnen Wetterlogs werden als Dokumente im Elasticsearch abgelegt und auch hier\"uber abgefragt. Allerdings werden die Wetterdaten auch noch entsprechend des allgmeinen Konzepts im HDFS abgelegt. Die Ablage Struktur im HDFS ist in folgendem Pattern:  '/datakraken/weather/\$Stadt\$/\$Datum\$/\$TimeStamp\$'.
 \section{'Querdenker' Telegram Gruppen}
@@ -523,6 +532,14 @@ Um einen \"Uberblick zu schaffen \"uber die derzeitige Corona-Situation ist es w
 All diese Dinge werden prim\"ar nur in Tabellenform bereitgestellt, jedoch gibt es hier bereits einige Projekte die diese Tabellen automatisch einlesen und dann \"uber einen Webserver abfragbar machen. So wurde in diesem Projekt die \textit{https://api.corona-zahlen.org/docs/} als API genutzt die alle interessanten Daten zur Verf\"ugung stellt. \newline
 Alle Daten werden hier vor der Indizierung vor-verarbeitet und dann nach dem Ablagekonzept abgelegt.
 Des weiteren wird bei den Inzidenzwerten auch noch zwischen Landkreis und Bundesl\"andern unterschieden und beide abgespeichert bzw. indiziert.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{rkiapiOverview.png}
+	\captionsetup{justification=centering}
+	\caption{RKI Corona API Startseite}
+	\label{pic:rkiapiOverview}
+\end{figure}
+
 \section{Corona Maßnahmen}
 Für die Daten der gültigen Maßnahmen und Verordnungen wird direkt auf die offiziellen Websites der Bundesregierung bzw. der jeweiligen Landesregierung zugegriffen. Wir haben uns bewusst dagegen entschieden mögliche Dritt-Anbieter wie Nachrichtenportale zu integrieren um die Informationen ungefiltert zu erhalten, was auch Nachteile nach sich zog da die jeweiligen Regierungsportale es teilweise deutlich schwerer gemacht haben. Daraus resultieren 16 Websiten die als Datenquellen hergenommen werden, hier eine Übersicht:
 
@@ -587,7 +604,7 @@ Seit Version 4 wurde die Engine auf ein künstliches Neuronales Netz aufgebaut. 
 
 \chapter{Funktion und Implementierung}
 
-Für unsere vier primären Datenquellen RKI Daten, Maßnahmen der Regierung, Nachrichtenartikel und Wetterdaten haben wir uns Entschieden jeweils ein eigenes Programm ("Scraper") mit Python zu implementieren die hier nun einzeln erläutert werden.
+Für unsere vier primären Datenquellen RKI Daten, Maßnahmen der Regierung, Nachrichtenartikel und Wetterdaten haben wir uns Entschieden jeweils ein eigenes Programm ('Scraper') mit Python zu implementieren die hier nun einzeln erläutert werden.
 
 \section{Maßnahmen}
 Bei der Entwicklung wurde auf hohe Konfigurierbarkeit geachtet da schon während des Prozesses festgestellt wurde das jederzeit Änderungen an den ausgewählten Websiten passieren können und deshalb das Programm sehr flexibel sein muss.
