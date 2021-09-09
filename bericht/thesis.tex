@@ -210,6 +210,40 @@ TODO
 Wir in unserem Team, bestehend aus Jochen Schmidt, Lennard Rose und Moritz Zeitler hatten nach unserem Gemeinsamen Programmierprojekt beschlossen, wieder zusammen zu arbeiten und diesmal in eine ganz andere Richtung zu gehen. Hierzu muss man wissen, dass unser Programmierprojekt damals aus einem Multiplayer-Computerspiel bestand, welches wir ausschließlich mit C++ sowie SDL programmierten. Da wir nichts vorgefertigtes an Code oder Lösungen benutzten und alles "von der Pike auf"  entwickelten, lag der Fokus vor allem auf Algorithmen, Datenstrukturen und Patterns. Auch wenn uns diese Art des Entwickelns allen sehr Spaß gemacht hat und unser Projekt sehr Erfolgreich war, wollten wir mit dieser Projektarbeit nochmal in eine ganz andere Richtung gehen um uns als Entwickler weiter zu entwickeln und unserem Repertoire ein paar neue Tools hinzuzufügen. Mit dem Thema Datamining war für uns auch sehr schnell ein Thema gefunden, Coronadaten boten sich aus aktuellem Anlass an und da Moritz noch ein paar alte Rechner im Keller stehen hatte, beschlossen wir nicht nur eine Lösung, sondern ein betriebsbereites System zu entwickeln. \newline
 Der Fokus dieser Projektarbeit soll also ganz klar auf Schnittstellen, Interaktionen und Recherche über Lösungsmöglichkeiten liegen. 
 
+\chapter{More Projektmanagement}
+\section{Risikoanalyse}
+Für unser Projekt haben wir nach der generellen Planung des Aufbaus und Systems eine Risikoanalyse vorgenommen. Da wir auf viele verschiedene heterogene Elemente angewiesen sind war es uns wichtig uns vorher eine Übersicht möglicher Risiken zu erstellen. Für unsere Bewertung haben wir uns auf die Kategorien {gering, mittel und hoch} festgelegt für die Wahrscheinlichkeit des Eintritts und die Größe des Schadens bei Eintritt.
+\subsection{Risikoidentifikation}
+Wir haben folgende Risiken erfasst:
+
+\begin{itemize}
+\item Ausfall von Hardwareteilen
+Da wir bei unserer Hardware auf unsere privaten ehemaligen genutzten Rechner setzen und damit auf heterogene Systeme und keine wirklichen Servern ist durchaus davon auszugehen das der ein oder andere Ausfall der Hardwareteile während des Projekts möglich ist. Das führt je nach schwere des Schadens bis zu einem Ausfall eines Nodes.
+\item Ausfall ganzer Nodes
+Da wir wie bereits erwähnt auf unterschiedliche Hardware setzten und hierbei bereits ein Risiko besteht es könnte ein schwerwiegenden Ausfall geben kommt aber auch noch hinzu das anderweitig z.B. durch falsche Konfiguration ein Ausfall entstehen kann. 
+\item Inkompatibilität von Python Versionen zwischen Windows und Ubuntu
+Wir führen alle unsere Entwicklungen auf Windows durch und für die Server setzen wir auf eine etwas ältere Ubuntu Version. Dadurch sehen wir es als Risiko beim späteren deployen unserer Skripte auf den Servern.
+\item Inkompatibilität von Frameworks zueinander
+Für das Scheduling, das Dateisystem etc. setzen wir auf viele verschiedene Frameworks die alle Hand in Hand gehen müssen. Da sehen wir ein direktes Risiko von Inkompatibiltät
+\item Schaden an der Festplatte durch Transport
+Dadurch das die Rechner nicht fest bei einem Projektmitglied oder festgelegtem Ort während der Entwicklung standen und des öfteren zwischen einander 
+transportiert wurden war die Unversehrtheit des Systems sowie vor allem der HDDs ein Risiko. Die Rechner sollten erst im späteren Verlauf in der FHWS eingesetzt werden.
+\end{itemize}
+\subsection{Risikobewertung}
+%-> Tabelle
+Ausfall von Hardwareteilen - Häufigkeit: mittel; Schaden: gering
+Ausfall eines Nodes - Häufigkeit: gering; Schaden: hoch
+Inkompatibilität zwischen Windows/Ubuntu - Häufigkeit: hoch; Schaden: mittel
+Inkompatibilität zwischen Frameworks - Häufigkeit: hoch; Schaden: gering
+Transportschäden - Häufigkeit: mittel; Schaden: mittel
+\subsection{Risikomatrix}
+\begin{figure}[h!]
+\caption{Risikomatrix}
+\label{risikoMatrix}
+\centering
+\includegraphics[scale=1.0]{images/risikoanalyse.png}
+\end{figure} 
+
 
 \chapter{Cluster}
 Grunds\"atzlich wird das komplette Projekt auf Basis eines Hadoop Cluster erstellt. Hadoop ist ein Framework f\"ur die skalierbare und verteilt arbeitende Software. Gerne wird auch der Begriff  Hadoop \"Okosystem verwendet da es einen kompletten Zoo von Technologien (z.B. Zookeeper, HBase, Flink, Storm, Pig, Solr) gibt die im Hadoop Umfeld verwendet werden kann. Hadoop erm\"oglicht eine horizontale Skalierung, dies bedeutet das dem System dynamisch zus\"atzliche Knoten, angeh\"angt werden k\"onnen die dann die Rechenleistung, bzw die Speicherkapazit\"at des Clusters erh\"ohen. In der Basis besteht Hadoop aus YARN und dem HDFS die zusammen mit dem MapReduce Konzept eine Datenverarbeitung erm\"oglichen. Zus\"atzlich zu diesen Standardkomponenten wurden noch Apache Oozie sowie Apache Zeppelin installiert. Diese einzelnen Konzepte sowie zus\"atzliche Basisinformationen zum Cluster werden im folgenden noch genauer erkl\"art.
