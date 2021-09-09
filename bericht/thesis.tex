@@ -7,6 +7,7 @@
 \usepackage[pdftex]{graphicx}
 \graphicspath{ {./pictures/} }
 \usepackage[hidelinks]{hyperref}
+\usepackage[german]{cleveref}
 \usepackage{color}
 \usepackage{amssymb}
 \usepackage{textcomp}
@@ -546,7 +547,7 @@ Für die Daten der gültigen Maßnahmen und Verordnungen wird direkt auf die off
 \item \url{https://www.regierung-mv.de/corona/Verordnungen-und-Dokumente/}
 \end{itemize}
 
-Im laufe der Analyse der Websites stellte sich heraus das es drei Fälle zu Beleuchten gab. Zum einen wurde oft auf den Websites mehr schlecht als recht über die aktuellen Corona-Maßnahmen informiert und nur auf das aktuell gültige Rechtsdokument wie eine Corona-Verordnung verwiesen welches meistens als PDF-Datei publik gemacht wurde:
+Im laufe der Analyse der Websites stellte sich heraus das es drei Fälle zu Beleuchten gab. Zum einen wurde oft auf den Websites mehr schlecht als recht über die aktuellen Corona-Maßnahmen informiert und nur auf das aktuell gültige Rechtsdokument wie eine Corona-Verordnung verwiesen, welches meistens als PDF-Datei publik gemacht wurde:
 \begin{figure}[h!]
 \caption{Hessische Landesseite (Verordnung als PDF verlinkt)}
 \label{websiteHessen}
@@ -583,16 +584,63 @@ Bei den bereits genannten Datenquellen ergab sich die Problematik dass die Infor
 
 \subsection{Tesseract}
 Tesseract wurde ursprünglich bei Hewlett-Packard entwickelt und 2005 als Open Source veröffentlicht wo es seit 2006 von Google betreut wird.
-Seit Version 4 wurde die Engine auf ein künstliches Neuronales Netz aufgebaut. Grundsätzlich wird die Software von der Kommandozeile aus gesteuert um es aus unserem Python-Skript ansprechbar zu machen wird dazu noch das pytesseract-Package für Python benötigt.
+Seit Version 4 wurde die Engine auf ein künstliches Neuronales Netz aufgebaut. Grundsätzlich wird die Software von der Kommandozeile aus gesteuert. Um es aus unserem Python-Skript ansprechbar zu machen wird dazu noch das pytesseract-Package für Python benötigt.
 
 \chapter{Funktion und Implementierung}
 
 Für unsere vier primären Datenquellen RKI Daten, Maßnahmen der Regierung, Nachrichtenartikel und Wetterdaten haben wir uns Entschieden jeweils ein eigenes Programm ("Scraper") mit Python zu implementieren die hier nun einzeln erläutert werden.
 
 \section{Maßnahmen}
-Bei der Entwicklung wurde auf hohe Konfigurierbarkeit geachtet da schon während des Prozesses festgestellt wurde das jederzeit Änderungen an den ausgewählten Websiten passieren können und deshalb das Programm sehr flexibel sein muss.
 
-\subsection{Datenquellen Konfiguration}
+\subsection{Konfigurationen}
+
+\subsubsection{Programm Konfiguration}
+Bei der Entwicklung wurde auf hohe Konfigurierbarkeit geachtet da schon während des Prozesses festgestellt wurde das jederzeit Änderungen an den ausgewählten Websiten passieren können und deshalb das Programm sehr flexibel sein sollte. Hierfür wurde eine Config.py-Datei angelegt in denen alle wichtigen Informationen wie z.B. URLs von ElasticSearch und HDFS etc.
+
+\begin{lstlisting}[caption=Config für das Programm]
+# -------------------------------hdfs--------------------------------
+HDFS_BASE_URL = '127.0.0.1'
+HDFS_PORT = '50070'
+HDFS_USER = 'hadoop'
+HDFS_MEASURES_BASE_PATH = '/datakraken/measures/'
+# -------------------------------TESSERACT---------------------------
+TESSERACT_PATH = "E:/Programme/Tesseract/tesseract"
+# -------------------------------logging-----------------------------
+loggerName = "restrictionLogger"
+logFileName = 'RestrictionScraper.log'
+# -------------------------------ElasticSearch-----------------------
+es_url = '127.0.0.1'
+es_port = '9200'
+indexName = "restrictions"
+...
+\end{lstlisting}
+
+\subsubsection{Datenquellen Konfiguration}
+Da fast auschließlich nur spezielle Elemente der Websiten wie die \textless a\textgreater -Tags der PDFS oder  \textless img\textgreater -Tags der Bilder selektiert werden mussten wurde auf ein Key/Value-Schema zurückgegriffen. Der Key spezifierte ob der Code auf eine spezielle Element-ID oder ein Klassenname durchsucht wird, falls das aber nicht möglich war wurde auf den eindeutigen CSS Selector des Elements zurückgegriffen. 
+
+\begin{figure}[h!]
+\caption{HTML-Element der Hessischen Landesseite}
+\label{htmlHessen}
+\centering
+\includegraphics[scale=1.0]{pictures/hessenHTMLexample.png}
+\end{figure} 
+
+Wie man in \cref{htmlHessen} sehen kann ist das \textless a\textgreater -Tag nicht über eine Id oder ähnliches eindeutig selektierbar deswegen wird ein CSS Selector gebildet, den man sich zudem auch über die Entwicklertools generieren kann. In diesem Beispiel:
+\begin{lstlisting}[caption=CSS Selector]
+#node-listenseite-100174 > div.content.clearfix > div.view.view-registerblock.view-id-registerblock.view-display-id-block.view-dom-id-eabeac53f51705a80d47815e52e2470f.hzd_registerpage-processed > div > div.views-row.views-row-1.views-row-first.views-row-odd > div.views-field.views-field-nothing-2.registerpage-content-right.he_content_body > div > a
+\end{lstlisting}
+
+Zu jedem Bundesland wurde eine Konfiguration in ElasticSearch gespeichert die am Anfang des Programms geladen wird und dementsprechend dann die Daten lädt. 
+
+\begin{lstlisting}[caption=Config von Bayern, language=json]
+{
+	"state" 	: "Bayern",
+	"url"	: "https://www.stmgp.bayern.de/coronavirus/",
+	"Target": "class_",
+	"Value"	: "vc_single_image-img attachment-full"
+}
+\end{lstlisting}
+
 
 \section{Artikel}
 \subsection{Konfigurierbarkeit}
