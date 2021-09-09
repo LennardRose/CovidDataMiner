@@ -735,24 +735,6 @@ Der Scraper besteht aus drei großen Komponenten. Eine HDFS-Komponente, eine Ela
 Durch die Gegebenheit das im Endeffekt vier verschiedene, aber trotzdem \"ahnliche, Endpunkte nacheinander abgefragt wurde ein zentraler abstrakter Scraper gebaut. Hier sind die zentralen Funktionen hinterlegt die f\"ur alle Endpunkte identisch sind wie auch die abstrakten Methoden die jeder Scraper zur Verf\"ugung stellen muss. \newline
 Die Funktionsweise basiert immer auf dem gleichen Gedankengang, die Roh-Daten werden \"uber den entsprechenden Endpunkt heruntergeladen und zwischengespeichert. Diese Rohdaten sind im JSON-Format und werden so auch abgelegt.
 \begin{lstlisting}[caption=Inzidenz Rohdaten der Corona-API ,label=incidencedataraw,language=json]
-"SH":{
-	"id":1,
-	"name":"Schleswig-Holstein",
-	"population":2910875,
-	"cases":72677,
-	"deaths":1662,
-	"casesPerWeek":1478,
-	"deathsPerWeek":1,
-	"recovered":68390,
-	"abbreviation":"SH",
-	"weekIncidence":50.77511057671663,
-	"casesPer100k":2496.74067076051,
-	"delta":{
-		"cases":171,
-		"deaths":5,
-		"recovered":274
-	}
-},
 "HH":{
 	"id":2,
 	"name":"Hamburg",
@@ -773,9 +755,34 @@ Die Funktionsweise basiert immer auf dem gleichen Gedankengang, die Roh-Daten we
 }
 \end{lstlisting}
 Zus\"atzlich wird dann noch der Zeitstempel angeh\"angt wann diese Daten heruntergeladen werden.
-
 \subsection{HDFS Helper}
+F\"ur alle Scraper wurde ein HDFS Helper verwendet der die Anbindung an das alternative Filesystem unterst\"utzt. Funktionen f\"ur das Lesen wie auch schreiben von JSON Dokumenten sind hier hinterlegt.
+Mit der Erstellung des HDFS Helper wird außerdem die Verbindung zum HDFS getestet. Zus\"atzlich sind noch Funktionen zum erweitern von Dokumenten und das Bearbeiten von Dokumenten, diese werden aber zum aktuellen Zeitpunkt nicht genutzt. \newline
+Technisch gesehen ist der Helper nur ein Wrapper um die 'pywebhdfs' library, welche die HTTP-API des HDFS anspricht.
+Beispielhaft wird hier die Funktion gezeigt, die alle JSON Dokumente ausgibt die in einem Ordner ausgibt:
+\begin{lstlisting}[caption=HDFS Helper Beispiel ,label=hdfsHelperJsonInDoc,language=python]
+def get_json_files_from_directory(self, directory):
+	"""get all meta jsons in a hdfs directory matching the internal regex pattern
+	which filters all files that don't end with meta.json
+
+	Args:
+	directory (string): the hdfs directory you want to check
+
+	Returns:
+	list: list of all meta jsons in specified hdfs directory
+	"""
+	file_names = self.hdfs_client.list_dir(
+	directory)['FileStatuses']['FileStatus']
+	file_list = []
+	for file_name in file_names:
+		file_list.append(file_name['pathSuffix'])
+		file_list = list(
+		filter(lambda x: x.endswith(".json"), file_list))
+	return file_list
+
+\end{lstlisting}
 \subsection{Elasticsearch Helper}
+\"Ahnlich zum HDFS Helper wurde auch eine Helper Klasse f\"ur Elasticsearch implementiert.
 \section{Wetter}
 
 \chapter{Lösung}
