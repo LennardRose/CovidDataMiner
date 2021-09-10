@@ -764,11 +764,11 @@ Um zu verhindern das die selben Maßnahmen immer wieder neu extrahiert werden wi
 
 \subsubsection{HDFS Wrapper}
 
-Um die Daten ohne Probleme ins HDFS einfügen zu können wurde auf die 'pywebHDFS' Bibliothek in Python zurückgegriffen. Diese bildet für uns die Schnittstelle zwischen unserem Code und dem Dateiablagesystem. Um das ganze isoliert nutzen zu können wurde eine HDFS Wrapper Klasse geschrieben die, welche Funktionalität von pywebhdfs beinhaltet.
+Um die Daten ohne Probleme ins HDFS einfügen zu können wurde auf die 'pywebHDFS' Bibliothek in Python zurückgegriffen. Diese bildet für uns die Schnittstelle zwischen unserem Code und dem Dateiablagesystem. Um das ganze isoliert nutzen zu können wurde eine HDFS Wrapper Klasse geschrieben die, welche Funktionalität von pywebhdfs beinhaltet. Genauer wird dies noch beim RKI-Scraper Kapitel behandelt.
 
 \subsubsection{ElasticSearch Wrapper}
 
-Genauso wurde für die ElasticSearch Anbindung auf deren veröffentlichte Python-Bibliothek ElasticSearchClient aufgebaut. Auch hier wurde wieder eine Wrapper Klasse geschrieben zur Kapselung.
+Genauso wurde für die ElasticSearch Anbindung auf deren veröffentlichte Python-Bibliothek ElasticSearchClient aufgebaut. Auch hier wurde wieder eine Wrapper Klasse geschrieben zur Kapselung. Genauer wird dies noch beim RKI-Scraper Kapitel behandelt.
 
 \section{Artikel}
 \subsection{Konfigurierbarkeit}
@@ -887,8 +887,6 @@ Die entsprechenden Konfigurationen werden dann als Liste dem Scraper zurückgege
 \end{lstlisting}
 Um nicht jedes mal für jeden einzelnen Artikel eine eigene Konfiguration erstellen bzw. einen Scrapevorgang starten zu müssen wird sich zu nutze gemacht, dass Artikelverlinkungen auf Artikelübersichtsseiten, wie in Figure \ref {articlelist} zu sehen, in gleichartige HTML-Tags geschrieben werden. Es muss in der article\_config also nur der Link zu dieser Übersichtsseite (bestehend aus base\_url und path\_url), sowie das HTML-Tag und die HTML-Klasse angegeben werden. Im Fall des Beispiels in listing \ref{articleconfigoverview} wurden die Artikel der Kreiszeitung bereits über eine suche, wie unter path\_url zu sehen weiter auf unser Themengebiet eingeschränkt. Um nun zu verhindern, dass unerwünschte Artikel wie z.B. Werbung, Newsticker und Ähnliches gespeichert werden, lassen sich über 'url\_conditions' bei 'url\_string' Zeichenketten angeben, welche in der URL des Artikels (nicht) vorkommen sollen, steuerbar über setzen von 'include\_condition' auf true/false. Dabei lässt sich durch die Elemente der Liste eine 'AND'-Beziehung darstellen, über trennen von Zeichenketten mittels '|' innerhalb eines 'condition\_string' eine 'OR'-Beziehung. In diesem Beispiel werden Artikellinks nach dem kriterium gefiltert, ob sie '/niedersachsen' enthalten, den Pfad der Website, unter welchem alle Niedersachsen betreffenden Artikel zu finden sind.
 
-\subsection{Persistierung}
-
 \section{RKI-Daten}
 Technisch gesehen ist die Implementierung des RKI-Scraper nichts besonderes. Im Endeffekt wurden die Schnittstellen der RKI-API abgefragt, die Daten verarbeitet, indiziert und abgelegt. Hierzu wurden einige zus\"atzliche Hilfsfunktionen erstellt die diese Arbeiten erleichtern. \newline
 Der Scraper besteht aus drei großen Komponenten. Eine HDFS-Komponente, eine Elasticsearch-Komponente und eine Scraping Komponente. Jede einzelne dieser Komponenten haben eine ganz bestimmte Aufgabe vergleichbar mit Nano-Services. Diese sollen im folgenden kurz erl\"auter werden.
@@ -943,9 +941,31 @@ def get_json_files_from_directory(self, directory):
 
 \end{lstlisting}
 \subsection{Elasticsearch Helper}
-\"Ahnlich zum HDFS Helper wurde auch eine Helper Klasse f\"ur Elasticsearch implementiert.
-\section{Wetter}
+\"Ahnlich zum HDFS Helper wurde auch eine Helper Klasse f\"ur Elasticsearch implementiert. Neben Standardfunktionen wie das Indizieren einzelner Dokumente gibt es auch noch komplexere Funktionen wie zum Beispiel die automatische Suche nach dem Neuesten Dokument in einem Index. Eine außerdem wichtige Funktion ist hier die 'bulk' Indizierung einer Liste. Um viele Dokumente schnell und kosteng\"unstig zu indizieren wird bei Elasticsearch die sogenannte 'Bulk API' verwendet. Auf eine niedriges Level herunter gebrochen werden anstelle vieler einzelner Anfragen eine große bzw. einige wenige Anfragen mit vielen Dokumenten versendet. Die Anzahl der Dokumente pro Anfrage wird \"uber die 'chunk-size' geregelt. Die Wrapper-Funktion nimmt hier eine Liste von Objekten, die chunk-size, sowie den Ziel-Index und verwandelt diese dann entsprechend der vorgegebenen Elasticsearch-Funktion in eine bzw. mehrere 'bulk-request'.
+\begin{lstlisting}[caption=Elasticsearch Helper f\"ur Bulk Indizierung ,label=esBulk,language=python]
+	def bulk_index_list(self, index_name, document_list, chunk_size=1000):
+	"""indexes a list of documents using the bulk index api
+	converts list of objects to a bulk index command
+	make sure index exists before using this method
 
+	Args:
+	index_name (string): name of the es index
+	document_list (list): python list containing all documents you want to index
+	chunk_size (int, optional): how many docs per bulk request shall be added to the request. Defaults to 10000.
+	"""
+	if document_list:
+		base_map = {}
+		base_map['_index'] = index_name
+		items = []
+		for elem in document_list:
+			base_map['_source'] = elem
+			items.append(copy.copy(base_map))
+		helpers.bulk(self.es_client, items, chunk_size=chunk_size)
+\end{lstlisting}
+Mit Hilfe dieser Funktion kann dann, wie eben beschrieben, eine Liste von Objekte mit Hilfe des Index Namen und optional einer chunk-size, 'bulk' indiziert werden.
+\section{Wetter}
+Der Wetter-Scraper ist wohl der trivialste Scraper. Hier wird lediglich eine Konfigurationsdatei gelesen, die angibt welche St\"adte ber\"ucksichtigt werden sollen, und anhand des Ergebnis dann die Wetter-API abfragt. Technisch gesehen gibt es hier keinen große Magie. Die Abfrage funktioniert \"uber den Städtenamen der mit in Anfrage-URL eingef\"ugt wird. Zu beachten war allerdings das maximal 60 Anfragen pro Minute durchgef\"uhrt werden d\"urfen und das Umlaute gesondert behandelt werden m\"ussen da diese im HDFS Umfeld zu Problemen f\"uhren k\"onnen. Um gr\"oßern Konfigurationsaufwand im Bezug auf das Elasticsearch-Mapping zu verhindern wurde außerdem der Timestamp auf eine Standard Elasticsearch Format umgewandelt.\newline
+F\"ur eine sp\"ater Verwendung ohne Konfigurationsdatei wurden hier bereits Vorbereitungen getroffen das der Scraper auch \"uber Elasticsearch konfigurierbar ist.
 \chapter{Lösung}
 \section{Corona Maßnahmen}
 
