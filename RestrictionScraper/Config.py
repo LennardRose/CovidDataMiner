@@ -2,7 +2,6 @@
 HDFS_BASE_URL = '127.0.0.1'
 HDFS_PORT = '50070'
 HDFS_USER = 'hadoop'
-
 HDFS_MEASURES_BASE_PATH = '/datakraken/measures/'
 # -------------------------------TESSERACT------------------------------------------
 TESSERACT_PATH = "E:/Programme/Tesseract/tesseract"

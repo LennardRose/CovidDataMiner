@@ -3,6 +3,7 @@ from bs4.element import Comment
 from Config import *
 from Util import *
 import requests
+import time
 import pdfminer.high_level
 import io
 import os
@@ -156,10 +157,7 @@ class Parser:
             response = urllib.request.urlopen(self.baseUrl)
             webContent = response.read()
 
-            #TODO: still here because hdfs integration not done
-            open(self.directory+DEFAULT_HTML_FILENAME, 'wb').write(webContent)
-
-            self.hdfs_client.save_as_file(self.directory+DEFAULT_HTML_FILENAME, webContent)
+            self.hdfs_client.save_as_file(self.directory, str(time.time())+_+DEFAULT_HTML_FILENAME, webContent)
         else:
             url = elem
 
