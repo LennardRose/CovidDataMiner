@@ -71,7 +71,7 @@ class ElasticSearchClient:
             body=search_body, index=index_name)
         if not search_result['hits'] or not search_result['hits']['hits'] or not search_result['hits']['hits'][0] or not search_result['hits']['hits'][0]['_source']:
             logging.error('No date time field found')
-            return None
+            return 0
         else:
             document = search_result['hits']['hits'][0]['_source']
             return document[date_field_name]

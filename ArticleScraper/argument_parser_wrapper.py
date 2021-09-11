@@ -19,7 +19,7 @@ class ArgumentParserWrapper: # clap the sillables like a 3 year old
     def __init__(self):
         self.parser = argparse.ArgumentParser(description='scrapes sources by the configs given')
 
-    def parse_arguments(self):
+    def _parse_arguments(self):
         """
         parses the arguments
         """
@@ -41,7 +41,7 @@ class ArgumentParserWrapper: # clap the sillables like a 3 year old
         :return: list with all matching article_configs
         """
 
-        args = self.parse_arguments()
+        args = self._parse_arguments()
         data = []
 
         if len(sys.argv) < 2: #programmname ist auch ein argument, deshalb 2 ---> scrape alle in articleclient wenn nichts weiter angegeben
@@ -50,7 +50,7 @@ class ArgumentParserWrapper: # clap the sillables like a 3 year old
         for filename in args.filenames:
             data.append(client_factory.get_file_client().read_file(filename))
                 
-        for id in args.elastic_ids:
+        for id in args.articleclient_ids:
             data.append(client_factory.get_article_client().get_article_config(id))
 
         data = list(filter(None, data)) # filter the none values for missing values

@@ -16,7 +16,7 @@ class HdfsClient():
         """
         self.hdfs_client = PyWebHdfsClient(
             host=hdfs_base_url, port=hdfs_port, user_name='hadoop')
-        self.test_hdfs_connection()
+        #self.test_hdfs_connection()
 
     def test_hdfs_connection(self):
         """Testing the hdfs connection by trying to list items in the root directory

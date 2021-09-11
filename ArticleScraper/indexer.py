@@ -19,13 +19,13 @@ if os.name == 'posix':
 else:
     slash = chr(92) # '\' for Windows
 
-def current_path():
+def _current_path():
     return os.path.dirname(os.path.realpath( __file__ ))
 
 # default path is the script's current dir
-def get_files_in_dir():
+def _get_files_in_dir():
 
-    self = os.path.join(current_path(), "article_sources")
+    self = os.path.join(_current_path(), "article_sources")
 
     file_list = []
 
@@ -41,7 +41,7 @@ def get_files_in_dir():
 
     return file_list
 
-def get_data_from_json_file(file):
+def _get_data_from_json_file(file):
     data = None
 
     with open(file) as file:
@@ -50,7 +50,7 @@ def get_data_from_json_file(file):
     return data
 
 # pass a directory (relative path) to function call
-all_files = get_files_in_dir()
+all_files = _get_files_in_dir()
 
 print ("Files to index:", len( all_files ))
 
@@ -58,8 +58,8 @@ if not client.indices.exists(index="article_config"):
     print("Index article_config not found, initialize index.")
     client.indices.create(index="article_config")
 
-python_path = os.path.join(current_path(), "venv", "Scripts", "python.exe")
-main_path = os.path.join(current_path(), "main.py")
+python_path = os.path.join(_current_path(), "venv", "Scripts", "python.exe")
+main_path = os.path.join(_current_path(), "main.py")
 
 
 index_count = 0
@@ -67,7 +67,7 @@ index_count = 0
 for file in enumerate(all_files):
 
     # get the data inside the file
-    data = get_data_from_json_file( file[1] )
+    data = _get_data_from_json_file( file[1] )
 
     query = {
         "query" :  
