@@ -298,7 +298,7 @@ Das ganze wurde für bessere Übersichtlichkeit grafisch als Matrix dargestellt:
 \section{Zeitaufwand}
 Wie bereits im Kapitel zu den Tickets erw\"ahnt wurde individuell jede Aufgabe bewertet und somit auch klar erkennbar welche Aufgaben hier zeitlich unter- bzw. untersch\"atzt worden sind. Am problematischstem stellten sich im Verlauf des Projekts immer wieder Plattform-Themen (z.B. Installation von Technologien) heraus:
 \begin{itemize}
-	\item Installation von Hadoop auf allen Nodes: gesch\"atzt mit 3 Stunden, tats\"achlicher 25 Stunden
+	\item Installation von Hadoop auf allen Nodes: gesch\"atzt mit 3 Stunden, tats\"achlich 25 Stunden
 	\item Installation von Apache Oozie: gesch\"atzt mit einer Stunde, tats\"achlich 3 Stunden und am Ende nicht verwendet
 	\item Installation von Hadoop \"uber Ambari: gesch\"atzt mit einer Stunde, tats\"achlich 2 Stunden ohne positives Ergebnis und Abbruch da keine Apache Ambari Distribution frei zur Verf\"ugung steht (unter gewissen Rahmenbedingungen)
 \end{itemize}
@@ -397,7 +397,7 @@ Das soeben erw\"ahnte Konzept der Nachrichten wird genauso f\"ur die Massnahmen 
 \section{Wetterdaten}
 Auch die Wetterdaten werden im gleichen Stil abgelegt. Heisst die einzelnen Wetterlogs werden als Dokumente im Elasticsearch abgelegt und auch hier\"uber abgefragt. Allerdings werden die Wetterdaten auch noch entsprechend des allgmeinen Konzepts im HDFS abgelegt. Die Ablage Struktur im HDFS ist in folgendem Pattern:  '/datakraken/weather/\$Stadt\$/\$Datum\$/\$TimeStamp\$'.
 \chapter{Cluster Technologien}
-Grunds\"atzlich wird das komplette Projekt auf Basis eines Hadoop Cluster erstellt. Hadoop ist ein Framework f\"ur skalierbare und verteilt arbeitende Software. Gerne wird auch der Begriff  Hadoop \"Okosystem verwendet da es einen kompletten Zoo von Technologien (z.B. Zookeeper, HBase, Flink, Storm, Pig, Solr) gibt die im Hadoop Umfeld verwendet werden kann. Hadoop erm\"oglicht eine horizontale Skalierung, dies bedeutet das dem System dynamisch zus\"atzliche Knoten, angeh\"angt werden k\"onnen die dann die Rechenleistung, bzw die Speicherkapazit\"at des Clusters erh\"ohen. In der Basis besteht Hadoop aus YARN und dem HDFS die zusammen mit dem MapReduce Konzept eine Datenverarbeitung erm\"oglichen. Zus\"atzlich zu diesen Standardkomponenten wurden noch Apache Oozie sowie Apache Zeppelin installiert. Diese einzelnen Konzepte sowie zus\"atzliche Basisinformationen zum Cluster werden im folgenden noch genauer erkl\"art.
+Grunds\"atzlich wird das komplette Projekt auf Basis eines Hadoop Cluster erstellt. Hadoop ist ein Framework f\"ur skalierbare und verteilt arbeitende Software. Gerne wird auch der Begriff  Hadoop \"Okosystem verwendet da es einen kompletten Zoo von Technologien (z.B. Zookeeper, HBase, Flink, Storm, Pig, Solr) gibt die im Hadoop Umfeld verwendet werden k\"onnen. Hadoop erm\"oglicht eine horizontale Skalierung, dies bedeutet das dem System dynamisch zus\"atzliche Knoten, angeh\"angt werden k\"onnen die dann die Rechenleistung, bzw die Speicherkapazit\"at des Clusters erh\"ohen. In der Basis besteht Hadoop aus YARN und dem HDFS die zusammen mit dem MapReduce Konzept eine Datenverarbeitung erm\"oglichen. Zus\"atzlich zu diesen Standardkomponenten wurden noch Apache Oozie sowie Apache Zeppelin installiert. Diese einzelnen Konzepte sowie zus\"atzliche Basisinformationen zum Cluster werden im folgenden noch genauer erkl\"art.
 
 \section{YARN}
 YARN steht f\"ur 'Yet another resource negotiater'. Die Aufgabe des YARN darin die verf\"ugbaren Ressourcen auf alle anfallenden Aufgaben zu verteilen. Dies bedeutet YARN ist 'Resourcemanager' als auch 'Job-Scheduler'.
@@ -447,9 +447,9 @@ Um die gesammelten Daten auch effektiv verarbeiten zu k\"onnen, muss ein geeigne
 \end{figure}
 
 \chapter{Cluster und Deployment}
-\section{Überblick} Bereits bei der Ideenfindung zu der Projektarbeit wurde entschieden, nicht nur den Quellcode für den Datensammler zu schreiben, sondern das ganze auch auf einem Cluster zum laufen zu bringen. Dazu wurden 4 ausgediente Rechner genommen, von denen 2 den Prozess bis zum Schluss überlebten, die übrigen aber immerhin mit ihrem ableben die Ausfallsicherheit bestätigten. Die Absicht hier war aus alter, ungenutzter Hardware neuen Wert zu schöpfen und Tieferen Einblick in Serververwaltung mit Linux zu erhalten. Es wirde bei dem Aufsetzen der Nodes mit der benötigten Software bewusst von der Verwendung von Docker abgesehen, trotz des Wissens, dass es die einfachste Möglichkeit gewesen wäre. Grund hierfür ist, dass dieses Projekt vornehmlich dazu dienen sollte, ein breites Fundament an Wissen aufzubauen, welches auch Serveradministration beinhalten sollte. Um Elasticsearch mit Docker zu starten, wäre nicht viel mehr nötig gewesen als sich ein Compose-File aus dem Internet zu suchen und zu starten.
+\section{Überblick} Bereits bei der Ideenfindung zu der Projektarbeit wurde entschieden, nicht nur den Quellcode für den Datensammler zu schreiben, sondern das ganze auch auf einem Cluster zum laufen zu bringen. Dazu wurden 4 ausgediente Rechner genommen, von denen 2 den Prozess bis zum Schluss überlebten, die übrigen aber immerhin mit ihrem ableben die Ausfallsicherheit bestätigten. Die Absicht hier war aus alter, ungenutzter Hardware neuen Wert zu schöpfen und Tieferen Einblick in Serververwaltung mit Linux zu erhalten. Es wurde bei dem Aufsetzen der Nodes mit der benötigten Software bewusst von der Verwendung von Docker abgesehen, trotz des Wissens, dass es die einfachste Möglichkeit gewesen wäre. Grund hierfür ist, dass dieses Projekt vornehmlich dazu dienen sollte, ein breites Fundament an Wissen aufzubauen, welches auch Serveradministration beinhalten sollte. Um Elasticsearch mit Docker zu starten, wäre nicht viel mehr nötig gewesen als sich ein Compose-File aus dem Internet zu suchen und zu starten.
 
-\section{Betriebssystem} Als Betriebssystem wurde Ubuntu 18.04 LTS gewählt, da es mit ca. einem Drittel aller Linuxserver das meistverwendete Betriebssystem darstellt. Als Bezeichnung für die einzelnen Knoten wurde 'datakrakennamenode', für den Masternode, sowie 'datanodekraken1', 'datanodekraken2', für die Data- bzw. Workernodes gewählt (Anmerkung: der 4. Server war zu diesem Zeitpunkt bereits defekt und wird nicht weiter erwähnt). Auf jedem Knoten wurde ein User mit Namen 'hadoop' angelegt. Im laufe des Projekts stellte sich heraus, dass eine 'sauberere' Lösung gewesen wäre, einen User zu allgemeinen Serververwaltung, sowie jeweils einen User zum laufen der Elasticsearch sowie Hadoop Daemons zu erstellen. Auch wurde der Fehler gemacht den Rootuser nur Stiefmütterlich zu behandeln und nicht mit Passwort einzurichten, dies kostete beim Recovery viel Zeit und nerven.\newline
+\section{Betriebssystem} Als Betriebssystem wurde Ubuntu 18.04 LTS gewählt, da es mit ca. einem Drittel aller Linuxserver das meistverwendete Betriebssystem darstellt. Als Bezeichnung für die einzelnen Knoten wurde 'datakrakennamenode', für den Masternode, sowie 'datanodekraken1', 'datanodekraken2', für die Data- bzw. Workernodes gewählt (Anmerkung: der 4. Server war zu diesem Zeitpunkt bereits defekt und wird nicht weiter erwähnt). Auf jedem Knoten wurde ein User mit Namen 'hadoop' angelegt. Im laufe des Projekts stellte sich heraus, dass eine 'sauberere' Lösung gewesen wäre, einen User zu allgemeinen Serververwaltung, sowie jeweils einen User zum Betrieb der Elasticsearch sowie Hadoop Daemons zu erstellen. Auch wurde der Fehler gemacht den Rootuser nur Stiefmütterlich zu behandeln und nicht mit Passwort einzurichten, dies kostete beim Recovery viel Zeit und nerven.\newline
 Als nächsten Schritt wurden allen Nodes statische private IP-Adressen zugewiesen, hierzu wurden die vom Router vergebenen Adressen verwendet. \pagebreak
 \begin{lstlisting}[caption=datakrakennamenode: /etc/netplan/00-installer-config.yaml,label=hosts,language=bash]
 network:
@@ -466,7 +466,7 @@ network:
   version: 2
 #mit sudo netplan try/-apply anwenden!
 \end{lstlisting}
-Diese wurden auf die Knotennamen in der "hosts"- Datei gemappt, um sie bei der weiteren Konfiguration immer mit ihrem Namen angeben zu können.
+Diese wurden auf die Knotennamen in der 'hosts'- Datei gemappt, um sie bei der weiteren Konfiguration immer mit ihrem Namen angeben zu können.
 \begin{lstlisting}[caption=etc/hosts,label=hosts,language=bash]
 ...
 192.168.0.115 datakrakennamenode
@@ -487,7 +487,7 @@ Hadoop ist eine opensource Lösung von Apache, die parallele Verarbeitung und ve
 Der Cluster besteht aus einem Master und vielen sogenannten Workernodes. Der Master behält dabei den Überblick über das verteilte Dateisystem. Dies tut er indem auf ihm 2 Daemons laufen, der Namenode und der Resourcemanager. Der Namenode managt das verteilte Dateisystem und weiß wo die gespeicherten Daten sind. Der Resourcemanager verwaltet YARN-Jobs und kümmert sich um die Planung und Ausführung von Prozessen auf den Workernodes. \newline
 Workernodes hingegen sind zum speichern der Daten und dem Ausführen der Jobs da. Auch sie hosten zwei Daemons, den Datanode, zum verwalten der Daten auf dem Node, sowie dem Nodemanager, der die Ausführung der Tasks auf dem Node verwaltet.
 \subsection{Setup}
-Hadoop Version 3.2.2 wurde als Binary für Ubuntu heruntergeladen und entpackt. Der Einfachheit halber wurde der Ordner von "hadoop-3.2.2" zu "hadoop" umbenannt.
+Hadoop Version 3.2.2 wurde als Binary für Ubuntu heruntergeladen und entpackt. Der Einfachheit halber wurde der Ordner von 'hadoop-3.2.2' zu 'hadoop' umbenannt.
 Als nächstes wurden die nötigen Umgebungsvariablen gesetzt und die PATH-Variable angepasst.
 \begin{lstlisting}[caption=etc/environment,label=env,language=bash]
 HADOOP_HOME=/home/hadoop/hadoop
@@ -584,13 +584,13 @@ stop-dfs.sh
 21912 Jps
 21434 DataNode
 \end{lstlisting}
-Sollten die Daemons wider erwarten nicht anspringen, hat es sich als hilfreich erwiesen den tempordner von Hadoop zu löschen und das HDFS erneut zu formatieren.
+Sollten die Daemons wider erwarten nicht anspringen, hat es sich als hilfreich erwiesen den 'temp'-Ordner von Hadoop zu löschen und das HDFS erneut zu formatieren.
 
 \pagebreak
 
 \section{Elasticsearch}
-Bei der Installation von Elasticsearch und Kibana wurde sich strickt an die Anleitung auf der Onlinepräsenz von Elasticsearch selbst gehalten. Kibana wurde anders als Elasticsearch nur auf datakrakennamenode installiert.
-Der User zu gruppen elasticsearch und kibana hinzugefügt und die entsprechenden Berechtigungen über die verzeichnisse verteilt.
+Bei der Installation von Elasticsearch und Kibana wurde sich strickt an die Anleitung auf der Onlinepräsenz von Elastic selbst gehalten. Kibana wurde anders als Elasticsearch nur auf datakrakennamenode installiert.
+Der User zu Gruppen 'elasticsearch' und 'kibana' hinzugefügt und die entsprechenden Berechtigungen über die Verzeichnisse verteilt.
 
 \begin{lstlisting}[caption=elasticsearch.yml,label=elasticyml,language=bash]
 cluster.name: datakraken
@@ -647,7 +647,7 @@ curl -XGET 'datakrakennamenode:5601/status'
 
 \chapter{Funktion und Implementierung}
 
-Für unsere vier primären Datenquellen RKI Daten, Maßnahmen der Regierung, Nachrichtenartikel und Wetterdaten haben wir uns Entschieden jeweils ein eigenes Programm ('Scraper') mit Python zu implementieren die hier nun einzeln erläutert werden. \newline
+Für die vier primären Datenquellen RKI Daten, Maßnahmen der Regierung, Nachrichtenartikel und Wetterdaten wurde sich daf\"ur Entschieden jeweils ein eigenes Programm ('Scraper') mit Python zu implementieren die hier nun einzeln erläutert werden. \newline
 
 \section{Scheduling}
 Jeder der Scraper wird, wie in Sektion \ref{ooziecron} bereits erwähnt, mit Cron gestartet. Als Zeitintervall wurde eine Stunde gewählt (siehe \ref{cron}). \newline
@@ -1170,7 +1170,7 @@ F\"ur eine sp\"ater Verwendung ohne Konfigurationsdatei wurden hier bereits Vorb
 
 \chapter{Zusammenfassung und Fazit}
 Abschließend war das Projekt f\"ur das Projektteam ein wirklich wichtiger Erfahrungswert im Studienverlauf. In jedem durchgef\"uhrten Projekt gibt es Stolpersteine die \"uberwunden werden m\"ussen, auch in diesem Projekt. Der Cluster an sich stellte große Probleme dar die im Vorhinein nicht erwartet worden. Auch zun\"achst, und teilweise im Nachhinein, zuf\"allig vorkommende Probleme brachten den Fortschritt immer wieder ins Stocken. Aber diese 'nicht vorhersehbaren' Probleme sind Erfahrungen die in Rahmen des Studiums noch kaum weitere Folgen haben aber einen enormen Vorteil f\"ur die Zukunft bringen. \newline
-Positiv zu erw\"ahnen ist die Kohäsion des Projektteams. Durch einige bereits vorhergegangene gemeinsame Projekte herrschte ein klares Bewusstsein \"uber die St\"arken und Schwächen jedes der Mitglieder innerhalb des Teams. Trotz der Probleme wurde immer zielstrebig an einer L\"osung gearbeitet und versucht sich soweit wie m\"oglich gegenseitig zu Unterst\"utzen ohne dabei eine unkonstruktive Stimmung aufkommen zu lassen. \newline 
+Positiv zu erw\"ahnen ist die Kohäsion des Projektteams. Durch einige bereits vorhergegangene gemeinsame Projekte herrschte ein klares Bewusstsein \"uber die St\"arken und Schwächen jedes der Mitglieder innerhalb des Teams. Trotz der Probleme wurde immer zielstrebig an einer L\"osung gearbeitet und versucht sich soweit wie m\"oglich gegenseitig zu Unterst\"utzen ohne dabei eine unkonstruktive Stimmung aufkommen zu lassen. \newline
 Aus technischer Sicht gesehen mag das Ergebnis nicht all zu komplex wirken, jedoch tr\"ugt dieser Schein. Die meisten Teile des Projektes erforderten erheblichen Rechercheaufwand. Abwägen von Lösungsansätzen, Technik und Techniken sorge besonders in der ersten Hälfte des Projektes für größere Verzögerungen. Somit sind besonders jene Teile für das Projekt maßgeblich, welche man in der Finalen Lösung nicht sieht: ein breites Fundament an neu gewonnenem Wissen, auch Abseits des minimal Notwendigem. Damit hat das Projekt unserer Meinung sein Ziel ganz klar erreicht, eine technische L\"osung f\"ur das Problem ist entstanden und es wurde enorm viel Wissen innerhalb der Projektmitglieder aufgebaut.
 
 \backmatter
