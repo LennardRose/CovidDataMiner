@@ -225,7 +225,7 @@ Wir in unserem Team, bestehend aus Jochen Schmidt, Lennard Rose und Moritz Zeitl
 Der Fokus dieser Projektarbeit soll also ganz klar auf Schnittstellen, Interaktionen und Recherche über Lösungsmöglichkeiten liegen.
 
 \chapter{Entwicklungsprozess}
-Beim Entwicklungsprozess wurde sich f\"ur eine Scrum artige L\"osung entschieden. So werden klassische Artefakte und Tools wie etwa das Daily oder der Backlog entsprechend angepasst angewandt. Anpassung meist im Sinne der zeitlichen Komponente. Da das Projekt parallel w\"ahrend des Semesters abl\"auft wurde hier das 'Daily', von einem t\"aglichen auf einen w\"ochentlichen Rhythmus umgestellt. Das Backlog wird durch das Team selbst bef\"ullt da es keinen 'Product Owner' gibt. Genauso wurden die Sprints abgewandelt, durch die zeitliche Entzerrung wird hier direkt auf eine dynamische Sprintl\"ange gesetzt die jeweils zum Sprint-Anfang abgestimmt worden ist. \newline
+Beim Entwicklungsprozess wurde sich f\"ur eine scrumartige L\"osung entschieden. So werden klassische Artefakte und Tools wie etwa das Daily oder der Backlog entsprechend angepasst angewandt. Anpassung meist im Sinne der zeitlichen Komponente. Da das Projekt parallel w\"ahrend des Semesters abl\"auft wurde hier das 'Daily', von einem t\"aglichen auf einen w\"ochentlichen Rhythmus umgestellt. Das Backlog wird durch das Team selbst bef\"ullt da es keinen 'Product Owner' gibt. Genauso wurden die Sprints abgewandelt, durch die zeitliche Entzerrung wird hier direkt auf eine dynamische Sprintl\"ange gesetzt die jeweils zum Sprint-Anfang abgestimmt worden ist. \newline
 G\"anzlich verzichtet wurde auf die Sprint Retrospektive, zwar hat sich im Laufe des Projekts der Prozess dynamisch angepasst, allerdings wurde hier nicht explizit ein Artefakt bzw. Termin durchgef\"uhrt. \"Anderungen am Prozess wurden kurzfristig und in direkter Absprache mit allen Teammitgliedern beschlossen. Vereinfachend hinzu kam, dass sich die Projektaufgaben durch die vielen, verschiedenartigen Scraper, welche nicht weiter miteinander interagieren, gut aufteilen ließen. So konnte jeder sein Tempo selbst bestimmen und es waren wenig zusätzliche Maßnahmen nötig um die Arbeit an gemeinsam genutzten Modulen zu koordinieren.
 
 \chapter{Projektmanagement}
@@ -235,15 +235,15 @@ Für unser Projekt haben wir nach der generellen Planung des Aufbaus und Systems
 Wir haben folgende Risiken erfasst:
 
 \begin{itemize}
-\item Ausfall von Hardwareteilen
+\item\textbf{Ausfall von Hardwareteilen}
 Da wir bei unserer Hardware auf unsere privaten ehemaligen genutzten Rechner setzen und damit auf heterogene Systeme und keine wirklichen Servern ist durchaus davon auszugehen das der ein oder andere Ausfall der Hardwareteile während des Projekts möglich ist. Das führt je nach schwere des Schadens bis zu einem Ausfall eines Nodes.
-\item Ausfall ganzer Nodes
+\item\textbf{Ausfall ganzer Nodes}
 Da wir wie bereits erwähnt auf unterschiedliche Hardware setzten und hierbei bereits ein Risiko besteht es könnte ein schwerwiegenden Ausfall geben kommt aber auch noch hinzu das anderweitig z.B. durch falsche Konfiguration ein Ausfall entstehen kann.
-\item Inkompatibilität von Python Versionen zwischen Windows und Ubuntu
+\item\textbf{Inkompatibilität von Python Versionen zwischen Windows und Ubuntu}
 Wir führen alle unsere Entwicklungen auf Windows durch und für die Server setzen wir auf eine etwas ältere Ubuntu Version. Dadurch sehen wir es als Risiko beim späteren deployen unserer Skripte auf den Servern.
-\item Inkompatibilität von Frameworks zueinander
+\item\textbf{Inkompatibilität von Frameworks zueinander}
 Für das Scheduling, das Dateisystem etc. setzen wir auf viele verschiedene Frameworks die alle Hand in Hand gehen müssen. Da sehen wir ein direktes Risiko von Inkompatibiltät
-\item Schaden an der Festplatte durch Transport
+\item\textbf{Schaden an der Festplatte durch Transport}
 Dadurch das die Rechner nicht fest bei einem Projektmitglied oder festgelegtem Ort während der Entwicklung standen und des öfteren zwischen einander
 transportiert wurden war die Unversehrtheit des Systems sowie vor allem der HDDs ein Risiko. Die Rechner sollten erst im späteren Verlauf in der FHWS eingesetzt werden.
 \end{itemize}
@@ -264,7 +264,8 @@ Transportschäden - Häufigkeit: mittel; Schaden: mittel
 
 
 \chapter{Cluster Technologien}
-Grunds\"atzlich wird das komplette Projekt auf Basis eines Hadoop Cluster erstellt. Hadoop ist ein Framework f\"ur die skalierbare und verteilt arbeitende Software. Gerne wird auch der Begriff  Hadoop \"Okosystem verwendet da es einen kompletten Zoo von Technologien (z.B. Zookeeper, HBase, Flink, Storm, Pig, Solr) gibt die im Hadoop Umfeld verwendet werden kann. Hadoop erm\"oglicht eine horizontale Skalierung, dies bedeutet das dem System dynamisch zus\"atzliche Knoten, angeh\"angt werden k\"onnen die dann die Rechenleistung, bzw die Speicherkapazit\"at des Clusters erh\"ohen. In der Basis besteht Hadoop aus YARN und dem HDFS die zusammen mit dem MapReduce Konzept eine Datenverarbeitung erm\"oglichen. Zus\"atzlich zu diesen Standardkomponenten wurden noch Apache Oozie sowie Apache Zeppelin installiert. Diese einzelnen Konzepte sowie zus\"atzliche Basisinformationen zum Cluster werden im folgenden noch genauer erkl\"art.
+Grunds\"atzlich wird das komplette Projekt auf Basis eines Hadoop Cluster erstellt. Hadoop ist ein Framework f\"ur skalierbare und verteilt arbeitende Software. Gerne wird auch der Begriff  Hadoop \"Okosystem verwendet da es einen kompletten Zoo von Technologien (z.B. Zookeeper, HBase, Flink, Storm, Pig, Solr) gibt die im Hadoop Umfeld verwendet werden kann. Hadoop erm\"oglicht eine horizontale Skalierung, dies bedeutet das dem System dynamisch zus\"atzliche Knoten, angeh\"angt werden k\"onnen die dann die Rechenleistung, bzw die Speicherkapazit\"at des Clusters erh\"ohen. In der Basis besteht Hadoop aus YARN und dem HDFS die zusammen mit dem MapReduce Konzept eine Datenverarbeitung erm\"oglichen. Zus\"atzlich zu diesen Standardkomponenten wurden noch Apache Oozie sowie Apache Zeppelin installiert. Diese einzelnen Konzepte sowie zus\"atzliche Basisinformationen zum Cluster werden im folgenden noch genauer erkl\"art.
+
 \section{YARN}
 YARN steht f\"ur 'Yet another resource negotiater'. Die Aufgabe des YARN darin die verf\"ugbaren Ressourcen auf alle anfallenden Aufgaben zu verteilen. Dies bedeutet YARN ist 'Resourcemanager' als auch 'Job-Scheduler'.
 \begin{figure}[H]
@@ -285,16 +286,19 @@ Die tats\"achliche grundlegende Idee hinter der Funktion von YARN ist das Aufspa
 \end{figure}
 Dies ist an dieser Stelle wahrscheinlich durchaus unverst\"andlich, was allerdings f\"ur den nachfolgenden Bericht nicht all zu relevant ist.
 \newline An dieser Stelle ist es wichtig zu erw\"ahnen das die Auftr\"age die von YARN ausgef\"uhrt werden immer in Containern ausgef\"uhrt werden, vergleichbar mit Docker oder Kubernetes. Dies bedeutet das alle Abh\"angigkeiten mit in den Container geliefert werden m\"ussen. Außerdem ist zu beachten das es teilweise zu Problemen mit Netzwerk bzw. Internetzugriff kommen kann.
+
 \section{HDFS}
-Das 'Hadoop Distributed File System' ist die Technologie, die im Hadoop Umfeld die verteilte Datenablage erm\"oglicht. HDFS hat viele Gemeinsamkeiten zu andern bekannten verteilten Dateisystemen wie zum Beispiel Amazon S3. Der Hauptunterschied zu den meisten Technologien ist Widerstandsf\"ahigkeit gegen\"uber Fehlern. Der Grundsatz von Hadoop war immer das ein Cluster aus Standard bzw. Kosteng\"unstiger Hardware aufgebaut werden kann, was allerdings zu einer h\"ohren Fehleranf\"alligkeit f\"uhren kann. Das HDFS wurde in diesem Zusammenhang nach dem Grundsatz entwickelt das es immer ein Teil der Hardware nicht funktioniert.\cite{hdfsFailure} \newline
-Mit unter der wichtigste Grundsatz ist aber wahrscheinlich dass, wenn m\"oglich, nicht die Daten zum Prozess bewegt werden sondern der Code bzw. der Algorithmus zu den Daten gebracht wird.\cite{movingComputation} Je gr\"osser der Datensatz desto gr\"osser die Kosten diese Daten zu verschieben. Und da sich im Normalfall ein 'BigData' System haupts\"achlich um grosse Datenmengen k\"ummert wird dieser Prozess genau umgedreht, der Algorithmus kommt zu den Daten. Die n\"otigen Voraussetzungen und Schnittstellen stellt das HDFS zur Verf\"ugung um Applikationen es zu erm\"oglichen diese Idee umzusetzen.
-\section{Oozie und Cron}
-Als Grundprinzip sollen alle Daten kontinuierlich und automatisch im Cluster gespeichert werden. Hierzu m\"ussen die entsprechenden Datensammler regelm\"assig gestartet werden oder dauerhaft als Daemon laufen. In diesem Projekt wurde davon abgesehen dauerhaft laufende Datensammler zu verwenden da diese grunds\"atzlich erst mal Rechenkapazit\"at bindet. Dies widerspricht dem Prinzip das Hadoop individuell Rechenkapazit\"at zur Verf\"ugung stellt.\newline
-Als Alternative gibt es im Hadoop-Technologie-Zoo bereits eine L\"osung die es erm\"oglicht zeitlich, oder sogar Daten getriggert, automatisch Aufgaben startet - Apache Oozie. Eigentlich Hauptaufgabe von Oozie sind die sogenannten 'Workflows', was nichts anderes ist als ein vordefinierter Arbeitsablauf. Um zeitlich gesteuerte Aufgaben zu starten gibt es die sogenannten 'Coordinator Jobs', sie sind vergleichbar mit den normalen Workflows und sind einzelne, konfigurierbare Arbeitsschritte. Wichtig ist an dieser Stelle zu wissen das unabh\"angig von der Aufgabe, egal ob Python Script, MapReduce oder Email-Action, immer ein Art Container (vergleichbar mit Docker) erstellt wird der dann von YARN ausgef\"uhrt wird. \newline
-Die logische Konsequenz daraus ist, dass dem auszuf\"uhrenden Paket bzw. Container alle n\"otigen Abh\"angigkeiten mitzugeben sind. Dies bedeutet zum Beispiel das alle Python Libraries mit in das auszuf\"uhrende Paket mit eingebunden sein m\"ussen. F\"ur fast alle Datensammler stellt dies kein Problem dar, lediglich der Scraper, der sich um die Corona-Massnahmen k\"ummert, stellt eine großes Problem dar. Mit Tesseract nutzt der Scraper ein Commandline-Tool das nicht mit ein ausf\"uhrbares Paket gepackt werden kann. \newline
-Deswegen musste als Alternative Cron verwendet werden, was ebenso zeitlich gesteuert Scripte ausf\"uhren kann. Genauer wird an dieser Stelle nicht auf Cron eingegangen, da es sich hier um eine mehr als nur bekannte Standardkomponente des Unix-Kernel handelt. Problematisch ist hier leider das die Scripte nicht \"uber YARN sondern \"uber einen Knoten selbst ausgef\"uhrt werden. Von Vorteil ist hier aber das sowohl der Installationsaufwand quasi nicht vorhanden ist und auch das Paketieren der Software bedeutend einfacher darstellt als bei Oozie.
+Das 'Hadoop Distributed File System' ist die Technologie, die im Hadoop Umfeld die verteilte Datenablage erm\"oglicht. HDFS hat viele Gemeinsamkeiten zu andern bekannten verteilten Dateisystemen wie zum Beispiel Amazon S3. Der Hauptunterschied zu den meisten Technologien ist Widerstandsf\"ahigkeit gegen\"uber Fehlern. Der Grundsatz von Hadoop war immer das ein Cluster aus Standard bzw. Kosteng\"unstiger Hardware aufgebaut werden kann, was allerdings zu einer h\"oheren Fehleranf\"alligkeit f\"uhren kann. Das HDFS wurde in diesem Zusammenhang nach dem Grundsatz entwickelt das es immer ein Teil der Hardware nicht funktioniert.\cite{hdfsFailure} \newline
+Mit unter der wichtigste Grundsatz ist aber wahrscheinlich dass, wenn m\"oglich, nicht die Daten zum Prozess bewegt werden sondern der Code bzw. der Algorithmus zu den Daten gebracht wird.\cite{movingComputation} Je gr\"oßer der Datensatz desto gr\"oßer die Kosten diese Daten zu verschieben. Und da sich im Normalfall ein 'BigData' System haupts\"achlich um große Datenmengen k\"ummert wird dieser Prozess genau umgedreht, der Algorithmus kommt zu den Daten. Die n\"otigen Voraussetzungen und Schnittstellen stellt das HDFS zur Verf\"ugung um Applikationen es zu erm\"oglichen diese Idee umzusetzen.
+
+\section{Oozie und Cron}  \label{ooziecron}
+Als Grundprinzip sollen alle Daten kontinuierlich und automatisch im Cluster gespeichert werden. Hierzu m\"ussen die entsprechenden Datensammler regelm\"assig gestartet werden oder dauerhaft als Daemon laufen. In diesem Projekt wurde davon abgesehen dauerhaft laufende Datensammler zu verwenden, da diese grunds\"atzlich Rechenkapazit\"at binden. Dies widerspricht dem Prinzip, dass Hadoop individuell Rechenkapazit\"at zur Verf\"ugung stellt.\newline
+Als Alternative gibt es im Hadoop-Technologie-Zoo bereits eine L\"osung die es erm\"oglicht zeitlich, oder sogar daten-getriggert, automatisch Aufgaben zu starten - Apache Oozie. Eigentliche Hauptaufgabe von Oozie sind die sogenannten 'Workflows', was nichts anderes ist als ein vordefinierter Arbeitsablauf. Um zeitlich gesteuerte Aufgaben zu starten gibt es die sogenannten 'Coordinator Jobs', sie sind vergleichbar mit den normalen Workflows und sind einzelne, konfigurierbare Arbeitsschritte. Wichtig ist an dieser Stelle zu wissen, dass unabh\"angig von der Aufgabe, egal ob Python Script, MapReduce oder Email-Action, immer ein Art Container (vergleichbar mit Docker) erstellt wird, der dann von YARN ausgef\"uhrt wird. \newline
+Die logische Konsequenz daraus ist, dass dem auszuf\"uhrenden Paket bzw. Container alle n\"otigen Abh\"angigkeiten mitzugeben sind. Dies bedeutet zum Beispiel, dass alle Python Libraries mit in das auszuf\"uhrende Paket mit eingebunden sein m\"ussen. F\"ur fast alle Datensammler stellt dies kein Problem dar, lediglich der Scraper, der sich um die Corona-Massnahmen k\"ummert, stellt ein großes Problem dar. Mit Tesseract nutzt der Scraper ein Commandline-Tool das nicht mit ein ausf\"uhrbares Paket gepackt werden kann. \newline
+Deswegen musste als Alternative Cron verwendet werden, was ebenso zeitlich gesteuert Scripte ausf\"uhren kann. Genauer wird an dieser Stelle nicht auf Cron eingegangen, da es sich hier um eine mehr als nur bekannte Standardkomponente des Unix-Kernel handelt. Problematisch ist hier leider das die Scripte nicht \"uber YARN sondern \"uber einen Knoten selbst ausgef\"uhrt werden. Von Vorteil ist hier aber das sowohl der Installationsaufwand quasi nicht vorhanden ist und sich auch das Paketieren der Software bedeutend einfacher darstellt als bei Oozie.
+
 \section{Zeppelin}
-Um die gesammelten Daten auch effektiv verarbeiten zu k\"onnen, muss ein geeigneter Prozess aufgezeigt werden. Das Grundkonzept von Hadoop ist immer noch MapReduce. Dies funktioniert im Entwicklungsprozess immer dar\"uber das eine Job programmiert wird und dann auf dem Cluster getestet wird. F\"ur Testzwecke ist das ein großer Aufwand. Heutzutage geht daher  der Trend hin zu RapidPrototyping-Umgebungen. So gibt es auch im Hadoop Umfeld eine entsprechende Option, Apache Zeppelin. Zeppelin ist stark vergleichbar mit JupyterHub und ist somit eine RapidProtoyping-Umgebung mit User Management. Innerhalb der sogenannten Notebooks kann fast jede erdenkliche Programmiersprache als Interpreter verwendet werden (z.B. Python, Java, R, Elasticsearch, hive, spark). Der grosse Vorteil von Zeppelin gegen\"uber Jupyter ist, dass der Kernel (Programmiersprachen spezifischer Prozess der Code ausf\"uhrt) auf YARN ausgef\"uhrt werden kann und somit auf alle Ressourcen des Cluster zugreifen kann.
+Um die gesammelten Daten auch effektiv verarbeiten zu k\"onnen, muss ein geeigneter Prozess aufgezeigt werden. Das Grundkonzept von Hadoop ist immer noch MapReduce. Dies funktioniert im Entwicklungsprozess immer indem ein Job programmiert wird und dann auf dem Cluster getestet wird. F\"ur Testzwecke ist das ein großer Aufwand. Heutzutage geht daher  der Trend hin zu RapidPrototyping-Umgebungen. So gibt es auch im Hadoop Umfeld eine entsprechende Option, Apache Zeppelin. Zeppelin ist stark vergleichbar mit JupyterHub und ist somit eine RapidProtoyping-Umgebung mit User Management. Innerhalb der sogenannten Notebooks kann fast jede erdenkliche Programmiersprache als Interpreter verwendet werden (z.B. Python, Java, R, Elasticsearch, hive, spark). Der grosse Vorteil von Zeppelin gegen\"uber Jupyter ist, dass der Kernel (Programmiersprachen spezifischer Prozess der Code ausf\"uhrt) auf YARN ausgef\"uhrt werden kann und somit auf alle Ressourcen des Cluster zugreifen kann.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.6]{zeppelinOverview.png}
@@ -326,9 +330,9 @@ Im Bereich der Telegram Gruppen muss hier differenziert werden. Die verschickten
 
 \chapter{Cluster und Deployment}
 %mehr so braindump, überarbeiten%
-\section{Überblick} Bereits bei der Ideenfindung zu unserer Projektarbeit hatten wir uns dazu entschieden, nicht nur den Quellcode für den Datensammler zu schreiben, sondern das ganze auch auf einem Cluster zum laufen zu bringen. Hierfür haben wir 3 alte Rechner (Bis zur explosion eines Netzteils ursprünglich 4) von Moritz genommen. Die Absicht hier war, aus alter, ungenutzter Hardware, neuen Wert zu schöpfen. Tieferen Einblick in Serververwaltung erhalten. Bla bla weitere gründe ausdenken. Wir haben bewusst von der Verwendung von Docker abgesehen, trotz des Wissens, dass es die einfachste Möglichkeit wäre die Software auf dem Cluster zu deployen. Grund ist, dass wir dieses Projekt vornehmlich dazu nutzen wollen, ein breites Fundament an Wissen aufzubauen, welches auch Serveradministration beinhalten soll. Um Elasticsearch mit Docker zu starten, ist nicht viel mehr nötig als sich ein Compose-File aus dem Internet zu suchen und zu starten. Retrospektiv betrachtet hat sich diese Erwartung erfüllt und durch das troubleshooting
+\section{Überblick} Bereits bei der Ideenfindung zu unserer Projektarbeit hatten wir uns dazu entschieden, nicht nur den Quellcode für den Datensammler zu schreiben, sondern das ganze auch auf einem Cluster zum laufen zu bringen. Hierfür haben wir 3 alte Rechner (Bis zur Explosion eines Netzteils ursprünglich 4) von Moritz genommen. Die Absicht hier war aus alter, ungenutzter Hardware neuen Wert zu schöpfen und Tieferen Einblick in Serververwaltung mit Linux zu erhalten. Wir haben bei dem Aufsetzen der Nodes mit der benötigten Software bewusst von der Verwendung von Docker abgesehen, trotz des Wissens, dass es die einfachste Möglichkeit gewesen wäre. Grund ist, dass wir dieses Projekt vornehmlich dazu nutzen wollen, ein breites Fundament an Wissen aufzubauen, welches auch Serveradministration beinhalten soll. Um Elasticsearch mit Docker zu starten, ist nicht viel mehr nötig als sich ein Compose-File aus dem Internet zu suchen und zu starten.
 
-\section{Betriebssystem} Als Betriebssystem wählten wir Ubuntu 18.04 LTS, da es mit ca. einem Drittel aller Linuxserver das meistverwendete Betriebssystem darstellt. Als Bezeichnung für die einzelnen Knoten wählten wir "datakrakennamenode", für den Masternode, sowie "datanodekraken1" und "datanodekraken2", für die beiden Anderen. Auf jedem Knoten legten wir einen User mit Namen "Hadoop" an. Im laufe des Projekts stellte sich heraus, dass eine "sauberere" Lösung gewesen wäre, einen User zu allgemeinen Serververwaltung, sowie jeweils einen User zum laufen der Elasticsearch sowie Hadoop Daemons zu erstellen. Auch wurde der Fehler gemacht den Rootuser nur Stiefmütterlich zu behandeln und nicht mit Passwort einzurichten, dies kostete beim Recovery viel Zeit und nerven.\newline
+\section{Betriebssystem} Als Betriebssystem wählten wir Ubuntu 18.04 LTS, da es mit ca. einem Drittel aller Linuxserver das meistverwendete Betriebssystem darstellt. Als Bezeichnung für die einzelnen Knoten wählten wir 'datakrakennamenode', für den Masternode, sowie 'datanodekraken1' und 'datanodekraken2', für die beiden Anderen. Auf jedem Knoten legten wir einen User mit Namen 'hadoop' an. Im laufe des Projekts stellte sich heraus, dass eine 'sauberere' Lösung gewesen wäre, einen User zu allgemeinen Serververwaltung, sowie jeweils einen User zum laufen der Elasticsearch sowie Hadoop Daemons zu erstellen. Auch wurde der Fehler gemacht den Rootuser nur Stiefmütterlich zu behandeln und nicht mit Passwort einzurichten, dies kostete beim Recovery viel Zeit und nerven.\newline
 Als nächsten Schritt wiesen wir allen Nodes statische private IP-Adressen zu, hierzu wählten wir die vom Router vergebenen Adressen. \pagebreak
 \begin{lstlisting}[caption=datakrakennamenode: /etc/netplan/00-installer-config.yaml,label=hosts,language=bash]
 network:
@@ -360,8 +364,8 @@ JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 \section{Hadoop}
 \subsection{Allgemeines}
-Hadoop ist eine Opensource Lösung von Apache die parallele Verarbeitung und verteilte Datenhaltung auf einem Cluster möglich macht. Mit Hadoop ist auch immer das Hadoop Distributet File System (HDFS) sowie YARN, ein Framework zur Ablaufplanung von verteilten Anwendungen gemeint. \newline
-Der Cluster besteht aus einem Master und sogenannten Workernodes. Der Master behält dabei den Überblich über das verteilte Dateisystem. Dies tut er indem auf ihm 2 Daemons laufen, der Namenode und der Resourcemanager. Der Namenode managt das verteilte Dateisystem und weiß wo die gespeicherten Daten sind. Der Resourcemanager verwaltet YARN-Jobs und kümmert sich um die Planung und Ausführung von Prozessen auf den Workernodes. \newline
+Hadoop ist eine opensource Lösung von Apache, die parallele Verarbeitung und verteilte Datenhaltung auf einem Cluster möglich macht. Mit Hadoop ist auch immer das Hadoop Distributet File System (HDFS) sowie YARN, ein Framework zur Ablaufplanung von verteilten Anwendungen gemeint. \newline
+Der Cluster besteht aus einem Master und vielen sogenannten Workernodes. Der Master behält dabei den Überblick über das verteilte Dateisystem. Dies tut er indem auf ihm 2 Daemons laufen, der Namenode und der Resourcemanager. Der Namenode managt das verteilte Dateisystem und weiß wo die gespeicherten Daten sind. Der Resourcemanager verwaltet YARN-Jobs und kümmert sich um die Planung und Ausführung von Prozessen auf den Workernodes. \newline
 Workernodes hingegen sind zum speichern der Daten und dem Ausführen der Jobs da. Auch sie hosten zwei Daemons, den Datanode, zum verwalten der Daten auf dem Node, sowie dem Nodemanager, der die Ausführung der Tasks auf dem Node verwaltet.
 \subsection{Setup}
 Hadoop Version 3.2.2 wurde als Binary für Ubuntu heruntergeladen und entpackt. Der Einfachheit halber wurde der Ordner von "hadoop-3.2.2" zu "hadoop" umbenannt.
@@ -539,6 +543,7 @@ curl -XGET 'datakrakennamenode:5601/status'
 
 \chapter{Datenquellen}
 \section{Nachrichtenartikel}
+Die Onlinepräsenzen von Zeitungen sind Grundsätzlich sehr gut Organisiert. Artikel sind meist sehr übersichtlich in Themengebiete oder Dossiers unterteilt, lassen sich aber zur Not auch mittels allgegenwärtiger Suchfunktion gut vorfiltern. Auch URLs zu den einzelnen Artikeln sind meist in Themen und Regionsspezifische Pfade unterteilt und somit einfach zu filtern. Als Datenquelle wurden daher so gut wie möglich durch eben genannte Möglichkeiten zum Coronathema vorgefilterte Artikelübersichtsseiten verwendet deren Artikel anschließend über Regex-Zeichenfolgen in ihrer URL weiter gefiltert wurden. Als Quellen können neben den 32 vorkonfigurierten auch beliebig weitere Quellen verwendet werden, da der Scraper dafür ausgelegt wurde, von allen Zeitungsquellen zu jedem Thema Informationen speichern zu können. Bei den vorkonfigurierten Quellen handelt es sich um Zeitungsartikel über die Coronalage Weltweit, sowie zu jedem Bundesland und deren Hauptstädten. 
 \section{RKI Daten}
 Um einen \"Uberblick zu schaffen \"uber die derzeitige Corona-Situation ist es wichtig entsprechende Infektionszahlen dauerhaft abzuspeichern. Die hierf\"ur aktuell sicherste Quelle ist das Robert-Koch-Institut (RKI). Das RKI stellt außer den Infektionszahlen noch zus\"atzliche Informationen zur Verf\"ugung, wie zum Beispiel den aktuellen Impfstatus oder die Situation der durchgef\"uhrten Tests.\newline
 All diese Dinge werden prim\"ar nur in Tabellenform bereitgestellt, jedoch gibt es hier bereits einige Projekte die diese Tabellen automatisch einlesen und dann \"uber einen Webserver abfragbar machen. So wurde in diesem Projekt die \textit{https://api.corona-zahlen.org/docs/} als API genutzt die alle interessanten Daten zur Verf\"ugung stellt. \newline
@@ -553,7 +558,7 @@ Des weiteren wird bei den Inzidenzwerten auch noch zwischen Landkreis und Bundes
 \end{figure}
 
 \section{Corona Maßnahmen}
-Für die Daten der gültigen Maßnahmen und Verordnungen wird direkt auf die offiziellen Websites der Bundesregierung bzw. der jeweiligen Landesregierung zugegriffen. Wir haben uns bewusst dagegen entschieden mögliche Dritt-Anbieter wie Nachrichtenportale zu integrieren um die Informationen ungefiltert zu erhalten, was auch Nachteile nach sich zog da die jeweiligen Regierungsportale es teilweise deutlich schwerer gemacht haben. Daraus resultieren 16 Websiten die als Datenquellen hergenommen werden, hier eine Übersicht:
+Für die Daten der gültigen Maßnahmen und Verordnungen wird direkt auf die offiziellen Websites der Bundesregierung bzw. der jeweiligen Landesregierung zugegriffen. Wir haben uns bewusst dagegen entschieden mögliche Dritt-Anbieter wie Nachrichtenportale zu integrieren um die Informationen ungefiltert zu erhalten, was auch Nachteile nach sich zog da die jeweiligen Regierungsportale es teilweise deutlich schwerer gemacht haben. Daraus resultieren 16 Webseiten die als Datenquellen hergenommen werden, hier eine Übersicht:
 
 \begin{itemize}
 \itemsep-1em
@@ -619,7 +624,22 @@ Während der Entwicklung und Verwendung von Tesseract ist aufgefallen das die En
 
 \chapter{Funktion und Implementierung}
 
-Für unsere vier primären Datenquellen RKI Daten, Maßnahmen der Regierung, Nachrichtenartikel und Wetterdaten haben wir uns Entschieden jeweils ein eigenes Programm ('Scraper') mit Python zu implementieren die hier nun einzeln erläutert werden.
+Für unsere vier primären Datenquellen RKI Daten, Maßnahmen der Regierung, Nachrichtenartikel und Wetterdaten haben wir uns Entschieden jeweils ein eigenes Programm ('Scraper') mit Python zu implementieren die hier nun einzeln erläutert werden. \newline
+
+\section{Scheduling}
+Jeder der Scraper wird, wie in Sektion \ref{ooziecron} bereits erwähnt, mit Cron gestartet. Als Zeitintervall wurde eine Stunde gewählt (siehe \ref{cron}). \newline
+
+\begin{lstlisting}[caption=Cron-einstellungen,label=cron,language=bash]
+#M   S     T M W   Befehl
+#-----------------------------------------------------------------
+0 * * * *   /home/hadoop/ArticleScraper/ubuntu_venv/bin/python3 /home/hadoop/ArticleScraper/main.py
+0 * * * *   /home/hadoop/RKILoader/venv/bin/python3 /home/hadoop/ArticleScraper/main.py
+0 * * * *   /home/hadoop/weatherdownloader/venv/bin/python3 /home/hadoop/ArticleScraper/main.py
+0 * * * *   /home/hadoop/ArticleScraper/ubuntu_venv/bin/python3 /home/hadoop/ArticleScraper/main.py
+#-----------------------------------------------------------------
+\end{lstlisting}
+
+\pagebreak
 
 \section{Maßnahmen}
 
@@ -645,6 +665,8 @@ es_port = '9200'
 indexName = "restrictions"
 ...
 \end{lstlisting}
+
+\pagebreak
 
 \subsubsection{Datenquellen Konfiguration}
 Da fast auschließlich nur spezielle Elemente der Websiten wie die \textless a\textgreater -Tags der PDFS oder  \textless img\textgreater -Tags der Bilder selektiert werden mussten wurde auf ein Key/Value-Schema zurückgegriffen. Der Key spezifierte ob der Code auf eine spezielle Element-ID oder ein Klassenname durchsucht wird, falls das aber nicht möglich war wurde auf den eindeutigen CSS Selector des Elements zurückgegriffen.
@@ -769,12 +791,40 @@ Um die Daten ohne Probleme ins HDFS einfügen zu können wurde auf die 'pywebHDF
 \subsubsection{ElasticSearch Wrapper}
 
 Genauso wurde für die ElasticSearch Anbindung auf deren veröffentlichte Python-Bibliothek ElasticSearchClient aufgebaut. Auch hier wurde wieder eine Wrapper Klasse geschrieben zur Kapselung.
+\pagebreak
+
 
 \section{Artikel}
+
+
+\subsection{Programmaufbau und Ablauf}
+
+\begin{figure}[h!]
+\caption{Klassendiagram(vereinfacht)}
+\label{articlescraperclassdiag}
+\centering
+\includegraphics[scale=0.4]{article_scraper_class_diagram.png}
+\end{figure}
+Der Übersichtlichkeit halber wurden im oberen Diagram \ref{articlescraperclassdiag} 'private' Funktionen sowie lose Kuppelungen mit dem Modul 'utils.py' weggelassen. Das Modul 'indexer.py' nimmt eine Sonderrolle ein, da es einzig dazu dient article\_configs aus JSON-Dateien in Elasticsearch zu indizieren, sonst aber nichts mit dem eigentlichen Programm zu tun hat. Das Programm kann logisch in die Module abstract\_client.py, client\_factory.py, hdfs\_client.py und elastic\_search\_client.py welche der Persistierung der Daten dienen und argument\_parser\_wraper.py, article\_scraper.py und meta\_parser.py welche das Extrahieren und Verarbeiten der Daten übernehmen unterteilt werden. Diese Unterteilung dient der Austauschbarkeit von Komponenten und der Trennung von Fachdomäne und Infrastruktur wie im Domain-Driven-Design üblich.
+\pagebreak
+
+
+\begin{figure}[h!]
+\caption{Swimlane diagram(vereinfacht)}
+\label{articlescraperswimlanediag}
+\centering
+\includegraphics[scale=0.6]{article_scraper_swimlane_diagram.png}
+\end{figure}
+Im oberen Diagram \ref{articlescraperswimlanediag} wurden die einzelnen Clients aus Gründen der Übersichtlichkeit nur in Textform erwähnt.
+\pagebreak
+
+
 \subsection{Konfigurierbarkeit}
-Um mit dem Scraper später von beliebigen Quellen scrapen zu können wurde das gesamte System so Konfigurierbar wie möglich gemacht. Hierfür waren 2 Arten von Konfigurationsdateien notwendig, eine für das gesamte System und eine für jede Quelle von der mit dem Programm gescraped werden soll. Alle Konfigurationen wurden im JSON-Format abgespeichert, im folgenden das Format der JSON-Dateien, auf deren Anteile wir später weiter eingehen.
+Um mit dem Scraper später von beliebigen Quellen scrapen zu können wurde das gesamte System so konfigurierbar wie möglich gemacht. Hierfür waren 2 Arten von Konfigurationsdateien notwendig, eine für das gesamte System und eine für jede Quelle von der mit dem Programm gescraped werden soll. Alle Konfigurationen wurden im JSON-Format abgespeichert, im folgenden das Format der JSON-Dateien(Listing \ref{config} und Listing \ref{articleconfig}), auf deren Anteile wir später weiter eingehen.
+
+
 \subsubsection{Allgemeine Konfiguration}
-Die allgemeine Konfiguration config.json wurde hierbei bei Start in eine globale Variable eingelesen auf die von ueberall aus zugegriffen werden konnte. Werte aus dieser Datei können sich grob in Daten zur initialisierung der Clients und des Loggers, sowie Zeitformate und Einstellungen für den Scraper einteilen.
+Die allgemeine Konfiguration config.json wird bei Start in eine globale Variable eingelesen auf die von überall aus zugegriffen werden kann. Werte aus dieser Datei können sich grob in Daten zur Initialisierung der Clients und des Loggers, sowie Zeitformate und Einstellungen für den Scraper einteilen.
 \begin{lstlisting}[caption=config.json,label=config,language=json]
 {
 "ELASTICSEARCH_URL" : "192.168.0.115",
@@ -798,14 +848,15 @@ Die allgemeine Konfiguration config.json wurde hierbei bei Start in eine globale
 }
 }
 \end{lstlisting}
+
+
 \subsubsection{Artikel Konfiguration}
 Die Artikelkonfiguration ( im weiteren nur article\_config) kann entweder aus dem gleichnamigen Datenbank-Index( Hier von  Elasticsearch ) geladen oder aus einer JSON-Datei gelesen werden. Hierfür wird argparse benutzt, mit welchem sich Commandlineargumente einstellen und parsen lassen. Für den ArticleScraper sind die vorhandenen Optionen:
 \begin{itemize}
-\item --articleclient <id>: Die unter dem Index "article\_config" hinterlegte Konfiguration mit entsprechender Id wird gescraped
-\item --file <filename>: Die unter dem <filename> gefundene Datei wird gescraped
+\item --articleclient \textless id\textgreater: Die unter dem Index "article\_config" hinterlegte Konfiguration mit entsprechender \textless id\textgreater wird gescraped
+\item --file \textless filename\textgreater: Die unter dem \textless filename\textgreater gefundene Datei wird gescraped
 \item keine Argumente: Alle unter dem Index "article\_config" hinterlegten Konfigurationen werden gescraped
 \end{itemize}
-
 Die entsprechenden Konfigurationen werden dann als Liste dem Scraper zurückgegeben und weiter verarbeitet.
 \begin{lstlisting}[caption=article\_config am Beispiel Niedersachsen,label=articleconfig,language=json]
 {
@@ -833,10 +884,10 @@ Die entsprechenden Konfigurationen werden dann als Liste dem Scraper zurückgege
         "attribute_value": "article:published_time"
     },
     "author": {
-        "source": "TAG",
-        "tag": "meta",
-        "attribute" : "property",
-        "attribute_value": "lp.article:author",
+        "source": "JSON_LD",
+        "tag": "author",
+        "attribute" : null,
+        "attribute_value": null,
         "default": null
     },
     "description": {
@@ -847,11 +898,11 @@ Die entsprechenden Konfigurationen werden dann als Liste dem Scraper zurückgege
         "default": null
     },
     "type": {
-        "source": "TAG",
-        "tag": "meta",
-        "attribute" : "property",
-        "attribute_value": "og:type",
-        "default": null
+        "source": "DEFAULT",
+        "tag": null,
+        "attribute" : null,
+        "attribute_value": null,
+        "default": "anschauungszweck erfuellt"
     },
     "keywords": {
         "source": "NOEXIST",
@@ -862,7 +913,7 @@ Die entsprechenden Konfigurationen werden dann als Liste dem Scraper zurückgege
     }
 }
 \end{lstlisting}
-
+\pagebreak
 
 
 \subsection{Erhalten von Artikellinks}
@@ -872,9 +923,10 @@ Die entsprechenden Konfigurationen werden dann als Liste dem Scraper zurückgege
 \centering
 \includegraphics[scale=0.4]{articles_list.png}
 \end{figure}
+
+Um nicht jedes mal für jeden einzelnen Artikel eine eigene Konfiguration erstellen bzw. einen Scrapevorgang starten zu müssen wird sich zu nutze gemacht, dass Artikelverlinkungen auf Artikelübersichtsseiten, wie in Figure \ref {articlelist} zu sehen, in gleichartige HTML-Tags geschrieben werden. 
+
 \begin{lstlisting}[caption=article\_config für Übersichtsseite,label=articleconfigoverview,language=json]
-    "region": "niedersachsen",
-    "site_name": "kreiszeitung",
     "base_url": "https://www.kreiszeitung.de/",
     "path_url": "suche/?tt=1&tx=&sb=&td=&fd=&qr=corona",
     "html_tag": "div",
@@ -885,9 +937,98 @@ Die entsprechenden Konfigurationen werden dann als Liste dem Scraper zurückgege
         "include_condition": true}
         	],
 \end{lstlisting}
-Um nicht jedes mal für jeden einzelnen Artikel eine eigene Konfiguration erstellen bzw. einen Scrapevorgang starten zu müssen wird sich zu nutze gemacht, dass Artikelverlinkungen auf Artikelübersichtsseiten, wie in Figure \ref {articlelist} zu sehen, in gleichartige HTML-Tags geschrieben werden. Es muss in der article\_config also nur der Link zu dieser Übersichtsseite (bestehend aus base\_url und path\_url), sowie das HTML-Tag und die HTML-Klasse angegeben werden. Im Fall des Beispiels in listing \ref{articleconfigoverview} wurden die Artikel der Kreiszeitung bereits über eine suche, wie unter path\_url zu sehen weiter auf unser Themengebiet eingeschränkt. Um nun zu verhindern, dass unerwünschte Artikel wie z.B. Werbung, Newsticker und Ähnliches gespeichert werden, lassen sich über 'url\_conditions' bei 'url\_string' Zeichenketten angeben, welche in der URL des Artikels (nicht) vorkommen sollen, steuerbar über setzen von 'include\_condition' auf true/false. Dabei lässt sich durch die Elemente der Liste eine 'AND'-Beziehung darstellen, über trennen von Zeichenketten mittels '|' innerhalb eines 'condition\_string' eine 'OR'-Beziehung. In diesem Beispiel werden Artikellinks nach dem kriterium gefiltert, ob sie '/niedersachsen' enthalten, den Pfad der Website, unter welchem alle Niedersachsen betreffenden Artikel zu finden sind.
+
+Es muss in der article\_config also nur der Link zu dieser Übersichtsseite (bestehend aus base\_url und path\_url), sowie das HTML-Tag(html\_tag) und die HTML-Klasse(html\_class) angegeben werden. Im Fall des Beispiels in listing \ref{articleconfigoverview} wurden die Artikel der Kreiszeitung bereits über eine suche, wie unter path\_url zu sehen weiter auf unser Themengebiet eingeschränkt. 
+\pagebreak
+
+Die URLs der einzelnen Artikel werden dann in 3 Schritten extrahiert. \newline
+Im ersten Schritt werden alle passenden Tags herausgefiltert. \newline
+Im zweiten Schritt wird die URL aus jedem Tag bzw. seinen descendants extrahiert. \newline
+Im dritten und letzten Schritt wird diese Liste aus Links gefiltert. Es wird nun verhindert, dass unerwünschte Artikel wie z.B. Werbung, Newsticker und Ähnliches gespeichert werden. Hierzu lassen sich über 'url\_conditions' bei 'url\_string' Zeichenketten angeben, welche in der URL des Artikels (nicht) vorkommen sollen, steuerbar über setzen von 'include\_condition' auf true/false. Dabei lässt sich durch die Elemente der Liste eine 'AND'-Beziehung darstellen, über trennen von Zeichenketten mittels '\textbar' innerhalb eines 'condition\_string' eine 'OR'-Beziehung. In diesem Beispiel werden Artikellinks nach dem kriterium gefiltert, ob sie '/niedersachsen' enthalten, den Pfad der Website, unter welchem alle Niedersachsen betreffenden Artikel zu finden sind. \newline
+Weiter wird die Liste nach URLs gefiltert, welche bereits in einem vorherigen Scrapevorgang verarbeitet wurden. Hierzu wird eine Anzahl der letzten gespeicherten Artikel-Metadaten geladen und mit der Linkliste abgeglichen. Um den Scraper so generisch wie möglich zu halten wurde bewusst darauf verzichtet an dieser Stelle die Liste nur mit dem aktuellsten gespeicherten Artikel-Metadatensatz abzugleichen und dann abzubrechen, da es bei manchen Webseiten zu Fehlern aufgrund von abweichender Sortierung kam.
+\pagebreak
+
+\subsection{Sammeln von Metadaten}
+Es werden zu jedem Artikel Metadaten gespeichert um später einmal schnell Artikel nach bestimmten Kriterien suchen und filtern zu können. Hierzu wird in der article\_config, wie in Listing \ref{articleconfig} zu sehen, zu jedem der ausgewählten Attribute spezifiziert, wo diese im HTML-Dokument der Seite zu finden sind bzw. wie sie zu definieren sind. Es stehen 4 Optionen für Quellen zur Verfügung: 
+\begin{itemize}
+\item \textbf{TAG} \newline
+\begin{figure}[h!]
+\caption{Metadaten in HTML-Dokument}
+\label{articlemeta}
+\centering
+\includegraphics[scale=0.4]{articles_meta.png}
+\end{figure} \newline
+Die gesuchte Information kann in einem Tag gefunden werden. Dies beinhaltet alle 'normalen' Tags, es können Informationen aus dem Text des Tags oder aus dem 'content' extrahiert werden, wobei Text vorrang hat. über 'tag', 'attribute' und 'attribute\_value' können die benötigten Tags, wie in Listing \ref{articleconfig} auf Basis von Abbildung \ref{articlemeta} zu sehen, weiter spezifiziert werden.
+
+
+\item \textbf{DEFAULT} \newline
+Die gesuchte Information soll einen Defaultwert annehmen. Dieser wird in der article\_config über das Attribut 'default' bestimmt (siehe Listing \ref{articleconfig}). Dies gilt nicht für 'title', der für die Benennung der zu speichernden Datei benötigt wird. Für 'date' wird der aktuelle Zeitpunkt genommen.
+
+\pagebreak
+
+\item \textbf{JSON\_LD}\newline
+\begin{figure}[h!]
+\caption{Metadaten in HTML-Dokument}
+\label{articlejson}
+\centering
+\includegraphics[scale=0.4]{articles_ld_json.png}
+\end{figure} \newline
+ Die gesuchte Information kann in einem eingebetteten JSON im 'script'-Tag vom Typ 'application/ld+json', wie in Abbildung \ref{articlejson} zu sehen, gefunden werden. Über die Attribute 'attribute' und 'attribute\_value', der article\_config, können einzelne Tags ausgewählt werden. Für die Auswahl des Wertes wird das 'tag' Attribut der article\_config als Key genutzt. Dabei ist es möglich auch verschachtelte oder Listenelemente zu extrahieren. Sollte der gefundene JSON-Key auch wieder ein Dictionary sein wird der Value des Key 'name' extrahiert (zu sehen in Abbildung \ref{articlejson} und Listing \ref{articleconfig}). 
+
+\item \textbf{NOEXIST} \newline
+Die Information steht nicht zur Verfügung oder soll nicht gespeichert werden. Es wird stattdessen ein Bindestrich als Freizeichen gespeichert.
+\end{itemize}
+
+\pagebreak
+
+Anhand dieser Festlegungen wird für jedes Attribut eine passende Strategie angewendet. Die so gewonnenen Informationen werden in das JSON-Dokument 'article\_meta\_data' geschrieben.
+\begin{lstlisting}[caption=article\_meta\_data Dokument vor seiner Befüllung mit Daten,label=articlemetadata,language=json]
+{ 	 
+	"title" : None, 
+	"description" : None, 
+	"url": URL, 
+	"source_url" : article_config["base_url"] + article_config["path_url"],  
+	"type" : None, 
+	"date" : None, 
+	"index_time" : utils.date_now(),
+	"region" : article_config["region"], 
+	"site_name" : article_config["site_name"], 
+	"author" : None, 
+	"keywords" : None,
+	"filename" : "placeholder_to_prevent_iteration",
+	"filepath" : "placeholder_to_prevent_iteration"
+}
+\end{lstlisting}
+In Listing \ref{articlemetadata} sind neben denen aus dem HTML-Dokument noch weitere Attribute zu sehen. Bei 'source\_url', 'region' und 'site\_name' handelt es sich um Informationen welche aus der 'article\_config' übernommen werden, da deren benennung dem Nutzer überlassen werden soll bzw. im Falle der 'source\_url' nicht mehr zugänglich ist. 'index\_time' hält den Zeitpunkt der Erstellung des Dokuments fest (Nicht den der Indizierung) und 'filename' und 'filepath' dienen zum abspeichern und wiederfinden der Datei und werden erst u.a. aus den Metainformationen zusammengesetzt.
+
+\pagebreak
 
 \subsection{Persistierung}
+Zur Persistierung der Daten können verschiedene Technologien verwendet werden. Um diese austauschbar zu machen wurde ein Factory-pattern implementiert mit dem jeweils der Client zurückgeliefert wird, welcher für den entsprechenden Zweck in der allgemeinen Konfiguration angegeben wurde (siehe Listing \ref{config}). Dadurch bleiben die für die 3 verwendeten abstrakten Clients(ArticleClient, MetaClient, FileClient) nutzbaren Technologien ohne viel aufwand, nach dem liskovschen Substitutionsprinzip, austauschbar. ArticleClient und MetaClient  wurden mit Elasticsearch realisiert. Für den FileClient wurde HDFS verwendet. Für die beiden Technologien wurde jeweils eine Wrapper-klasse geschrieben welche von dem jeweiligen Client erben und deren Funktionen überschreiben. 
+\begin{lstlisting}[basicstyle=\small, caption=Funktion zum Speichern der Daten, label=articlesave,language=python]
+    def _save(self, article_meta_data, content):
+        id = None
+        try:
+            id = client_factory.get_meta_client().index_meta_data(article_meta_data)  
+            logging.info("Success -- Saved Metadata")
+
+        except Exception as e:
+            logging.error("failed to save Metadata with meta_client") 
+            logging.error(e)
+
+        if id:
+            try:
+                client_factory.get_file_client().save_as_file(article_meta_data["filepath"], article_meta_data["filename"], content)
+                logging.info("Success -- Saved content")
+
+            except Exception as e:
+                logging.error("failed to save Content with file_client")
+                logging.error(e)
+                client_factory.get_meta_client().delete_meta_data(id)
+
+\end{lstlisting}
+Da zuerst die Metadaten (als article\_meta\_data) und direkt im Anschluss das zugehörige Artikeldokument abgespeichert werden, wurde um sicherzustellen dass bei einem Fehler keine Inkonsistenzen entstehen, die in Listing \ref{articlesave} zu sehende Funktion implementiert. Sollte das speichern der Metadaten Fehlschlagen, wird der die Artikeldatei nicht mehr gespeichert. Sollte hingegen das speichern der Artikeldatei fehlschlagen, werden die zuvor gespeicherten Metadaten wieder gelöscht. Hier ist auch zu sehen wie die 'client\_factory' angewendet wird, ohne das wissen um die konkrete, technische Umsetzung der Clients haben zu müssen.
+\pagebreak
 
 \section{RKI-Daten}
 Technisch gesehen ist die Implementierung des RKI-Scraper nichts besonderes. Im Endeffekt wurden die Schnittstellen der RKI-API abgefragt, die Daten verarbeitet, indiziert und abgelegt. Hierzu wurden einige zus\"atzliche Hilfsfunktionen erstellt die diese Arbeiten erleichtern. \newline
