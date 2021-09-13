@@ -578,7 +578,7 @@ curl -XGET 'datakrakennamenode:5601/status'
 
 \chapter{Datenquellen}
 \section{Nachrichtenartikel}
-Die Onlinepräsenzen von Zeitungen sind Grundsätzlich sehr gut Organisiert. Artikel sind meist sehr übersichtlich in Themengebiete oder Dossiers unterteilt, lassen sich aber zur Not auch mittels allgegenwärtiger Suchfunktion gut vorfiltern. Auch URLs zu den einzelnen Artikeln sind meist in Themen und Regionsspezifische Pfade unterteilt und somit einfach zu filtern. Als Datenquelle wurden daher so gut wie möglich durch eben genannte Möglichkeiten zum Coronathema vorgefilterte Artikelübersichtsseiten verwendet deren Artikel anschließend über Regex-Zeichenfolgen in ihrer URL weiter gefiltert wurden. Als Quellen können neben den 32 vorkonfigurierten auch beliebig weitere Quellen verwendet werden, da der Scraper dafür ausgelegt wurde, von allen Zeitungsquellen zu jedem Thema Informationen speichern zu können. Bei den vorkonfigurierten Quellen handelt es sich um Zeitungsartikel über die Coronalage Weltweit, sowie zu jedem Bundesland und deren Hauptstädten. 
+Die Onlinepräsenzen von Zeitungen sind Grundsätzlich sehr gut Organisiert. Artikel sind meist sehr übersichtlich in Themengebiete oder Dossiers unterteilt, lassen sich aber zur Not auch mittels allgegenwärtiger Suchfunktion gut vorfiltern. Auch URLs zu den einzelnen Artikeln sind meist in Themen und Regionsspezifische Pfade unterteilt und somit einfach zu filtern. Als Datenquelle wurden daher so gut wie möglich durch eben genannte Möglichkeiten zum Coronathema vorgefilterte Artikelübersichtsseiten verwendet deren Artikel anschließend über Regex-Zeichenfolgen in ihrer URL weiter gefiltert wurden. Als Quellen können neben den 32 vorkonfigurierten auch beliebig weitere Quellen verwendet werden, da der Scraper dafür ausgelegt wurde, von allen Zeitungsquellen zu jedem Thema Informationen speichern zu können. Bei den vorkonfigurierten Quellen handelt es sich um Zeitungsartikel über die Coronalage Weltweit, sowie zu jedem Bundesland und deren Hauptstädten.
 \section{RKI Daten}
 Um einen \"Uberblick zu schaffen \"uber die derzeitige Corona-Situation ist es wichtig entsprechende Infektionszahlen dauerhaft abzuspeichern. Die hierf\"ur aktuell sicherste Quelle ist das Robert-Koch-Institut (RKI). Das RKI stellt außer den Infektionszahlen noch zus\"atzliche Informationen zur Verf\"ugung, wie zum Beispiel den aktuellen Impfstatus oder die Situation der durchgef\"uhrten Tests.\newline
 All diese Dinge werden prim\"ar nur in Tabellenform bereitgestellt, jedoch gibt es hier bereits einige Projekte die diese Tabellen automatisch einlesen und dann \"uber einen Webserver abfragbar machen. So wurde in diesem Projekt die \textit{https://api.corona-zahlen.org/docs/} als API genutzt die alle interessanten Daten zur Verf\"ugung stellt. \newline
@@ -710,7 +710,7 @@ Da fast auschließlich nur spezielle Elemente der Websiten wie die \textless a\t
 \caption{HTML-Element der Hessischen Landesseite}
 \label{htmlHessen}
 \centering
-\includegraphics[scale=1.0]{pictures/hessenHTMLexample.png}
+\includegraphics[scale=1.0]{hessenHTMLexample.png}
 \end{figure}
 
 Wie man in \cref{htmlHessen} sehen kann ist das \textless a\textgreater -Tag nicht über eine Id oder ähnliches eindeutig selektierbar deswegen wird ein CSS Selector gebildet, den man sich zudem auch über die Entwicklertools generieren kann. In diesem Beispiel:
@@ -735,7 +735,7 @@ Zu jedem Bundesland wurde eine Konfiguration in ElasticSearch gespeichert die am
 \caption{Aktivitätsdiagramm des Scrapers}
 \label{activityRestriction}
 \centering
-\includegraphics[scale=0.5]{pictures/aktivitätsdiagramm_restrictionscraper.png}
+\includegraphics[scale=0.5]{aktivitätsdiagramm_restrictionscraper.png}
 \end{figure}
 
 \subsubsection{Rohdaten Extrahierung}\label{sec:sub:sub:rohdaten}
@@ -981,7 +981,7 @@ Die entsprechenden Konfigurationen werden dann als Liste dem Scraper zurückgege
 \includegraphics[scale=0.4]{articles_list.png}
 \end{figure}
 
-Um nicht jedes mal für jeden einzelnen Artikel eine eigene Konfiguration erstellen bzw. einen Scrapevorgang starten zu müssen wird sich zu nutze gemacht, dass Artikelverlinkungen auf Artikelübersichtsseiten, wie in Figure \ref {articlelist} zu sehen, in gleichartige HTML-Tags geschrieben werden. 
+Um nicht jedes mal für jeden einzelnen Artikel eine eigene Konfiguration erstellen bzw. einen Scrapevorgang starten zu müssen wird sich zu nutze gemacht, dass Artikelverlinkungen auf Artikelübersichtsseiten, wie in Figure \ref {articlelist} zu sehen, in gleichartige HTML-Tags geschrieben werden.
 
 \begin{lstlisting}[caption=article\_config für Übersichtsseite,label=articleconfigoverview,language=json]
     "base_url": "https://www.kreiszeitung.de/",
@@ -995,7 +995,7 @@ Um nicht jedes mal für jeden einzelnen Artikel eine eigene Konfiguration erstel
         	],
 \end{lstlisting}
 
-Es muss in der article\_config also nur der Link zu dieser Übersichtsseite (bestehend aus base\_url und path\_url), sowie das HTML-Tag(html\_tag) und die HTML-Klasse(html\_class) angegeben werden. Im Fall des Beispiels in listing \ref{articleconfigoverview} wurden die Artikel der Kreiszeitung bereits über eine suche, wie unter path\_url zu sehen weiter auf unser Themengebiet eingeschränkt. 
+Es muss in der article\_config also nur der Link zu dieser Übersichtsseite (bestehend aus base\_url und path\_url), sowie das HTML-Tag(html\_tag) und die HTML-Klasse(html\_class) angegeben werden. Im Fall des Beispiels in listing \ref{articleconfigoverview} wurden die Artikel der Kreiszeitung bereits über eine suche, wie unter path\_url zu sehen weiter auf unser Themengebiet eingeschränkt.
 \pagebreak
 
 Die URLs der einzelnen Artikel werden dann in 3 Schritten extrahiert. \newline
@@ -1006,7 +1006,7 @@ Weiter wird die Liste nach URLs gefiltert, welche bereits in einem vorherigen Sc
 \pagebreak
 
 \subsection{Sammeln von Metadaten}
-Es werden zu jedem Artikel Metadaten gespeichert um später einmal schnell Artikel nach bestimmten Kriterien suchen und filtern zu können. Hierzu wird in der article\_config, wie in Listing \ref{articleconfig} zu sehen, zu jedem der ausgewählten Attribute spezifiziert, wo diese im HTML-Dokument der Seite zu finden sind bzw. wie sie zu definieren sind. Es stehen 4 Optionen für Quellen zur Verfügung: 
+Es werden zu jedem Artikel Metadaten gespeichert um später einmal schnell Artikel nach bestimmten Kriterien suchen und filtern zu können. Hierzu wird in der article\_config, wie in Listing \ref{articleconfig} zu sehen, zu jedem der ausgewählten Attribute spezifiziert, wo diese im HTML-Dokument der Seite zu finden sind bzw. wie sie zu definieren sind. Es stehen 4 Optionen für Quellen zur Verfügung:
 \begin{itemize}
 \item \textbf{TAG} \newline
 \begin{figure}[h!]
@@ -1030,7 +1030,7 @@ Die gesuchte Information soll einen Defaultwert annehmen. Dieser wird in der art
 \centering
 \includegraphics[scale=0.4]{articles_ld_json.png}
 \end{figure} \newline
- Die gesuchte Information kann in einem eingebetteten JSON im 'script'-Tag vom Typ 'application/ld+json', wie in Abbildung \ref{articlejson} zu sehen, gefunden werden. Über die Attribute 'attribute' und 'attribute\_value', der article\_config, können einzelne Tags ausgewählt werden. Für die Auswahl des Wertes wird das 'tag' Attribut der article\_config als Key genutzt. Dabei ist es möglich auch verschachtelte oder Listenelemente zu extrahieren. Sollte der gefundene JSON-Key auch wieder ein Dictionary sein wird der Value des Key 'name' extrahiert (zu sehen in Abbildung \ref{articlejson} und Listing \ref{articleconfig}). 
+ Die gesuchte Information kann in einem eingebetteten JSON im 'script'-Tag vom Typ 'application/ld+json', wie in Abbildung \ref{articlejson} zu sehen, gefunden werden. Über die Attribute 'attribute' und 'attribute\_value', der article\_config, können einzelne Tags ausgewählt werden. Für die Auswahl des Wertes wird das 'tag' Attribut der article\_config als Key genutzt. Dabei ist es möglich auch verschachtelte oder Listenelemente zu extrahieren. Sollte der gefundene JSON-Key auch wieder ein Dictionary sein wird der Value des Key 'name' extrahiert (zu sehen in Abbildung \ref{articlejson} und Listing \ref{articleconfig}).
 
 \item \textbf{NOEXIST} \newline
 Die Information steht nicht zur Verfügung oder soll nicht gespeichert werden. Es wird stattdessen ein Bindestrich als Freizeichen gespeichert.
@@ -1040,17 +1040,17 @@ Die Information steht nicht zur Verfügung oder soll nicht gespeichert werden. E
 
 Anhand dieser Festlegungen wird für jedes Attribut eine passende Strategie angewendet. Die so gewonnenen Informationen werden in das JSON-Dokument 'article\_meta\_data' geschrieben.
 \begin{lstlisting}[caption=article\_meta\_data Dokument vor seiner Befüllung mit Daten,label=articlemetadata,language=json]
-{ 	 
-	"title" : None, 
-	"description" : None, 
-	"url": URL, 
-	"source_url" : article_config["base_url"] + article_config["path_url"],  
-	"type" : None, 
-	"date" : None, 
+{
+	"title" : None,
+	"description" : None,
+	"url": URL,
+	"source_url" : article_config["base_url"] + article_config["path_url"],
+	"type" : None,
+	"date" : None,
 	"index_time" : utils.date_now(),
-	"region" : article_config["region"], 
-	"site_name" : article_config["site_name"], 
-	"author" : None, 
+	"region" : article_config["region"],
+	"site_name" : article_config["site_name"],
+	"author" : None,
 	"keywords" : None,
 	"filename" : "placeholder_to_prevent_iteration",
 	"filepath" : "placeholder_to_prevent_iteration"
@@ -1061,16 +1061,16 @@ In Listing \ref{articlemetadata} sind neben denen aus dem HTML-Dokument noch wei
 \pagebreak
 
 \subsection{Persistierung}
-Zur Persistierung der Daten können verschiedene Technologien verwendet werden. Um diese austauschbar zu machen wurde ein Factory-pattern implementiert mit dem jeweils der Client zurückgeliefert wird, welcher für den entsprechenden Zweck in der allgemeinen Konfiguration angegeben wurde (siehe Listing \ref{config}). Dadurch bleiben die für die 3 verwendeten abstrakten Clients(ArticleClient, MetaClient, FileClient) nutzbaren Technologien ohne viel aufwand, nach dem liskovschen Substitutionsprinzip, austauschbar. ArticleClient und MetaClient  wurden mit Elasticsearch realisiert. Für den FileClient wurde HDFS verwendet. Für die beiden Technologien wurde jeweils eine Wrapper-klasse geschrieben welche von dem jeweiligen Client erben und deren Funktionen überschreiben. 
+Zur Persistierung der Daten können verschiedene Technologien verwendet werden. Um diese austauschbar zu machen wurde ein Factory-pattern implementiert mit dem jeweils der Client zurückgeliefert wird, welcher für den entsprechenden Zweck in der allgemeinen Konfiguration angegeben wurde (siehe Listing \ref{config}). Dadurch bleiben die für die 3 verwendeten abstrakten Clients(ArticleClient, MetaClient, FileClient) nutzbaren Technologien ohne viel aufwand, nach dem liskovschen Substitutionsprinzip, austauschbar. ArticleClient und MetaClient  wurden mit Elasticsearch realisiert. Für den FileClient wurde HDFS verwendet. Für die beiden Technologien wurde jeweils eine Wrapper-klasse geschrieben welche von dem jeweiligen Client erben und deren Funktionen überschreiben.
 \begin{lstlisting}[basicstyle=\small, caption=Funktion zum Speichern der Daten, label=articlesave,language=python]
     def _save(self, article_meta_data, content):
         id = None
         try:
-            id = client_factory.get_meta_client().index_meta_data(article_meta_data)  
+            id = client_factory.get_meta_client().index_meta_data(article_meta_data)
             logging.info("Success -- Saved Metadata")
 
         except Exception as e:
-            logging.error("failed to save Metadata with meta_client") 
+            logging.error("failed to save Metadata with meta_client")
             logging.error(e)
 
         if id:
