@@ -221,7 +221,7 @@ TODO
 \mainmatter
 
 \chapter{Einführung und Motivation}\label{ch:intro}
-Wir in unserem Team, bestehend aus Jochen Schmidt, Lennard Rose und Moritz Zeitler hatten nach unserem Gemeinsamen Programmierprojekt beschlossen, wieder zusammen zu arbeiten und diesmal in eine ganz andere Richtung zu gehen. Hierzu muss man wissen, dass unser Programmierprojekt damals aus einem Multiplayer-Computerspiel bestand, welches wir ausschließlich mit C++ sowie SDL programmierten. Da wir nichts vorgefertigtes an Code oder Lösungen benutzten und alles "von der Pike auf"  entwickelten, lag der Fokus vor allem auf Algorithmen, Datenstrukturen und Patterns. Auch wenn uns diese Art des Entwickelns allen sehr Spaß gemacht hat und unser Projekt sehr Erfolgreich war, wollten wir mit dieser Projektarbeit nochmal in eine ganz andere Richtung gehen um uns als Entwickler weiter zu entwickeln und unserem Repertoire ein paar neue Tools hinzuzufügen. Mit dem Thema Datamining war für uns auch sehr schnell ein Thema gefunden, Coronadaten boten sich aus aktuellem Anlass an und da Moritz noch ein paar alte Rechner im Keller stehen hatte, beschlossen wir nicht nur eine Lösung, sondern ein betriebsbereites System zu entwickeln. \newline
+Wir in unserem Team, bestehend aus Jochen Schmidt, Lennard Rose und Moritz Zeitler hatten nach unserem Gemeinsamen Programmierprojekt beschlossen, wieder zusammen zu arbeiten und diesmal in eine ganz andere Richtung zu gehen. Hierzu muss man wissen, dass unser Programmierprojekt damals aus einem Multiplayer-Computerspiel bestand, welches wir ausschließlich mit C++ sowie SDL programmierten. Da wir nichts vorgefertigtes an Code oder Lösungen benutzten und alles "von der Pike auf"  entwickelten, lag der Fokus vor allem auf Algorithmen, Datenstrukturen und Patterns. Auch wenn uns diese Art des Entwickelns allen sehr Spaß gemacht hat und unser Projekt sehr Erfolgreich war, wollten wir mit dieser Projektarbeit nochmal in eine ganz andere Richtung gehen um uns als Entwickler weiter zu entwickeln und unserem Repertoire ein paar neue Tools hinzuzufügen. Mit dem Thema Datamining war für uns auch sehr schnell ein Thema gefunden, welches uns sehr interessierte. Durch die Situation der Pandemie und die damit einhergehende Brisanz und Aktualität der Daten wie Inzidenz-Werte und Impfrate haben wir uns schnell auf Coronadaten festgelegt. Da Moritz noch ein paar alte Rechner im Keller stehen hatte, beschlossen wir nicht nur eine Lösung, sondern ein betriebsbereites System zu entwickeln. \newline
 Der Fokus dieser Projektarbeit soll also ganz klar auf Schnittstellen, Interaktionen und Recherche über Lösungsmöglichkeiten liegen.
 
 \chapter{Entwicklungsprozess}
@@ -261,11 +261,11 @@ Wir haben folgende Risiken erfasst:
 
 \begin{itemize}
 \item\textbf{Ausfall von Hardwareteilen}
-Da wir bei unserer Hardware auf unsere privaten ehemaligen genutzten Rechner setzen und damit auf heterogene Systeme und keine wirklichen Servern ist durchaus davon auszugehen das der ein oder andere Ausfall der Hardwareteile während des Projekts möglich ist. Das führt je nach schwere des Schadens bis zu einem Ausfall eines Nodes.
+Da wir bei unserer Hardware auf unsere privaten, ehemaligen genutzten, Rechner setzen und damit auf heterogene Systeme und keine wirklichen Servern ist durchaus davon auszugehen das der ein oder andere Ausfall der Hardwareteile während des Projekts möglich ist. Das führt je nach schwere des Schadens bis zu einem Ausfall eines Nodes.
 \item\textbf{Ausfall ganzer Nodes}
-Da wir wie bereits erwähnt auf unterschiedliche Hardware setzten und hierbei bereits ein Risiko besteht es könnte ein schwerwiegenden Ausfall geben kommt aber auch noch hinzu das anderweitig z.B. durch falsche Konfiguration ein Ausfall entstehen kann.
+Da wir wie bereits erwähnt auf unterschiedliche Hardware setzen und hierbei bereits ein Risiko besteht, es könne ein schwerwiegenden Ausfall geben, kommt aber auch noch hinzu das anderweitig z.B. durch falsche Konfiguration ein Ausfall entstehen kann.
 \item\textbf{Inkompatibilität von Python Versionen zwischen Windows und Ubuntu}
-Wir führen alle unsere Entwicklungen auf Windows durch und für die Server setzen wir auf eine etwas ältere Ubuntu Version. Dadurch sehen wir es als Risiko beim späteren deployen unserer Skripte auf den Servern.
+Wir führen alle unsere Entwicklungen auf Windows durch und für die Server setzen wir auf eine etwas ältere Ubuntu Version. Dadurch sehen wir es als Risiko beim späteren aufsetzen unserer Programme auf den Servern.
 \item\textbf{Inkompatibilität von Frameworks zueinander}
 Für das Scheduling, das Dateisystem etc. setzen wir auf viele verschiedene Frameworks die alle Hand in Hand gehen müssen. Da sehen wir ein direktes Risiko von Inkompatibiltät
 \item\textbf{Schaden an der Festplatte durch Transport}
@@ -273,19 +273,22 @@ Dadurch das die Rechner nicht fest bei einem Projektmitglied oder festgelegtem O
 transportiert wurden war die Unversehrtheit des Systems sowie vor allem der HDDs ein Risiko. Die Rechner sollten erst im späteren Verlauf in der FHWS eingesetzt werden.
 \end{itemize}
 \subsection{Risikobewertung}
-%-> Tabelle
-Ausfall von Hardwareteilen - Häufigkeit: mittel; Schaden: gering
-Ausfall eines Nodes - Häufigkeit: gering; Schaden: hoch
-Inkompatibilität zwischen Windows/Ubuntu - Häufigkeit: hoch; Schaden: mittel
-Inkompatibilität zwischen Frameworks - Häufigkeit: hoch; Schaden: gering
-Transportschäden - Häufigkeit: mittel; Schaden: mittel
+\textbf{Ausfall von Hardwareteilen:} Häufigkeit: mittel; Schaden: gering \\
+\textbf{Ausfall eines Nodes:} Häufigkeit: gering; Schaden: hoch \\
+\textbf{Inkompatibilität zwischen Windows/Ubuntu:} Häufigkeit: hoch; Schaden: mittel \\
+\textbf{Inkompatibilität zwischen Frameworks:} Häufigkeit: hoch; Schaden: gering \\
+\textbf{Transportschäden:} Häufigkeit: mittel; Schaden: mittel \\
 \subsection{Risikomatrix}
+
+Das ganze wurde für bessere Übersichtlichkeit grafisch als Matrix dargestellt:
+
 \begin{figure}[H]
 \caption{Risikomatrix}
 \label{risikoMatrix}
 \centering
 \includegraphics[scale=0.8]{pictures/risikoanalyse.png}
 \end{figure}
+
 \subsection{Zeitaufwand}
 Wie bereits im Kapitel zu den Tickets erw\"ahnt wurde individuell jede Aufgabe bewertet und somit auch klar erkennbar welche Aufgaben hier zeitlich unter- bzw. untersch\"atzt worden sind. Am problematischstem stellten sich im Verlauf des Projekts immer wieder Plattform-Themen (z.B. Installation von Technologien) heraus:
 \begin{itemize}
@@ -296,6 +299,7 @@ Wie bereits im Kapitel zu den Tickets erw\"ahnt wurde individuell jede Aufgabe b
 Dieser zus\"atzliche Aufwand musste dann in anderen Tickets aufgefangen werden. Allerdings war dies nur begrenzt m\"oglich da hier durchaus auch viel Aufwand n\"otig war. \newline
 Eine solche Zeit-Problematik wurde aber bereits zu Beginn des Projektes ber\"ucksichtigt. So wurden einige Themen die das Projektteam verwirklichen wollte als Optional eingestuft. Als Beispiel kann man hier eine REST-Schnittstelle f\"ur die Konfiguration der Scraper nennen oder einen Scraper der Querdenker-Telegram-Gruppen \"uberwacht. \newline
 An dieser Stelle ist aber trotzdem wichtig zu erw\"ahnen das viele Tickets einen zus\"atzlichen Zeitaufwand ben\"otigt haben auf Grund von Plattform-Themen. Dies bedeutet das die meisten Installationen an sich mehr Zeit in Anspruch genommen haben aber auch weiterhin in vielen Aufgaben die Plattform zus\"atzlich Zeit gekostet hat die nicht klar zu einem anderen Ticket zuzuordnen waren.
+
 \chapter{Cluster Technologien}
 Grunds\"atzlich wird das komplette Projekt auf Basis eines Hadoop Cluster erstellt. Hadoop ist ein Framework f\"ur skalierbare und verteilt arbeitende Software. Gerne wird auch der Begriff  Hadoop \"Okosystem verwendet da es einen kompletten Zoo von Technologien (z.B. Zookeeper, HBase, Flink, Storm, Pig, Solr) gibt die im Hadoop Umfeld verwendet werden kann. Hadoop erm\"oglicht eine horizontale Skalierung, dies bedeutet das dem System dynamisch zus\"atzliche Knoten, angeh\"angt werden k\"onnen die dann die Rechenleistung, bzw die Speicherkapazit\"at des Clusters erh\"ohen. In der Basis besteht Hadoop aus YARN und dem HDFS die zusammen mit dem MapReduce Konzept eine Datenverarbeitung erm\"oglichen. Zus\"atzlich zu diesen Standardkomponenten wurden noch Apache Oozie sowie Apache Zeppelin installiert. Diese einzelnen Konzepte sowie zus\"atzliche Basisinformationen zum Cluster werden im folgenden noch genauer erkl\"art.
 
@@ -611,7 +615,7 @@ Für die Daten der gültigen Maßnahmen und Verordnungen wird direkt auf die off
 \item \url{https://www.regierung-mv.de/corona/Verordnungen-und-Dokumente/}
 \end{itemize}
 
-Im laufe der Analyse der Websites stellte sich heraus das es drei Fälle zu Beleuchten gab. Zum einen wurde oft auf den Websites mehr schlecht als recht über die aktuellen Corona-Maßnahmen informiert und nur auf das aktuell gültige Rechtsdokument wie eine Corona-Verordnung verwiesen welches meistens als PDF-Datei publik gemacht wurde:
+Im laufe der Analyse der Websites stellte sich heraus das es drei Fälle zu Beleuchten gab. Zum einen wurde oft auf den Websites mehr schlecht als recht über die aktuellen Corona-Maßnahmen informiert und nur auf das aktuell gültige Rechtsdokument wie eine Corona-Verordnung verwiesen. Diese sind größtenteils als PDF-Datei publik gemacht:
 \begin{figure}[H]
 \caption{Hessische Landesseite (Verordnung als PDF verlinkt)}
 \label{websiteHessen}
@@ -642,16 +646,6 @@ Die Wetterdaten sind grunds\"atzlich die einfachste Datenquelle. Hier gibt es me
 Ausgew\"ahlt wurde hier endg\"ultig \textit{https://openweathermap.org/api}. Hier k\"onnen aktuelle Wetterdaten umsonst heruntergeladen werden. Eingeschr\"ankt wird hier bei historischen Daten, was allerdings f\"ur das Konzept irrelevant ist da die Daten immer tagesaktuell abgespeichert werden sollen. \newline
 Die API wird dann pro Stadt abgefragt und nach dem Ablagekonzept abgelegt bzw. indiziert. Zu beachten ist allerdings noch das nur eine beschr\"ankte Anzahl an Anfragen pro Minute durchgef\"uhrt werden k\"onnen. Dies wurde Software technisch Umgang oder besser gesagt ber\"ucksichtigt.
 
-\chapter{Problemstellung}
-\section{Corona Maßnahmen}
-Bei den bereits genannten Datenquellen ergab sich die Problematik dass die Informationen in unterschiedlichen Formaten vorhanden sind. Die Informationen waren in Bildern als JPEG- und PNG-Dateien sowie PDF-Dateien enthalten und als reiner Text in den HTML-Code eingebettet. Um an die Rohdaten zu kommen wäre es an dieser Stelle ein leichtes diese Dateien nun einfach herunterzuladen und im HDFS abzulegen, da wir aber auch Metadaten für spätere Analysen speichern möchten hatten wir das Problem das wir aus den Bildern und PDF Dateien die Informationen extrahieren mussten. Um die Bilder zu Text zu wandeln entschieden wir uns für die Open Source OCR Engine Tesseract und um den Text aus den PDFs während der Laufzeit zu erhalten wurde auf das Python-Package pdfminer.six gesetzt.
-
-\subsection{Tesseract}
-Tesseract wurde ursprünglich bei Hewlett-Packard entwickelt und 2005 als Open Source veröffentlicht wo es seit 2006 von Google betreut wird.
-Seit Version 4 wurde die Engine auf ein künstliches Neuronales Netz aufgebaut. Grundsätzlich wird die Software von der Kommandozeile aus gesteuert. Um es aus unserem Python-Skript ansprechbar zu machen wird dazu noch das pytesseract-Package für Python benötigt.
-
-\subsubsection{Bildumwandlung}\label{sec:sub:sub:bild}
-Während der Entwicklung und Verwendung von Tesseract ist aufgefallen das die Engine mit einigen bunten Bildern, die die Landesregierungen veröffentlicht haben Probleme hat. Vor allem wenn der Text farbig auf farbigen Hintergrund ist. Um dieses Problem schnell und trotzdem effizient zu lösen haben wir uns entschieden die Bilder vor der Textanalyse in schwarz und weiß umzuwandeln. Verschiedene Tests und die bisherige Erfahrung haben gezeigt dass das zwar keine perfekte aber durchaus eine solide Lösung ist.
 
 \chapter{Funktion und Implementierung}
 
@@ -674,10 +668,20 @@ Jeder der Scraper wird, wie in Sektion \ref{ooziecron} bereits erwähnt, mit Cro
 
 \section{Maßnahmen}
 
+\subsection{Tesseract}
+
+Bei den bereits genannten Datenquellen ergab sich die Problematik dass die Informationen in unterschiedlichen Formaten vorhanden sind. Die Informationen waren in Bildern als JPEG- und PNG-Dateien sowie PDF-Dateien enthalten und als reiner Text in den HTML-Code eingebettet. Um an die Rohdaten zu kommen wäre es an dieser Stelle ein leichtes die Dateien herunterzuladen und im HDFS abzulegen, da wir aber auch Metadaten für spätere Analysen speichern möchten hatten wir das Problem das wir aus den Bilder- und PDF-Dateien die Informationen extrahieren mussten. Um die Bilder zu Text zu wandeln entschieden wir uns für die Open Source OCR Engine Tesseract und um den Text aus den PDFs während der Laufzeit zu erhalten wurde auf das Python-Package pdfminer.six gesetzt.
+
+Tesseract wurde ursprünglich bei Hewlett-Packard entwickelt und 2005 als Open Source veröffentlicht wo es seit 2006 von Google betreut wird.
+Seit Version 4 basiert die Engine auf einem künstlichen Neuronalen Netz. Grundsätzlich wird die Software von der Kommandozeile aus gesteuert. Um es aus unserem Python-Skript ansprechbar zu machen wird dazu noch das pytesseract-Package für Python benötigt.
+
+\subsubsection{Bildumwandlung}\label{sec:sub:sub:bild}
+Während der Entwicklung und der Verwendung von Tesseract ist aufgefallen das die Engine mit einigen bunten Bildern, die die Landesregierungen veröffentlicht haben, Probleme hat. Vor allem wenn der Text farbig auf farbigen Hintergrund ist. Um dieses Problem schnell und trotzdem effizient zu lösen haben wir uns entschieden die Bilder vor der Textanalyse in schwarz und weiß umzuwandeln. Verschiedene Tests und die bisherige Erfahrung haben gezeigt dass das zwar keine perfekte aber durchaus eine solide Lösung ist.
+
 \subsection{Konfigurationen}
 
 \subsubsection{Programm Konfiguration}
-Bei der Entwicklung wurde auf hohe Konfigurierbarkeit geachtet da schon während des Prozesses festgestellt wurde das jederzeit Änderungen an den ausgewählten Websiten passieren können und deshalb das Programm sehr flexibel sein sollte. Hierfür wurde eine Config.py-Datei angelegt in denen alle wichtigen Informationen wie z.B. URLs von ElasticSearch und HDFS etc.
+Bei der Entwicklung wurde auf hohe Konfigurierbarkeit geachtet da schon während des Prozesses festgestellt wurde das jederzeit Änderungen an den ausgewählten Websiten passieren können und deshalb das Programm sehr flexibel sein sollte. Hierfür wurde eine Config.py-Datei angelegt in denen alle wichtigen Informationen wie z.B. URLs von ElasticSearch und HDFS abgespeichert sind.
 
 \begin{lstlisting}[caption=Config für das Programm]
 # -------------------------------hdfs--------------------------------
@@ -700,7 +704,7 @@ indexName = "restrictions"
 \pagebreak
 
 \subsubsection{Datenquellen Konfiguration}
-Da fast auschließlich nur spezielle Elemente der Websiten wie die \textless a\textgreater -Tags der PDFS oder  \textless img\textgreater -Tags der Bilder selektiert werden mussten wurde auf ein Key/Value-Schema zurückgegriffen. Der Key spezifierte ob der Code auf eine spezielle Element-ID oder ein Klassenname durchsucht wird, falls das aber nicht möglich war wurde auf den eindeutigen CSS Selector des Elements zurückgegriffen.
+Da fast auschließlich nur spezielle Elemente der Websiten wie die \textless a\textgreater -Tags der PDFs oder  \textless img\textgreater -Tags der Bilder selektiert werden mussten wurde auf ein Key/Value-Schema zurückgegriffen. Der Key spezifierte ob der HTML-Code auf eine spezielle Element-ID oder anderes Attribut wie Klassenname durchsucht wird, falls das aber nicht möglich war wurde auf den eindeutigen CSS Selector des Elements zurückgegriffen.
 
 \begin{figure}[H]
 \caption{HTML-Element der Hessischen Landesseite}
@@ -714,7 +718,7 @@ Wie man in \cref{htmlHessen} sehen kann ist das \textless a\textgreater -Tag nic
 #node-listenseite-100174 > div.content.clearfix > div.view.view-registerblock.view-id-registerblock.view-display-id-block.view-dom-id-eabeac53f51705a80d47815e52e2470f.hzd_registerpage-processed > div > div.views-row.views-row-1.views-row-first.views-row-odd > div.views-field.views-field-nothing-2.registerpage-content-right.he_content_body > div > a
 \end{lstlisting}
 
-Zu jedem Bundesland wurde eine Konfiguration in ElasticSearch gespeichert die am Anfang des Programms geladen wird und dementsprechend dann die Daten lädt.
+Zu jedem Bundesland wurde eine Konfiguration in ElasticSearch gespeichert die am Anfang des Programms geladen wird und vorgibt woher und welche Daten das Programm laden soll.
 
 \begin{lstlisting}[caption=Config von Bayern, language=json]
 {
@@ -739,8 +743,8 @@ Zu jedem Bundesland wurde eine Konfiguration in ElasticSearch gespeichert die am
 Wie im Aktivitätsdiagramm \cref{activityRestriction} zu sehen ist, werden am Anfang alle Datenquellenkonfigurationen aus ElasticSearch geladen und der Scraping Prozess für jede Quelle gestartet. Hierbei wird auf die in der Config angegebene URL zugegriffen und die jeweiligen Elemente die durch Target/Value spezifiert sind heruntergeladen. Dazu wird auf die Python-Bibliothek BeautifulSoup zurückgegriffen die zum parsen von XML- und HTML-Dokumenten dient.
 
 \begin{lstlisting}[caption=Parsen und filtern der Website, language=Python]
-	page = requests.get(self.baseUrl)
-       soup = BeautifulSoup(page.content, 'lxml')
+	    page = requests.get(self.baseUrl)
+        soup = BeautifulSoup(page.content, 'lxml')
         if self.target == 'CSSselector':
             elements = soup.select(self.val)
 
@@ -752,7 +756,6 @@ Wie im Aktivitätsdiagramm \cref{activityRestriction} zu sehen ist, werden am An
 \end{lstlisting}
 
 Nachdem die Elemente extrahiert wurden wird je nach Fall weiter verfahren. Wenn es eine Bild-URL ist wird das Bild herunter geladen. Um mit Tesseract eine höhere Genauigkeit zu erzielen wie in \cref{sec:sub:sub:bild} beschrieben, werden die Bilder zu schwarz-weiß konvertiert. Im HDFS werden beide Varianten der Bilder abgespeichert und das konvertierte Bild wird Tesseract zur Textumwandlung übergeben.
-% TODO installation tesseract etc erklären vll bei setup (sprachpakete etc)
 
 \begin{lstlisting}[caption=Schwarz-weiß Konvertierung, language=Python]
 	imgBytes = requests.get(cleanedUrl).content
@@ -811,19 +814,40 @@ Am Ende werden die json-Objekte mit folgendem Format an ElasticSearch gesendet:
 }
 \end{lstlisting}
 
-Um zu verhindern das die selben Maßnahmen immer wieder neu extrahiert werden wird jedes mal beim indexieren in ElasticSearch eine unique ID mitgeben die sich aus dem Bundesland plus dem Gültigkeitsdatum der Maßnahme bildet. Vor jedem Einfügen wird zuerst geprüft ob dazu schon ein Datensatz existiert und nur wenn nicht dann wird die Aktion vollzogen.
+Um zu verhindern das die selben Maßnahmen immer wieder neu extrahiert werden wird jedes mal beim indexieren in ElasticSearch eine eindeutige ID mitgeben die sich aus dem Bundesland plus dem Gültigkeitsdatum der Maßnahme bildet. Vor jedem Einfügen wird zuerst geprüft ob dazu schon ein Datensatz existiert und nur wenn nicht dann wird die Aktion vollzogen.
 
 \subsection{Persistierung}
 
 \subsubsection{HDFS Wrapper}
 
-Um die Daten ohne Probleme ins HDFS einfügen zu können wurde auf die 'pywebHDFS' Bibliothek in Python zurückgegriffen. Diese bildet für uns die Schnittstelle zwischen unserem Code und dem Dateiablagesystem. Um das ganze isoliert nutzen zu können wurde eine HDFS Wrapper Klasse geschrieben die, welche Funktionalität von pywebhdfs beinhaltet. Genauer wird dies noch beim RKI-Scraper Kapitel behandelt.
+Um die Daten ohne Probleme ins HDFS einfügen zu können wurde auf die 'pywebHDFS' Bibliothek in Python zurückgegriffen. Diese bildet für uns die Schnittstelle zwischen unserem Code und dem Dateiablagesystem. Um das ganze isoliert nutzen zu können wurde eine HDFS Wrapper Klasse geschrieben die, die Funktionalität von pywebhdfs beinhaltet. Der Wrapper beinhaltet Funktionalität zum Speichern, öffnen und bearbeiten von Dateien und testet im Konstruktor die Konnektivität mit.
+
+\begin{lstlisting}[caption=Datei-Speicherungs Funktion]
+    def save_as_file(self, path, filename, content):
+        """
+        saves the content with a given filename as a file
+        """
+        logger.info("saving %s to hdfs filesystem", path+filename)
+        self.hdfs_client.create_file(file_data=content, path=path+filename)
+\end{lstlisting}
 
 \subsubsection{ElasticSearch Wrapper}
 
+Genauso wurde für die ElasticSearch Anbindung auf deren veröffentlichte Python-Bibliothek ElasticSearchClient aufgebaut. Auch hier wurde wieder eine Wrapper Klasse geschrieben zur Kapselung der Funktionalitäten. Bei Erstellung wird die Konfiguration an den Konstruktor übergeben und die Indexe initialisiert.
 
-Genauso wurde für die ElasticSearch Anbindung auf deren veröffentlichte Python-Bibliothek ElasticSearchClient aufgebaut. Auch hier wurde wieder eine Wrapper Klasse geschrieben zur Kapselung. Genauer wird dies noch beim RKI-Scraper Kapitel behandelt.
-g.
+\begin{lstlisting}[caption=Initialisierung der Indexe]
+    def initIndex(self):
+        """
+        initializes required indices if not already existing
+        """
+        if not self.es_client.indices.exists(index=indexName):
+            logger.info("Index %s not found - initializing index", indexName)
+            self.es_client.indices.create(index=indexName, body=indexMapping, ignore=400)
+
+        if not self.es_client.indices.exists(index=metaIndexName):
+            logger.info("Index %s not found - initializing index", metaIndexName)
+            self.es_client.indices.create(index=metaIndexName, body=metaIndexMapping, ignore=400)
+\end{lstlisting}
 \pagebreak
 
 
