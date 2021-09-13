@@ -228,6 +228,31 @@ Der Fokus dieser Projektarbeit soll also ganz klar auf Schnittstellen, Interakti
 Beim Entwicklungsprozess wurde sich f\"ur eine scrumartige L\"osung entschieden. So werden klassische Artefakte und Tools wie etwa das Daily oder der Backlog entsprechend angepasst angewandt. Anpassung meist im Sinne der zeitlichen Komponente. Da das Projekt parallel w\"ahrend des Semesters abl\"auft wurde hier das 'Daily', von einem t\"aglichen auf einen w\"ochentlichen Rhythmus umgestellt. Das Backlog wird durch das Team selbst bef\"ullt da es keinen 'Product Owner' gibt. Genauso wurden die Sprints abgewandelt, durch die zeitliche Entzerrung wird hier direkt auf eine dynamische Sprintl\"ange gesetzt die jeweils zum Sprint-Anfang abgestimmt worden ist. \newline
 G\"anzlich verzichtet wurde auf die Sprint Retrospektive, zwar hat sich im Laufe des Projekts der Prozess dynamisch angepasst, allerdings wurde hier nicht explizit ein Artefakt bzw. Termin durchgef\"uhrt. \"Anderungen am Prozess wurden kurzfristig und in direkter Absprache mit allen Teammitgliedern beschlossen. Vereinfachend hinzu kam, dass sich die Projektaufgaben durch die vielen, verschiedenartigen Scraper, welche nicht weiter miteinander interagieren, gut aufteilen ließen. So konnte jeder sein Tempo selbst bestimmen und es waren wenig zusätzliche Maßnahmen nötig um die Arbeit an gemeinsam genutzten Modulen zu koordinieren.
 
+\subsection{Projektboard und Tickets}
+Um den Entwicklungsprozess auch in einer Tool Umgebung abzubilden wurde sich dazu entschieden auf eine durchgehende L\"osung zu setzen. Dies bedeutet das sowohl die Codeverwaltung als auch die Projektverwaltung inklusive Tickets \"uber eine privates GitHub Repository gel\"ost worden sind. Diese Entscheidung wurde so getroffen da hier die Administrative-Verwaltung vom Projektteam selbst \"ubernommen werden kann und keine Abh\"angigkeit zu Dritten besteht. \newline
+Wie bereits erw\"ahnt stellt GitHub ein komplettes Tool-Set zur Projektverwaltung zur Verf\"ugung. Das Entwicklungsboard gibt hier eine \"Ubersicht
+\"uber den derzeitigen Projektstand. Visuelle ist diese stark mit vielen anderen Tools vergleichbar.
+\begin{figure}[H]
+	\caption{Ausschnitt aus dem GitHub Entwicklungsboard}
+	\label{gitHubBoasrd}
+	\centering
+	\includegraphics[scale=0.35]{pictures/gitHubBoard.png}
+\end{figure}
+Gut zu erkennen sind hier die verschiedenen Status in denen sich die Tickets befinden k\"onnen. \newline
+Der Prozess begann mit einer Erstellung der Tickets aus der Projektgruppe heraus. Daraufhin wurde der Zeitaufwand der Tickets gesch\"atzt und damit gleichzeitig in die Spalte 'ToDo' verschoben. Nach Bearbeitung ('In Progress') wurde dann eine entsprechende Review der Aufgabe durchgef\"uhrt. Im Ticket an sich ist eine Beschreibung mit Checkpoints hinterlegt die diese Review erleichtert.
+\begin{figure}[H]
+	\caption{Beispiel Ticket des Projekts}
+	\label{gitHubTicket}
+	\centering
+	\includegraphics[scale=0.45]{pictures/gitHubTicket.png}
+\end{figure}
+Prozess technisch gesehen wurde dann die Kontrolle im Ticket selbst durchgef\"uhrt ob alle Aufgaben erledigt wurden und dies entsprechend auch im Code kontrolliert. F\"ur eine technische Kontrolle wurden hier die direkt in GitHub eingebundenen 'Pull-Requests' genutzt. Hier erfolgte dann eine Kontrolle des Codes an sich und teilweise auch sehr erfolgreich technische Diskussionen die zu einer besseren L\"osung eines Problems f\"uhrten.
+\begin{figure}[H]
+	\caption{Ausschnitt eines Pull Request}
+	\label{gitHubPullRequest}
+	\centering
+	\includegraphics[scale=0.45]{pictures/gitHubPullRequest.png}
+\end{figure}
 \chapter{Projektmanagement}
 \section{Risikoanalyse}
 Für unser Projekt haben wir nach der generellen Planung des Aufbaus und Systems eine Risikoanalyse vorgenommen. Da wir auf viele verschiedene heterogene Elemente angewiesen sind war es uns wichtig uns vorher eine Übersicht möglicher Risiken zu erstellen. Für unsere Bewertung haben wir uns auf die Kategorien {gering, mittel und hoch} festgelegt für die Wahrscheinlichkeit des Eintritts und die Größe des Schadens bei Eintritt.
@@ -255,14 +280,22 @@ Inkompatibilität zwischen Windows/Ubuntu - Häufigkeit: hoch; Schaden: mittel
 Inkompatibilität zwischen Frameworks - Häufigkeit: hoch; Schaden: gering
 Transportschäden - Häufigkeit: mittel; Schaden: mittel
 \subsection{Risikomatrix}
-\begin{figure}[h!]
+\begin{figure}[H]
 \caption{Risikomatrix}
 \label{risikoMatrix}
 \centering
-\includegraphics[scale=1.0]{pictures/risikoanalyse.png}
+\includegraphics[scale=0.8]{pictures/risikoanalyse.png}
 \end{figure}
-
-
+\subsection{Zeitaufwand}
+Wie bereits im Kapitel zu den Tickets erw\"ahnt wurde individuell jede Aufgabe bewertet und somit auch klar erkennbar welche Aufgaben hier zeitlich unter- bzw. untersch\"atzt worden sind. Am problematischstem stellten sich im Verlauf des Projekts immer wieder Plattform-Themen (z.B. Installation von Technologien) heraus:
+\begin{itemize}
+	\item Installation von Hadoop auf allen Nodes: gesch\"atzt mit 3 Stunden, tats\"achlicher 25 Stunden
+	\item Installation von Apache Oozie: gesch\"atzt mit einer Stunde, tats\"achlich 3 Stunden und am Ende nicht verwendet
+	\item Installation von Hadoop \"uber Ambari: gesch\"atzt mit einer Stunde, tats\"achlich 2 Stunden ohne positives Ergebnis und Abbruch da keine Apache Ambari Distribution frei zur Verf\"ugung steht (unter gewissen Rahmenbedingungen)
+\end{itemize}
+Dieser zus\"atzliche Aufwand musste dann in anderen Tickets aufgefangen werden. Allerdings war dies nur begrenzt m\"oglich da hier durchaus auch viel Aufwand n\"otig war. \newline
+Eine solche Zeit-Problematik wurde aber bereits zu Beginn des Projektes ber\"ucksichtigt. So wurden einige Themen die das Projektteam verwirklichen wollte als Optional eingestuft. Als Beispiel kann man hier eine REST-Schnittstelle f\"ur die Konfiguration der Scraper nennen oder einen Scraper der Querdenker-Telegram-Gruppen \"uberwacht. \newline
+An dieser Stelle ist aber trotzdem wichtig zu erw\"ahnen das viele Tickets einen zus\"atzlichen Zeitaufwand ben\"otigt haben auf Grund von Plattform-Themen. Dies bedeutet das die meisten Installationen an sich mehr Zeit in Anspruch genommen haben aber auch weiterhin in vielen Aufgaben die Plattform zus\"atzlich Zeit gekostet hat die nicht klar zu einem anderen Ticket zuzuordnen waren.
 \chapter{Cluster Technologien}
 Grunds\"atzlich wird das komplette Projekt auf Basis eines Hadoop Cluster erstellt. Hadoop ist ein Framework f\"ur skalierbare und verteilt arbeitende Software. Gerne wird auch der Begriff  Hadoop \"Okosystem verwendet da es einen kompletten Zoo von Technologien (z.B. Zookeeper, HBase, Flink, Storm, Pig, Solr) gibt die im Hadoop Umfeld verwendet werden kann. Hadoop erm\"oglicht eine horizontale Skalierung, dies bedeutet das dem System dynamisch zus\"atzliche Knoten, angeh\"angt werden k\"onnen die dann die Rechenleistung, bzw die Speicherkapazit\"at des Clusters erh\"ohen. In der Basis besteht Hadoop aus YARN und dem HDFS die zusammen mit dem MapReduce Konzept eine Datenverarbeitung erm\"oglichen. Zus\"atzlich zu diesen Standardkomponenten wurden noch Apache Oozie sowie Apache Zeppelin installiert. Diese einzelnen Konzepte sowie zus\"atzliche Basisinformationen zum Cluster werden im folgenden noch genauer erkl\"art.
 
@@ -325,8 +358,6 @@ Die wichtigsten Basis Informationen \"uber den Status der Corona-Pandemie in Deu
 Das soeben erw\"ahnte Konzept der Nachrichten wird genauso f\"ur die Massnahmen verwendet. Rohdaten werden im HDFS abgelegt, w\"ahrend die beschreibenden Daten im Elasticsearch indiziert werden. Diese Massnahmen werden mit folgendem Pattern abgelegt: '/datakraken/measures/\$bundesland\$/\$Datum\$+\$TimeStamp\$/'.
 \section{Wetterdaten}
 Auch die Wetterdaten werden im gleichen Stil abgelegt. Heisst die einzelnen Wetterlogs werden als Dokumente im Elasticsearch abgelegt und auch hier\"uber abgefragt. Allerdings werden die Wetterdaten auch noch entsprechend des allgmeinen Konzepts im HDFS abgelegt. Die Ablage Struktur im HDFS ist in folgendem Pattern:  '/datakraken/weather/\$Stadt\$/\$Datum\$/\$TimeStamp\$'.
-\section{'Querdenker' Telegram Gruppen}
-Im Bereich der Telegram Gruppen muss hier differenziert werden. Die verschickten Nachrichten an sich werden mit den Meta-Daten zusammen im Elasticsearch abgelegt. H\"angt allerdings an der Nachricht noch eine Datei ein, oder ein Link, wird die Datei im HDFS abgelegt. Dazu wird eine Referenz erstellt und mit im Elasticsearch abgelegt. Die Ablage Struktur im HDFS ist in folgendem Pattern: '/datakraken/telegram/\$GruppenName\$/\$Datum\$/\$NachrichtId\$\_\$TimeStamp\$'.
 
 \chapter{Cluster und Deployment}
 %mehr so braindump, überarbeiten%
@@ -786,11 +817,13 @@ Um zu verhindern das die selben Maßnahmen immer wieder neu extrahiert werden wi
 
 \subsubsection{HDFS Wrapper}
 
-Um die Daten ohne Probleme ins HDFS einfügen zu können wurde auf die 'pywebHDFS' Bibliothek in Python zurückgegriffen. Diese bildet für uns die Schnittstelle zwischen unserem Code und dem Dateiablagesystem. Um das ganze isoliert nutzen zu können wurde eine HDFS Wrapper Klasse geschrieben die, die Funktionalität von pywebhdfs beinhaltet.
+Um die Daten ohne Probleme ins HDFS einfügen zu können wurde auf die 'pywebHDFS' Bibliothek in Python zurückgegriffen. Diese bildet für uns die Schnittstelle zwischen unserem Code und dem Dateiablagesystem. Um das ganze isoliert nutzen zu können wurde eine HDFS Wrapper Klasse geschrieben die, welche Funktionalität von pywebhdfs beinhaltet. Genauer wird dies noch beim RKI-Scraper Kapitel behandelt.
 
 \subsubsection{ElasticSearch Wrapper}
 
-Genauso wurde für die ElasticSearch Anbindung auf deren veröffentlichte Python-Bibliothek ElasticSearchClient aufgebaut. Auch hier wurde wieder eine Wrapper Klasse geschrieben zur Kapselung.
+
+Genauso wurde für die ElasticSearch Anbindung auf deren veröffentlichte Python-Bibliothek ElasticSearchClient aufgebaut. Auch hier wurde wieder eine Wrapper Klasse geschrieben zur Kapselung. Genauer wird dies noch beim RKI-Scraper Kapitel behandelt.
+g.
 \pagebreak
 
 
@@ -1084,17 +1117,38 @@ def get_json_files_from_directory(self, directory):
 
 \end{lstlisting}
 \subsection{Elasticsearch Helper}
-\"Ahnlich zum HDFS Helper wurde auch eine Helper Klasse f\"ur Elasticsearch implementiert.
-\section{Wetter}
+\"Ahnlich zum HDFS Helper wurde auch eine Helper Klasse f\"ur Elasticsearch implementiert. Neben Standardfunktionen wie das Indizieren einzelner Dokumente gibt es auch noch komplexere Funktionen wie zum Beispiel die automatische Suche nach dem Neuesten Dokument in einem Index. Eine außerdem wichtige Funktion ist hier die 'bulk' Indizierung einer Liste. Um viele Dokumente schnell und kosteng\"unstig zu indizieren wird bei Elasticsearch die sogenannte 'Bulk API' verwendet. Auf eine niedriges Level herunter gebrochen werden anstelle vieler einzelner Anfragen eine große bzw. einige wenige Anfragen mit vielen Dokumenten versendet. Die Anzahl der Dokumente pro Anfrage wird \"uber die 'chunk-size' geregelt. Die Wrapper-Funktion nimmt hier eine Liste von Objekten, die chunk-size, sowie den Ziel-Index und verwandelt diese dann entsprechend der vorgegebenen Elasticsearch-Funktion in eine bzw. mehrere 'bulk-request'.
+\begin{lstlisting}[caption=Elasticsearch Helper f\"ur Bulk Indizierung ,label=esBulk,language=python]
+	def bulk_index_list(self, index_name, document_list, chunk_size=1000):
+	"""indexes a list of documents using the bulk index api
+	converts list of objects to a bulk index command
+	make sure index exists before using this method
 
+	Args:
+	index_name (string): name of the es index
+	document_list (list): python list containing all documents you want to index
+	chunk_size (int, optional): how many docs per bulk request shall be added to the request. Defaults to 10000.
+	"""
+	if document_list:
+		base_map = {}
+		base_map['_index'] = index_name
+		items = []
+		for elem in document_list:
+			base_map['_source'] = elem
+			items.append(copy.copy(base_map))
+		helpers.bulk(self.es_client, items, chunk_size=chunk_size)
+\end{lstlisting}
+Mit Hilfe dieser Funktion kann dann, wie eben beschrieben, eine Liste von Objekte mit Hilfe des Index Namen und optional einer chunk-size, 'bulk' indiziert werden.
+\section{Wetter}
+Der Wetter-Scraper ist wohl der trivialste Scraper. Hier wird lediglich eine Konfigurationsdatei gelesen, die angibt welche St\"adte ber\"ucksichtigt werden sollen, und anhand des Ergebnis dann die Wetter-API abfragt. Technisch gesehen gibt es hier keinen große Magie. Die Abfrage funktioniert \"uber den Städtenamen der mit in Anfrage-URL eingef\"ugt wird. Zu beachten war allerdings das maximal 60 Anfragen pro Minute durchgef\"uhrt werden d\"urfen und das Umlaute gesondert behandelt werden m\"ussen da diese im HDFS Umfeld zu Problemen f\"uhren k\"onnen. Um gr\"oßern Konfigurationsaufwand im Bezug auf das Elasticsearch-Mapping zu verhindern wurde außerdem der Timestamp auf eine Standard Elasticsearch Format umgewandelt.\newline
+F\"ur eine sp\"ater Verwendung ohne Konfigurationsdatei wurden hier bereits Vorbereitungen getroffen das der Scraper auch \"uber Elasticsearch konfigurierbar ist.
 \chapter{Lösung}
 \section{Corona Maßnahmen}
 
-
-\chapter{Evaluierung}
-
-\chapter{Zusammenfassung}
-
+\chapter{Zusammenfassung und Fazit}
+Abschließend war das Projekt f\"ur das Projektteam ein wirklich wichtiger Erfahrungswert im Studienverlauf. In jedem durchgef\"uhrten Projekt gibt es Stolpersteine die \"uberwunden werden m\"ussen, auch in diesem Projekt. Der Cluster an sich stellte große Probleme dar die nicht wirklich im Vorhinein erwartet worden sind. Auch zun\"achst, und teilweise im Nachhinein, zuf\"allig vorkommende Probleme brachten den Fortschritt immer wieder ins Stocken. Aber diese 'nicht vorhersehbaren' Probleme sind Erfahrungen die in Rahmen des Studiums noch kaum weitere Folgen haben aber einen enormen Vorteil f\"ur die Zukunft bringen. \newline
+Positiv zu erw\"ahnen ist die Kohäsion des Projektteams. Durch bereits einige vorhergehende gemeinsame Projekte ist das Bewusstsein \"uber die St\"arke des Teams im Team klar. Trotz der Probleme wurde immer zielstrebig an einer L\"osung gearbeitet und versucht soweit wie m\"oglich sich gegenseitig zu Unterst\"utzen ohne dabei eine negative Stimmung aufkommen zu lassen.\newline
+Aus technischer Sicht gesehen mag das Ergebnis nicht all zu komplex wirken, jedoch tr\"ugt dieser Schein. Durch technische und auch zugegebenermaßen einiger fehlender Kompetenzen war der Aufwand nicht zu untersch\"atzen. Damit hat das Projekt unserer Meinung sein Ziel ganz klar erreicht, eine technische L\"osung f\"ur das Problem ist entstanden und es wurde enorm viel Wissen innerhalb der Projektmitglieder aufgebaut.
 
 \backmatter
 %%%%%%%%%%%%%%%%%%%
