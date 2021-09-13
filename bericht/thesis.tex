@@ -41,8 +41,8 @@
 \def\BaAuthorStudyProgram{Informatik} %% Wirtschaftsinformatik, E-Commerce, Informationssysteme
 \def\BaType{Projektarbeit} %% Masterarbeit
 \def\BaTitle{Entwicklung einer Data Mining Plattform f\"ur Corona Daten}
-\def\BaSupervisorOne{Prof. Rott}
-\def\BaSupervisorTwo{Prof. Fertig}
+\def\BaSupervisorOne{Michael Rott, Dipl.- Inform. (FH)}
+\def\BaSupervisorTwo{Tobias Fertig, M.Sc}
 \def\BaDeadline{\today}
 
 \ifdefined\iswithfullname
@@ -221,14 +221,14 @@ pdfkeywords={Keywords}
 \mainmatter
 
 \chapter{Einführung und Motivation}\label{ch:intro}
-Wir in unserem Team, bestehend aus Jochen Schmidt, Lennard Rose und Moritz Zeitler hatten nach unserem Gemeinsamen Programmierprojekt beschlossen, wieder zusammen zu arbeiten und diesmal in eine ganz andere Richtung zu gehen. Hierzu muss man wissen, dass unser Programmierprojekt damals aus einem Multiplayer-Computerspiel bestand, welches wir ausschließlich mit C++ sowie SDL programmierten. Da wir nichts vorgefertigtes an Code oder Lösungen benutzten und alles "von der Pike auf"  entwickelten, lag der Fokus vor allem auf Algorithmen, Datenstrukturen und Patterns. Auch wenn uns diese Art des Entwickelns allen sehr Spaß gemacht hat und unser Projekt sehr Erfolgreich war, wollten wir mit dieser Projektarbeit nochmal in eine ganz andere Richtung gehen um uns als Entwickler weiter zu entwickeln und unserem Repertoire ein paar neue Tools hinzuzufügen. Mit dem Thema Datamining war für uns auch sehr schnell ein Thema gefunden, welches uns sehr interessierte. Durch die Situation der Pandemie und die damit einhergehende Brisanz und Aktualität der Daten wie Inzidenz-Werte und Impfrate haben wir uns schnell auf Coronadaten festgelegt. Da Moritz noch ein paar alte Rechner im Keller stehen hatte, beschlossen wir nicht nur eine Lösung, sondern ein betriebsbereites System zu entwickeln. \newline
+Wir in unserem Team, bestehend aus Jochen Schmidt, Lennard Rose und Moritz Zeitler hatten nach unserem Gemeinsamen Programmierprojekt beschlossen, wieder zusammen zu arbeiten und diesmal in eine ganz andere Richtung zu gehen. Hierzu muss man wissen, dass unser Programmierprojekt damals aus einem Multiplayer-Computerspiel bestand, welches wir ausschließlich mit C++ sowie SDL programmierten. Da wir nichts vorgefertigtes an Code oder Lösungen benutzten und alles 'von der Pike auf'  entwickelten, lag der Fokus vor allem auf Algorithmen, Datenstrukturen und Patterns. Auch wenn uns diese Art des Entwickelns allen sehr Spaß gemacht hat und unser Projekt sehr Erfolgreich war, wollten wir mit dieser Projektarbeit nochmal in eine ganz andere Richtung gehen um uns als Entwickler weiter zu entwickeln und unserem Repertoire ein paar neue Tools hinzuzufügen. Mit dem Thema Datamining war für uns auch sehr schnell ein Thema gefunden, welches uns sehr interessierte. Durch die Situation der Pandemie und die damit einhergehende Brisanz und Aktualität der Daten wie Inzidenz-Werte und Impfrate haben wir uns schnell auf Coronadaten festgelegt. Da Moritz noch ein paar alte Rechner im Keller stehen hatte, beschlossen wir nicht nur eine Lösung, sondern ein betriebsbereites System zu entwickeln. \newline
 Der Fokus dieser Projektarbeit soll also ganz klar auf Schnittstellen, Interaktionen und Recherche über Lösungsmöglichkeiten liegen.
 
 \chapter{Entwicklungsprozess}
-Beim Entwicklungsprozess wurde sich f\"ur eine scrumartige L\"osung entschieden. So werden klassische Artefakte und Tools wie etwa das Daily oder der Backlog entsprechend angepasst angewandt. Anpassung meist im Sinne der zeitlichen Komponente. Da das Projekt parallel w\"ahrend des Semesters abl\"auft wurde hier das 'Daily', von einem t\"aglichen auf einen w\"ochentlichen Rhythmus umgestellt. Das Backlog wird durch das Team selbst bef\"ullt da es keinen 'Product Owner' gibt. Genauso wurden die Sprints abgewandelt, durch die zeitliche Entzerrung wird hier direkt auf eine dynamische Sprintl\"ange gesetzt die jeweils zum Sprint-Anfang abgestimmt worden ist. \newline
+Beim Entwicklungsprozess wurde sich f\"ur eine 'scrumartige' L\"osung entschieden. So werden klassische Artefakte und Tools wie etwa das Daily oder der Backlog entsprechend angepasst angewandt. Anpassung meist im Sinne der zeitlichen Komponente. Da das Projekt parallel w\"ahrend des Semesters abl\"auft wurde hier das 'Daily', von einem t\"aglichen auf einen w\"ochentlichen Rhythmus umgestellt. Das Backlog wird durch das Team selbst bef\"ullt da es keinen 'Product Owner' gibt. Genauso wurden die Sprints abgewandelt, durch die zeitliche Entzerrung wird hier direkt auf eine dynamische Sprintl\"ange gesetzt die jeweils zum Sprint-Anfang abgestimmt worden ist. \newline
 G\"anzlich verzichtet wurde auf die Sprint Retrospektive, zwar hat sich im Laufe des Projekts der Prozess dynamisch angepasst, allerdings wurde hier nicht explizit ein Artefakt bzw. Termin durchgef\"uhrt. \"Anderungen am Prozess wurden kurzfristig und in direkter Absprache mit allen Teammitgliedern beschlossen. Vereinfachend hinzu kam, dass sich die Projektaufgaben durch die vielen, verschiedenartigen Scraper, welche nicht weiter miteinander interagieren, gut aufteilen ließen. So konnte jeder sein Tempo selbst bestimmen und es waren wenig zusätzliche Maßnahmen nötig um die Arbeit an gemeinsam genutzten Modulen zu koordinieren.
 
-\subsection{Projektboard und Tickets}
+\section{Projektboard und Tickets}
 Um den Entwicklungsprozess auch in einer Tool Umgebung abzubilden wurde sich dazu entschieden auf eine durchgehende L\"osung zu setzen. Dies bedeutet das sowohl die Codeverwaltung als auch die Projektverwaltung inklusive Tickets \"uber eine privates GitHub Repository gel\"ost worden sind. Diese Entscheidung wurde so getroffen da hier die Administrative-Verwaltung vom Projektteam selbst \"ubernommen werden kann und keine Abh\"angigkeit zu Dritten besteht. \newline
 Wie bereits erw\"ahnt stellt GitHub ein komplettes Tool-Set zur Projektverwaltung zur Verf\"ugung. Das Entwicklungsboard gibt hier eine \"Ubersicht
 \"uber den derzeitigen Projektstand. Visuelle ist diese stark mit vielen anderen Tools vergleichbar.
@@ -299,7 +299,94 @@ Wie bereits im Kapitel zu den Tickets erw\"ahnt wurde individuell jede Aufgabe b
 Dieser zus\"atzliche Aufwand musste dann in anderen Tickets aufgefangen werden. Allerdings war dies nur begrenzt m\"oglich da hier durchaus auch viel Aufwand n\"otig war. \newline
 Eine solche Zeit-Problematik wurde aber bereits zu Beginn des Projektes ber\"ucksichtigt. So wurden einige Themen die das Projektteam verwirklichen wollte als Optional eingestuft. Als Beispiel kann man hier eine REST-Schnittstelle f\"ur die Konfiguration der Scraper nennen oder einen Scraper der Querdenker-Telegram-Gruppen \"uberwacht. \newline
 An dieser Stelle ist aber trotzdem wichtig zu erw\"ahnen das viele Tickets einen zus\"atzlichen Zeitaufwand ben\"otigt haben auf Grund von Plattform-Themen. Dies bedeutet das die meisten Installationen an sich mehr Zeit in Anspruch genommen haben aber auch weiterhin in vielen Aufgaben die Plattform zus\"atzlich Zeit gekostet hat die nicht klar zu einem anderen Ticket zuzuordnen waren.
+\chapter{Datenquellen}
+\section{Nachrichtenartikel}
+Die Onlinepräsenzen von Zeitungen sind Grundsätzlich sehr gut Organisiert. Artikel sind meist sehr übersichtlich in Themengebiete oder Dossiers unterteilt, lassen sich aber zur Not auch mittels allgegenwärtiger Suchfunktion gut vorfiltern. Auch URLs zu den einzelnen Artikeln sind meist in Themen und Regionsspezifische Pfade unterteilt und somit einfach zu filtern. Als Datenquelle wurden daher so gut wie möglich durch eben genannte Möglichkeiten zum Coronathema vorgefilterte Artikelübersichtsseiten verwendet deren Artikel anschließend über Regex-Zeichenfolgen in ihrer URL weiter gefiltert wurden. Als Quellen können neben den 32 vorkonfigurierten auch beliebig weitere Quellen verwendet werden, da der Scraper dafür ausgelegt wurde, von allen Zeitungsquellen zu jedem Thema Informationen speichern zu können. Bei den vorkonfigurierten Quellen handelt es sich um Zeitungsartikel über die Coronalage Weltweit, sowie zu jedem Bundesland und deren Hauptstädten.
+\section{RKI Daten}
+Um einen \"Uberblick zu schaffen \"uber die derzeitige Corona-Situation ist es wichtig entsprechende Infektionszahlen dauerhaft abzuspeichern. Die hierf\"ur aktuell sicherste Quelle ist das Robert-Koch-Institut (RKI). Das RKI stellt außer den Infektionszahlen noch zus\"atzliche Informationen zur Verf\"ugung, wie zum Beispiel den aktuellen Impfstatus oder die Situation der durchgef\"uhrten Tests.\newline
+All diese Dinge werden prim\"ar nur in Tabellenform bereitgestellt, jedoch gibt es hier bereits einige Projekte die diese Tabellen automatisch einlesen und dann \"uber einen Webserver abfragbar machen. So wurde in diesem Projekt die \textit{https://api.corona-zahlen.org/docs/} als API genutzt die alle interessanten Daten zur Verf\"ugung stellt. \newline
+Alle Daten werden hier vor der Indizierung vor-verarbeitet und dann nach dem Ablagekonzept abgelegt.
+Des weiteren wird bei den Inzidenzwerten auch noch zwischen Landkreis und Bundesl\"andern unterschieden und beide abgespeichert bzw. indiziert.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{rkiapiOverview.png}
+	\captionsetup{justification=centering}
+	\caption{RKI Corona API Startseite}
+	\label{pic:rkiapiOverview}
+\end{figure}
 
+\section{Corona Maßnahmen}
+Für die Daten der gültigen Maßnahmen und Verordnungen wird direkt auf die offiziellen Websites der Bundesregierung bzw. der jeweiligen Landesregierung zugegriffen. Wir haben uns bewusst dagegen entschieden mögliche Dritt-Anbieter wie Nachrichtenportale zu integrieren um die Informationen ungefiltert zu erhalten, was auch Nachteile nach sich zog da die jeweiligen Regierungsportale es teilweise deutlich schwerer gemacht haben. Daraus resultieren 16 Webseiten die als Datenquellen hergenommen werden, hier eine Übersicht:
+
+\begin{itemize}
+	\itemsep-1em
+	\item \url{https://www.stmgp.bayern.de/coronavirus/}
+	\item \url{https://www.niedersachsen.de/Coronavirus/vorschriften-der-landesregierung-185856.html}
+	\item \url{https://www.hamburg.de/verordnung/}
+	\item \url{https://www.inneres.bremen.de/corona-die-haeufigsten-fragen-und-antworten-23460}
+	\item \url{https://kkm.brandenburg.de/kkm/de/}
+	\item \url{https://www.berlin.de/corona/massnahmen/verordnung/}
+	\item \url{https://corona.rlp.de/de/aktuelles/corona-regeln-im-ueberblick/}
+	\item \url{https://www.saarland.de/DE/portale/corona/service/downloads/_documents/corona-verfuegungen/dld_2021-08-25-aenderung-vom-21-08-18.html}
+	\item \url{https://www.schleswig-holstein.de/DE/Schwerpunkte/Coronavirus/Erlasse/2021/210820_LF_corona-bekaempfungsvo.html}
+	\item \url{https://www.baden-wuerttemberg.de/de/service/aktuelle-infos-zu-corona/aktuelle-corona-verordnung-des-landes-baden-wuerttemberg/}
+	\item \url{https://www.coronavirus.sachsen.de/amtliche-bekanntmachungen.html}
+	\item \url{https://coronavirus.sachsen-anhalt.de/amtliche-informationen/}
+	\item \url{https://www.hessen.de/fuer-buerger/corona-hessen/verordnungen-und-allgemeinverfuegungen}
+	\item \url{https://www.tmasgff.de/covid-19/verordnung}
+	\item \url{https://www.land.nrw/de/media/galerie/corona-fakten-1}
+	\item \url{https://www.regierung-mv.de/corona/Verordnungen-und-Dokumente/}
+\end{itemize}
+
+Im laufe der Analyse der Websites stellte sich heraus das es drei Fälle zu Beleuchten gab. Zum einen wurde oft auf den Websites mehr schlecht als recht über die aktuellen Corona-Maßnahmen informiert und nur auf das aktuell gültige Rechtsdokument wie eine Corona-Verordnung verwiesen. Diese sind größtenteils als PDF-Datei publik gemacht:
+\begin{figure}[H]
+	\caption{Hessische Landesseite (Verordnung als PDF verlinkt)}
+	\label{websiteHessen}
+	\centering
+	\includegraphics[scale=0.9]{pictures/hessenOverview.png}
+\end{figure}
+
+Seltener wurde die gültige Verordnung oder zusammengefasste Informationen als reiner Text in den HTML-Code integriert:
+
+\begin{figure}[H]
+	\caption{Berliner Landesseite (Verordnung im HTML Code)}
+	\label{websiteBerlin}
+	\centering
+	\includegraphics[scale=0.8]{pictures/berlinOverview.png}
+\end{figure}
+
+Und letzteres wurden zusammengefasste Informationen als Überblick in einer Bildergalerie präsentiert:
+
+\begin{figure}[H]
+	\caption{Nordrhein-Westfalens Landesseite (Informationen als Bilder Galerie)}
+	\label{websiteNRW}
+	\centering
+	\includegraphics[scale=0.8]{pictures/nrwOverview.png}
+\end{figure}
+
+\section{Wetterdaten}
+Die Wetterdaten sind grunds\"atzlich die einfachste anzusprechende Datenquelle. Hier gibt es mehrere verschiedene APIs die Wetterdaten zur Verfügung stellen, die Schwierigkeit ist nur eine API zu finden die diese Informationen ohne Kosten freigeben.
+Ausgew\"ahlt wurde hier endg\"ultig \textit{https://openweathermap.org/api}. Hier k\"onnen aktuelle Wetterdaten umsonst heruntergeladen werden. Eingeschr\"ankt wird hier bei historischen Daten, was allerdings f\"ur das Konzept irrelevant ist da die Daten immer tagesaktuell abgespeichert werden sollen. \newline
+Die API wird dann pro Stadt abgefragt und nach dem Ablagekonzept abgelegt bzw. indiziert. Zu beachten ist allerdings noch das nur eine beschr\"ankte Anzahl an Anfragen pro Minute durchgef\"uhrt werden k\"onnen. Dies wurde Software technisch Umgang oder besser gesagt ber\"ucksichtigt.
+\chapter{Datenablagekonzept}
+F\"ur die Datenablage wurde zun\"achst ein entsprechendes Konzept entwickelt. Dieses Konzept basiert auf den Daten die abgelegt werden sollen. Hierzu wird zun\"achst ein \"Uberblick \"uber die zu ablegenden Daten gegeben:
+\begin{itemize}
+	\item Corona Nachrichten/Artikel
+	\item Corona RKI Daten
+	\item Corona Maßnahmen
+	\item Wetterdaten
+\end{itemize}
+Jede einzelne Datenquelle wird nun genauer beleuchtet und ein entsprechendes Datenablagekonzept erarbeitet. Da die Konzepte sich aber sehr \"ahneln wird der Hauptteil der Erkl\"arung bei der gr\"ossten Komponente den Corona-Artikeln zu finden sein. Grunds\"atzlich werden alle Daten sowohl in Elasticsearch als auch im HDFS abgelegt. Wobei das HDFS haupts\"achlich f\"ur Data Governance Zwecke genutzt wird. Bedeutet das hier die Rohdaten unver\"andert gespeichert werden sollen um sp\"ater immer noch Zugriff auf die Original Daten zu haben, was eine Art 'sanity-check' der Daten erm\"oglicht.
+\section{Corona Nachrichten/Artikel}
+Die Corona Nachrichten bzw. Artikel werden in zwei unterschiedlichen Technologien abgelegt. Zun\"achst betrachten wir die Rohdaten. Wie bereits erkl\"art wird jeder Artikel in Rohformat gespeichert. Diese Daten sind aber f\"ur die Auswertung und zur \"Ubersicht der Datensammlung erst mal unwichtig. Dies bedeutet das diese Daten nicht in einer Datenbank indiziert, sondern nur im HDFS abgelegt werden. Die Geschwindigkeit des HDFS f\"ur den Datenzugriff ist ausreichend um die Daten bei einer genauen Auswertung ad-hoc zu lesen. Streng genommen k\"onnte man sogar argumentieren dass das HDFS nichts anderes als ein 'key-value store' ist. So wird im Hintergrund eine Datei die unter einem gewissen Pfad abgelegt worden ist f\"ur den User als klassischer Dateipfad angezeigt (Ordner durch 'forward-slashes' getrennt und am Ende des Pfades ein Dateiname), intern aber der Pfad einen key darstellt. Dies ist n\"otig um die Verteilung und Ausfallsicherheit der Daten \"uber mehrere Knoten gew\"ahrleisten zu k\"onnen. Allerdings ist dies f\"ur den User faktisch nicht bemerkbar, da dieser immer mit den entsprechenden Pfaden arbeitet.
+Um nun den Kreis zu schliessen werden nicht nur Meta-Daten der Artikel gespeichert sondern auch der komplette Artikel im Rohformat um Datenverlust vorzubeugen und die Konsistenz der Daten sp\"ater noch pr\"ufen zu k\"onnen. Die Rohdaten werden dann abgelegt unter dem Pfad: '/datakraken/articles/region/quelle/zeitung/Datum/'. Dieser Pfad wird dann zu den Meta-Daten hinzugef\"ugt. Der Titel der Dateien im Textformat selbst setzt sich aus region + quellenname + artikeltitel zusammen. \newline
+Meta-Daten werden vom entsprechenden Scraper parallel zu den Rohdaten erzeugt. Dies Daten werden dann, unter entsprechendem Index Namen im Elasticsearch Cluster abgelegt. Dies hilft dabei eine \"Ubersicht über die Daten und deren Inhalt zu erhalten, einen Status zu bekommen in welchem Maße die Daten in das System kommen und erm\"oglicht eine rudiment\"are Analyse. Die Daten setzen sich zusammen aus den Atributen der Quelle: Name, Region und URL, des entsprechenden Artikels: URL, Titel, Datum der Veröffentlichung, Autor, Typ, Beschreibung und Stichworten, sowie Daten zur Erzeugung: Indizierungs bzw. Erstellungszeitpunkt, Dateiname und Pfad.
+\section{Corona RKI Daten}
+Die wichtigsten Basis Informationen \"uber den Status der Corona-Pandemie in Deutschland sind h\"ochst wahrscheinlich Inzidenz-Wert und Impfquote. Diese Informationen werden in diesem Projekt \"uber das Robert-Koch-Institut bezogen. \"Uber eine \"offentliche API kann nicht nur Inzidenzwert pro Bundesland, sondern auch per Bezirk bezogen werden. Ausserdem sind alle Informationen zum derzeitigen Impfstand in Deutschland, sowie Informationen zu PCR- und Schnelltests in Deutschland verf\"ugbar. Alle Informationen die hier von der API zur Verf\"ugung gestellt werden, werden auch gespeichert. Hier folgt der Scraper dem Allgemeinen Konzept, die Original Daten werden im HDFS abgelegt und dann mit minimaler Ver\"anderung im Elasticsearch indiziert.
+\section{Corona Maßnahmen}
+Das soeben erw\"ahnte Konzept der Nachrichten wird genauso f\"ur die Massnahmen verwendet. Rohdaten werden im HDFS abgelegt, w\"ahrend die beschreibenden Daten im Elasticsearch indiziert werden. Diese Massnahmen werden mit folgendem Pattern abgelegt: '/datakraken/measures/\$bundesland\$/\$Datum\$+\$TimeStamp\$/'.
+\section{Wetterdaten}
+Auch die Wetterdaten werden im gleichen Stil abgelegt. Heisst die einzelnen Wetterlogs werden als Dokumente im Elasticsearch abgelegt und auch hier\"uber abgefragt. Allerdings werden die Wetterdaten auch noch entsprechend des allgmeinen Konzepts im HDFS abgelegt. Die Ablage Struktur im HDFS ist in folgendem Pattern:  '/datakraken/weather/\$Stadt\$/\$Datum\$/\$TimeStamp\$'.
 \chapter{Cluster Technologien}
 Grunds\"atzlich wird das komplette Projekt auf Basis eines Hadoop Cluster erstellt. Hadoop ist ein Framework f\"ur skalierbare und verteilt arbeitende Software. Gerne wird auch der Begriff  Hadoop \"Okosystem verwendet da es einen kompletten Zoo von Technologien (z.B. Zookeeper, HBase, Flink, Storm, Pig, Solr) gibt die im Hadoop Umfeld verwendet werden kann. Hadoop erm\"oglicht eine horizontale Skalierung, dies bedeutet das dem System dynamisch zus\"atzliche Knoten, angeh\"angt werden k\"onnen die dann die Rechenleistung, bzw die Speicherkapazit\"at des Clusters erh\"ohen. In der Basis besteht Hadoop aus YARN und dem HDFS die zusammen mit dem MapReduce Konzept eine Datenverarbeitung erm\"oglichen. Zus\"atzlich zu diesen Standardkomponenten wurden noch Apache Oozie sowie Apache Zeppelin installiert. Diese einzelnen Konzepte sowie zus\"atzliche Basisinformationen zum Cluster werden im folgenden noch genauer erkl\"art.
 
@@ -349,25 +436,6 @@ Um die gesammelten Daten auch effektiv verarbeiten zu k\"onnen, muss ein geeigne
 	\caption{\"Ubersicht Zeppelin Oberfl\"ache}
 	\label{pic:zeppelinOverview}
 \end{figure}
-\chapter{Datenablagekonzept}
-F\"ur die Datenablage wurde zun\"achst ein entsprechendes Konzept entwickelt. Dieses Konzept basiert auf den Daten die abgelegt werden sollen. Hierzu wird zun\"achst ein \"Uberblick \"uber die zu ablegenden Daten gegeben:
-\begin{itemize}
-	\item Corona Nachrichten/Artikel
-	\item Corona RKI Daten
-	\item Corona Maßnahmen
-	\item Wetterdaten
-\end{itemize}
-Jede einzelne Datenquelle wird nun genauer beleuchtet und ein entsprechendes Datenablagekonzept erarbeitet. Da die Konzepte sich aber sehr \"ahneln wird der Hauptteil der Erkl\"arung bei der gr\"ossten Komponente den Corona-Artikeln zu finden sein. Grunds\"atzlich werden alle Daten sowohl in Elasticsearch als auch im HDFS abgelegt. Wobei das HDFS haupts\"achlich f\"ur Data Governance Zwecke genutzt wird. Bedeutet das hier die Rohdaten unver\"andert gespeichert werden sollen um sp\"ater immer noch Zugriff auf die Original Daten zu haben, was eine Art 'sanity-check' der Daten erm\"oglicht.
-\section{Corona Nachrichten/Artikel}
-Die Corona Nachrichten bzw. Artikel werden in zwei unterschiedlichen Technologien abgelegt. Zun\"achst betrachten wir die Rohdaten. Wie bereits erkl\"art wird jeder Artikel in Rohformat gespeichert. Diese Daten sind aber f\"ur die Auswertung und zur \"Ubersicht der Datensammlung erst mal unwichtig. Dies bedeutet das diese Daten nicht in einer Datenbank indiziert, sondern nur im HDFS abgelegt werden. Die Geschwindigkeit des HDFS f\"ur den Datenzugriff ist ausreichend um die Daten bei einer genauen Auswertung ad-hoc zu lesen. Streng genommen k\"onnte man sogar argumentieren dass das HDFS nichts anderes als ein 'key-value store' ist. So wird im Hintergrund eine Datei die unter einem gewissen Pfad abgelegt worden ist f\"ur den User als klassischer Dateipfad angezeigt (Ordner durch 'forward-slashes' getrennt und am Ende des Pfades ein Dateiname), intern aber der Pfad einen key darstellt. Dies ist n\"otig um die Verteilung und Ausfallsicherheit der Daten \"uber mehrere Knoten gew\"ahrleisten zu k\"onnen. Allerdings ist dies f\"ur den User faktisch nicht bemerkbar, da dieser immer mit den entsprechenden Pfaden arbeitet.
-Um nun den Kreis zu schliessen werden nicht nur Meta-Daten der Artikel gespeichert sondern auch der komplette Artikel im Rohformat um Datenverlust vorzubeugen und die Konsistenz der Daten sp\"ater noch pr\"ufen zu k\"onnen. Die Rohdaten werden dann abgelegt unter dem Pfad: '/datakraken/articles/region/quelle/zeitung/Datum/'. Dieser Pfad wird dann zu den Meta-Daten hinzugef\"ugt. Der Titel der Dateien im Textformat selbst setzt sich aus region + quellenname + artikeltitel zusammen. \newline
- Meta-Daten werden vom entsprechenden Scraper parallel zu den Rohdaten erzeugt. Dies Daten werden dann, unter entsprechendem Index Namen im Elasticsearch Cluster abgelegt. Dies hilft dabei eine \"Ubersicht über die Daten und deren Inhalt zu erhalten, einen Status zu bekommen in welchem Maße die Daten in das System kommen und erm\"oglicht eine rudiment\"are Analyse. Die Daten setzen sich zusammen aus den Atributen der Quelle: Name, Region und URL, des entsprechenden Artikels: URL, Titel, Datum der Veröffentlichung, Autor, Typ, Beschreibung und Stichworten, sowie Daten zur Erzeugung: Indizierungs bzw. Erstellungszeitpunkt, Dateiname und Pfad.
-\section{Corona RKI Daten}
-Die wichtigsten Basis Informationen \"uber den Status der Corona-Pandemie in Deutschland sind h\"ochst wahrscheinlich Inzidenz-Wert und Impfquote. Diese Informationen werden in diesem Projekt \"uber das Robert-Koch-Institut bezogen. \"Uber eine \"offentliche API kann nicht nur Inzidenzwert pro Bundesland, sondern auch per Bezirk bezogen werden. Ausserdem sind alle Informationen zum derzeitigen Impfstand in Deutschland, sowie Informationen zu PCR- und Schnelltests in Deutschland verf\"ugbar. Alle Informationen die hier von der API zur Verf\"ugung gestellt werden, werden auch gespeichert. Hier folgt der Scraper dem Allgemeinen Konzept, die Original Daten werden im HDFS abgelegt und dann mit minimaler Ver\"anderung im Elasticsearch indiziert.
-\section{Corona Maßnahmen}
-Das soeben erw\"ahnte Konzept der Nachrichten wird genauso f\"ur die Massnahmen verwendet. Rohdaten werden im HDFS abgelegt, w\"ahrend die beschreibenden Daten im Elasticsearch indiziert werden. Diese Massnahmen werden mit folgendem Pattern abgelegt: '/datakraken/measures/\$bundesland\$/\$Datum\$+\$TimeStamp\$/'.
-\section{Wetterdaten}
-Auch die Wetterdaten werden im gleichen Stil abgelegt. Heisst die einzelnen Wetterlogs werden als Dokumente im Elasticsearch abgelegt und auch hier\"uber abgefragt. Allerdings werden die Wetterdaten auch noch entsprechend des allgmeinen Konzepts im HDFS abgelegt. Die Ablage Struktur im HDFS ist in folgendem Pattern:  '/datakraken/weather/\$Stadt\$/\$Datum\$/\$TimeStamp\$'.
 
 \chapter{Cluster und Deployment}
 %mehr so braindump, überarbeiten%
@@ -582,75 +650,7 @@ curl -XGET 'datakrakennamenode:5601/status'
 Über ssh beide mittels IP adresse abrufbar
 %Braindump ende%
 
-\chapter{Datenquellen}
-\section{Nachrichtenartikel}
-Die Onlinepräsenzen von Zeitungen sind Grundsätzlich sehr gut Organisiert. Artikel sind meist sehr übersichtlich in Themengebiete oder Dossiers unterteilt, lassen sich aber zur Not auch mittels allgegenwärtiger Suchfunktion gut vorfiltern. Auch URLs zu den einzelnen Artikeln sind meist in Themen und Regionsspezifische Pfade unterteilt und somit einfach zu filtern. Als Datenquelle wurden daher so gut wie möglich durch eben genannte Möglichkeiten zum Coronathema vorgefilterte Artikelübersichtsseiten verwendet deren Artikel anschließend über Regex-Zeichenfolgen in ihrer URL weiter gefiltert wurden. Als Quellen können neben den 32 vorkonfigurierten auch beliebig weitere Quellen verwendet werden, da der Scraper dafür ausgelegt wurde, von allen Zeitungsquellen zu jedem Thema Informationen speichern zu können. Bei den vorkonfigurierten Quellen handelt es sich um Zeitungsartikel über die Coronalage Weltweit, sowie zu jedem Bundesland und deren Hauptstädten.
-\section{RKI Daten}
-Um einen \"Uberblick zu schaffen \"uber die derzeitige Corona-Situation ist es wichtig entsprechende Infektionszahlen dauerhaft abzuspeichern. Die hierf\"ur aktuell sicherste Quelle ist das Robert-Koch-Institut (RKI). Das RKI stellt außer den Infektionszahlen noch zus\"atzliche Informationen zur Verf\"ugung, wie zum Beispiel den aktuellen Impfstatus oder die Situation der durchgef\"uhrten Tests.\newline
-All diese Dinge werden prim\"ar nur in Tabellenform bereitgestellt, jedoch gibt es hier bereits einige Projekte die diese Tabellen automatisch einlesen und dann \"uber einen Webserver abfragbar machen. So wurde in diesem Projekt die \textit{https://api.corona-zahlen.org/docs/} als API genutzt die alle interessanten Daten zur Verf\"ugung stellt. \newline
-Alle Daten werden hier vor der Indizierung vor-verarbeitet und dann nach dem Ablagekonzept abgelegt.
-Des weiteren wird bei den Inzidenzwerten auch noch zwischen Landkreis und Bundesl\"andern unterschieden und beide abgespeichert bzw. indiziert.
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.4]{rkiapiOverview.png}
-	\captionsetup{justification=centering}
-	\caption{RKI Corona API Startseite}
-	\label{pic:rkiapiOverview}
-\end{figure}
 
-\section{Corona Maßnahmen}
-Für die Daten der gültigen Maßnahmen und Verordnungen wird direkt auf die offiziellen Websites der Bundesregierung bzw. der jeweiligen Landesregierung zugegriffen. Wir haben uns bewusst dagegen entschieden mögliche Dritt-Anbieter wie Nachrichtenportale zu integrieren um die Informationen ungefiltert zu erhalten, was auch Nachteile nach sich zog da die jeweiligen Regierungsportale es teilweise deutlich schwerer gemacht haben. Daraus resultieren 16 Webseiten die als Datenquellen hergenommen werden, hier eine Übersicht:
-
-\begin{itemize}
-\itemsep-1em
-\item \url{https://www.stmgp.bayern.de/coronavirus/}
-\item \url{https://www.niedersachsen.de/Coronavirus/vorschriften-der-landesregierung-185856.html}
-\item \url{https://www.hamburg.de/verordnung/}
-\item \url{https://www.inneres.bremen.de/corona-die-haeufigsten-fragen-und-antworten-23460}
-\item \url{https://kkm.brandenburg.de/kkm/de/}
-\item \url{https://www.berlin.de/corona/massnahmen/verordnung/}
-\item \url{https://corona.rlp.de/de/aktuelles/corona-regeln-im-ueberblick/}
-\item \url{https://www.saarland.de/DE/portale/corona/service/downloads/_documents/corona-verfuegungen/dld_2021-08-25-aenderung-vom-21-08-18.html}
-\item \url{https://www.schleswig-holstein.de/DE/Schwerpunkte/Coronavirus/Erlasse/2021/210820_LF_corona-bekaempfungsvo.html}
-\item \url{https://www.baden-wuerttemberg.de/de/service/aktuelle-infos-zu-corona/aktuelle-corona-verordnung-des-landes-baden-wuerttemberg/}
-\item \url{https://www.coronavirus.sachsen.de/amtliche-bekanntmachungen.html}
-\item \url{https://coronavirus.sachsen-anhalt.de/amtliche-informationen/}
-\item \url{https://www.hessen.de/fuer-buerger/corona-hessen/verordnungen-und-allgemeinverfuegungen}
-\item \url{https://www.tmasgff.de/covid-19/verordnung}
-\item \url{https://www.land.nrw/de/media/galerie/corona-fakten-1}
-\item \url{https://www.regierung-mv.de/corona/Verordnungen-und-Dokumente/}
-\end{itemize}
-
-Im laufe der Analyse der Websites stellte sich heraus das es drei Fälle zu Beleuchten gab. Zum einen wurde oft auf den Websites mehr schlecht als recht über die aktuellen Corona-Maßnahmen informiert und nur auf das aktuell gültige Rechtsdokument wie eine Corona-Verordnung verwiesen. Diese sind größtenteils als PDF-Datei publik gemacht:
-\begin{figure}[H]
-\caption{Hessische Landesseite (Verordnung als PDF verlinkt)}
-\label{websiteHessen}
-\centering
-\includegraphics[scale=0.9]{pictures/hessenOverview.png}
-\end{figure}
-
-Seltener wurde die gültige Verordnung oder zusammengefasste Informationen als reiner Text in den HTML-Code integriert:
-
-\begin{figure}[H]
-\caption{Berliner Landesseite (Verordnung im HTML Code)}
-\label{websiteBerlin}
-\centering
-\includegraphics[scale=0.8]{pictures/berlinOverview.png}
-\end{figure}
-
-Und letzteres wurden zusammengefasste Informationen als Überblick in einer Bildergalerie präsentiert:
-
-\begin{figure}[H]
-\caption{Nordrhein-Westfalens Landesseite (Informationen als Bilder Galerie)}
-\label{websiteNRW}
-\centering
-\includegraphics[scale=0.8]{pictures/nrwOverview.png}
-\end{figure}
-
-\section{Wetterdaten}
-Die Wetterdaten sind grunds\"atzlich die einfachste anzusprechende Datenquelle. Hier gibt es mehrere verschiedene APIs die Wetterdaten zur Verfügung stellen, die Schwierigkeit ist nur eine API zu finden die diese Informationen ohne Kosten freigeben.
-Ausgew\"ahlt wurde hier endg\"ultig \textit{https://openweathermap.org/api}. Hier k\"onnen aktuelle Wetterdaten umsonst heruntergeladen werden. Eingeschr\"ankt wird hier bei historischen Daten, was allerdings f\"ur das Konzept irrelevant ist da die Daten immer tagesaktuell abgespeichert werden sollen. \newline
-Die API wird dann pro Stadt abgefragt und nach dem Ablagekonzept abgelegt bzw. indiziert. Zu beachten ist allerdings noch das nur eine beschr\"ankte Anzahl an Anfragen pro Minute durchgef\"uhrt werden k\"onnen. Dies wurde Software technisch Umgang oder besser gesagt ber\"ucksichtigt.
 
 
 \chapter{Funktion und Implementierung}
@@ -689,7 +689,7 @@ Während der Entwicklung und der Verwendung von Tesseract ist aufgefallen das di
 \subsubsection{Programm Konfiguration}
 Bei der Entwicklung wurde auf hohe Konfigurierbarkeit geachtet da schon während des Prozesses festgestellt wurde das jederzeit Änderungen an den ausgewählten Websiten passieren können und deshalb das Programm sehr flexibel sein sollte. Hierfür wurde eine Config.py-Datei angelegt in denen alle wichtigen Informationen wie z.B. URLs von ElasticSearch und HDFS abgespeichert sind.
 
-\begin{lstlisting}[caption=Config für das Programm]
+\begin{lstlisting}[basicstyle=\small, caption=Config für das Programm]
 # -------------------------------hdfs--------------------------------
 HDFS_BASE_URL = '127.0.0.1'
 HDFS_PORT = '50070'
@@ -748,54 +748,53 @@ Zu jedem Bundesland wurde eine Konfiguration in ElasticSearch gespeichert die am
 
 Wie im Aktivitätsdiagramm \cref{activityRestriction} zu sehen ist, werden am Anfang alle Datenquellenkonfigurationen aus ElasticSearch geladen und der Scraping Prozess für jede Quelle gestartet. Hierbei wird auf die in der Config angegebene URL zugegriffen und die jeweiligen Elemente die durch Target/Value spezifiert sind heruntergeladen. Dazu wird auf die Python-Bibliothek BeautifulSoup zurückgegriffen die zum parsen von XML- und HTML-Dokumenten dient.
 
-\begin{lstlisting}[caption=Parsen und filtern der Website, language=Python]
-	    page = requests.get(self.baseUrl)
-        soup = BeautifulSoup(page.content, 'lxml')
-        if self.target == 'CSSselector':
-            elements = soup.select(self.val)
+\begin{lstlisting}[basicstyle=\small, caption=Parsen und filtern der Website, language=Python]
+page = requests.get(self.baseUrl)
+soup = BeautifulSoup(page.content, 'lxml')
+if self.target == 'CSSselector':
+    elements = soup.select(self.val)
 
-        else:
-            kwargs = {
-                    self.target: self.val
-                }
-            elements = soup.find_all(**kwargs)
+else:
+    kwargs = {
+            self.target: self.val
+        }
+    elements = soup.find_all(**kwargs)
 \end{lstlisting}
 
 Nachdem die Elemente extrahiert wurden wird je nach Fall weiter verfahren. Wenn es eine Bild-URL ist wird das Bild herunter geladen. Um mit Tesseract eine höhere Genauigkeit zu erzielen wie in \cref{sec:sub:sub:bild} beschrieben, werden die Bilder zu schwarz-weiß konvertiert. Im HDFS werden beide Varianten der Bilder abgespeichert und das konvertierte Bild wird Tesseract zur Textumwandlung übergeben.
 
-\begin{lstlisting}[caption=Schwarz-weiß Konvertierung, language=Python]
-	imgBytes = requests.get(cleanedUrl).content
-	image = Image.open(io.BytesIO(imgBytes))
-	imgBW = image.convert("1", dither=Image.NONE)
-	self.hdfs_client.save_as_file(self.directory, fileNameBW, imgBWbytes)
-	self.hdfs_client.save_as_file(self.directory, fileName, imgBytes)
+\begin{lstlisting}[basicstyle=\small, caption=Schwarz-weiß Konvertierung, language=Python]
+imgBytes = requests.get(cleanedUrl).content
+image = Image.open(io.BytesIO(imgBytes))
+imgBW = image.convert("1", dither=Image.NONE)
+self.hdfs_client.save_as_file(self.directory, fileNameBW, imgBWbytes)
+self.hdfs_client.save_as_file(self.directory, fileName, imgBytes)
 
-	data = pytesseract.image_to_string(imgBW, lang='deu')
+data = pytesseract.image_to_string(imgBW, lang='deu')
 \end{lstlisting}
 
 Im Falle eines verlinkten PDF-Dokuments wird dieses herunter geladen und der Text mit der Bibliothek pdfminer.six extrahiert.
 
-\begin{lstlisting}[caption=PDF Text Extraktion, language=Python]
-	fileBytes = requests.get(url).content
-	self.hdfs_client.save_as_file(self.directory, fileName, fileBytes)
-	data = pdfminer.high_level.extract_text(io.BytesIO(fileBytes), codec="utf-8")
+\begin{lstlisting}[basicstyle=\small, caption=PDF Text Extraktion, language=Python]
+fileBytes = requests.get(url).content
+self.hdfs_client.save_as_file(self.directory, fileName, fileBytes)
+data = pdfminer.high_level.extract_text(io.BytesIO(fileBytes), codec="utf-8")
 \end{lstlisting}
 
 Der letzte Fall bedeutet das die Informationen direkt im HTML-Code als Text integriert sind. Hierbei laden wir einfach die komplette Seite und extrahieren den Text hieraus.
 
-\begin{lstlisting}[caption=Website speichern, language=Python]
-	response = urllib.request.urlopen(self.baseUrl)
-      webContent = response.read()
-	self.hdfs_client.save_as_file(self.directory, str(time.time())+
-		_+DEFAULT_HTML_FILENAME, webContent)
-	data = elem.text.strip()
+\begin{lstlisting}[basicstyle=\small, caption=Website speichern, language=Python]
+response = urllib.request.urlopen(self.baseUrl)
+webContent = response.read()
+self.hdfs_client.save_as_file(self.directory, str(time.time())+_+DEFAULT_HTML_FILENAME, webContent)
+data = elem.text.strip()
 \end{lstlisting}
 
 \subsubsection{Metadaten Extrahierung}
 
 Nachdem in \cref{sec:sub:sub:rohdaten} die Rohdaten gespeichert wurden und der Text daraus extrahiert wurde ging es darum sinnvolle Metadaten zu filtern. Eine sinnvolle und robuste Verarbeitung zu finden war eine große Herausforderung - um daraus nicht eine neue Projektarbeit vom Zaun zu brechen wurde auf simple Methoden wie String vergleiche und verstärkt auf reguläre Ausdrücke gesetzt. Zu Beginn der Entwicklung war der Inzidenzwert die maßgebliche Metrik zur Bewertung der Situation im Gegensatz zur Krankenhausbelegung derzeit. Deswegen wurde unter anderen der Text darauf analysiert ob die Maßnahme Inzidenzbasierend ist und wenn ja, welche Inzidenzschranken vorhanden sind. Des weiteren wird ein Gültigkeitsdatum gesucht und der Text auf diverse Tags wie Maskenpflicht, Kontaktbeschränkungen etc. untersucht um die Maßnahme etwas eingrenzen zu können. Hierfür wurden diverse reguläre Ausdrücke verwendet z.B.
 
-\begin{lstlisting}[caption=Regex für Inzidenzschranken, language=Python]
+\begin{lstlisting}[basicstyle=\small, caption=Regex für Inzidenzschranken, language=Python]
 INCIDENCE_REGEX =
 	r"(((?<=Inzidenzstufe)|(?<=Inzidenzwert)
 	|(?<=Inzidenz)|(?<=Schwellenwert))).{0,20}(\d{2,3})"
@@ -828,31 +827,31 @@ Um zu verhindern das die selben Maßnahmen immer wieder neu extrahiert werden wi
 
 Um die Daten ohne Probleme ins HDFS einfügen zu können wurde auf die 'pywebHDFS' Bibliothek in Python zurückgegriffen. Diese bildet für uns die Schnittstelle zwischen unserem Code und dem Dateiablagesystem. Um das ganze isoliert nutzen zu können wurde eine HDFS Wrapper Klasse geschrieben die, die Funktionalität von pywebhdfs beinhaltet. Der Wrapper beinhaltet Funktionalität zum Speichern, öffnen und bearbeiten von Dateien und testet im Konstruktor die Konnektivität mit.
 
-\begin{lstlisting}[caption=Datei-Speicherungs Funktion]
-    def save_as_file(self, path, filename, content):
-        """
-        saves the content with a given filename as a file
-        """
-        logger.info("saving %s to hdfs filesystem", path+filename)
-        self.hdfs_client.create_file(file_data=content, path=path+filename)
+\begin{lstlisting}[basicstyle=\small, caption=Datei-Speicherungs Funktion]
+def save_as_file(self, path, filename, content):
+    """
+    saves the content with a given filename as a file
+    """
+    logger.info("saving %s to hdfs filesystem", path+filename)
+    self.hdfs_client.create_file(file_data=content, path=path+filename)
 \end{lstlisting}
 
 \subsubsection{ElasticSearch Wrapper}
 
 Genauso wurde für die ElasticSearch Anbindung auf deren veröffentlichte Python-Bibliothek ElasticSearchClient aufgebaut. Auch hier wurde wieder eine Wrapper Klasse geschrieben zur Kapselung der Funktionalitäten. Bei Erstellung wird die Konfiguration an den Konstruktor übergeben und die Indexe initialisiert.
 
-\begin{lstlisting}[caption=Initialisierung der Indexe]
-    def initIndex(self):
-        """
-        initializes required indices if not already existing
-        """
-        if not self.es_client.indices.exists(index=indexName):
-            logger.info("Index %s not found - initializing index", indexName)
-            self.es_client.indices.create(index=indexName, body=indexMapping, ignore=400)
+\begin{lstlisting}[basicstyle=\small, caption=Initialisierung der Indexe]
+def initIndex(self):
+    """
+    initializes required indices if not already existing
+    """
+    if not self.es_client.indices.exists(index=indexName):
+        logger.info("Index %s not found - initializing index", indexName)
+        self.es_client.indices.create(index=indexName, body=indexMapping, ignore=400)
 
-        if not self.es_client.indices.exists(index=metaIndexName):
-            logger.info("Index %s not found - initializing index", metaIndexName)
-            self.es_client.indices.create(index=metaIndexName, body=metaIndexMapping, ignore=400)
+    if not self.es_client.indices.exists(index=metaIndexName):
+        logger.info("Index %s not found - initializing index", metaIndexName)
+        self.es_client.indices.create(index=metaIndexName, body=metaIndexMapping, ignore=400)
 \end{lstlisting}
 \pagebreak
 
@@ -1172,8 +1171,6 @@ Mit Hilfe dieser Funktion kann dann, wie eben beschrieben, eine Liste von Objekt
 \section{Wetter}
 Der Wetter-Scraper ist wohl der trivialste Scraper. Hier wird lediglich eine Konfigurationsdatei gelesen, die angibt welche St\"adte ber\"ucksichtigt werden sollen, und anhand des Ergebnis dann die Wetter-API abfragt. Technisch gesehen gibt es hier keinen große Magie. Die Abfrage funktioniert \"uber den Städtenamen der mit in Anfrage-URL eingef\"ugt wird. Zu beachten war allerdings das maximal 60 Anfragen pro Minute durchgef\"uhrt werden d\"urfen und das Umlaute gesondert behandelt werden m\"ussen da diese im HDFS Umfeld zu Problemen f\"uhren k\"onnen. Um gr\"oßern Konfigurationsaufwand im Bezug auf das Elasticsearch-Mapping zu verhindern wurde außerdem der Timestamp auf eine Standard Elasticsearch Format umgewandelt.\newline
 F\"ur eine sp\"ater Verwendung ohne Konfigurationsdatei wurden hier bereits Vorbereitungen getroffen das der Scraper auch \"uber Elasticsearch konfigurierbar ist.
-\chapter{Lösung}
-\section{Corona Maßnahmen}
 
 \chapter{Zusammenfassung und Fazit}
 Abschließend war das Projekt f\"ur das Projektteam ein wirklich wichtiger Erfahrungswert im Studienverlauf. In jedem durchgef\"uhrten Projekt gibt es Stolpersteine die \"uberwunden werden m\"ussen, auch in diesem Projekt. Der Cluster an sich stellte große Probleme dar die nicht wirklich im Vorhinein erwartet worden sind. Auch zun\"achst, und teilweise im Nachhinein, zuf\"allig vorkommende Probleme brachten den Fortschritt immer wieder ins Stocken. Aber diese 'nicht vorhersehbaren' Probleme sind Erfahrungen die in Rahmen des Studiums noch kaum weitere Folgen haben aber einen enormen Vorteil f\"ur die Zukunft bringen. \newline
@@ -1191,7 +1188,7 @@ Aus technischer Sicht gesehen mag das Ergebnis nicht all zu komplex wirken, jedo
 %%%%%%%%%%%%%%%%%%%
 %% create tables list
 %%%%%%%%%%%%%%%%%%%
-\listoftables
+%\listoftables
 
 %%%%%%%%%%%%%%%%%%%
 %% create listings list
