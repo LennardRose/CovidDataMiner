@@ -907,7 +907,7 @@ Die allgemeine Konfiguration config.json wird bei Start in eine globale Variable
 
 
 \subsubsection{Artikel Konfiguration}
-Die Artikelkonfiguration ( im weiteren nur article\_config) kann entweder aus dem gleichnamigen Datenbank-Index( Hier von  Elasticsearch ) geladen oder aus einer JSON-Datei gelesen werden. Hierfür wird argparse benutzt, mit welchem sich Commandlineargumente einstellen und parsen lassen. Für den ArticleScraper sind die vorhandenen Optionen:
+Die Artikelkonfiguration (im weiteren nur article\_config) kann entweder aus dem gleichnamigen Datenbank-Index (Hier von  Elasticsearch ) geladen oder aus einer JSON-Datei gelesen werden. Hierfür wird argparse benutzt, mit welchem sich Commandlineargumente einstellen und parsen lassen. Für den ArticleScraper sind die vorhandenen Optionen:
 \begin{itemize}
 \item --articleclient \textless id\textgreater: Die unter dem Index 'article\_config' hinterlegte Konfiguration mit entsprechender \textless id\textgreater wird gescraped
 \item --file \textless filename\textgreater: Die unter dem \textless filename\textgreater gefundene Datei wird gescraped
@@ -994,7 +994,7 @@ Um nicht jedes mal für jeden einzelnen Artikel eine eigene Konfiguration erstel
         	],
 \end{lstlisting}
 
-Es muss in der article\_config also nur der Link zu dieser Übersichtsseite (bestehend aus base\_url und path\_url), sowie das HTML-Tag(html\_tag) und die HTML-Klasse(html\_class) angegeben werden. Im Fall des Beispiels in listing \ref{articleconfigoverview} wurden die Artikel der Kreiszeitung bereits über eine suche, wie unter path\_url zu sehen weiter auf unser Themengebiet eingeschränkt.
+Es muss in der article\_config also nur der Link zu dieser Übersichtsseite (bestehend aus base\_url und path\_url), sowie das HTML-Tag (html\_tag) und die HTML-Klasse (html\_class) angegeben werden. Im Fall des Beispiels in listing \ref{articleconfigoverview} wurden die Artikel der Kreiszeitung bereits über eine suche, wie unter path\_url zu sehen weiter auf unser Themengebiet eingeschränkt.
 \pagebreak
 
 Die URLs der einzelnen Artikel werden dann in 3 Schritten extrahiert. \newline
