@@ -265,6 +265,7 @@ Transportschäden - Häufigkeit: mittel; Schaden: mittel
 
 \chapter{Cluster Technologien}
 Grunds\"atzlich wird das komplette Projekt auf Basis eines Hadoop Cluster erstellt. Hadoop ist ein Framework f\"ur skalierbare und verteilt arbeitende Software. Gerne wird auch der Begriff  Hadoop \"Okosystem verwendet da es einen kompletten Zoo von Technologien (z.B. Zookeeper, HBase, Flink, Storm, Pig, Solr) gibt die im Hadoop Umfeld verwendet werden kann. Hadoop erm\"oglicht eine horizontale Skalierung, dies bedeutet das dem System dynamisch zus\"atzliche Knoten, angeh\"angt werden k\"onnen die dann die Rechenleistung, bzw die Speicherkapazit\"at des Clusters erh\"ohen. In der Basis besteht Hadoop aus YARN und dem HDFS die zusammen mit dem MapReduce Konzept eine Datenverarbeitung erm\"oglichen. Zus\"atzlich zu diesen Standardkomponenten wurden noch Apache Oozie sowie Apache Zeppelin installiert. Diese einzelnen Konzepte sowie zus\"atzliche Basisinformationen zum Cluster werden im folgenden noch genauer erkl\"art.
+
 \section{YARN}
 YARN steht f\"ur 'Yet another resource negotiater'. Die Aufgabe des YARN darin die verf\"ugbaren Ressourcen auf alle anfallenden Aufgaben zu verteilen. Dies bedeutet YARN ist 'Resourcemanager' als auch 'Job-Scheduler'.
 \begin{figure}[H]
@@ -285,14 +286,17 @@ Die tats\"achliche grundlegende Idee hinter der Funktion von YARN ist das Aufspa
 \end{figure}
 Dies ist an dieser Stelle wahrscheinlich durchaus unverst\"andlich, was allerdings f\"ur den nachfolgenden Bericht nicht all zu relevant ist.
 \newline An dieser Stelle ist es wichtig zu erw\"ahnen das die Auftr\"age die von YARN ausgef\"uhrt werden immer in Containern ausgef\"uhrt werden, vergleichbar mit Docker oder Kubernetes. Dies bedeutet das alle Abh\"angigkeiten mit in den Container geliefert werden m\"ussen. Außerdem ist zu beachten das es teilweise zu Problemen mit Netzwerk bzw. Internetzugriff kommen kann.
+
 \section{HDFS}
 Das 'Hadoop Distributed File System' ist die Technologie, die im Hadoop Umfeld die verteilte Datenablage erm\"oglicht. HDFS hat viele Gemeinsamkeiten zu andern bekannten verteilten Dateisystemen wie zum Beispiel Amazon S3. Der Hauptunterschied zu den meisten Technologien ist Widerstandsf\"ahigkeit gegen\"uber Fehlern. Der Grundsatz von Hadoop war immer das ein Cluster aus Standard bzw. Kosteng\"unstiger Hardware aufgebaut werden kann, was allerdings zu einer h\"oheren Fehleranf\"alligkeit f\"uhren kann. Das HDFS wurde in diesem Zusammenhang nach dem Grundsatz entwickelt das es immer ein Teil der Hardware nicht funktioniert.\cite{hdfsFailure} \newline
 Mit unter der wichtigste Grundsatz ist aber wahrscheinlich dass, wenn m\"oglich, nicht die Daten zum Prozess bewegt werden sondern der Code bzw. der Algorithmus zu den Daten gebracht wird.\cite{movingComputation} Je gr\"oßer der Datensatz desto gr\"oßer die Kosten diese Daten zu verschieben. Und da sich im Normalfall ein 'BigData' System haupts\"achlich um große Datenmengen k\"ummert wird dieser Prozess genau umgedreht, der Algorithmus kommt zu den Daten. Die n\"otigen Voraussetzungen und Schnittstellen stellt das HDFS zur Verf\"ugung um Applikationen es zu erm\"oglichen diese Idee umzusetzen.
-\section{Oozie und Cron}
+
+\section{Oozie und Cron}  \label{ooziecron}
 Als Grundprinzip sollen alle Daten kontinuierlich und automatisch im Cluster gespeichert werden. Hierzu m\"ussen die entsprechenden Datensammler regelm\"assig gestartet werden oder dauerhaft als Daemon laufen. In diesem Projekt wurde davon abgesehen dauerhaft laufende Datensammler zu verwenden, da diese grunds\"atzlich Rechenkapazit\"at binden. Dies widerspricht dem Prinzip, dass Hadoop individuell Rechenkapazit\"at zur Verf\"ugung stellt.\newline
 Als Alternative gibt es im Hadoop-Technologie-Zoo bereits eine L\"osung die es erm\"oglicht zeitlich, oder sogar daten-getriggert, automatisch Aufgaben zu starten - Apache Oozie. Eigentliche Hauptaufgabe von Oozie sind die sogenannten 'Workflows', was nichts anderes ist als ein vordefinierter Arbeitsablauf. Um zeitlich gesteuerte Aufgaben zu starten gibt es die sogenannten 'Coordinator Jobs', sie sind vergleichbar mit den normalen Workflows und sind einzelne, konfigurierbare Arbeitsschritte. Wichtig ist an dieser Stelle zu wissen, dass unabh\"angig von der Aufgabe, egal ob Python Script, MapReduce oder Email-Action, immer ein Art Container (vergleichbar mit Docker) erstellt wird, der dann von YARN ausgef\"uhrt wird. \newline
 Die logische Konsequenz daraus ist, dass dem auszuf\"uhrenden Paket bzw. Container alle n\"otigen Abh\"angigkeiten mitzugeben sind. Dies bedeutet zum Beispiel, dass alle Python Libraries mit in das auszuf\"uhrende Paket mit eingebunden sein m\"ussen. F\"ur fast alle Datensammler stellt dies kein Problem dar, lediglich der Scraper, der sich um die Corona-Massnahmen k\"ummert, stellt ein großes Problem dar. Mit Tesseract nutzt der Scraper ein Commandline-Tool das nicht mit ein ausf\"uhrbares Paket gepackt werden kann. \newline
 Deswegen musste als Alternative Cron verwendet werden, was ebenso zeitlich gesteuert Scripte ausf\"uhren kann. Genauer wird an dieser Stelle nicht auf Cron eingegangen, da es sich hier um eine mehr als nur bekannte Standardkomponente des Unix-Kernel handelt. Problematisch ist hier leider das die Scripte nicht \"uber YARN sondern \"uber einen Knoten selbst ausgef\"uhrt werden. Von Vorteil ist hier aber das sowohl der Installationsaufwand quasi nicht vorhanden ist und sich auch das Paketieren der Software bedeutend einfacher darstellt als bei Oozie.
+
 \section{Zeppelin}
 Um die gesammelten Daten auch effektiv verarbeiten zu k\"onnen, muss ein geeigneter Prozess aufgezeigt werden. Das Grundkonzept von Hadoop ist immer noch MapReduce. Dies funktioniert im Entwicklungsprozess immer indem ein Job programmiert wird und dann auf dem Cluster getestet wird. F\"ur Testzwecke ist das ein großer Aufwand. Heutzutage geht daher  der Trend hin zu RapidPrototyping-Umgebungen. So gibt es auch im Hadoop Umfeld eine entsprechende Option, Apache Zeppelin. Zeppelin ist stark vergleichbar mit JupyterHub und ist somit eine RapidProtoyping-Umgebung mit User Management. Innerhalb der sogenannten Notebooks kann fast jede erdenkliche Programmiersprache als Interpreter verwendet werden (z.B. Python, Java, R, Elasticsearch, hive, spark). Der grosse Vorteil von Zeppelin gegen\"uber Jupyter ist, dass der Kernel (Programmiersprachen spezifischer Prozess der Code ausf\"uhrt) auf YARN ausgef\"uhrt werden kann und somit auf alle Ressourcen des Cluster zugreifen kann.
 \begin{figure}[H]
@@ -620,7 +624,22 @@ Während der Entwicklung und Verwendung von Tesseract ist aufgefallen das die En
 
 \chapter{Funktion und Implementierung}
 
-Für unsere vier primären Datenquellen RKI Daten, Maßnahmen der Regierung, Nachrichtenartikel und Wetterdaten haben wir uns Entschieden jeweils ein eigenes Programm ('Scraper') mit Python zu implementieren die hier nun einzeln erläutert werden.
+Für unsere vier primären Datenquellen RKI Daten, Maßnahmen der Regierung, Nachrichtenartikel und Wetterdaten haben wir uns Entschieden jeweils ein eigenes Programm ('Scraper') mit Python zu implementieren die hier nun einzeln erläutert werden. \newline
+
+\section{Scheduling}
+Jeder der Scraper wird, wie in Sektion \ref{ooziecron} bereits erwähnt, mit Cron gestartet. Als Zeitintervall wurde eine Stunde gewählt (siehe \ref{cron}). \newline
+
+\begin{lstlisting}[caption=Cron-einstellungen,label=cron,language=bash]
+#M   S     T M W   Befehl
+#-----------------------------------------------------------------
+0 * * * *   /home/hadoop/ArticleScraper/ubuntu_venv/bin/python3 /home/hadoop/ArticleScraper/main.py
+0 * * * *   /home/hadoop/RKILoader/venv/bin/python3 /home/hadoop/ArticleScraper/main.py
+0 * * * *   /home/hadoop/weatherdownloader/venv/bin/python3 /home/hadoop/ArticleScraper/main.py
+0 * * * *   /home/hadoop/ArticleScraper/ubuntu_venv/bin/python3 /home/hadoop/ArticleScraper/main.py
+#-----------------------------------------------------------------
+\end{lstlisting}
+
+\pagebreak
 
 \section{Maßnahmen}
 
@@ -646,6 +665,8 @@ es_port = '9200'
 indexName = "restrictions"
 ...
 \end{lstlisting}
+
+\pagebreak
 
 \subsubsection{Datenquellen Konfiguration}
 Da fast auschließlich nur spezielle Elemente der Websiten wie die \textless a\textgreater -Tags der PDFS oder  \textless img\textgreater -Tags der Bilder selektiert werden mussten wurde auf ein Key/Value-Schema zurückgegriffen. Der Key spezifierte ob der Code auf eine spezielle Element-ID oder ein Klassenname durchsucht wird, falls das aber nicht möglich war wurde auf den eindeutigen CSS Selector des Elements zurückgegriffen.
