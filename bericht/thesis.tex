@@ -1125,7 +1125,7 @@ F\"ur alle Scraper wurde ein HDFS Helper verwendet der die Anbindung an das alte
 Mit der Erstellung des HDFS Helper wird außerdem die Verbindung zum HDFS getestet. Zus\"atzlich sind noch Funktionen zum erweitern von Dokumenten und das Bearbeiten von Dokumenten, diese werden aber zum aktuellen Zeitpunkt nicht genutzt. \newline
 Technisch gesehen ist der Helper nur ein Wrapper um die 'pywebhdfs' library, welche die HTTP-API des HDFS anspricht.
 Beispielhaft wird hier die Funktion gezeigt, die alle JSON Dokumente ausgibt die in einem Ordner ausgibt:
-\begin{lstlisting}[caption=HDFS Helper Beispiel ,label=hdfsHelperJsonInDoc,language=python]
+\begin{lstlisting}[basicstyle=\small, caption=HDFS Helper Beispiel ,label=hdfsHelperJsonInDoc,language=python]
 def get_json_files_from_directory(self, directory):
 	"""get all meta jsons in a hdfs directory matching the internal regex pattern
 	which filters all files that don't end with meta.json
@@ -1148,7 +1148,7 @@ def get_json_files_from_directory(self, directory):
 \end{lstlisting}
 \subsection{Elasticsearch Helper}
 \"Ahnlich zum HDFS Helper wurde auch eine Helper Klasse f\"ur Elasticsearch implementiert. Neben Standardfunktionen wie das Indizieren einzelner Dokumente gibt es auch noch komplexere Funktionen wie zum Beispiel die automatische Suche nach dem Neuesten Dokument in einem Index. Eine außerdem wichtige Funktion ist hier die 'bulk' Indizierung einer Liste. Um viele Dokumente schnell und kosteng\"unstig zu indizieren wird bei Elasticsearch die sogenannte 'Bulk API' verwendet. Auf eine niedriges Level herunter gebrochen werden anstelle vieler einzelner Anfragen eine große bzw. einige wenige Anfragen mit vielen Dokumenten versendet. Die Anzahl der Dokumente pro Anfrage wird \"uber die 'chunk-size' geregelt. Die Wrapper-Funktion nimmt hier eine Liste von Objekten, die chunk-size, sowie den Ziel-Index und verwandelt diese dann entsprechend der vorgegebenen Elasticsearch-Funktion in eine bzw. mehrere 'bulk-request'.
-\begin{lstlisting}[caption=Elasticsearch Helper f\"ur Bulk Indizierung ,label=esBulk,language=python]
+\begin{lstlisting}[basicstyle=\small, caption=Elasticsearch Helper f\"ur Bulk Indizierung ,label=esBulk,language=python]
 	def bulk_index_list(self, index_name, document_list, chunk_size=1000):
 	"""indexes a list of documents using the bulk index api
 	converts list of objects to a bulk index command
