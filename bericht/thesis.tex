@@ -316,18 +316,24 @@ Bevor YARN zu seinem Namen kam wurde der Dienst zun\"achst 'MapReduce2' genannt.
 Die tats\"achliche grundlegende Idee hinter der Funktion von YARN ist das Aufspalten von 'ResourceManager' und 'ApplicationMaster'. Der ResourceManager ist die zentrale Komponente mit dem der User in Kommunikation steht oder besser gesagt mit dem eine Anfrage an Rechenkapazit\"at kommuniziert. F\"ur eine solche Anfrage erstellt der 'ResourceManager' einen enstprechenden 'ApplicationMaster', dieser k\"ummert sich dann von Anfang bis Ende um diesen einen Auftrag. Status, Neustart oder Fehlerbehandlung werden komplett von ihm \"ubernommen der 'ResourceManager' hat damit nichts mehr zu tun. Der 'ApplicationMaster' \"ubergibt seine Aufgabe an einen Nodemanager der dann die tatsa\"achliche Ausf\"uhrung startet, bzw eine Container entgegen nimmt und diesen ausf\"uhrt. Die \"Uberwachung dieses Containers ist allerdings wiederum, wie bereits erw\"ahnt, Aufgabe des 'ApplicationMaster'. Nach Abschluss der Ausf\"uhrung meldet sich der 'ApplicationMaster' wieder beim 'ResourceManager' ab und gibt seine Ressourcen wieder frei.\cite{Shenoy.2014}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.9]{yarnOverview.png}
+	\includegraphics[scale=0.3]{clusterNodeOverview.png}
 	\captionsetup{justification=centering}
-	\caption{Visualisierung der Aus\"uhrung eines YARN-Containers}
+	\caption{\"Ubersicht \"uber alle Container in der YARN Web-UI}
 	\label{pic:yarnOverview}
 \end{figure}
 Dies ist an dieser Stelle wahrscheinlich durchaus unverst\"andlich, was allerdings f\"ur den nachfolgenden Bericht nicht all zu relevant ist.
-\newline An dieser Stelle ist es wichtig zu erw\"ahnen das die Auftr\"age die von YARN ausgef\"uhrt werden immer in Containern ausgef\"uhrt werden, vergleichbar mit Docker oder Kubernetes. Dies bedeutet das alle Abh\"angigkeiten mit in den Container geliefert werden m\"ussen. Außerdem ist zu beachten das es teilweise zu Problemen mit Netzwerk bzw. Internetzugriff kommen kann.
+\newline Es ist allerdings wichtig zu erw\"ahnen das die Auftr\"age die von YARN ausgef\"uhrt werden immer in einem Container ausgef\"uhrt werden, vergleichbar mit Docker oder Kubernetes. Dies bedeutet das alle Abh\"angigkeiten mit in den Container geliefert werden m\"ussen. Außerdem ist zu beachten das es teilweise zu Problemen mit Netzwerk bzw. Internetzugriff kommen kann.
 
 \section{HDFS}
 Das 'Hadoop Distributed File System' ist die Technologie, die im Hadoop Umfeld die verteilte Datenablage erm\"oglicht. HDFS hat viele Gemeinsamkeiten zu andern bekannten verteilten Dateisystemen wie zum Beispiel Amazon S3. Der Hauptunterschied zu den meisten Technologien ist Widerstandsf\"ahigkeit gegen\"uber Fehlern. Der Grundsatz von Hadoop war immer das ein Cluster aus Standard bzw. Kosteng\"unstiger Hardware aufgebaut werden kann, was allerdings zu einer h\"oheren Fehleranf\"alligkeit f\"uhren kann. Das HDFS wurde in diesem Zusammenhang nach dem Grundsatz entwickelt das es immer ein Teil der Hardware nicht funktioniert.\cite{hdfsFailure} \newline
 Mit unter der wichtigste Grundsatz ist aber wahrscheinlich dass, wenn m\"oglich, nicht die Daten zum Prozess bewegt werden sondern der Code bzw. der Algorithmus zu den Daten gebracht wird.\cite{movingComputation} Je gr\"oßer der Datensatz desto gr\"oßer die Kosten diese Daten zu verschieben. Und da sich im Normalfall ein 'BigData' System haupts\"achlich um große Datenmengen k\"ummert wird dieser Prozess genau umgedreht, der Algorithmus kommt zu den Daten. Die n\"otigen Voraussetzungen und Schnittstellen stellt das HDFS zur Verf\"ugung um Applikationen es zu erm\"oglichen diese Idee umzusetzen.
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{hdfsOverviewNodes.png}
+	\captionsetup{justification=centering}
+	\caption{Knoten \"Ubersicht des HDFS}
+	\label{pic:hdfsOverviewNodes}
+\end{figure}
 \section{Oozie und Cron}  \label{ooziecron}
 Als Grundprinzip sollen alle Daten kontinuierlich und automatisch im Cluster gespeichert werden. Hierzu m\"ussen die entsprechenden Datensammler regelm\"assig gestartet werden oder dauerhaft als Daemon laufen. In diesem Projekt wurde davon abgesehen dauerhaft laufende Datensammler zu verwenden, da diese grunds\"atzlich Rechenkapazit\"at binden. Dies widerspricht dem Prinzip, dass Hadoop individuell Rechenkapazit\"at zur Verf\"ugung stellt.\newline
 Als Alternative gibt es im Hadoop-Technologie-Zoo bereits eine L\"osung die es erm\"oglicht zeitlich, oder sogar daten-getriggert, automatisch Aufgaben zu starten - Apache Oozie. Eigentliche Hauptaufgabe von Oozie sind die sogenannten 'Workflows', was nichts anderes ist als ein vordefinierter Arbeitsablauf. Um zeitlich gesteuerte Aufgaben zu starten gibt es die sogenannten 'Coordinator Jobs', sie sind vergleichbar mit den normalen Workflows und sind einzelne, konfigurierbare Arbeitsschritte. Wichtig ist an dieser Stelle zu wissen, dass unabh\"angig von der Aufgabe, egal ob Python Script, MapReduce oder Email-Action, immer ein Art Container (vergleichbar mit Docker) erstellt wird, der dann von YARN ausgef\"uhrt wird. \newline
