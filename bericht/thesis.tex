@@ -182,7 +182,7 @@ pdfkeywords={Keywords}
    Fakultät Informatik und Wirtschaftsinformatik}}
 \subject{\BaType}
 \title{\BaTitle\\[15mm]}
-\subtitle{\normalsize{vorgelegt an der Hochschule f\"{u}r angewandte Wissenschaften W\"{u}rzburg-Schweinfurt in der Fakult\"{a}t Informatik und Wirtschaftsinformatik zum Abschluss eines Studiums im Studiengang \BaAuthorStudyProgram}}
+\subtitle{\normalsize{vorgelegt an der Hochschule f\"{u}r angewandte Wissenschaften W\"{u}rzburg-Schweinfurt in der Fakult\"{a}t Informatik und Wirtschaftsinformatik}}
 \author{Jochen Schmidt, Lennard Rose, Moritz Zeitler}
 \date{\normalsize{Eingereicht am: \BaDeadline}}
 \publishers{\
@@ -383,14 +383,17 @@ F\"ur die Datenablage wurde zun\"achst ein entsprechendes Konzept entwickelt. Di
 	\item Wetterdaten
 \end{itemize}
 Jede einzelne Datenquelle wird nun genauer beleuchtet und ein entsprechendes Datenablagekonzept erarbeitet. Da die Konzepte sich aber sehr \"ahneln wird der Hauptteil der Erkl\"arung bei der gr\"ossten Komponente den Corona-Artikeln zu finden sein. Grunds\"atzlich werden alle Daten sowohl in Elasticsearch als auch im HDFS abgelegt. Wobei das HDFS haupts\"achlich f\"ur Data Governance Zwecke genutzt wird. Bedeutet das hier die Rohdaten unver\"andert gespeichert werden sollen um sp\"ater immer noch Zugriff auf die Original Daten zu haben, was eine Art 'sanity-check' der Daten erm\"oglicht.
+
 \section{Corona Nachrichten/Artikel}
-Die Corona Nachrichten bzw. Artikel werden in zwei unterschiedlichen Technologien abgelegt. Zun\"achst betrachten wir die Rohdaten. Wie bereits erkl\"art wird jeder Artikel in Rohformat gespeichert. Diese Daten sind aber f\"ur die Auswertung und zur \"Ubersicht der Datensammlung erst mal unwichtig. Dies bedeutet das diese Daten nicht in einer Datenbank indiziert, sondern nur im HDFS abgelegt werden. Die Geschwindigkeit des HDFS f\"ur den Datenzugriff ist ausreichend um die Daten bei einer genauen Auswertung ad-hoc zu lesen. Streng genommen k\"onnte man sogar argumentieren dass das HDFS nichts anderes als ein 'key-value store' ist. So wird im Hintergrund eine Datei die unter einem gewissen Pfad abgelegt worden ist f\"ur den User als klassischer Dateipfad angezeigt (Ordner durch 'forward-slashes' getrennt und am Ende des Pfades ein Dateiname), intern aber der Pfad einen key darstellt. Dies ist n\"otig um die Verteilung und Ausfallsicherheit der Daten \"uber mehrere Knoten gew\"ahrleisten zu k\"onnen. Allerdings ist dies f\"ur den User faktisch nicht bemerkbar, da dieser immer mit den entsprechenden Pfaden arbeitet.
-Um nun den Kreis zu schliessen werden nicht nur Meta-Daten der Artikel gespeichert sondern auch der komplette Artikel im Rohformat um Datenverlust vorzubeugen und die Konsistenz der Daten sp\"ater noch pr\"ufen zu k\"onnen. Die Rohdaten werden dann abgelegt unter dem Pfad: '/datakraken/articles/region/quelle/zeitung/Datum/'. Dieser Pfad wird dann zu den Meta-Daten hinzugef\"ugt. Der Titel der Dateien im Textformat selbst setzt sich aus region + quellenname + artikeltitel zusammen. \newline
-Meta-Daten werden vom entsprechenden Scraper parallel zu den Rohdaten erzeugt. Dies Daten werden dann, unter entsprechendem Index Namen im Elasticsearch Cluster abgelegt. Dies hilft dabei eine \"Ubersicht über die Daten und deren Inhalt zu erhalten, einen Status zu bekommen in welchem Maße die Daten in das System kommen und erm\"oglicht eine rudiment\"are Analyse. Die Daten setzen sich zusammen aus den Atributen der Quelle: Name, Region und URL, des entsprechenden Artikels: URL, Titel, Datum der Veröffentlichung, Autor, Typ, Beschreibung und Stichworten, sowie Daten zur Erzeugung: Indizierungs bzw. Erstellungszeitpunkt, Dateiname und Pfad.
+Die Corona Nachrichten bzw. Artikel werden in zwei unterschiedlichen Technologien abgelegt. Zun\"achst betrachten wir die Rohdaten. Wie bereits erkl\"art wird jeder Artikel in Rohformat gespeichert. Diese Daten sind aber f\"ur die Auswertung und zur \"Ubersicht der Datensammlung erst mal unwichtig. Dies bedeutet, dass diese Daten nicht in einer Datenbank indiziert, sondern nur im HDFS abgelegt werden. Die Geschwindigkeit des HDFS f\"ur den Datenzugriff ist ausreichend um die Daten bei einer genauen Auswertung ad-hoc zu lesen. Streng genommen k\"onnte man sogar argumentieren, dass das HDFS nichts anderes als ein 'key-value store' ist. So wird im Hintergrund eine Datei die unter einem gewissen Pfad abgelegt worden ist f\"ur den User als klassischer Dateipfad angezeigt (Ordner durch 'forward-slashes' getrennt und am Ende des Pfades ein Dateiname), intern aber der Pfad einen Key darstellt. Dies ist n\"otig um die Verteilung und Ausfallsicherheit der Daten \"uber mehrere Knoten gew\"ahrleisten zu k\"onnen. Allerdings ist dies f\"ur den User faktisch nicht bemerkbar, da dieser immer mit den entsprechenden Pfaden arbeitet.
+Der komplette Artikel wird im Rohformat gespeichert um Datenverlust vorzubeugen und die Konsistenz der Daten sp\"ater noch pr\"ufen zu k\"onnen. Die Rohdaten werden dann abgelegt unter dem Pfad: '/datakraken/articles/\$region\$/\$quelle\$/\$Datum\$/'. Der Titel der Dateien im Textformat selbst setzt sich aus region + quellenname + artikeltitel zusammen. Dieser Pfad wird dann zu den Meta-Daten hinzugef\"ugt. Meta-Daten werden vom entsprechenden Scraper parallel zu den Rohdaten erzeugt. Diese Daten werden dann, unter entsprechendem Index-Namen im Elasticsearch Cluster abgelegt. Dies hilft dabei eine \"Ubersicht über die Daten und deren Inhalt zu erhalten, einen Status zu bekommen in welchem Maße die Daten in das System kommen und erm\"oglicht eine rudiment\"are Analyse. Die Daten setzen sich zusammen aus den Atributen der Quelle: Name, Region und URL, des entsprechenden Artikels: URL, Titel, Datum der Veröffentlichung, Autor, Typ, Beschreibung und Stichworten, sowie Daten zur Erzeugung: Indizierungs bzw. Erstellungszeitpunkt, Dateiname und Pfad.
+
 \section{Corona RKI Daten}
 Die wichtigsten Basis Informationen \"uber den Status der Corona-Pandemie in Deutschland sind h\"ochst wahrscheinlich Inzidenz-Wert und Impfquote. Diese Informationen werden in diesem Projekt \"uber das Robert-Koch-Institut bezogen. \"Uber eine \"offentliche API kann nicht nur Inzidenzwert pro Bundesland, sondern auch per Bezirk bezogen werden. Ausserdem sind alle Informationen zum derzeitigen Impfstand in Deutschland, sowie Informationen zu PCR- und Schnelltests in Deutschland verf\"ugbar. Alle Informationen die hier von der API zur Verf\"ugung gestellt werden, werden auch gespeichert. Hier folgt der Scraper dem Allgemeinen Konzept, die Original Daten werden im HDFS abgelegt und dann mit minimaler Ver\"anderung im Elasticsearch indiziert.
+
 \section{Corona Maßnahmen}
 Das soeben erw\"ahnte Konzept der Nachrichten wird genauso f\"ur die Massnahmen verwendet. Rohdaten werden im HDFS abgelegt, w\"ahrend die beschreibenden Daten im Elasticsearch indiziert werden. Diese Massnahmen werden mit folgendem Pattern abgelegt: '/datakraken/measures/\$bundesland\$/\$Datum\$+\$TimeStamp\$/'.
+
 \section{Wetterdaten}
 Auch die Wetterdaten werden im gleichen Stil abgelegt. Heisst die einzelnen Wetterlogs werden als Dokumente im Elasticsearch abgelegt und auch hier\"uber abgefragt. Allerdings werden die Wetterdaten auch noch entsprechend des allgmeinen Konzepts im HDFS abgelegt. Die Ablage Struktur im HDFS ist in folgendem Pattern:  '/datakraken/weather/\$Stadt\$/\$Datum\$/\$TimeStamp\$'.
 \chapter{Cluster Technologien}
@@ -444,11 +447,10 @@ Um die gesammelten Daten auch effektiv verarbeiten zu k\"onnen, muss ein geeigne
 \end{figure}
 
 \chapter{Cluster und Deployment}
-%mehr so braindump, überarbeiten%
-\section{Überblick} Bereits bei der Ideenfindung zu unserer Projektarbeit hatten wir uns dazu entschieden, nicht nur den Quellcode für den Datensammler zu schreiben, sondern das ganze auch auf einem Cluster zum laufen zu bringen. Hierfür haben wir 3 alte Rechner (Bis zur Explosion eines Netzteils ursprünglich 4) von Moritz genommen. Die Absicht hier war aus alter, ungenutzter Hardware neuen Wert zu schöpfen und Tieferen Einblick in Serververwaltung mit Linux zu erhalten. Wir haben bei dem Aufsetzen der Nodes mit der benötigten Software bewusst von der Verwendung von Docker abgesehen, trotz des Wissens, dass es die einfachste Möglichkeit gewesen wäre. Grund ist, dass wir dieses Projekt vornehmlich dazu nutzen wollen, ein breites Fundament an Wissen aufzubauen, welches auch Serveradministration beinhalten soll. Um Elasticsearch mit Docker zu starten, ist nicht viel mehr nötig als sich ein Compose-File aus dem Internet zu suchen und zu starten.
+\section{Überblick} Bereits bei der Ideenfindung zu der Projektarbeit wurde entschieden, nicht nur den Quellcode für den Datensammler zu schreiben, sondern das ganze auch auf einem Cluster zum laufen zu bringen. Dazu wurden 4 ausgediente Rechner genommen, von denen 2 den Prozess bis zum Schluss überlebten, die übrigen aber immerhin mit ihrem ableben die Ausfallsicherheit bestätigten. Die Absicht hier war aus alter, ungenutzter Hardware neuen Wert zu schöpfen und Tieferen Einblick in Serververwaltung mit Linux zu erhalten. Es wirde bei dem Aufsetzen der Nodes mit der benötigten Software bewusst von der Verwendung von Docker abgesehen, trotz des Wissens, dass es die einfachste Möglichkeit gewesen wäre. Grund hierfür ist, dass dieses Projekt vornehmlich dazu dienen sollte, ein breites Fundament an Wissen aufzubauen, welches auch Serveradministration beinhalten sollte. Um Elasticsearch mit Docker zu starten, wäre nicht viel mehr nötig gewesen als sich ein Compose-File aus dem Internet zu suchen und zu starten.
 
-\section{Betriebssystem} Als Betriebssystem wählten wir Ubuntu 18.04 LTS, da es mit ca. einem Drittel aller Linuxserver das meistverwendete Betriebssystem darstellt. Als Bezeichnung für die einzelnen Knoten wählten wir 'datakrakennamenode', für den Masternode, sowie 'datanodekraken1' und 'datanodekraken2', für die beiden Anderen. Auf jedem Knoten legten wir einen User mit Namen 'hadoop' an. Im laufe des Projekts stellte sich heraus, dass eine 'sauberere' Lösung gewesen wäre, einen User zu allgemeinen Serververwaltung, sowie jeweils einen User zum laufen der Elasticsearch sowie Hadoop Daemons zu erstellen. Auch wurde der Fehler gemacht den Rootuser nur Stiefmütterlich zu behandeln und nicht mit Passwort einzurichten, dies kostete beim Recovery viel Zeit und nerven.\newline
-Als nächsten Schritt wiesen wir allen Nodes statische private IP-Adressen zu, hierzu wählten wir die vom Router vergebenen Adressen. \pagebreak
+\section{Betriebssystem} Als Betriebssystem wurde Ubuntu 18.04 LTS gewählt, da es mit ca. einem Drittel aller Linuxserver das meistverwendete Betriebssystem darstellt. Als Bezeichnung für die einzelnen Knoten wurde 'datakrakennamenode', für den Masternode, sowie 'datanodekraken1', 'datanodekraken2', für die Data- bzw. Workernodes gewählt (Anmerkung: der 4. Server war zu diesem Zeitpunkt bereits defekt und wird nicht weiter erwähnt). Auf jedem Knoten wurde ein User mit Namen 'hadoop' angelegt. Im laufe des Projekts stellte sich heraus, dass eine 'sauberere' Lösung gewesen wäre, einen User zu allgemeinen Serververwaltung, sowie jeweils einen User zum laufen der Elasticsearch sowie Hadoop Daemons zu erstellen. Auch wurde der Fehler gemacht den Rootuser nur Stiefmütterlich zu behandeln und nicht mit Passwort einzurichten, dies kostete beim Recovery viel Zeit und nerven.\newline
+Als nächsten Schritt wurden allen Nodes statische private IP-Adressen zugewiesen, hierzu wurden die vom Router vergebenen Adressen verwendet. \pagebreak
 \begin{lstlisting}[caption=datakrakennamenode: /etc/netplan/00-installer-config.yaml,label=hosts,language=bash]
 network:
   ethernets:
@@ -464,7 +466,7 @@ network:
   version: 2
 #mit sudo netplan try/-apply anwenden!
 \end{lstlisting}
-Diese mapten wir auf die Knotennamen in der "hosts"- Datei, um sie bei der weiteren Konfiguration immer mit ihrem Namen angeben zu können.
+Diese wurden auf die Knotennamen in der "hosts"- Datei gemappt, um sie bei der weiteren Konfiguration immer mit ihrem Namen angeben zu können.
 \begin{lstlisting}[caption=etc/hosts,label=hosts,language=bash]
 ...
 192.168.0.115 datakrakennamenode
@@ -477,6 +479,8 @@ Jeder Node erhielt ausserdem noch Java 8 zum ausführen von Hadoop bzw. Elastics
 JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 \end{lstlisting}
 
+\pagebreak
+
 \section{Hadoop}
 \subsection{Allgemeines}
 Hadoop ist eine opensource Lösung von Apache, die parallele Verarbeitung und verteilte Datenhaltung auf einem Cluster möglich macht. Mit Hadoop ist auch immer das Hadoop Distributet File System (HDFS) sowie YARN, ein Framework zur Ablaufplanung von verteilten Anwendungen gemeint. \newline
@@ -484,7 +488,7 @@ Der Cluster besteht aus einem Master und vielen sogenannten Workernodes. Der Mas
 Workernodes hingegen sind zum speichern der Daten und dem Ausführen der Jobs da. Auch sie hosten zwei Daemons, den Datanode, zum verwalten der Daten auf dem Node, sowie dem Nodemanager, der die Ausführung der Tasks auf dem Node verwaltet.
 \subsection{Setup}
 Hadoop Version 3.2.2 wurde als Binary für Ubuntu heruntergeladen und entpackt. Der Einfachheit halber wurde der Ordner von "hadoop-3.2.2" zu "hadoop" umbenannt.
-Als nächstes wurden die nötigen Umgebungsvariablen gesetzt und die PATH-Variable angepasst. %hier muss noch hin warum environment und nicht einfach .bashrc
+Als nächstes wurden die nötigen Umgebungsvariablen gesetzt und die PATH-Variable angepasst.
 \begin{lstlisting}[caption=etc/environment,label=env,language=bash]
 HADOOP_HOME=/home/hadoop/hadoop
 YARN_HOME=/home/hadoop/hadoop
@@ -493,7 +497,7 @@ HADOOP_HDFS_HOME=/home/hadoop/hadoop
 HOME=/home/hadoop
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/bin:/home/hadoop/hadoop/bin:/home/hadoop/hadoop/sbin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/lib/jvm/java-8-openjdk-amd64/sbin
 \end{lstlisting}
-Ausserdem wurden noch folgende Konfigurationen vorgenommen: \newline
+Ausserdem wurden noch folgende Hadoop-spezifische Konfigurationen vorgenommen: \newline
 \begin{lstlisting}[caption=/hadoop/etc/hadoop/core-site.xml,label=coresitexml,language=bash]
 <configuration>
         <property>
@@ -520,24 +524,8 @@ Ausserdem wurden noch folgende Konfigurationen vorgenommen: \newline
     </property>
 </configuration>
 \end{lstlisting}
-\begin{lstlisting}[caption=hadoop/etc/hadoop/hdfs-site.xml,label=hdfssitexml,language=bash]
-<configuration>
-    <property>
-            <name>dfs.namenode.name.dir</name>
-            <value>/home/hadoop/data/nameNode</value>
-    </property>
 
-    <property>
-            <name>dfs.datanode.data.dir</name>
-            <value>/home/hadoop/data/dataNode</value>
-    </property>
-
-    <property>
-            <name>dfs.replication</name>
-            <value>1</value>
-    </property>
-</configuration>
-\end{lstlisting}\begin{lstlisting}[caption=/hadoop/etc/hadoop/mapred-site.xml,label=mapredsitexml,language=bash]
+\begin{lstlisting}[caption=/hadoop/etc/hadoop/mapred-site.xml,label=mapredsitexml,language=bash]
 <configuration>
     <property>
             <name>mapreduce.framework.name</name>
@@ -585,24 +573,24 @@ hdfs namenode -format
 start-dfs.sh
 stop-dfs.sh
 \end{lstlisting}
-\begin{lstlisting}[caption=Check ob daemon auf datakrakennamenode läuft,label=jpsnamenode,language=bash] %hier noch orginal von cmd einfügen
+\begin{lstlisting}[caption= Überprüfen von Betrieb auf Namenode,label=jpsnamenode,language=bash] %hier noch orginal von cmd einfügen
 >jps
 21922 Jps
 21804 NameNode
 21879 SecondaryNameNode
 \end{lstlisting}
-\begin{lstlisting}[caption=Check ob daemon auf den workern läuft,label=jpsworker,language=bash]
+\begin{lstlisting}[caption=Überprüfen von Betrieb auf Workernodes,label=jpsworker,language=bash]
 >jps
 21912 Jps
 21434 DataNode
 \end{lstlisting}
 Sollten die Daemons wider erwarten nicht anspringen, hat es sich als hilfreich erwiesen den tempordner von Hadoop zu löschen und das HDFS erneut zu formatieren.
 
+\pagebreak
+
 \section{Elasticsearch}
-Alles nach anleitung von elastic installiert.
-Kibana nur auf datakrakennamenode installiert
-User zu gruppen elasticsearch und kibana hinzugefügt
-Berechtigungen über die verzeichnisse verteilt
+Bei der Installation von Elasticsearch und Kibana wurde sich strickt an die Anleitung auf der Onlinepräsenz von Elasticsearch selbst gehalten. Kibana wurde anders als Elasticsearch nur auf datakrakennamenode installiert.
+Der User zu gruppen elasticsearch und kibana hinzugefügt und die entsprechenden Berechtigungen über die verzeichnisse verteilt.
 
 \begin{lstlisting}[caption=elasticsearch.yml,label=elasticyml,language=bash]
 cluster.name: datakraken
@@ -637,7 +625,7 @@ sudo systemctl stop kibana.service
 
 
 \begin{lstlisting}[caption=Befehl zum durchsuchen der Logdaten,label=logelastic,language=bash]
-sudo journalctl --unit elasticsearch --since  ">>heutiges datum<<"
+sudo journalctl --unit elasticsearch --since  $heutiges datum$
 \end{lstlisting}
 
 \begin{lstlisting}[caption=Befehl zum durchsuchen der Logdaten,label=logkibana,language=bash]
@@ -653,8 +641,6 @@ curl -XGET 'datakrakennamenode:5601/api/status'
 curl -XGET 'datakrakennamenode:5601/status'
 \end{lstlisting}
 
-Über ssh beide mittels IP adresse abrufbar
-%Braindump ende%
 
 
 
@@ -1183,9 +1169,9 @@ Der Wetter-Scraper ist wohl der trivialste Scraper. Hier wird lediglich eine Kon
 F\"ur eine sp\"ater Verwendung ohne Konfigurationsdatei wurden hier bereits Vorbereitungen getroffen das der Scraper auch \"uber Elasticsearch konfigurierbar ist.
 
 \chapter{Zusammenfassung und Fazit}
-Abschließend war das Projekt f\"ur das Projektteam ein wirklich wichtiger Erfahrungswert im Studienverlauf. In jedem durchgef\"uhrten Projekt gibt es Stolpersteine die \"uberwunden werden m\"ussen, auch in diesem Projekt. Der Cluster an sich stellte große Probleme dar die nicht wirklich im Vorhinein erwartet worden sind. Auch zun\"achst, und teilweise im Nachhinein, zuf\"allig vorkommende Probleme brachten den Fortschritt immer wieder ins Stocken. Aber diese 'nicht vorhersehbaren' Probleme sind Erfahrungen die in Rahmen des Studiums noch kaum weitere Folgen haben aber einen enormen Vorteil f\"ur die Zukunft bringen. \newline
-Positiv zu erw\"ahnen ist die Kohäsion des Projektteams. Durch bereits einige vorhergehende gemeinsame Projekte ist das Bewusstsein \"uber die St\"arke des Teams im Team klar. Trotz der Probleme wurde immer zielstrebig an einer L\"osung gearbeitet und versucht soweit wie m\"oglich sich gegenseitig zu Unterst\"utzen ohne dabei eine negative Stimmung aufkommen zu lassen.\newline
-Aus technischer Sicht gesehen mag das Ergebnis nicht all zu komplex wirken, jedoch tr\"ugt dieser Schein. Durch technische und auch zugegebenermaßen einiger fehlender Kompetenzen war der Aufwand nicht zu untersch\"atzen. Damit hat das Projekt unserer Meinung sein Ziel ganz klar erreicht, eine technische L\"osung f\"ur das Problem ist entstanden und es wurde enorm viel Wissen innerhalb der Projektmitglieder aufgebaut.
+Abschließend war das Projekt f\"ur das Projektteam ein wirklich wichtiger Erfahrungswert im Studienverlauf. In jedem durchgef\"uhrten Projekt gibt es Stolpersteine die \"uberwunden werden m\"ussen, auch in diesem Projekt. Der Cluster an sich stellte große Probleme dar die im Vorhinein nicht erwartet worden. Auch zun\"achst, und teilweise im Nachhinein, zuf\"allig vorkommende Probleme brachten den Fortschritt immer wieder ins Stocken. Aber diese 'nicht vorhersehbaren' Probleme sind Erfahrungen die in Rahmen des Studiums noch kaum weitere Folgen haben aber einen enormen Vorteil f\"ur die Zukunft bringen. \newline
+Positiv zu erw\"ahnen ist die Kohäsion des Projektteams. Durch einige bereits vorhergegangene gemeinsame Projekte herrschte ein klares Bewusstsein \"uber die St\"arken und Schwächen jedes der Mitglieder innerhalb des Teams. Trotz der Probleme wurde immer zielstrebig an einer L\"osung gearbeitet und versucht sich soweit wie m\"oglich gegenseitig zu Unterst\"utzen ohne dabei eine unkonstruktive Stimmung aufkommen zu lassen. \newline 
+Aus technischer Sicht gesehen mag das Ergebnis nicht all zu komplex wirken, jedoch tr\"ugt dieser Schein. Die meisten Teile des Projektes erforderten erheblichen Rechercheaufwand. Abwägen von Lösungsansätzen, Technik und Techniken sorge besonders in der ersten Hälfte des Projektes für größere Verzögerungen. Somit sind besonders jene Teile für das Projekt maßgeblich, welche man in der Finalen Lösung nicht sieht: ein breites Fundament an neu gewonnenem Wissen, auch Abseits des minimal Notwendigem. Damit hat das Projekt unserer Meinung sein Ziel ganz klar erreicht, eine technische L\"osung f\"ur das Problem ist entstanden und es wurde enorm viel Wissen innerhalb der Projektmitglieder aufgebaut.
 
 \backmatter
 %%%%%%%%%%%%%%%%%%%
