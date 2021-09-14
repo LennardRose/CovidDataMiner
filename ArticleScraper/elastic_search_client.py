@@ -150,19 +150,48 @@ class ElasticSearchClient(MetaClient, ArticleClient):
         return { "mappings": {
         "properties": {
             "title": {
-                "type": "text" 
+                "type": "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          } 
             },
             "description": {
-                "type": "text"
+                "type": "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword"
+            }
+          }
             },
             "url": {
-                "type": "text"
+                "type": "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
             },
             "source_url": {
-                "type": "text"
+                "type": "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
             },
             "type": {
-                "type": "text"
+                "type": "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
             },
             "date": {
                 "type": "date"
@@ -171,22 +200,58 @@ class ElasticSearchClient(MetaClient, ArticleClient):
                 "type": "date"
             },
             "region": {
-                "type": "text"
+                "type": "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
             },
             "site_name": {
-                "type": "text"
+                "type": "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
             },
             "author": {
-                "type": "text"
+                "type": "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
             },
             "keywords": {
-                "type": "text"
+                "type": "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
             },
             "filename": {
-                "type": "text"
+                "type": "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
             },
             "filepath": {
-                "type": "text"
+                "type": "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
             }
         }
     }
