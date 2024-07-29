@@ -7,8 +7,7 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "console": "integratedTerminal",
-            "args": ["--elasticsearch", "6I1IpXsBQVgYcQE3GB1p"]
+            "console": "integratedTerminal"
 
         }
     ]
